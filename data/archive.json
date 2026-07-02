@@ -1,3 +1,277 @@
 {
-  "weeks": []
+  "weeks": [
+    {
+      "isoWeek": "2026-W27",
+      "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
+      "briefDate": "2026-07-02",
+      "videoD": {
+        "title": "On a tous 3 personnes en nous",
+        "theme": "Moi, sur-moi et ça",
+        "date": "2026-07-24",
+        "next": "La jalousie – toxique ou preuve d'amour ?"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "Il y a quelqu'un dans votre tête qui veut des choses que vous n'oseriez avouer à personne. Et le pire… c'est que c'est vous.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "On croit tous être « une » personne, cohérente, du matin au soir. Sauf que non. Vous n'êtes pas la même au boulot, avec votre mère, ou seul·e à 2h du matin. Et ce n'est pas de l'hypocrisie — c'est de la psychologie."
+            },
+            {
+              "t": "En France, on n'a jamais autant essayé de se comprendre : les consultations chez le psy ont bondi de près de 14% en un an, plus de 8 millions de rendez-vous. Et pourtant, 73% des Français pensent qu'il faut « du courage » juste pour aller voir un psy. On veut se connaître… mais on a peur de ce qu'on va trouver."
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé.",
+            "Montage : insert texte à l'écran « +14% de consultations psy en 2024 » et « 73% : il faut du courage pour consulter ». GIF possible : https://tenor.com/view/inner-demons-gif-13982762090204352166"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Pour moi, on n'a pas une personnalité : on en a trois. Et Freud avait déjà tout dit il y a un siècle. Il y a le ça — mes envies brutes. Le sur-moi — la morale, les règles, la culpabilité. Et le moi, coincé au milieu, qui négocie toute la journée. Assumer les trois, c'est ça, se connaître."
+            }
+          ],
+          "notes": [
+            "Caméra : ton affirmé, direct."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Le ça, c'est l'enfant capricieux en vous. Il veut le gâteau, le message à minuit, le plaisir tout de suite, sans se demander si c'est raisonnable. Il ne connaît pas le mot « demain »."
+            },
+            {
+              "t": "Le sur-moi, c'est la voix de votre mère, de la société, de l'école. « Ça ne se fait pas. » « Qu'est-ce que les gens vont penser ? » C'est lui qui vous fait culpabiliser après avoir mangé le gâteau."
+            },
+            {
+              "t": "Et le moi, c'est l'arbitre épuisé au milieu du ring. Toute la journée il essaie de contenter le ça sans se faire engueuler par le sur-moi. Quand vous hésitez, que vous procrastinez, que vous vous sentez « tiraillé » — c'est cette bagarre-là."
+            },
+            {
+              "t": "Prenez un exemple tout bête : le dimanche soir. Le ça veut rester au lit et commander à manger. Le sur-moi dit « tu dois préparer ta semaine, être productive ». Le moi finit par négocier : « ok, une heure de repos PUIS je m'y mets ». Ça vous parle ? C'est vos trois voix en réunion de crise."
+            },
+            {
+              "t": "Là où ça devient intéressant : la plupart des gens détestent une de leurs trois voix. Certains passent leur vie à faire taire leur ça — et deviennent rigides, frustrés, tristes. D'autres n'écoutent que leur ça — et brûlent tout autour d'eux. Le vrai équilibre, ce n'est pas d'en tuer une. C'est de les faire dialoguer."
+            },
+            {
+              "t": "Et moi là-dedans ? Je vous ai promis un truc. J'ai littéralement trois prénoms, et ce n'est pas un hasard :"
+            },
+            {
+              "t": "Il y a Claude (rien à voir avec l'agent IA), une version sage qu'on m'a demandé d'être, qui veut faire attention à elle, qui veut avoir une bonne hygiène de vie, qui est douce et patiente. C'est un surnom qu'on m'avait donné quand je travaillais dans l'animation, la profession où je me sentais le plus en sécurité."
+            },
+            {
+              "t": "Il y a Amandine — celle du quotidien, l'équilibre, le moi. Et il y a Amanda — celle que vous suivez, mon ça assumé, celle qui dit tout haut ce que les autres pensent tout bas, celle qui assume ce qu'elle est, sans se soucier du regard des autres. Celle qui n'arrive pas à se contrôler quand il s'agit de manger du sucre."
+            },
+            {
+              "t": "Je n'ai pas encore fait la paix avec mes 3 voix intérieures, car Amanda est finalement pas mal rejetée par les autres. Même Amandine au fond se dit qu'on aurait moins de souci sans Amanda. Claude en est persuadé."
+            }
+          ],
+          "notes": [
+            "Montage : couper sur B-roll quand je décris chaque voix. GIF ange/démon sur l'épaule pendant « le ça vs le sur-moi » : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-15606468775788725702",
+            "Montage : insert texte « 31% des Français ont déjà consulté un psy » quand je parle de se connaître.",
+            "Caméra : ton spontané, comme une confidence entre amis."
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Vous n'avez pas à choisir laquelle de vos trois voix est la vraie. Elles le sont toutes. La paix, c'est le jour où vous arrêtez de faire taire l'une pour plaire à l'autre.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Laquelle de vos trois voix parle le plus fort en ce moment : le ça, le moi, ou le sur-moi ? Dites-le-moi en commentaire."
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Vendredi prochain, on reste dans l'intime mais on change de terrain : je vous parle des femmes au foyer — choix assumé ou piège doré ? Ça va faire débat."
+            }
+          ],
+          "notes": [
+            "Prochain épisode au planning : « Les femmes au foyer » — 31/07."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Instagram @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
+            }
+          ],
+          "notes": [
+            "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": 1,
+          "title": "La stat qui dérange",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "hook": "En France, on est passés de 34 000 à plus de 43 000 psys en dix ans. On n'a jamais eu autant besoin de comprendre ce qu'on a dans la tête.",
+          "corps": "Et si le problème, c'était qu'on refuse d'admettre qu'on n'est pas UNE personne, mais trois ? Le moi, le sur-moi, et le ça.",
+          "cta": "La vidéo complète sort vendredi — abonnez-vous.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Lundi 20/07"
+        },
+        {
+          "n": 2,
+          "title": "L'ange et le démon",
+          "angle": "HUMOUR",
+          "dur": "15-20 sec",
+          "cam": "face cam + montage split",
+          "hook": "Vous savez, le petit ange et le petit démon sur les épaules ? Freud avait mis des noms dessus il y a 100 ans.",
+          "corps": "L'ange = le sur-moi (la morale). Le démon = le ça (les pulsions). Et vous, coincé au milieu, c'est le moi qui arbitre. Bon courage.",
+          "cta": "Je vous explique tout vendredi.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Lundi 20/07"
+        },
+        {
+          "n": 3,
+          "title": "Mes 3 prénoms",
+          "angle": "INTIME",
+          "dur": "25-30 sec",
+          "cam": "face cam doux, lumière chaude",
+          "hook": "Je vais vous avouer un truc que personne ne sait : j'ai littéralement trois prénoms, un pour chaque partie de moi.",
+          "corps": "Il y a celle qui se tient bien, celle qui vit, et celle qui ose tout. Vendredi, je vous les présente toutes les trois.",
+          "cta": "Rendez-vous vendredi 8h.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Mardi 21/07"
+        },
+        {
+          "n": 4,
+          "title": "L'opinion qui pique",
+          "angle": "OPINION",
+          "dur": "20-25 sec",
+          "cam": "face cam frontal, ton assumé",
+          "hook": "Arrêtez de dire « je suis comme ça, c'est tout ». Non. Vous êtes plusieurs, et vous laissez toujours le même gagner.",
+          "corps": "Se connaître, ce n'est pas se trouver une étiquette. C'est savoir lequel de vos trois « vous » tient le volant aujourd'hui.",
+          "cta": "On en parle en profondeur vendredi.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Mardi 21/07"
+        },
+        {
+          "n": 5,
+          "title": "L'erreur qu'on fait tous",
+          "angle": "CONSEIL",
+          "dur": "20-25 sec",
+          "cam": "face cam posé",
+          "hook": "Le jour où j'ai arrêté de me détester, c'est le jour où j'ai compris que ce n'était pas « moi » qui déraillait, mais mon ça.",
+          "corps": "Le conseil ? Ne fusionnez pas avec vos pulsions. Observez-les. Nommez-les. Elles ne SONT pas vous, elles font partie de vous.",
+          "cta": "La méthode complète vendredi.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Mercredi 22/07"
+        },
+        {
+          "n": 6,
+          "title": "La question qui divise",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "15-20 sec",
+          "cam": "face cam, regard caméra",
+          "hook": "Vraie question : est-ce qu'on peut faire taire complètement son « ça », ou est-ce qu'on finit toujours par craquer ?",
+          "corps": "Moi je pense qu'on ne le fait pas taire — on négocie avec. Mais je sais que ça va vous faire réagir. Team refoulement ou team lâcher-prise ?",
+          "cta": "Donnez votre camp en commentaire.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Jeudi 23/07"
+        },
+        {
+          "n": 7,
+          "title": "L'anecdote gênante",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "hook": "Un jour, en pleine réunion pro, mon « ça » a voulu dire un truc absolument pas professionnel. Mon sur-moi a hurlé « NON ».",
+          "corps": "Ce petit combat intérieur, on le vit tous, dix fois par jour. Sauf qu'on ne met jamais de mots dessus. Moi si, maintenant.",
+          "cta": "L'histoire complète vendredi.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Jeudi 23/07"
+        },
+        {
+          "n": 8,
+          "title": "3 signes que votre ça gagne",
+          "angle": "LISTE",
+          "dur": "20-25 sec",
+          "cam": "face cam + texte à l'écran",
+          "hook": "3 signes que c'est votre « ça » qui commande votre vie en ce moment 👇",
+          "corps": "1. Vous dites « je verrai demain » à tout. 2. Vous fuyez ce qui vous ferait grandir. 3. Vous culpabilisez sans jamais changer. On se reconnaît ?",
+          "cta": "Ce qu'il faut faire → vidéo de vendredi.",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "jour": "Samedi 25/07"
+        }
+      ]
+    }
+  ]
 }

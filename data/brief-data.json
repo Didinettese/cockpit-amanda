@@ -687,27 +687,24 @@
     {
       "num": "②",
       "title": "CONTEXTE & STATS",
-      "timing": "8-45 sec",
+      "timing": "15-60 sec",
       "lines": [
         {
-          "t": "On n'a jamais autant cherché à se comprendre : en dix ans, la France est passée de 34 000 à plus de 43 000 psychologues. Et le dispositif MonSoutienPsy a déjà accompagné près d'1,8 million de personnes.",
-          "quote": false
+          "t": "On croit tous être « une » personne, cohérente, du matin au soir. Sauf que non. Vous n'êtes pas la même au boulot, avec votre mère, ou seul·e à 2h du matin. Et ce n'est pas de l'hypocrisie — c'est de la psychologie."
         },
         {
-          "t": "On court tous après « se connaître ». Mais on cherche UNE réponse, alors qu'on est trois personnes à l'intérieur.",
-          "quote": false
+          "t": "En France, on n'a jamais autant essayé de se comprendre : les consultations chez le psy ont bondi de près de 14% en un an, plus de 8 millions de rendez-vous. Et pourtant, 73% des Français pensent qu'il faut « du courage » juste pour aller voir un psy. On veut se connaître… mais on a peur de ce qu'on va trouver."
         }
       ],
       "notes": [
-        "Stat 1 : 34 000 → 43 000+ psychologues en France (Association M3P, 2024).",
-        "Stat 2 : MonSoutienPsy ~1,8 M de bénéficiaires, x5 entre 2022 et 2025 (info.gouv.fr).",
-        "Insérer à l'écran le GIF ange/démon (Kronk) : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-13015310"
+        "Caméra : même cadre, ton posé.",
+        "Montage : insert texte à l'écran « +14% de consultations psy en 2024 » et « 73% : il faut du courage pour consulter ». GIF possible : https://tenor.com/view/inner-demons-gif-13982762090204352166"
       ]
     },
     {
       "num": "③",
       "title": "LANCEMENT SIGNATURE",
-      "timing": "45-50 sec",
+      "timing": "",
       "lines": [
         {
           "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
@@ -715,91 +712,103 @@
         }
       ],
       "notes": [
-        "Phrase de lancement VERBATIM. Caméra : léger sourire, ton plus doux."
+        "Caméra : léger sourire, ton plus doux."
       ]
     },
     {
       "num": "④",
-      "title": "OPINION",
-      "timing": "50 sec - 1:40",
+      "title": "MON OPINION D'ABORD",
+      "timing": "20 sec",
       "lines": [
         {
-          "t": "Mon avis ? On ne se déteste pas nous-mêmes. On déteste juste UNE des parties de nous — et on la confond avec tout le reste.",
-          "quote": true
-        },
-        {
-          "t": "Freud appelait ça le moi, le sur-moi et le ça. Moi je dis : la sage, la vivante, et celle qui ose tout.",
-          "quote": false
+          "t": "Pour moi, on n'a pas une personnalité : on en a trois. Et Freud avait déjà tout dit il y a un siècle. Il y a le ça — mes envies brutes. Le sur-moi — la morale, les règles, la culpabilité. Et le moi, coincé au milieu, qui négocie toute la journée. Assumer les trois, c'est ça, se connaître."
         }
       ],
       "notes": [
-        "Poser le cadre : ça = pulsions/désirs, sur-moi = morale/interdits, moi = l'arbitre du quotidien."
+        "Caméra : ton affirmé, direct."
       ]
     },
     {
       "num": "⑤",
       "title": "DÉVELOPPEMENT",
-      "timing": "1:40 - 3:30",
+      "timing": "4-5 min",
       "lines": [
         {
-          "t": "Le « ça », c'est le petit démon : il veut, tout de suite, sans se demander si c'est bien. Le « sur-moi », c'est l'ange moralisateur qui juge tout. Et le « moi », c'est vous, épuisé, à essayer de mettre tout le monde d'accord.",
-          "quote": false
+          "t": "Le ça, c'est l'enfant capricieux en vous. Il veut le gâteau, le message à minuit, le plaisir tout de suite, sans se demander si c'est raisonnable. Il ne connaît pas le mot « demain »."
         },
         {
-          "t": "Le problème, c'est quand un seul prend le pouvoir : trop de sur-moi et on s'interdit de vivre, trop de ça et on se crame.",
-          "quote": false
+          "t": "Le sur-moi, c'est la voix de votre mère, de la société, de l'école. « Ça ne se fait pas. » « Qu'est-ce que les gens vont penser ? » C'est lui qui vous fait culpabiliser après avoir mangé le gâteau."
+        },
+        {
+          "t": "Et le moi, c'est l'arbitre épuisé au milieu du ring. Toute la journée il essaie de contenter le ça sans se faire engueuler par le sur-moi. Quand vous hésitez, que vous procrastinez, que vous vous sentez « tiraillé » — c'est cette bagarre-là."
+        },
+        {
+          "t": "Prenez un exemple tout bête : le dimanche soir. Le ça veut rester au lit et commander à manger. Le sur-moi dit « tu dois préparer ta semaine, être productive ». Le moi finit par négocier : « ok, une heure de repos PUIS je m'y mets ». Ça vous parle ? C'est vos trois voix en réunion de crise."
+        },
+        {
+          "t": "Là où ça devient intéressant : la plupart des gens détestent une de leurs trois voix. Certains passent leur vie à faire taire leur ça — et deviennent rigides, frustrés, tristes. D'autres n'écoutent que leur ça — et brûlent tout autour d'eux. Le vrai équilibre, ce n'est pas d'en tuer une. C'est de les faire dialoguer."
+        },
+        {
+          "t": "Et moi là-dedans ? Je vous ai promis un truc. J'ai littéralement trois prénoms, et ce n'est pas un hasard :"
+        },
+        {
+          "t": "Il y a Claude (rien à voir avec l'agent IA), une version sage qu'on m'a demandé d'être, qui veut faire attention à elle, qui veut avoir une bonne hygiène de vie, qui est douce et patiente. C'est un surnom qu'on m'avait donné quand je travaillais dans l'animation, la profession où je me sentais le plus en sécurité."
+        },
+        {
+          "t": "Il y a Amandine — celle du quotidien, l'équilibre, le moi. Et il y a Amanda — celle que vous suivez, mon ça assumé, celle qui dit tout haut ce que les autres pensent tout bas, celle qui assume ce qu'elle est, sans se soucier du regard des autres. Celle qui n'arrive pas à se contrôler quand il s'agit de manger du sucre."
+        },
+        {
+          "t": "Je n'ai pas encore fait la paix avec mes 3 voix intérieures, car Amanda est finalement pas mal rejetée par les autres. Même Amandine au fond se dit qu'on aurait moins de souci sans Amanda. Claude en est persuadé."
         }
       ],
       "notes": [
-        "Rythme : illustrer chaque instance par un exemple concret du quotidien (bouffe, sexe, boulot, réseaux)."
+        "Montage : couper sur B-roll quand je décris chaque voix. GIF ange/démon sur l'épaule pendant « le ça vs le sur-moi » : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-15606468775788725702",
+        "Montage : insert texte « 31% des Français ont déjà consulté un psy » quand je parle de se connaître.",
+        "Caméra : ton spontané, comme une confidence entre amis."
       ]
     },
     {
       "num": "⑥",
       "title": "MOMENT CLÉ",
-      "timing": "3:30 - 4:30",
+      "timing": "",
       "lines": [
         {
-          "t": "Le jour où j'ai arrêté de dire « je suis comme ça » et que j'ai commencé à dire « une partie de moi est comme ça »… tout a changé.",
+          "t": "Vous n'avez pas à choisir laquelle de vos trois voix est la vraie. Elles le sont toutes. La paix, c'est le jour où vous arrêtez de faire taire l'une pour plaire à l'autre.",
           "quote": true
         }
       ],
       "notes": [
-        "Moment émotionnel, ton plus intime. C'est le pic de la vidéo — ralentir le débit."
+        "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
       ]
     },
     {
       "num": "⑦",
       "title": "QUESTION OUVERTE",
-      "timing": "4:30 - 5:10",
+      "timing": "",
       "lines": [
         {
-          "t": "Alors je vous pose la question : lequel des trois tient VOTRE volant en ce moment ? La sage, la vivante, ou celle qui ose tout ?",
-          "quote": true
+          "t": "Laquelle de vos trois voix parle le plus fort en ce moment : le ça, le moi, ou le sur-moi ? Dites-le-moi en commentaire."
         }
       ],
-      "notes": [
-        "Inviter explicitement à répondre en commentaire pour booster l'engagement."
-      ]
+      "notes": []
     },
     {
       "num": "⑧",
       "title": "TEASING",
-      "timing": "5:10 - 5:30",
+      "timing": "",
       "lines": [
         {
-          "t": "Et justement, il y a une émotion qui met ces trois-là en guerre plus que toutes les autres. La semaine prochaine : la jalousie — toxique, ou preuve d'amour ?",
-          "quote": true
+          "t": "Vendredi prochain, on reste dans l'intime mais on change de terrain : je vous parle des femmes au foyer — choix assumé ou piège doré ? Ça va faire débat."
         }
       ],
       "notes": [
-        "Teasing de l'épisode suivant D : « La jalousie – toxique ou preuve d'amour ? » (sortie 31/07)."
+        "Prochain épisode au planning : « Les femmes au foyer » — 31/07."
       ]
     },
     {
       "num": "⑨",
       "title": "CLÔTURE SIGNATURE",
-      "timing": "5:30 - 5:40",
+      "timing": "",
       "lines": [
         {
           "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
@@ -807,22 +816,20 @@
         }
       ],
       "notes": [
-        "Phrase de clôture VERBATIM. Caméra : regard caméra, sourire léger."
+        "Caméra : plan légèrement élargi, ton doux."
       ]
     },
     {
       "num": "⑩",
-      "title": "CTA",
-      "timing": "5:40 - 6:00",
+      "title": "CTA — ÉCRAN DE FIN",
+      "timing": "20 sec",
       "lines": [
         {
-          "t": "Si cette vidéo vous a parlé, abonnez-vous, et venez me dire vos trois « vous » en commentaire. Le reste — le plus intime — c'est sur mes autres réseaux, liens en description.",
-          "quote": false
+          "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Instagram @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
         }
       ],
       "notes": [
-        "Rappeler abonnement + commentaire + liens bio (OnlyFans/MYM/Telegram).",
-        "Option écran de fin : GIF conscience good/evil https://tenor.com/view/conscience-evil-good-angel-devil-gif-5692194"
+        "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
       ]
     }
   ],
