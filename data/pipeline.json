@@ -1,47 +1,232 @@
 {
   "statuses": [
-    { "key": "idee", "label": "💡 Idée", "color": "#6c757d" },
-    { "key": "script", "label": "✍️ Scripté", "color": "#fd7e14" },
-    { "key": "tourne", "label": "🎥 Tourné", "color": "#0d6efd" },
-    { "key": "monte", "label": "🎞️ Monté", "color": "#6f42c1" },
-    { "key": "publie", "label": "✅ Publié", "color": "#198754" }
+    {
+      "key": "idee",
+      "label": "💡 Idée",
+      "color": "#6c757d"
+    },
+    {
+      "key": "script",
+      "label": "✍️ Scripté",
+      "color": "#fd7e14"
+    },
+    {
+      "key": "tourne",
+      "label": "🎥 Tourné",
+      "color": "#0d6efd"
+    },
+    {
+      "key": "monte",
+      "label": "🎞️ Monté",
+      "color": "#6f42c1"
+    },
+    {
+      "key": "publie",
+      "label": "✅ Publié",
+      "color": "#198754"
+    }
   ],
   "episodes": [
-    { "id": "ep-2026-05-01", "date": "2026-05-01", "theme": "Présentation perso", "title": "Qui est Amanda ?", "status": "publie", "lieu": "Instagram & Telegram", "notes": "1er épisode" },
-    { "id": "ep-2026-05-08", "date": "2026-05-08", "theme": "Maîtresse ou épouse ?", "title": "Femme respectable VS femme désirée", "status": "publie", "lieu": "OnlyFans & MYM", "notes": "" },
-    { "id": "ep-2026-05-15", "date": "2026-05-15", "theme": "Apprêtée VS naturelle", "title": "Quelles femmes plaisent aux hommes ?", "status": "publie", "lieu": "OnlyFans & MYM", "notes": "" },
-    { "id": "ep-2026-05-22", "date": "2026-05-22", "theme": "Avoir des enfants", "title": "Pourquoi on ne veut plus avoir d'enfants ?", "status": "publie", "lieu": "Instagram & Telegram", "notes": "Annonce surprise en fin" },
-    { "id": "ep-2026-05-29", "date": "2026-05-29", "theme": "Mon mari", "title": "Derrière chaque femme se trouve un homme", "status": "publie", "lieu": "YouTube", "notes": "" },
-    { "id": "ep-2026-06-05", "date": "2026-06-05", "theme": "Amanda en transparence", "title": "Amanda en intimité", "status": "publie", "lieu": "OnlyFans & MYM", "notes": "Questions intimes" },
-    { "id": "ep-2026-06-12", "date": "2026-06-12", "theme": "Séparer le sexe et les sentiments", "title": "Sexe VS sentiments", "status": "publie", "lieu": "OnlyFans & MYM", "notes": "Méthode anti-jalousie" },
-    { "id": "ep-2026-06-19", "date": "2026-06-19", "theme": "Le libertinage", "title": "Le libertinage : Est-ce pour tout le monde ?", "status": "publie", "lieu": "OnlyFans & MYM", "notes": "Ma première fois" },
-    { "id": "ep-2026-06-26", "date": "2026-06-26", "theme": "Libertinage", "title": "10 règles pour débuter le libertinage", "status": "monte", "lieu": "OnlyFans & MYM", "notes": "Guide pratique accessible" },
-    { "id": "ep-2026-07-03", "date": "2026-07-03", "theme": "Libertinage", "title": "10 questions gênantes sur le libertinage", "status": "tourne", "lieu": "OnlyFans & MYM", "notes": "" },
-    { "id": "ep-2026-07-10", "date": "2026-07-10", "theme": "Couple", "title": "Don Juan VS Nympho", "status": "script", "lieu": "OnlyFans & MYM", "notes": "Double standard hommes/femmes" },
-    { "id": "ep-2026-07-17", "date": "2026-07-17", "theme": "Femme & Société", "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)", "status": "script", "lieu": "OnlyFans & MYM", "notes": "Lexique patriarcal" },
-    { "id": "ep-2026-07-24", "date": "2026-07-24", "theme": "Moi, sur-moi et ça", "title": "On a tous 3 personnes en nous", "status": "script", "lieu": "Instagram & Telegram", "notes": "Concept Freud vulgarisé + perso (mes 3 prénoms)",
+    {
+      "id": "ep-2026-05-01",
+      "date": "2026-05-01",
+      "theme": "Présentation perso",
+      "title": "Qui est Amanda ?",
+      "status": "publie",
+      "lieu": "Facebook & Telegram",
+      "notes": "1er épisode"
+    },
+    {
+      "id": "ep-2026-05-08",
+      "date": "2026-05-08",
+      "theme": "Maîtresse ou épouse ?",
+      "title": "Femme respectable VS femme désirée",
+      "status": "publie",
+      "lieu": "OnlyFans & MYM",
+      "notes": ""
+    },
+    {
+      "id": "ep-2026-05-15",
+      "date": "2026-05-15",
+      "theme": "Apprêtée VS naturelle",
+      "title": "Quelles femmes plaisent aux hommes ?",
+      "status": "publie",
+      "lieu": "OnlyFans & MYM",
+      "notes": ""
+    },
+    {
+      "id": "ep-2026-05-22",
+      "date": "2026-05-22",
+      "theme": "Avoir des enfants",
+      "title": "Pourquoi on ne veut plus avoir d'enfants ?",
+      "status": "publie",
+      "lieu": "Facebook & Telegram",
+      "notes": "Annonce surprise en fin"
+    },
+    {
+      "id": "ep-2026-05-29",
+      "date": "2026-05-29",
+      "theme": "Mon mari",
+      "title": "Derrière chaque femme se trouve un homme",
+      "status": "publie",
+      "lieu": "YouTube",
+      "notes": ""
+    },
+    {
+      "id": "ep-2026-06-05",
+      "date": "2026-06-05",
+      "theme": "Amanda en transparence",
+      "title": "Amanda en intimité",
+      "status": "publie",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Questions intimes"
+    },
+    {
+      "id": "ep-2026-06-12",
+      "date": "2026-06-12",
+      "theme": "Séparer le sexe et les sentiments",
+      "title": "Sexe VS sentiments",
+      "status": "publie",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Méthode anti-jalousie"
+    },
+    {
+      "id": "ep-2026-06-19",
+      "date": "2026-06-19",
+      "theme": "Le libertinage",
+      "title": "Le libertinage : Est-ce pour tout le monde ?",
+      "status": "publie",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Ma première fois"
+    },
+    {
+      "id": "ep-2026-06-26",
+      "date": "2026-06-26",
+      "theme": "Libertinage",
+      "title": "10 règles pour débuter le libertinage",
+      "status": "monte",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Guide pratique accessible"
+    },
+    {
+      "id": "ep-2026-07-03",
+      "date": "2026-07-03",
+      "theme": "Libertinage",
+      "title": "10 questions gênantes sur le libertinage",
+      "status": "tourne",
+      "lieu": "OnlyFans & MYM",
+      "notes": ""
+    },
+    {
+      "id": "ep-2026-07-10",
+      "date": "2026-07-10",
+      "theme": "Couple",
+      "title": "Don Juan VS Nympho",
+      "status": "script",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Double standard hommes/femmes"
+    },
+    {
+      "id": "ep-2026-07-17",
+      "date": "2026-07-17",
+      "theme": "Femme & Société",
+      "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
+      "status": "script",
+      "lieu": "OnlyFans & MYM",
+      "notes": "Lexique patriarcal"
+    },
+    {
+      "id": "ep-2026-07-24",
+      "date": "2026-07-24",
+      "theme": "Moi, sur-moi et ça",
+      "title": "On a tous 3 personnes en nous",
+      "status": "script",
+      "lieu": "Facebook & Telegram",
+      "notes": "Concept Freud vulgarisé + perso (mes 3 prénoms)",
       "titleOptions": [
-        { "text": "On a tous 3 personnes en nous", "potentiel": "🔥🔥🔥", "best": true },
-        { "text": "Moi, sur-moi et ça : qui commande vraiment ?", "potentiel": "🔥🔥", "best": false },
-        { "text": "Mes 3 prénoms (et pourquoi vous en avez aussi)", "potentiel": "🔥🔥", "best": false }
+        {
+          "text": "On a tous 3 personnes en nous",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "Moi, sur-moi et ça : qui commande vraiment ?",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Mes 3 prénoms (et pourquoi vous en avez aussi)",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
       ],
-      "caption": "On a tous 3 personnes dans la tête : le moi, le sur-moi et le ça. Aujourd'hui je vous ouvre la mienne — sans filtre.\n\n📲 Instagram @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#psychologie #couple #lespenséesdamanda #blondymandise" },
-    { "id": "ep-2026-07-31", "date": "2026-07-31", "theme": "Psycho", "title": "La jalousie – toxique ou preuve d'amour ?", "status": "idee", "lieu": "", "notes": "Question clivante = fort engagement" }
+      "caption": "On a tous 3 personnes dans la tête : le moi, le sur-moi et le ça. Aujourd'hui je vous ouvre la mienne — sans filtre.\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#psychologie #couple #lespenséesdamanda #blondymandise"
+    },
+    {
+      "id": "ep-2026-07-31",
+      "date": "2026-07-31",
+      "theme": "Psycho",
+      "title": "La jalousie – toxique ou preuve d'amour ?",
+      "status": "idee",
+      "lieu": "",
+      "notes": "Question clivante = fort engagement"
+    }
   ],
   "ideas": [
-    { "id": "id-tds", "theme": "Femme & Société", "title": "Être TDS est dégradant ?", "format": "Long format", "hook": "Prise de position + témoignage", "potentiel": "🔥🔥🔥" },
-    { "id": "id-foyer", "theme": "Femme & Société", "title": "Les femmes au foyer", "format": "Long format", "hook": "Débat moderne – choix ou contrainte ?", "potentiel": "🔥🔥" },
-    { "id": "id-creatrice", "theme": "MYM / OnlyFans", "title": "Ce que personne ne dit côté créatrice", "format": "Long format", "hook": "Tabou + démystification", "potentiel": "🔥🔥🔥" },
-    { "id": "id-attachement", "theme": "Couple", "title": "L'amour vs l'attachement – la différence", "format": "Long format", "hook": "Histoire perso + analyse psycho", "potentiel": "🔥🔥" },
-    { "id": "id-ambitieuse", "theme": "Femme & Société", "title": "Être une femme ambitieuse – trop ambitieuse ?", "format": "Long format", "hook": "Double standard sociétal", "potentiel": "🔥🔥" },
-    { "id": "id-of-couple", "theme": "MYM / OnlyFans", "title": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées", "format": "Long format", "hook": "Transparence + coulisses du couple", "potentiel": "🔥🔥" }
+    {
+      "id": "id-tds",
+      "theme": "Femme & Société",
+      "title": "Être TDS est dégradant ?",
+      "format": "Long format",
+      "hook": "Prise de position + témoignage",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-foyer",
+      "theme": "Femme & Société",
+      "title": "Les femmes au foyer",
+      "format": "Long format",
+      "hook": "Débat moderne – choix ou contrainte ?",
+      "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-creatrice",
+      "theme": "MYM / OnlyFans",
+      "title": "Ce que personne ne dit côté créatrice",
+      "format": "Long format",
+      "hook": "Tabou + démystification",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-attachement",
+      "theme": "Couple",
+      "title": "L'amour vs l'attachement – la différence",
+      "format": "Long format",
+      "hook": "Histoire perso + analyse psycho",
+      "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-ambitieuse",
+      "theme": "Femme & Société",
+      "title": "Être une femme ambitieuse – trop ambitieuse ?",
+      "format": "Long format",
+      "hook": "Double standard sociétal",
+      "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-of-couple",
+      "theme": "MYM / OnlyFans",
+      "title": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées",
+      "format": "Long format",
+      "hook": "Transparence + coulisses du couple",
+      "potentiel": "🔥🔥"
+    }
   ],
   "links": {
     "OnlyFans": "https://onlyfans.com/A_COMPLETER",
     "MYM": "https://mym.fans/A_COMPLETER",
     "Telegram": "https://t.me/A_COMPLETER",
     "PayPal": "https://paypal.me/A_COMPLETER",
-    "Instagram": "https://instagram.com/blondymandise",
     "YouTube": "https://youtube.com/@blondymandise",
     "TikTok": "https://tiktok.com/@A_COMPLETER",
     "Facebook": "https://facebook.com/A_COMPLETER",

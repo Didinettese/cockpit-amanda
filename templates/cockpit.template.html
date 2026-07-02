@@ -19,7 +19,7 @@
   --bg:#160E1B; --panel:#211527; --panel-2:#2B1A33; --line:#3A2743;
   --ink:#F6EEF2; --muted:#A991B0; --now:#FF6E8A; --now-soft:#ff6e8a22;
   --done:#E7B860; --done-soft:#e7b8601f;
-  --instagram:#E1477E; --telegram:#37A7E0; --youtube:#FF3B5C; --extrait:#B57BE0;
+  --telegram:#37A7E0; --youtube:#FF3B5C; --extrait:#B57BE0;
   --tiktok:#25E7DE; --facebook:#4C8DF6; --reddit:#FF5722; --x:#E8E3EA; --snapchat:#FFFC00;
   --radius:18px;
 }
@@ -254,8 +254,7 @@ const STATUS = {
 const STATUS_ORDER=["idee","script","tourne","monte","publie"];
 
 const PLAT = {
-  instagram:{n:"Instagram",em:"📸",c:"var(--instagram)"},
-  story:{n:"Story · IG+TikTok+FB",em:"📖",c:"#F5A623"},
+  story:{n:"Story · TikTok+FB",em:"📖",c:"#F5A623"},
   telegram:{n:"Telegram",em:"✈️",c:"var(--telegram)"},
   youtube:{n:"YouTube",em:"▶️",c:"var(--youtube)"},
   extrait:{n:"Extrait",em:"✂️",c:"var(--extrait)"},
@@ -265,7 +264,7 @@ const PLAT = {
   x:{n:"X",em:"✖️",c:"var(--x)"},
   snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"}
 };
-const PLAT_ORDER=["youtube","instagram","story","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
+const PLAT_ORDER=["youtube","story","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
 const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const WEEK=DATA.meta.isoWeek||"sem";
 const today=new Date();
@@ -348,7 +347,7 @@ function renderJour(){
   else renderCalByPlat();
   renderDays();
 }
-function firstPlatform(){for(const k of PLAT_ORDER){if(allWeekPosts().some(p=>p.platKey===k))return k;}return "instagram";}
+function firstPlatform(){for(const k of PLAT_ORDER){if(allWeekPosts().some(p=>p.platKey===k))return k;}return "facebook";}
 function allWeekPosts(){const out=[];DATA.schedule.forEach((d,di)=>d.posts.forEach((p,i)=>out.push({...p,day:d.day,date:d.date,dayIdx:di,id:pid(di,i)})));return out;}
 
 function renderCalByDay(){
@@ -366,7 +365,7 @@ function renderCalByDay(){
   if(viewIdx===todayIdx){
     const undone=posts.filter(p=>!done.has(p.id));
     if(!undone.length){h+='<div class="now-card alldone"><span class="now-tag"><span class="dot"></span>Terminé</span><div class="alldone-msg">Tout est posté ✨</div><div class="alldone-sub">Journée bouclée 📦</div></div>';}
-    else{const nm=nowMin();let next=undone.find(p=>toMin(p.time)>=nm-30)||undone[0];const pl=PLAT[next.platKey]||PLAT.instagram;
+    else{const nm=nowMin();let next=undone.find(p=>toMin(p.time)>=nm-30)||undone[0];const pl=PLAT[next.platKey]||PLAT.facebook;
       h+='<div class="now-card"><span class="now-tag"><span class="dot"></span>Maintenant · '+esc(next.time)+' '+esc(next.moment)+'</span>'
         +'<div style="display:flex;align-items:center;gap:9px;margin:11px 0 3px"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(next.plats)+'</span>'
         +'<span style="color:var(--muted);font-size:13px">'+undone.length+' restant'+(undone.length>1?"s":"")+'</span></div>'
@@ -408,7 +407,7 @@ function renderCalByPlat(){
 }
 
 function postCard(p,showTime){
-  const pl=PLAT[p.platKey]||PLAT.instagram;const on=done.has(p.id);const lien=resolveLien(p.lien);
+  const pl=PLAT[p.platKey]||PLAT.facebook;const on=done.has(p.id);const lien=resolveLien(p.lien);
   return '<div class="card'+(on?" done":"")+'" data-id="'+p.id+'">'
     +'<div class="card-head"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(p.plats)+'</span>'
     +'<button class="chk'+(on?" on":"")+'" aria-label="Fait">✓</button></div>'
@@ -697,7 +696,7 @@ function _renderIdees(){
 function renderLiens(){
   const el=document.getElementById("view-liens");
   const groups=[["Plateformes payantes",["OnlyFans","MYM"]],["Direct",["Telegram","PayPal","Snapchat"]],
-    ["Funnel direct",["X","Reddit"]],["Marque (réseaux)",["Instagram","YouTube","TikTok","Facebook","Threads"]],["Bio",["Bio"]]];
+    ["Funnel direct",["X","Reddit"]],["Marque (réseaux)",["YouTube","TikTok","Facebook","Threads"]],["Bio",["Bio"]]];
   const cats=(PIPE&&PIPE.linkCats)||{};
   let h='<div class="info">Ton coffre à liens. Modifie une URL : elle est enregistrée <b>partout</b> (synchro GitHub), visible depuis n\'importe quel téléphone. « ＋ Ajouter un lien » pour en créer un dans une catégorie.</div>';
   groups.forEach(([g,keys])=>{
