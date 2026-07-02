@@ -183,6 +183,21 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .src-tag{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
 .src-tag.live{color:var(--done);border-color:var(--done)}
 
+/* ===== Titres proposés + caption (onglet Script) ===== */
+.tblk{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:16px}
+.tblk .hd{font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.tblk .sub{font-size:12px;color:var(--muted);margin-bottom:11px}
+.topt{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:8px 9px;margin-bottom:8px}
+.topt.best{border-color:var(--done);box-shadow:0 0 0 3px var(--done-soft)}
+.topt .pick{width:26px;height:26px;border-radius:50%;border:1.6px solid var(--line);background:transparent;flex:0 0 auto;cursor:pointer;display:grid;place-items:center;color:transparent;font-weight:800;font-size:14px}
+.topt.best .pick{background:var(--done);border-color:var(--done);color:var(--bg)}
+.topt input.tt{flex:1;background:transparent;border:none;color:var(--ink);font-size:14px;font-weight:600;font-family:Inter;min-width:0}
+.topt input.tt:focus{outline:none}
+.topt select.pot{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;font-size:12.5px;padding:5px 6px;cursor:pointer;flex:0 0 auto}
+.topt .reco{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--bg);background:var(--done);border-radius:99px;padding:3px 7px;flex:0 0 auto}
+.topt .delt{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;flex:0 0 auto}
+.tblk .cl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:13px 0 6px}
+.tblk textarea.cap{width:100%;min-height:130px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:13.5px;line-height:1.5;padding:11px;font-family:Inter;resize:vertical}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -1114,7 +1129,13 @@ const PIPE_EMBED = {
     { "id": "ep-2026-07-03", "date": "2026-07-03", "theme": "Libertinage", "title": "10 questions gênantes sur le libertinage", "status": "tourne", "lieu": "OnlyFans & MYM", "notes": "" },
     { "id": "ep-2026-07-10", "date": "2026-07-10", "theme": "Couple", "title": "Don Juan VS Nympho", "status": "script", "lieu": "OnlyFans & MYM", "notes": "Double standard hommes/femmes" },
     { "id": "ep-2026-07-17", "date": "2026-07-17", "theme": "Femme & Société", "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)", "status": "script", "lieu": "OnlyFans & MYM", "notes": "Lexique patriarcal" },
-    { "id": "ep-2026-07-24", "date": "2026-07-24", "theme": "Moi, sur-moi et ça", "title": "On a tous 3 personnes en nous", "status": "script", "lieu": "Instagram & Telegram", "notes": "Concept Freud vulgarisé + perso (mes 3 prénoms)" },
+    { "id": "ep-2026-07-24", "date": "2026-07-24", "theme": "Moi, sur-moi et ça", "title": "On a tous 3 personnes en nous", "status": "script", "lieu": "Instagram & Telegram", "notes": "Concept Freud vulgarisé + perso (mes 3 prénoms)",
+      "titleOptions": [
+        { "text": "On a tous 3 personnes en nous", "potentiel": "🔥🔥🔥", "best": true },
+        { "text": "Moi, sur-moi et ça : qui commande vraiment ?", "potentiel": "🔥🔥", "best": false },
+        { "text": "Mes 3 prénoms (et pourquoi vous en avez aussi)", "potentiel": "🔥🔥", "best": false }
+      ],
+      "caption": "On a tous 3 personnes dans la tête : le moi, le sur-moi et le ça. Aujourd'hui je vous ouvre la mienne — sans filtre.\n\n📲 Instagram @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#psychologie #couple #lespenséesdamanda #blondymandise" },
     { "id": "ep-2026-07-31", "date": "2026-07-31", "theme": "Psycho", "title": "La jalousie – toxique ou preuve d'amour ?", "status": "idee", "lieu": "", "notes": "Question clivante = fort engagement" }
   ],
   "ideas": [
@@ -1155,6 +1176,7 @@ const STATUS_ORDER=["idee","script","tourne","monte","publie"];
 
 const PLAT = {
   instagram:{n:"Instagram",em:"📸",c:"var(--instagram)"},
+  story:{n:"Story · IG+TikTok+FB",em:"📖",c:"#F5A623"},
   telegram:{n:"Telegram",em:"✈️",c:"var(--telegram)"},
   youtube:{n:"YouTube",em:"▶️",c:"var(--youtube)"},
   extrait:{n:"Extrait",em:"✂️",c:"var(--extrait)"},
@@ -1164,7 +1186,7 @@ const PLAT = {
   x:{n:"X",em:"✖️",c:"var(--x)"},
   snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"}
 };
-const PLAT_ORDER=["youtube","instagram","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
+const PLAT_ORDER=["youtube","instagram","story","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
 const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const WEEK=DATA.meta.isoWeek||"sem";
 const today=new Date();
@@ -1349,11 +1371,55 @@ function renderReels(){
 
 /* ============ SCRIPT ============ */
 let scriptEdit=false;   // onglet Script en mode édition ?
-function renderScript(){
+/* --- Titres proposés (3, meilleur mis en avant) + caption YouTube, sur l'épisode VIDÉO D --- */
+const POT_LEVELS=["🔥","🔥🔥","🔥🔥🔥"];
+function videoDEpisode(){
+  if(!PIPE||!PIPE.episodes)return null;
+  const d=DATA.meta&&DATA.meta.videoD&&DATA.meta.videoD.date;
+  let ep=PIPE.episodes.find(e=>e.date===d);
+  if(!ep&&PIPE.episodes.length)ep=PIPE.episodes[PIPE.episodes.length-1];
+  if(ep){if(!Array.isArray(ep.titleOptions))ep.titleOptions=[];if(typeof ep.caption!=="string")ep.caption="";}
+  return ep;
+}
+function titleCaptionBlock(ep){
+  if(!ep)return '';
+  let h='<div class="tblk"><div class="hd">🎬 Titres proposés — VIDÉO D</div>'
+    +'<div class="sub">Modifie, ajuste le potentiel, choisis ton titre (il devient le titre officiel).</div>';
+  (ep.titleOptions||[]).forEach((o,i)=>{
+    const lvl=Math.max(0,POT_LEVELS.indexOf(o.potentiel||"🔥"));
+    h+='<div class="topt'+(o.best?" best":"")+'" data-ti="'+i+'">'
+      +'<button class="pick" title="Choisir ce titre">✓</button>'
+      +'<input class="tt" value="'+escAttr(o.text)+'" placeholder="Titre…">'
+      +'<select class="pot">'+POT_LEVELS.map((p,li)=>'<option value="'+p+'"'+(li===lvl?" selected":"")+'>'+p+'</option>').join("")+'</select>'
+      +(o.best?'<span class="reco">Reco</span>':'')
+      +'<button class="delt" title="Supprimer">🗑</button></div>';
+  });
+  h+='<button class="prog-add" id="addTitle" style="margin-bottom:2px">＋ Ajouter un titre</button>';
+  h+='<div class="cl">📝 Description YouTube</div>'
+    +'<textarea class="cap" id="capBox" placeholder="Description de la vidéo pour YouTube…">'+esc(ep.caption||"")+'</textarea></div>';
+  return h;
+}
+function bindTitleCaption(root,ep){
+  if(!ep)return;
+  root.querySelectorAll(".topt").forEach(row=>{
+    const i=+row.dataset.ti;
+    row.querySelector(".tt").onchange=e=>{ep.titleOptions[i].text=e.target.value;if(ep.titleOptions[i].best)ep.title=e.target.value;queueSave();};
+    row.querySelector(".pot").onchange=e=>{ep.titleOptions[i].potentiel=e.target.value;queueSave();};
+    row.querySelector(".pick").onclick=()=>{ep.titleOptions.forEach((o,j)=>o.best=(j===i));ep.title=ep.titleOptions[i].text||ep.title;queueSave();renderScript();toast("Titre choisi ✓");};
+    row.querySelector(".delt").onclick=()=>{ep.titleOptions.splice(i,1);queueSave();renderScript();};
+  });
+  const add=root.querySelector("#addTitle");
+  if(add)add.onclick=()=>{ep.titleOptions.push({text:"",potentiel:"🔥🔥",best:ep.titleOptions.length===0});queueSave();renderScript();};
+  const cap=root.querySelector("#capBox");
+  if(cap)cap.onchange=e=>{ep.caption=e.target.value;queueSave();};
+}
+function renderScript(){ensurePipe(_renderScript);}
+function _renderScript(){
   const el=document.getElementById("view-script");
   const entry=curEntry();                       // semaine en cours dans l'archive (éditable)
   const vd=DATA.meta.videoD||{};
-  let h='<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
+  const epD=videoDEpisode();
+  let h=titleCaptionBlock(epD)+'<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
     +(vd.title?'Thème : <b>'+esc(vd.title)+'</b>'+(vd.theme?' — '+esc(vd.theme):'')+'.<br>':'')
     +(scriptEdit?'Mode édition : modifie le texte, ajoute/supprime des lignes, mets tes expériences. <b>Enregistré automatiquement.</b>'
                 :'Coche « validé » chaque section une fois tournée.')+'</div>';
@@ -1390,6 +1456,7 @@ function renderScript(){
     });
     el.querySelector("#scAddBeat").onclick=()=>{SC.push({num:"",title:"Nouvelle section",timing:"",lines:[{t:"",quote:false}],notes:[]});queueArchiveSave();renderScript();};
     el.querySelector("#scReset").onclick=()=>{if(confirm("Remplacer par le script généré du lundi ? Tes modifications de cette semaine seront perdues.")){entry.script=JSON.parse(JSON.stringify(DATA.script||[]));queueArchiveSave();renderScript();}};
+    bindTitleCaption(el,epD);
     return;
   }
 
@@ -1408,6 +1475,7 @@ function renderScript(){
   el.innerHTML=h;
   if(entry){const t=el.querySelector("#scEditToggle");if(t)t.onclick=()=>{scriptEdit=true;renderScript();window.scrollTo({top:0,behavior:"smooth"});};}
   el.querySelectorAll("[data-bid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-bid]").dataset.bid;setDone(id,!done.has(id));renderScript();});
+  bindTitleCaption(el,epD);
 }
 
 /* ============ PIPELINE : chargement / sauvegarde (GitHub via Vercel) ============ */

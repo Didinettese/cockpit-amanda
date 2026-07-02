@@ -78,7 +78,15 @@ function sanitize(body) {
     title: String(e.title || ""),
     status: STATUS_KEYS.includes(e.status) ? e.status : "idee",
     lieu: String(e.lieu || ""),
-    notes: String(e.notes || "")
+    notes: String(e.notes || ""),
+    titleOptions: Array.isArray(e.titleOptions)
+      ? e.titleOptions.map(o => ({
+          text: String(o && o.text || ""),
+          potentiel: String(o && o.potentiel || ""),
+          best: !!(o && o.best)
+        }))
+      : [],
+    caption: String(e.caption || "")
   }));
   out.ideas = (Array.isArray(body.ideas) ? body.ideas : []).map((it, i) => ({
     id: String(it.id || `id-${Date.now()}-${i}`),
