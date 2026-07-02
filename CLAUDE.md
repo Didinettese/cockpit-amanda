@@ -34,8 +34,8 @@ sont committées via l'API, et la tâche automatique du lundi lit/écrit ces fic
   `sanitize()` conserve links/progress/linkCats (ne pas les retirer).
 - `api/archive.js` — même mécanisme pour `data/archive.json` : `POST` = 1 semaine,
   upsert par isoWeek. Le cockpit archive la semaine en cours à l'ouverture (autoArchive).
-- `scripts/build_cockpit.js` — injecte `brief-data.json` + `pipeline.json` dans le
-  template → `public/index.html`. C'est le **build command** de Vercel.
+- `scripts/build_cockpit.js` — injecte `brief-data.json` + `pipeline.json` + `archive.json`
+  dans le template → `public/index.html`. C'est le **build command** de Vercel.
 - `scripts/build_brief.js` — génère le `.docx` du brief (converti en PDF par CI).
 - `vercel.json` — buildCommand + outputDirectory `public` + fonction API.
 
@@ -45,17 +45,19 @@ node scripts/build_cockpit.js   # reconstruire public/index.html
 vercel dev                      # prévisualiser cockpit + API en local (besoin .env.local)
 ```
 Après un `node scripts/build_cockpit.js`, vérifier que `public/index.html` ne contient
-plus les marqueurs `__BRIEF_DATA__` ni `__PIPELINE_DATA__`.
+plus les marqueurs `__BRIEF_DATA__`, `__PIPELINE_DATA__` ni `__ARCHIVE_DATA__`.
 
 ## Conventions & règles
 - **Un seul fichier d'app** : ne pas découper `cockpit.template.html` en modules CSS/JS.
-- Le template contient deux marqueurs remplacés au build :
-  `/*__BRIEF_DATA__*/ {}` et `/*__PIPELINE_DATA__*/ {}`. Ne pas les supprimer.
+- Le template contient trois marqueurs remplacés au build :
+  `/*__BRIEF_DATA__*/ {}`, `/*__PIPELINE_DATA__*/ {}` et `/*__ARCHIVE_DATA__*/ {}`. Ne pas les supprimer.
 - Après toute modif du template ou des données, **rebâtir** et si possible **tester le
   JS** (ex. jsdom) avant de committer : les onglets Prog/Idées doivent se rendre et le
   bouton Enregistrer doit POST vers `/api/pipeline`.
 - Le cockpit charge le pipeline en direct via `/api/pipeline` (GET), avec repli sur la
-  copie embarquée (`PIPE_EMBED`) si l'API est indisponible.
+  copie embarquée (`PIPE_EMBED`) si l'API est indisponible. Idem pour les archives :
+  `/api/archive` (GET) avec repli sur `ARCHIVE_EMBED` (indispensable sur GitHub Pages,
+  qui ne sert pas les fonctions `/api/*`).
 - **Sécurité** : ne jamais committer de token ; `GITHUB_TOKEN` vit dans `.env.local`
   (local, gitignoré) et dans les variables d'environnement Vercel.
 - **Permissions Git** : le token fine-grained n'a QUE « Contents ». Ne jamais modifier

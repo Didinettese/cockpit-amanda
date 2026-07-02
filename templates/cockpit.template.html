@@ -243,6 +243,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 <script>
 const DATA = /*__BRIEF_DATA__*/ {};
 const PIPE_EMBED = /*__PIPELINE_DATA__*/ {};
+const ARCHIVE_EMBED = /*__ARCHIVE_DATA__*/ {};
 
 const STATUS = {
   idee:{label:"💡 Idée",c:"#6c757d"},
@@ -741,10 +742,12 @@ let archiveWeek=null;      // isoWeek de la semaine ouverte en détail
 // entrée d'archive de la semaine en cours = source du script éditable
 function curEntry(){return (ARCHIVE&&Array.isArray(ARCHIVE.weeks))?ARCHIVE.weeks.find(w=>w&&w.isoWeek===(DATA.meta&&DATA.meta.isoWeek)):null;}
 function afterArchiveReady(){if(curTab==="script")renderScript();if(curTab==="archives")renderArchives();}
+function embedArchive(){return (ARCHIVE_EMBED&&Array.isArray(ARCHIVE_EMBED.weeks))?JSON.parse(JSON.stringify(ARCHIVE_EMBED)):{weeks:[]};}
 function loadArchive(){
+  // API en direct si dispo ; sinon repli sur la copie embarquée au build (Pages / API HS)
   return fetch("/api/archive",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{
-    ARCHIVE=(j&&Array.isArray(j.weeks))?j:{weeks:[]};
-  }).catch(()=>{ARCHIVE={weeks:[]};});
+    ARCHIVE=(j&&Array.isArray(j.weeks)&&j.weeks.length)?j:embedArchive();
+  }).catch(()=>{ARCHIVE=embedArchive();});
 }
 function snapshotWeek(){
   const m=DATA.meta||{};
