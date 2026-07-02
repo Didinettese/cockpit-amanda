@@ -1120,7 +1120,23 @@ const PIPE_EMBED = {
     { "id": "id-attachement", "theme": "Couple", "title": "L'amour vs l'attachement – la différence", "format": "Long format", "hook": "Histoire perso + analyse psycho", "potentiel": "🔥🔥" },
     { "id": "id-ambitieuse", "theme": "Femme & Société", "title": "Être une femme ambitieuse – trop ambitieuse ?", "format": "Long format", "hook": "Double standard sociétal", "potentiel": "🔥🔥" },
     { "id": "id-of-couple", "theme": "MYM / OnlyFans", "title": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées", "format": "Long format", "hook": "Transparence + coulisses du couple", "potentiel": "🔥🔥" }
-  ]
+  ],
+  "links": {
+    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
+    "MYM": "https://mym.fans/A_COMPLETER",
+    "Telegram": "https://t.me/A_COMPLETER",
+    "PayPal": "https://paypal.me/A_COMPLETER",
+    "Instagram": "https://instagram.com/blondymandise",
+    "YouTube": "https://youtube.com/@blondymandise",
+    "TikTok": "https://tiktok.com/@A_COMPLETER",
+    "Facebook": "https://facebook.com/A_COMPLETER",
+    "Threads": "https://threads.net/@blondymandise",
+    "Reddit": "https://reddit.com/user/A_COMPLETER",
+    "Bio": "https://linktr.ee/A_COMPLETER",
+    "X": "https://x.com/A_COMPLETER",
+    "Snapchat": "https://snapchat.com/add/A_COMPLETER"
+  },
+  "progress": {}
 }
 ;
 
@@ -1164,9 +1180,12 @@ function escAttr(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"
 /* ---- persistence ---- */
 function loadDone(){try{done=new Set(JSON.parse(localStorage.getItem("done:"+WEEK)||"[]"));}catch(e){done=new Set();}}
 function saveDone(){try{localStorage.setItem("done:"+WEEK,JSON.stringify([...done]));}catch(e){}}
-function setDone(id,on){on?done.add(id):done.delete(id);saveDone();}
+function setDone(id,on){on?done.add(id):done.delete(id);saveDone();
+  if(PIPE){PIPE.progress=PIPE.progress||{};PIPE.progress[WEEK]=[...done];queueSave();}}
 function loadLinks(){try{Object.assign(DATA.links,JSON.parse(localStorage.getItem("links:"+WEEK)||"{}"));}catch(e){}}
-function saveLink(k,v){try{const s=JSON.parse(localStorage.getItem("links:"+WEEK)||"{}");s[k]=v;localStorage.setItem("links:"+WEEK,JSON.stringify(s));DATA.links[k]=v;}catch(e){}}
+function saveLink(k,v){try{const s=JSON.parse(localStorage.getItem("links:"+WEEK)||"{}");s[k]=v;localStorage.setItem("links:"+WEEK,JSON.stringify(s));}catch(e){}
+  DATA.links[k]=v;
+  if(PIPE){PIPE.links=PIPE.links||{};PIPE.links[k]=v;queueSave();}}
 function loadIdea(){try{return JSON.parse(localStorage.getItem("idea:"+WEEK)||"null");}catch(e){return null;}}
 function saveIdea(o){try{localStorage.setItem("idea:"+WEEK,JSON.stringify(o));}catch(e){}}
 let idea=null;
@@ -1349,11 +1368,24 @@ function renderScript(){
 async function loadPipe(){
   try{
     const r=await fetch("/api/pipeline",{cache:"no-store"});
-    if(r.ok){const j=await r.json();if(j&&(j.episodes||j.ideas)){PIPE=j;PIPE._source="api";normalizePipe();return;}}
+    if(r.ok){const j=await r.json();if(j&&(j.episodes||j.ideas)){PIPE=j;PIPE._source="api";normalizePipe();reconcileFromPipe();return;}}
   }catch(e){}
-  PIPE=JSON.parse(JSON.stringify(PIPE_EMBED||{}));PIPE._source="embed";normalizePipe();
+  PIPE=JSON.parse(JSON.stringify(PIPE_EMBED||{}));PIPE._source="embed";normalizePipe();reconcileFromPipe();
 }
-function normalizePipe(){if(!PIPE.episodes)PIPE.episodes=[];if(!PIPE.ideas)PIPE.ideas=[];}
+function normalizePipe(){if(!PIPE.episodes)PIPE.episodes=[];if(!PIPE.ideas)PIPE.ideas=[];if(!PIPE.links)PIPE.links={};if(!PIPE.progress)PIPE.progress={};}
+// aligne l'état local (liens + coches) sur la source git quand elle est disponible
+function reconcileFromPipe(){
+  if(!PIPE)return;
+  if(PIPE._source==="api"){
+    if(PIPE.links)Object.assign(DATA.links,PIPE.links);          // git = vérité pour les liens
+    const arr=PIPE.progress&&PIPE.progress[WEEK];
+    if(Array.isArray(arr)){done=new Set(arr);saveDone();}         // git = vérité pour les coches
+    else if(done.size){PIPE.progress[WEEK]=[...done];queueSave();} // 1re fois : on remonte le local
+  }else{
+    if(PIPE.links)for(const k in PIPE.links){if(!DATA.links[k])DATA.links[k]=PIPE.links[k];}
+  }
+  try{renderDays();if(curTab==="jour")renderJour();if(curTab==="liens")renderLiens();}catch(e){}
+}
 function ensurePipe(cb){
   if(PIPE){cb();return;}
   const el=document.getElementById("view-"+curTab);if(el)el.innerHTML='<div class="info">Chargement du pipeline…</div>';
@@ -1362,19 +1394,28 @@ function ensurePipe(cb){
 }
 function markDirty(){pipeDirty=true;updateSaveBar();}
 function updateSaveBar(){const b=document.getElementById("savebar");if(b)b.classList.toggle("show",pipeDirty);}
-async function savePipe(){
+// sauvegarde débouncée : liens + coches (une écriture git par salve)
+let saveTimer=null;
+function queueSave(){
+  if(!PIPE||PIPE._source!=="api")return;   // hors-ligne : cache local uniquement
+  clearTimeout(saveTimer);saveTimer=setTimeout(()=>pushPipe({quiet:true}),1200);
+}
+async function pushPipe(opts){
+  opts=opts||{};
   if(!PIPE)return;
-  if(PIPE._source!=="api"){toast("Sauvegarde en ligne indisponible ici");return;}
-  const btn=document.getElementById("saveBtn");btn.classList.add("busy");const old=btn.textContent;btn.textContent="…";
+  if(PIPE._source!=="api"){if(!opts.quiet)toast("Sauvegarde en ligne indisponible ici");return;}
+  const btn=document.getElementById("saveBtn");let old;
+  if(btn&&!opts.quiet){btn.classList.add("busy");old=btn.textContent;btn.textContent="…";}
   try{
-    const payload={statuses:PIPE.statuses||[],episodes:PIPE.episodes||[],ideas:PIPE.ideas||[]};
+    const payload={statuses:PIPE.statuses||[],episodes:PIPE.episodes||[],ideas:PIPE.ideas||[],links:PIPE.links||{},progress:PIPE.progress||{}};
     const r=await fetch("/api/pipeline",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
     if(!r.ok)throw new Error(await r.text());
-    const j=await r.json();if(j.pipeline){j.pipeline._source="api";PIPE=j.pipeline;normalizePipe();}
-    pipeDirty=false;updateSaveBar();toast("Enregistré ✓ (GitHub)");
+    await r.json().catch(()=>{});   // on ignore l'écho pour ne pas écraser une édition en cours
+    pipeDirty=false;updateSaveBar();toast(opts.quiet?"Synchronisé ✓":"Enregistré ✓ (GitHub)");
   }catch(e){toast("Échec de la sauvegarde");}
-  finally{btn.classList.remove("busy");btn.textContent=old;}
+  finally{if(btn&&!opts.quiet){btn.classList.remove("busy");btn.textContent=old;}}
 }
+function savePipe(){return pushPipe({quiet:false});}
 function nextEpisodeDate(){
   const ds=(PIPE.episodes||[]).map(e=>e.date).filter(Boolean).sort();
   let base=ds.length?new Date(ds[ds.length-1]+"T00:00:00"):new Date();
@@ -1470,7 +1511,7 @@ function renderLiens(){
   const el=document.getElementById("view-liens");
   const groups=[["Plateformes payantes",["OnlyFans","MYM"]],["Direct",["Telegram","PayPal","Snapchat"]],
     ["Funnel direct",["X","Reddit"]],["Marque (réseaux)",["Instagram","YouTube","TikTok","Facebook","Threads"]],["Bio",["Bio"]]];
-  let h='<div class="info">Ton coffre à liens. Modifie une URL et elle est mémorisée sur ce téléphone. « Copier » pour la coller ailleurs.</div>';
+  let h='<div class="info">Ton coffre à liens. Modifie une URL : elle est enregistrée <b>partout</b> (synchro GitHub), visible depuis n\'importe quel téléphone. « Copier » pour la coller ailleurs.</div>';
   groups.forEach(([g,keys])=>{h+='<div class="sec-title">'+g+'</div>';keys.forEach(k=>{const v=DATA.links[k]||"";
     h+='<div class="link-row"><span class="lk">'+k+'</span><div class="lr"><input data-k="'+k+'" value="'+esc(v)+'" spellcheck="false"><button class="copybtn" data-c="'+encodeURIComponent(v)+'">Copier</button></div></div>';});});
   el.innerHTML=h;

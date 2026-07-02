@@ -29,5 +29,21 @@
     { "id": "id-attachement", "theme": "Couple", "title": "L'amour vs l'attachement – la différence", "format": "Long format", "hook": "Histoire perso + analyse psycho", "potentiel": "🔥🔥" },
     { "id": "id-ambitieuse", "theme": "Femme & Société", "title": "Être une femme ambitieuse – trop ambitieuse ?", "format": "Long format", "hook": "Double standard sociétal", "potentiel": "🔥🔥" },
     { "id": "id-of-couple", "theme": "MYM / OnlyFans", "title": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées", "format": "Long format", "hook": "Transparence + coulisses du couple", "potentiel": "🔥🔥" }
-  ]
+  ],
+  "links": {
+    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
+    "MYM": "https://mym.fans/A_COMPLETER",
+    "Telegram": "https://t.me/A_COMPLETER",
+    "PayPal": "https://paypal.me/A_COMPLETER",
+    "Instagram": "https://instagram.com/blondymandise",
+    "YouTube": "https://youtube.com/@blondymandise",
+    "TikTok": "https://tiktok.com/@A_COMPLETER",
+    "Facebook": "https://facebook.com/A_COMPLETER",
+    "Threads": "https://threads.net/@blondymandise",
+    "Reddit": "https://reddit.com/user/A_COMPLETER",
+    "Bio": "https://linktr.ee/A_COMPLETER",
+    "X": "https://x.com/A_COMPLETER",
+    "Snapchat": "https://snapchat.com/add/A_COMPLETER"
+  },
+  "progress": {}
 }

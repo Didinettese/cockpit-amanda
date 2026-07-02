@@ -36,9 +36,27 @@ async function getFile() {
   return { pipeline: JSON.parse(content), sha: j.sha };
 }
 
+function cleanLinks(obj) {
+  const out = {};
+  if (obj && typeof obj === "object") {
+    for (const k of Object.keys(obj)) out[String(k)] = String(obj[k] == null ? "" : obj[k]);
+  }
+  return out;
+}
+function cleanProgress(obj) {
+  const out = {};
+  if (obj && typeof obj === "object") {
+    for (const wk of Object.keys(obj)) {
+      const arr = obj[wk];
+      if (Array.isArray(arr)) out[String(wk)] = arr.map(String);
+    }
+  }
+  return out;
+}
+
 // Nettoie / valide la charge utile envoyée par le cockpit
 function sanitize(body) {
-  const out = { statuses: [], episodes: [], ideas: [] };
+  const out = { statuses: [], episodes: [], ideas: [], links: {}, progress: {} };
   out.statuses = Array.isArray(body.statuses) && body.statuses.length
     ? body.statuses
     : STATUS_KEYS.map(k => ({ key: k }));
@@ -59,6 +77,8 @@ function sanitize(body) {
     hook: String(it.hook || ""),
     potentiel: String(it.potentiel || "")
   }));
+  out.links = cleanLinks(body.links);
+  out.progress = cleanProgress(body.progress);
   // tri des épisodes par date croissante
   out.episodes.sort((a, b) => (a.date || "").localeCompare(b.date || ""));
   return out;
@@ -74,7 +94,7 @@ module.exports = async (req, res) => {
 
     if (req.method === "GET") {
       const { pipeline } = await getFile();
-      res.status(200).json(pipeline || { statuses: [], episodes: [], ideas: [] });
+      res.status(200).json(pipeline || { statuses: [], episodes: [], ideas: [], links: {}, progress: {} });
       return;
     }
 
@@ -84,20 +104,26 @@ module.exports = async (req, res) => {
       if (!body || typeof body !== "object") { res.status(400).json({ error: "Corps JSON invalide." }); return; }
 
       const clean = sanitize(body);
-      const { sha } = await getFile();
       const content = Buffer.from(JSON.stringify(clean, null, 2) + "\n", "utf8").toString("base64");
 
-      const put = await fetch(API, {
-        method: "PUT",
-        headers: { ...ghHeaders(), "Content-Type": "application/json" },
-        body: JSON.stringify({
-          message: `Cockpit — MAJ pipeline (${new Date().toISOString().slice(0, 10)})`,
-          content,
-          branch: BRANCH,
-          ...(sha ? { sha } : {})
-        })
-      });
-      if (!put.ok) throw new Error(`GitHub PUT ${put.status}: ${await put.text()}`);
+      // écrit avec 1 réessai si le sha a changé entre-temps (conflit multi-appareils)
+      let put, attempt = 0;
+      while (true) {
+        const { sha } = await getFile();
+        put = await fetch(API, {
+          method: "PUT",
+          headers: { ...ghHeaders(), "Content-Type": "application/json" },
+          body: JSON.stringify({
+            message: `Cockpit — MAJ pipeline (${new Date().toISOString().slice(0, 10)})`,
+            content,
+            branch: BRANCH,
+            ...(sha ? { sha } : {})
+          })
+        });
+        if (put.ok) break;
+        if (put.status === 409 && attempt < 2) { attempt++; continue; } // sha périmé → on relit et on réessaie
+        throw new Error(`GitHub PUT ${put.status}: ${await put.text()}`);
+      }
       const j = await put.json();
       res.status(200).json({ ok: true, commit: j.commit && j.commit.sha, pipeline: clean });
       return;
