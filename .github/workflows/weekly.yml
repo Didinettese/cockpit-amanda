@@ -1,0 +1,62 @@
+name: Build brief + cockpit & deploy
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - "data/brief-data.json"
+      - "templates/**"
+      - "scripts/**"
+      - ".github/workflows/weekly.yml"
+  schedule:
+    - cron: "10 6 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci || npm install
+
+      - name: Install LibreOffice (docx -> pdf)
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libreoffice-writer fonts-noto-color-emoji
+
+      - name: Build brief (docx)
+        run: node scripts/build_brief.js
+
+      - name: Convert brief to PDF
+        run: |
+          soffice --headless --convert-to pdf --outdir public public/*.docx
+          rm -f public/*.docx
+          ls -la public
+
+      - name: Build cockpit (index.html)
+        run: node scripts/build_cockpit.js
+
+      - name: Ensure Pages serves files as-is
+        run: touch public/.nojekyll
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
