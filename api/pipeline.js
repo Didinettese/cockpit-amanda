@@ -53,10 +53,21 @@ function cleanProgress(obj) {
   }
   return out;
 }
+// linkCats : { "<catégorie>": ["<clé de lien ajouté>", ...] } — classe les liens perso
+function cleanLinkCats(obj) {
+  const out = {};
+  if (obj && typeof obj === "object") {
+    for (const cat of Object.keys(obj)) {
+      const arr = obj[cat];
+      if (Array.isArray(arr)) out[String(cat)] = arr.map(String);
+    }
+  }
+  return out;
+}
 
 // Nettoie / valide la charge utile envoyée par le cockpit
 function sanitize(body) {
-  const out = { statuses: [], episodes: [], ideas: [], links: {}, progress: {} };
+  const out = { statuses: [], episodes: [], ideas: [], links: {}, progress: {}, linkCats: {} };
   out.statuses = Array.isArray(body.statuses) && body.statuses.length
     ? body.statuses
     : STATUS_KEYS.map(k => ({ key: k }));
@@ -79,6 +90,7 @@ function sanitize(body) {
   }));
   out.links = cleanLinks(body.links);
   out.progress = cleanProgress(body.progress);
+  out.linkCats = cleanLinkCats(body.linkCats);
   // tri des épisodes par date croissante
   out.episodes.sort((a, b) => (a.date || "").localeCompare(b.date || ""));
   return out;
@@ -94,7 +106,7 @@ module.exports = async (req, res) => {
 
     if (req.method === "GET") {
       const { pipeline } = await getFile();
-      res.status(200).json(pipeline || { statuses: [], episodes: [], ideas: [], links: {}, progress: {} });
+      res.status(200).json(pipeline || { statuses: [], episodes: [], ideas: [], links: {}, progress: {}, linkCats: {} });
       return;
     }
 
