@@ -142,6 +142,13 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .arch-item b{font-family:"Bricolage Grotesque";font-weight:800;font-size:14px;color:var(--ink);display:flex;align-items:center;gap:8px}
 .arch-item span{font-size:12px;color:var(--muted)}
 .arch-item:active{transform:scale(.99)}
+/* éditeur de script */
+.sc-del{background:none;border:1px solid var(--line);color:var(--muted);border-radius:9px;width:32px;height:32px;font-size:14px;cursor:pointer;flex:0 0 auto}
+.sc-del:active{color:var(--now)}
+.sc-linerow{display:flex;gap:8px;align-items:flex-start;margin-bottom:6px}
+.sc-line,.sc-note{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--ink);font-size:14px;line-height:1.45;padding:8px 10px;font-family:Inter;resize:vertical}
+.sc-note{color:var(--muted);font-style:italic}
+.sc-add{padding:8px;font-size:12px;margin-bottom:8px}
 .btn{width:100%;border:none;border-radius:11px;padding:11px;font-weight:700;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque"}
 .btn.primary{background:var(--now);color:#fff}
 .btn.ghost{background:none;border:1px solid var(--line);color:var(--muted)}
@@ -426,23 +433,65 @@ function renderReels(){
 }
 
 /* ============ SCRIPT ============ */
+let scriptEdit=false;   // onglet Script en mode édition ?
 function renderScript(){
   const el=document.getElementById("view-script");
+  const entry=curEntry();                       // semaine en cours dans l'archive (éditable)
+  const vd=DATA.meta.videoD||{};
   let h='<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
-    +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
-    +'Tournage : <b>mercredi 8 juillet</b> · Sortie prévue : <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b> · Durée cible 5-10 min.<br>'
-    +'Coche « validé » chaque section une fois tournée.</div>';
-  const total=DATA.script.length,nDone=DATA.script.filter((b,i)=>done.has("b:"+i)).length;
+    +(vd.title?'Thème : <b>'+esc(vd.title)+'</b>'+(vd.theme?' — '+esc(vd.theme):'')+'.<br>':'')
+    +(scriptEdit?'Mode édition : modifie le texte, ajoute/supprime des lignes, mets tes expériences. <b>Enregistré automatiquement.</b>'
+                :'Coche « validé » chaque section une fois tournée.')+'</div>';
+  if(entry)h+='<button class="btn ghost" id="scEditToggle" style="margin-bottom:12px">'+(scriptEdit?'✓ Terminer l\'édition':'✏️ Modifier le script')+'</button>';
+
+  if(scriptEdit&&entry){
+    if(!Array.isArray(entry.script))entry.script=JSON.parse(JSON.stringify(DATA.script||[]));
+    const SC=entry.script;
+    SC.forEach((b,bi)=>{
+      h+='<div class="beat" data-bi="'+bi+'"><div class="bh" style="gap:6px">'
+        +'<input class="fld" data-f="num" value="'+escAttr(b.num||"")+'" style="width:46px;margin-bottom:0">'
+        +'<input class="fld" data-f="title" value="'+escAttr(b.title||"")+'" placeholder="Titre de la section" style="margin-bottom:0">'
+        +'<button class="sc-del" data-delbeat="'+bi+'" aria-label="Supprimer la section">🗑</button></div>'
+        +'<input class="fld" data-f="timing" value="'+escAttr(b.timing||"")+'" placeholder="Timing (ex. 0-8 sec)" style="margin:7px 0 4px">';
+      (b.lines||[]).forEach((l,li)=>{h+='<div class="sc-linerow"><textarea class="sc-line" data-li="'+li+'" rows="2">'+esc(l.t||"")+'</textarea><button class="sc-del" data-delline="'+li+'" aria-label="Supprimer la ligne">✕</button></div>';});
+      h+='<button class="prog-add sc-add" data-addline="'+bi+'">＋ ligne</button>';
+      (b.notes||[]).forEach((n,ni)=>{h+='<div class="sc-linerow"><textarea class="sc-note" data-ni="'+ni+'" rows="2" placeholder="Note caméra">'+esc(n||"")+'</textarea><button class="sc-del" data-delnote="'+ni+'" aria-label="Supprimer la note">✕</button></div>';});
+      h+='<button class="prog-add sc-add" data-addnote="'+bi+'">＋ note caméra</button></div>';
+    });
+    h+='<button class="prog-add" id="scAddBeat">＋ Ajouter une section</button>';
+    h+='<button class="btn ghost" id="scReset">↩︎ Repartir du script généré</button>';
+    el.innerHTML=h;
+    el.querySelector("#scEditToggle").onclick=()=>{scriptEdit=false;renderScript();window.scrollTo({top:0,behavior:"smooth"});};
+    el.querySelectorAll(".beat").forEach(card=>{
+      const bi=+card.dataset.bi;
+      card.querySelectorAll("[data-f]").forEach(inp=>inp.onchange=e=>{SC[bi][e.target.dataset.f]=e.target.value;queueArchiveSave();});
+      card.querySelectorAll(".sc-line").forEach(t=>t.onchange=e=>{SC[bi].lines[+e.target.dataset.li].t=e.target.value;queueArchiveSave();});
+      card.querySelectorAll(".sc-note").forEach(t=>t.onchange=e=>{SC[bi].notes[+e.target.dataset.ni]=e.target.value;queueArchiveSave();});
+      card.querySelectorAll("[data-delline]").forEach(b=>b.onclick=e=>{SC[bi].lines.splice(+e.currentTarget.dataset.delline,1);queueArchiveSave();renderScript();});
+      card.querySelectorAll("[data-delnote]").forEach(b=>b.onclick=e=>{(SC[bi].notes=SC[bi].notes||[]).splice(+e.currentTarget.dataset.delnote,1);queueArchiveSave();renderScript();});
+      card.querySelector("[data-addline]").onclick=()=>{(SC[bi].lines=SC[bi].lines||[]).push({t:"",quote:false});queueArchiveSave();renderScript();};
+      card.querySelector("[data-addnote]").onclick=()=>{(SC[bi].notes=SC[bi].notes||[]).push("");queueArchiveSave();renderScript();};
+      card.querySelector("[data-delbeat]").onclick=()=>{if(confirm("Supprimer cette section ?")){SC.splice(bi,1);queueArchiveSave();renderScript();}};
+    });
+    el.querySelector("#scAddBeat").onclick=()=>{SC.push({num:"",title:"Nouvelle section",timing:"",lines:[{t:"",quote:false}],notes:[]});queueArchiveSave();renderScript();};
+    el.querySelector("#scReset").onclick=()=>{if(confirm("Remplacer par le script généré du lundi ? Tes modifications de cette semaine seront perdues.")){entry.script=JSON.parse(JSON.stringify(DATA.script||[]));queueArchiveSave();renderScript();}};
+    return;
+  }
+
+  // ----- mode lecture -----
+  const SC=(entry&&Array.isArray(entry.script))?entry.script:(DATA.script||[]);
+  const total=SC.length,nDone=SC.filter((b,i)=>done.has("b:"+i)).length;
   h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> sections validées</div>';
-  DATA.script.forEach((b,i)=>{
+  SC.forEach((b,i)=>{
     const on=done.has("b:"+i);
-    h+='<div class="beat'+(on?" done":"")+'" data-bid="b:'+i+'"><div class="bh"><span><span class="num">'+b.num+'</span> '+esc(b.title)+(b.timing?' <span class="tag">('+esc(b.timing)+')</span>':'')+'</span>'
+    h+='<div class="beat'+(on?" done":"")+'" data-bid="b:'+i+'"><div class="bh"><span><span class="num">'+esc(b.num||"")+'</span> '+esc(b.title||"")+(b.timing?' <span class="tag">('+esc(b.timing)+')</span>':'')+'</span>'
       +'<button class="chk'+(on?" on":"")+'" aria-label="Validé">✓</button></div>';
-    b.lines.forEach(l=>{h+='<div class="line'+(l.quote?' q':'')+'">'+esc(l.t)+'</div>';});
-    (b.notes||[]).forEach(n=>{h+='<div class="cam">'+esc(n)+'</div>';});
+    (b.lines||[]).forEach(l=>{h+='<div class="line'+(l.quote?' q':'')+'">'+esc(l.t||"")+'</div>';});
+    (b.notes||[]).forEach(n=>{h+='<div class="cam">'+esc(n||"")+'</div>';});
     h+='</div>';
   });
   el.innerHTML=h;
+  if(entry){const t=el.querySelector("#scEditToggle");if(t)t.onclick=()=>{scriptEdit=true;renderScript();window.scrollTo({top:0,behavior:"smooth"});};}
   el.querySelectorAll("[data-bid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-bid]").dataset.bid;setDone(id,!done.has(id));renderScript();});
 }
 
@@ -628,6 +677,9 @@ function delLink(name,cat){
 /* ============ ARCHIVES (semaines de tournage passées) ============ */
 let ARCHIVE=null;          // { weeks:[...] } chargé depuis /api/archive
 let archiveWeek=null;      // isoWeek de la semaine ouverte en détail
+// entrée d'archive de la semaine en cours = source du script éditable
+function curEntry(){return (ARCHIVE&&Array.isArray(ARCHIVE.weeks))?ARCHIVE.weeks.find(w=>w&&w.isoWeek===(DATA.meta&&DATA.meta.isoWeek)):null;}
+function afterArchiveReady(){if(curTab==="script")renderScript();if(curTab==="archives")renderArchives();}
 function loadArchive(){
   return fetch("/api/archive",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{
     ARCHIVE=(j&&Array.isArray(j.weeks))?j:{weeks:[]};
@@ -641,11 +693,20 @@ function snapshotWeek(){
 // archive la semaine en cours si elle n'y est pas encore (1 écriture git par semaine)
 function autoArchive(){
   loadArchive().then(()=>{
+    afterArchiveReady();
     const wk=DATA.meta&&DATA.meta.isoWeek;if(!wk)return;
     if((ARCHIVE.weeks||[]).some(w=>w.isoWeek===wk))return;
     fetch("/api/archive",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(snapshotWeek())})
-      .then(r=>r.ok?r.json():null).then(j=>{if(j&&j.archive)ARCHIVE=j.archive;if(curTab==="archives")renderArchives();}).catch(()=>{});
+      .then(r=>r.ok?r.json():null).then(j=>{if(j&&j.archive)ARCHIVE=j.archive;afterArchiveReady();}).catch(()=>{});
   });
+}
+// sauvegarde débouncée du script édité (dans l'archive de la semaine)
+let archTimer=null;
+function queueArchiveSave(){clearTimeout(archTimer);archTimer=setTimeout(pushArchive,1200);}
+function pushArchive(){
+  const entry=curEntry();if(!entry)return;
+  fetch("/api/archive",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(entry)})
+    .then(r=>{if(!r.ok)throw 0;return r.json();}).then(()=>toast("Script enregistré ✓")).catch(()=>toast("Échec de la sauvegarde"));
 }
 function renderArchives(){
   const el=document.getElementById("view-archives");

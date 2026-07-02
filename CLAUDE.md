@@ -23,8 +23,12 @@ sont committées via l'API, et la tâche automatique du lundi lit/écrit ces fic
   Statuts : `idee|script|tourne|monte|publie`.
 - `data/brief-data.json` — contenu du brief de la semaine (meta, links, schedule[7],
   reels[8], script[10], ideaProposals[3], sources).
-- `data/archive.json` — `weeks[]` : snapshots des semaines passées (isoWeek, weekLabel,
-  videoD, script, reels) pour relire une semaine dans l'onglet Archives.
+- `data/archive.json` — `weeks[]` : snapshots par semaine (isoWeek, weekLabel, videoD,
+  script, reels), consultables dans l'onglet Archives. L'entrée de la **semaine en cours**
+  sert aussi de **script éditable** : l'onglet Script lit/écrit `weeks[semaine].script`
+  (repli sur `brief-data.json` → `script` tant que la semaine n'est pas archivée). Pour
+  remplacer le script d'une semaine à la main, éditer cette entrée (et `brief-data.json`
+  pour le PDF).
 - `api/pipeline.js` — fonction Vercel (Node, sans dépendance) : `GET` lit et `POST`
   écrit `data/pipeline.json` via l'API GitHub Contents. Auth par env `GITHUB_TOKEN`.
   `sanitize()` conserve links/progress/linkCats (ne pas les retirer).
