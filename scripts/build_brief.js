@@ -25,7 +25,7 @@ const rule = (c = PURPLE) => new Paragraph({ border: { bottom: { style: BorderSt
 const pageBreak = () => new Paragraph({ children: [new PageBreak()] });
 
 // platform colors for the flat calendar
-const PCOL = { instagram: "E1477E", telegram: "37A7E0", youtube: "FF0000", extrait: "8E44AD", tiktok: "111111", facebook: "4C8DF6", reddit: "D93A00", x: "111111", snapchat: "B58900" };
+const PCOL = { telegram: "37A7E0", youtube: "FF0000", extrait: "8E44AD", tiktok: "111111", facebook: "4C8DF6", reddit: "D93A00", x: "111111", snapchat: "B58900", story: "F5A623" };
 
 function pipeRow(icon, label, title, extra, fill) {
   const border = { style: BorderStyle.SINGLE, size: 1, color: "CCCCCC" };
@@ -123,9 +123,9 @@ const children = [
   bullet("→ Comment je fais la paix entre mes 3 voix"),
   bullet("→ La question qui va vous faire réfléchir toute la semaine"),
   spacer(),
-  P([R("📲 Instagram @blondymandise · OnlyFans/MYM · Telegram → liens en bio", { bold: true })]),
+  P([R("📲 Facebook @blondymandise · OnlyFans/MYM · Telegram → liens en bio", { bold: true })]),
   P([R("#psychologie #connaissancedesoi #ça #surmoi #freud #développementpersonnel #lespenséesdamanda #blondymandise #introspection", { color: GREY })]),
-  h2("④ Caption Instagram (post de sortie)"),
+  h2("④ Caption Facebook (post de sortie)"),
   P([R("On a tous 3 personnes en nous… et la mienne préférée est celle que je cache le plus. 🎭", { bold: true })]),
   P("Nouvelle vidéo en ligne : le ça, le moi, le sur-moi — et mes 3 prénoms révélés. Lien en bio 🔗"),
   P([R("Laquelle de vos 3 voix parle le plus fort en ce moment ? 👇", { italics: true })]),
@@ -134,12 +134,12 @@ const children = [
 
   // PARTIE 3
   h1("PARTIE 3 — PLANNING STORIES DE LA SEMAINE (narratif)"),
-  P([R("Version narrative de la stratégie éditoriale Instagram + Telegram. Le détail plat et copiable est en Partie 6.", { italics: true, color: GREY })]),
+  P([R("Version narrative de la stratégie éditoriale Facebook + Telegram. Le détail plat et copiable est en Partie 6.", { italics: true, color: GREY })]),
   h2("Bloc 1 — Lundi → Jeudi matin : « " + M.previous.title + " »"),
-  P("Instagram (public, engagement ouvert) : relance commentaires (lun), sondage à-deux-ou-seul (mar), Q&A + coulisses tournage (mer), citation partageable (jeu matin). Varier les formats chaque jour."),
+  P("Facebook (public, engagement ouvert) : relance commentaires (lun), sondage à-deux-ou-seul (mar), Q&A + coulisses tournage (mer), citation partageable (jeu matin). Varier les formats chaque jour."),
   P("Telegram (abonnés exclusifs, ton intime) : confession + vocal exclusif (lun), question sur leur vécu de couple (mar), lecture exclusive des questions de tournage (mer), confession « la phrase non dite » (jeu matin)."),
   h2("Bloc 2 — Jeudi soir : teasing Vidéo A"),
-  P("Instagram : story teaser mystérieux (sans nommer le sujet) + sondage anticipation « assume / esquive ». Telegram : annonce d'un debrief exclusif post-vidéo pour vendredi soir → créer l'anticipation."),
+  P("Facebook : story teaser mystérieux (sans nommer le sujet) + sondage anticipation « assume / esquive ». Telegram : annonce d'un debrief exclusif post-vidéo pour vendredi soir → créer l'anticipation."),
   h2("Bloc 3 — Vendredi → Dimanche : « " + M.videoA.title + " »"),
   P("Vendredi : annonce sortie + CTA (IG) / invitation + promesse de debrief (TG matin), puis résultat sondage (IG soir) / DEBRIEF EXCLUSIF (TG soir). Samedi : exploitation commentaires + question ouverte (IG) / question plus intime, Amanda commence (TG). Dimanche : recap + amorce vendredi prochain (IG) / bilan intime + teasing exclusivité de la semaine suivante (TG)."),
   pageBreak(),
@@ -163,7 +163,7 @@ children.push(pageBreak());
 // PARTIE 6
 children.push(h1("PARTIE 6 — CALENDRIER DE DIFFUSION MULTI-PLATEFORME"));
 children.push(P([R("Liste plate et structurée de toutes les publications de la semaine, jour par jour, toutes plateformes. C'est ce que le cockpit lit (onglets Jour & Plateforme).", { italics: true, color: GREY })]));
-children.push(P([R("Roster de plateformes — Funnel marque (SFW) : ", { bold: true }), R("YouTube · Instagram · TikTok · Facebook. "), R("Funnel direct / monétisation : ", { bold: true }), R("X (teasers → OnlyFans) · Reddit (subs + flair) · Telegram (PPV) · Snapchat (manuel). Contenu 100% en français.")]));
+children.push(P([R("Roster de plateformes — Funnel marque (SFW) : ", { bold: true }), R("YouTube · TikTok · Facebook. "), R("Funnel direct / monétisation : ", { bold: true }), R("X (teasers → OnlyFans) · Reddit (subs + flair) · Telegram (PPV) · Snapchat (manuel). Contenu 100% en français.")]));
 DATA.schedule.forEach(d => {
   children.push(h2(d.day + " " + d.date));
   d.posts.forEach(p => { children.push(flatPost(p)); children.push(spacer()); });
@@ -177,7 +177,7 @@ const linkGroups = [
   ["Plateformes payantes", ["OnlyFans", "MYM"]],
   ["Direct", ["Telegram", "PayPal", "Snapchat"]],
   ["Funnel direct", ["X", "Reddit"]],
-  ["Marque (réseaux)", ["Instagram", "YouTube", "TikTok", "Facebook", "Threads"]],
+  ["Marque (réseaux)", ["YouTube", "TikTok", "Facebook", "Threads"]],
   ["Bio", ["Bio"]],
 ];
 linkGroups.forEach(([grp, keys]) => {
