@@ -151,6 +151,35 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 .foot{text-align:center;color:var(--muted);font-size:11.5px;margin-top:24px;line-height:1.6}
 .reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:8px 16px;font-size:12px;cursor:pointer;margin-top:14px;font-family:Inter}
+
+/* ===== Programmation (pipeline éditable) ===== */
+.prog-ep{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:13px;margin-bottom:10px;border-left:4px solid var(--line)}
+.prog-ep.upcoming{border-left-color:var(--now)}
+.prog-ep .row1{display:flex;align-items:center;gap:8px;margin-bottom:9px}
+.prog-ep input[type=date]{background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--ink);font-family:ui-monospace,Menlo,monospace;font-size:12.5px;padding:8px 9px}
+.prog-ep .del{margin-left:auto;background:none;border:1px solid var(--line);color:var(--muted);border-radius:9px;width:32px;height:32px;font-size:15px;cursor:pointer;flex:0 0 auto}
+.prog-ep .fld{background:var(--bg);border:1px solid var(--line);border-radius:9px;color:var(--ink);font-size:13.5px;padding:9px 10px;width:100%;margin-bottom:7px;font-family:Inter}
+.prog-ep .fld.theme{color:var(--muted);font-size:12px}
+.stsel{appearance:none;border:none;border-radius:8px;color:#160E1B;font-weight:700;font-size:12px;padding:7px 26px 7px 11px;cursor:pointer;font-family:Inter;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6'><path d='M0 0l5 6 5-6z' fill='%23160E1B'/></svg>");background-repeat:no-repeat;background-position:right 9px center}
+.prog-add{width:100%;border:1px dashed var(--line);background:none;color:var(--muted);border-radius:12px;padding:13px;font-weight:700;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque";margin-bottom:10px}
+.prog-add:active{transform:scale(.99)}
+.prog-h{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin:16px 2px 10px}
+.prog-h .t{font-family:"Bricolage Grotesque";font-size:15px;font-weight:800}
+.prog-h .c{font-size:12px;color:var(--muted)}
+.src-tag{font-size:10.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:99px;border:1px solid var(--line);color:var(--muted)}
+.src-tag.live{color:var(--done);border-color:var(--done)}
+
+/* ===== barre de sauvegarde ===== */
+#savebar{position:fixed;left:0;right:0;bottom:calc(env(safe-area-inset-bottom) + 66px);max-width:520px;margin:0 auto;padding:0 14px;z-index:45;
+  transform:translateY(140%);transition:.28s;pointer-events:none}
+#savebar.show{transform:translateY(0);pointer-events:auto}
+#savebar .inner{display:flex;align-items:center;gap:10px;background:linear-gradient(160deg,var(--panel-2),var(--panel));
+  border:1px solid var(--now);border-radius:14px;padding:10px 12px;box-shadow:0 0 0 4px var(--now-soft),0 16px 34px -16px #000}
+#savebar .msg{flex:1;font-size:12.5px;color:var(--ink);font-weight:600}
+#savebar .msg small{display:block;color:var(--muted);font-weight:500;font-size:11px}
+#savebar button{border:none;border-radius:10px;padding:11px 16px;font-weight:800;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque";background:var(--now);color:#fff}
+#savebar button.busy{opacity:.6}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
 </head>
@@ -175,6 +204,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 <div id="view-jour"></div>
 <div id="view-reels" style="display:none"></div>
 <div id="view-script" style="display:none"></div>
+<div id="view-prog" style="display:none"></div>
 <div id="view-idees" style="display:none"></div>
 <div id="view-liens" style="display:none"></div>
 
@@ -182,14 +212,27 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
   <button class="tab active" data-v="jour"><span class="ic">📅</span>Jour</button>
   <button class="tab" data-v="reels"><span class="ic">🎬</span>Réels</button>
   <button class="tab" data-v="script"><span class="ic">📜</span>Script</button>
+  <button class="tab" data-v="prog"><span class="ic">🗂️</span>Prog</button>
   <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
   <button class="tab" data-v="liens"><span class="ic">🔗</span>Liens</button>
 </div>
+
+<div id="savebar"><div class="inner"><div class="msg" id="saveMsg">Modifications non enregistrées<small>Elles seront committées dans GitHub.</small></div><button id="saveBtn">Enregistrer</button></div></div>
 
 <div id="toast"></div>
 
 <script>
 const DATA = /*__BRIEF_DATA__*/ {};
+const PIPE_EMBED = /*__PIPELINE_DATA__*/ {};
+
+const STATUS = {
+  idee:{label:"💡 Idée",c:"#6c757d"},
+  script:{label:"✍️ Scripté",c:"#fd7e14"},
+  tourne:{label:"🎥 Tourné",c:"#0d6efd"},
+  monte:{label:"🎞️ Monté",c:"#6f42c1"},
+  publie:{label:"✅ Publié",c:"#198754"}
+};
+const STATUS_ORDER=["idee","script","tourne","monte","publie"];
 
 const PLAT = {
   instagram:{n:"Instagram",em:"📸",c:"var(--instagram)"},
@@ -212,6 +255,12 @@ let calMode="day";               // "day" | "plat"
 let platFilter=null;             // platKey when in plat mode
 let curTab="jour";
 let done=new Set();
+
+/* ---- pipeline (Programmation + Idées) ---- */
+let PIPE=null;              // pipeline courant (episodes + ideas)
+let pipeLoading=null;       // promesse de chargement
+let pipeDirty=false;        // modifications non enregistrées ?
+function escAttr(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/"/g,"&quot;").replace(/</g,"&lt;");}
 
 /* ---- persistence ---- */
 function loadDone(){try{done=new Set(JSON.parse(localStorage.getItem("done:"+WEEK)||"[]"));}catch(e){done=new Set();}}
@@ -237,11 +286,12 @@ function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");curTab=b.dataset.v;
-  ["jour","reels","script","idees","liens"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  ["jour","reels","script","prog","idees","liens"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
   document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
   if(curTab==="jour")renderJour();
   if(curTab==="reels")renderReels();
   if(curTab==="script")renderScript();
+  if(curTab==="prog")renderProg();
   if(curTab==="idees")renderIdees();
   if(curTab==="liens")renderLiens();
   window.scrollTo({top:0,behavior:"smooth"});
@@ -396,65 +446,124 @@ function renderScript(){
   el.querySelectorAll("[data-bid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-bid]").dataset.bid;setDone(id,!done.has(id));renderScript();});
 }
 
-/* ============ IDÉES ============ */
-function renderIdees(){
-  const el=document.getElementById("view-idees");
-  idea=loadIdea();
-  let h="";
-  const pending=idea&&!idea.validated;
-  if(pending&&(todayIdx>=6)){ // dimanche ou après
-    h+='<div class="banner"><span>⏰</span><div><b>Rappel :</b> tu as choisi une idée mais tu ne l\'as pas encore saisie dans le calendrier. Fais-le <b>avant lundi</b> — une nouvelle idée sera proposée lundi.</div></div>';
-  }
-  if(idea){
-    h+='<div class="chosen"><span class="lab">Idée choisie pour les prochaines semaines</span>'
-      +'<div class="tt">'+esc(idea.title)+'</div>'
-      +'<div class="tag">'+esc(idea.theme)+' · '+esc(idea.format||"Long format")+' · '+esc(idea.potentiel||"")+'</div>'
-      +'<div class="kv" style="margin-top:8px">'+esc(idea.hook||"")+'</div>'
-      +'<div class="validrow"><button class="chk'+(idea.validated?" on":"")+'" id="ideaChk" aria-label="Saisie faite">✓</button>'
-      +'<div class="txt">'+(idea.validated?'<b>Saisie dans le calendrier faite ✓</b>':'Coche quand tu as <b>saisi cette idée dans le calendrier</b> (à faire manuellement).')+'</div></div>'
-      +'<button class="btn ghost" id="changeIdea" style="margin-top:12px">Changer d\'idée</button></div>';
-    el.innerHTML=h;
-    document.getElementById("ideaChk").onclick=()=>{idea.validated=!idea.validated;saveIdea(idea);renderIdees();refreshAlerts();toast(idea.validated?"Saisie validée ✓":"Décoché");};
-    document.getElementById("changeIdea").onclick=()=>{if(confirm("Changer d'idée ? Le choix actuel sera remplacé."))  {localStorage.removeItem("idea:"+WEEK);idea=null;renderIdees();refreshAlerts();}};
-    return;
-  }
-  h+='<div class="info"><span class="tt">💡 Propositions de nouvelles idées</span>'
-    +'Pour les <b>prochaines semaines</b>. Choisis-en une : elle s\'affichera avec une case à cocher. '
-    +'C\'est à toi de <b>saisir l\'idée dans le calendrier</b> (Google Sheets), puis de cocher « saisie faite ».</div>';
-  (DATA.ideaProposals||[]).forEach((p,i)=>{
-    h+='<div class="idea-card"><div class="ih">'+esc(p.title)+'</div>'
-      +'<div class="im">'+esc(p.theme)+' · '+esc(p.format||"Long format")+' · '+esc(p.potentiel||"")+'</div>'
-      +'<div class="kv" style="margin-bottom:10px">'+esc(p.hook||"")+'</div>'
-      +'<button class="btn primary" data-i="'+i+'">Choisir cette idée</button></div>';
-  });
-  el.innerHTML=h;
-  el.querySelectorAll(".btn.primary").forEach(b=>b.onclick=e=>{
-    const p=DATA.ideaProposals[+e.currentTarget.dataset.i];
-    if(confirm('Choisir « '+p.title+' » ?\n\nTu devras la saisir manuellement dans le calendrier.')){
-      idea={...p,validated:false,ts:Date.now()};saveIdea(idea);renderIdees();refreshAlerts();toast("Idée choisie ✓");
-      maybeNotify();
-    }
-  });
+/* ============ PIPELINE : chargement / sauvegarde (GitHub via Vercel) ============ */
+async function loadPipe(){
+  try{
+    const r=await fetch("/api/pipeline",{cache:"no-store"});
+    if(r.ok){const j=await r.json();if(j&&(j.episodes||j.ideas)){PIPE=j;PIPE._source="api";normalizePipe();return;}}
+  }catch(e){}
+  PIPE=JSON.parse(JSON.stringify(PIPE_EMBED||{}));PIPE._source="embed";normalizePipe();
+}
+function normalizePipe(){if(!PIPE.episodes)PIPE.episodes=[];if(!PIPE.ideas)PIPE.ideas=[];}
+function ensurePipe(cb){
+  if(PIPE){cb();return;}
+  const el=document.getElementById("view-"+curTab);if(el)el.innerHTML='<div class="info">Chargement du pipeline…</div>';
+  if(!pipeLoading)pipeLoading=loadPipe();
+  pipeLoading.then(cb);
+}
+function markDirty(){pipeDirty=true;updateSaveBar();}
+function updateSaveBar(){const b=document.getElementById("savebar");if(b)b.classList.toggle("show",pipeDirty);}
+async function savePipe(){
+  if(!PIPE)return;
+  if(PIPE._source!=="api"){toast("Sauvegarde en ligne indisponible ici");return;}
+  const btn=document.getElementById("saveBtn");btn.classList.add("busy");const old=btn.textContent;btn.textContent="…";
+  try{
+    const payload={statuses:PIPE.statuses||[],episodes:PIPE.episodes||[],ideas:PIPE.ideas||[]};
+    const r=await fetch("/api/pipeline",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)});
+    if(!r.ok)throw new Error(await r.text());
+    const j=await r.json();if(j.pipeline){j.pipeline._source="api";PIPE=j.pipeline;normalizePipe();}
+    pipeDirty=false;updateSaveBar();toast("Enregistré ✓ (GitHub)");
+  }catch(e){toast("Échec de la sauvegarde");}
+  finally{btn.classList.remove("busy");btn.textContent=old;}
+}
+function nextEpisodeDate(){
+  const ds=(PIPE.episodes||[]).map(e=>e.date).filter(Boolean).sort();
+  let base=ds.length?new Date(ds[ds.length-1]+"T00:00:00"):new Date();
+  base.setDate(base.getDate()+7);
+  while(base.getDay()!==5)base.setDate(base.getDate()+1); // caler sur un vendredi
+  return base.toISOString().slice(0,10);
+}
+function programIdea(i){
+  const it=PIPE.ideas[i];if(!it)return;
+  PIPE.episodes.push({id:"ep-"+Date.now(),date:nextEpisodeDate(),theme:it.theme||"",title:it.title||"",status:"idee",lieu:"",notes:it.hook||""});
+  PIPE.ideas.splice(i,1);markDirty();
+  toast("Programmée ✓ — onglet Prog");
+  _renderIdees();
 }
 
-/* ---- alerts / notifications ---- */
-function refreshAlerts(){
-  const i=loadIdea();const pending=i&&!i.validated;
-  document.querySelector('.tab[data-v="idees"]').classList.toggle("has-alert",!!pending);
+/* ============ PROGRAMMATION (pipeline éditable) ============ */
+function renderProg(){ensurePipe(_renderProg);}
+function _renderProg(){
+  const el=document.getElementById("view-prog");
+  PIPE.episodes.sort((a,b)=>(a.date||"").localeCompare(b.date||""));
+  const todayISO=new Date().toISOString().slice(0,10);
+  const src=PIPE._source==="api"?'<span class="src-tag live">● en direct</span>':'<span class="src-tag">hors-ligne</span>';
+  let h='<div class="info"><span class="tt">🗂️ Programmation des vidéos</span>'
+    +'Toutes les vidéos, triées par date. Change le <b>statut</b>, modifie une ligne, ou ajoute une vidéo. '
+    +'Chaque <b>Enregistrer</b> écrit dans GitHub — le brief du lundi lit ces données.</div>';
+  h+='<div class="prog-h"><span class="t">📺 Épisodes</span>'+src+'</div>';
+  PIPE.episodes.forEach((e,i)=>{
+    const up=(e.date||"")>=todayISO;const st=STATUS[e.status]||STATUS.idee;
+    h+='<div class="prog-ep'+(up?" upcoming":"")+'" data-ep="'+i+'">'
+      +'<div class="row1"><input type="date" data-f="date" value="'+escAttr(e.date)+'">'
+      +'<select class="stsel" data-f="status" style="background-color:'+st.c+'">'
+      +STATUS_ORDER.map(k=>'<option value="'+k+'"'+(k===e.status?" selected":"")+'>'+STATUS[k].label+'</option>').join("")
+      +'</select><button class="del" data-delep="'+i+'" aria-label="Supprimer">🗑</button></div>'
+      +'<input class="fld" data-f="title" value="'+escAttr(e.title)+'" placeholder="Titre de la vidéo">'
+      +'<input class="fld theme" data-f="theme" value="'+escAttr(e.theme)+'" placeholder="Thème / rubrique"></div>';
+  });
+  h+='<button class="prog-add" id="addEp">＋ Ajouter une vidéo</button>';
+  el.innerHTML=h;
+  el.querySelectorAll(".prog-ep").forEach(card=>{
+    const i=+card.dataset.ep;
+    card.querySelectorAll("[data-f]").forEach(inp=>inp.onchange=e=>{
+      const f=e.target.dataset.f;PIPE.episodes[i][f]=e.target.value;
+      if(f==="status"){e.target.style.backgroundColor=(STATUS[e.target.value]||STATUS.idee).c;}
+      if(f==="date"){markDirty();_renderProg();return;}
+      markDirty();
+    });
+    card.querySelector("[data-delep]").onclick=()=>{if(confirm("Supprimer « "+(PIPE.episodes[i].title||"cette vidéo")+" » ?")){PIPE.episodes.splice(i,1);markDirty();_renderProg();}};
+  });
+  document.getElementById("addEp").onclick=()=>{PIPE.episodes.push({id:"ep-"+Date.now(),date:nextEpisodeDate(),theme:"",title:"Nouvelle vidéo",status:"idee",lieu:"",notes:""});markDirty();_renderProg();};
 }
-function maybeNotify(){
-  try{
-    if(!("Notification" in window))return;
-    if(Notification.permission==="default"){Notification.requestPermission();}
-  }catch(e){}
-}
-function sundayNudge(){
-  try{
-    const i=loadIdea();
-    if(i&&!i.validated&&todayIdx>=6&&"Notification"in window&&Notification.permission==="granted"){
-      new Notification("Cockpit — idée à saisir",{body:"Saisis l'idée choisie dans le calendrier avant lundi."});
-    }
-  }catch(e){}
+
+/* ============ IDÉES (banque + propositions) ============ */
+function renderIdees(){ensurePipe(_renderIdees);}
+function _renderIdees(){
+  const el=document.getElementById("view-idees");
+  let h='<div class="info"><span class="tt">💡 Idées & banque de sujets</span>'
+    +'Les <b>propositions de la semaine</b> (générées lundi) et ta <b>banque d\'idées</b>. '
+    +'« Programmer » ajoute l\'idée à la suite des épisodes (onglet <b>Prog</b>). Pense à <b>Enregistrer</b>.</div>';
+  const props=DATA.ideaProposals||[];
+  if(props.length){
+    h+='<div class="prog-h"><span class="t">✨ Propositions de la semaine</span></div>';
+    props.forEach((p,i)=>{
+      h+='<div class="idea-card"><div class="ih">'+esc(p.title)+'</div>'
+        +'<div class="im">'+esc(p.theme)+' · '+esc(p.format||"Long format")+' · '+esc(p.potentiel||"")+'</div>'
+        +'<div class="kv" style="margin-bottom:10px">'+esc(p.hook||"")+'</div>'
+        +'<button class="btn ghost" data-prop="'+i+'">＋ Ajouter à la banque</button></div>';
+    });
+  }
+  const ideas=PIPE.ideas||[];
+  h+='<div class="prog-h"><span class="t">📚 Banque d\'idées</span><span class="c">'+ideas.length+'</span></div>';
+  if(!ideas.length){h+='<div class="info">Banque vide pour l\'instant.</div>';}
+  ideas.forEach((it,i)=>{
+    h+='<div class="idea-card"><div class="ih">'+esc(it.title)+'</div>'
+      +'<div class="im">'+esc(it.theme)+' · '+esc(it.format||"Long format")+' · '+esc(it.potentiel||"")+'</div>'
+      +'<div class="kv" style="margin-bottom:10px">'+esc(it.hook||"")+'</div>'
+      +'<div style="display:flex;gap:8px"><button class="btn primary" data-prog="'+i+'" style="flex:2">🗂️ Programmer</button>'
+      +'<button class="btn ghost" data-delidea="'+i+'" style="flex:1">Supprimer</button></div></div>';
+  });
+  h+='<button class="prog-add" id="addIdea">＋ Ajouter une idée</button>';
+  el.innerHTML=h;
+  el.querySelectorAll("[data-prop]").forEach(b=>b.onclick=e=>{
+    const p=DATA.ideaProposals[+e.currentTarget.dataset.prop];
+    PIPE.ideas.push({id:"id-"+Date.now(),theme:p.theme||"",title:p.title||"",format:p.format||"Long format",hook:p.hook||"",potentiel:p.potentiel||""});
+    markDirty();_renderIdees();toast("Ajoutée à la banque ✓");
+  });
+  el.querySelectorAll("[data-prog]").forEach(b=>b.onclick=e=>programIdea(+e.currentTarget.dataset.prog));
+  el.querySelectorAll("[data-delidea]").forEach(b=>b.onclick=e=>{const i=+e.currentTarget.dataset.delidea;if(confirm("Supprimer « "+(PIPE.ideas[i].title||"cette idée")+" » ?")){PIPE.ideas.splice(i,1);markDirty();_renderIdees();}});
+  document.getElementById("addIdea").onclick=()=>{PIPE.ideas.push({id:"id-"+Date.now(),theme:"",title:"Nouvelle idée",format:"Long format",hook:"",potentiel:"🔥"});markDirty();_renderIdees();};
 }
 
 /* ============ LIENS ============ */
@@ -471,8 +580,11 @@ function renderLiens(){
 }
 
 /* ---- boot ---- */
-loadDone();loadLinks();idea=loadIdea();
-renderDays();renderJour();refreshAlerts();sundayNudge();
+loadDone();loadLinks();
+document.getElementById("saveBtn").onclick=savePipe;
+pipeLoading=loadPipe();
+pipeLoading.then(()=>{if(curTab==="prog")_renderProg();if(curTab==="idees")_renderIdees();});
+renderDays();renderJour();
 </script>
 </body>
 </html>
