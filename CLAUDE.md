@@ -15,13 +15,21 @@ sont committées via l'API, et la tâche automatique du lundi lit/écrit ces fic
 
 ## Architecture (fichiers clés)
 - `templates/cockpit.template.html` — TOUTE l'app en un seul fichier (HTML+CSS+JS
-  vanilla, sans framework). Onglets : Jour, Réels, Script, **Prog**, Idées, Liens.
-- `data/pipeline.json` — pipeline éditorial : `episodes[]` (date, theme, title,
-  status, lieu, notes) et `ideas[]`. Statuts : `idee|script|tourne|monte|publie`.
+  vanilla, sans framework). Onglets : Jour, Réels, Script, **Prog**, Idées, Liens,
+  Archives. Tout s'enregistre automatiquement (auto-save débouncé), sans bouton.
+- `data/pipeline.json` — pipeline éditorial + état perso synchronisé : `episodes[]`
+  (date, theme, title, status, lieu, notes), `ideas[]`, `links` (URLs modifiées),
+  `progress` (coches par semaine ISO) et `linkCats` (liens perso classés par catégorie).
+  Statuts : `idee|script|tourne|monte|publie`.
 - `data/brief-data.json` — contenu du brief de la semaine (meta, links, schedule[7],
   reels[8], script[10], ideaProposals[3], sources).
+- `data/archive.json` — `weeks[]` : snapshots des semaines passées (isoWeek, weekLabel,
+  videoD, script, reels) pour relire une semaine dans l'onglet Archives.
 - `api/pipeline.js` — fonction Vercel (Node, sans dépendance) : `GET` lit et `POST`
   écrit `data/pipeline.json` via l'API GitHub Contents. Auth par env `GITHUB_TOKEN`.
+  `sanitize()` conserve links/progress/linkCats (ne pas les retirer).
+- `api/archive.js` — même mécanisme pour `data/archive.json` : `POST` = 1 semaine,
+  upsert par isoWeek. Le cockpit archive la semaine en cours à l'ouverture (autoArchive).
 - `scripts/build_cockpit.js` — injecte `brief-data.json` + `pipeline.json` dans le
   template → `public/index.html`. C'est le **build command** de Vercel.
 - `scripts/build_brief.js` — génère le `.docx` du brief (converti en PDF par CI).

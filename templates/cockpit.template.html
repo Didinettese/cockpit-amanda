@@ -138,6 +138,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .idea-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
 .idea-card .ih{font-weight:700;font-size:15px;margin-bottom:4px}
 .idea-card .im{font-size:12px;color:var(--muted);margin-bottom:8px}
+.arch-item{display:flex;flex-direction:column;gap:4px;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:13px 14px;margin-bottom:9px;cursor:pointer;font-family:Inter}
+.arch-item b{font-family:"Bricolage Grotesque";font-weight:800;font-size:14px;color:var(--ink);display:flex;align-items:center;gap:8px}
+.arch-item span{font-size:12px;color:var(--muted)}
+.arch-item:active{transform:scale(.99)}
 .btn{width:100%;border:none;border-radius:11px;padding:11px;font-weight:700;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque"}
 .btn.primary{background:var(--now);color:#fff}
 .btn.ghost{background:none;border:1px solid var(--line);color:var(--muted)}
@@ -199,6 +203,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 <div id="view-prog" style="display:none"></div>
 <div id="view-idees" style="display:none"></div>
 <div id="view-liens" style="display:none"></div>
+<div id="view-archives" style="display:none"></div>
 
 <div class="tabs" id="tabs">
   <button class="tab active" data-v="jour"><span class="ic">📅</span>Jour</button>
@@ -207,6 +212,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
   <button class="tab" data-v="prog"><span class="ic">🗂️</span>Prog</button>
   <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
   <button class="tab" data-v="liens"><span class="ic">🔗</span>Liens</button>
+  <button class="tab" data-v="archives"><span class="ic">📚</span>Archives</button>
 </div>
 
 
@@ -279,7 +285,7 @@ function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");curTab=b.dataset.v;
-  ["jour","reels","script","prog","idees","liens"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  ["jour","reels","script","prog","idees","liens","archives"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
   document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
   if(curTab==="jour")renderJour();
   if(curTab==="reels")renderReels();
@@ -287,6 +293,7 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   if(curTab==="prog")renderProg();
   if(curTab==="idees")renderIdees();
   if(curTab==="liens")renderLiens();
+  if(curTab==="archives")renderArchives();
   window.scrollTo({top:0,behavior:"smooth"});
 });
 function goto(tab){document.querySelector('.tab[data-v="'+tab+'"]').click();}
@@ -618,11 +625,80 @@ function delLink(name,cat){
   markDirty();renderLiens();toast("Lien supprimé");
 }
 
+/* ============ ARCHIVES (semaines de tournage passées) ============ */
+let ARCHIVE=null;          // { weeks:[...] } chargé depuis /api/archive
+let archiveWeek=null;      // isoWeek de la semaine ouverte en détail
+function loadArchive(){
+  return fetch("/api/archive",{cache:"no-store"}).then(r=>r.ok?r.json():null).then(j=>{
+    ARCHIVE=(j&&Array.isArray(j.weeks))?j:{weeks:[]};
+  }).catch(()=>{ARCHIVE={weeks:[]};});
+}
+function snapshotWeek(){
+  const m=DATA.meta||{};
+  return {isoWeek:m.isoWeek||"",weekLabel:m.weekLabel||"",briefDate:m.briefDate||"",
+    videoD:m.videoD||null,script:DATA.script||[],reels:DATA.reels||[]};
+}
+// archive la semaine en cours si elle n'y est pas encore (1 écriture git par semaine)
+function autoArchive(){
+  loadArchive().then(()=>{
+    const wk=DATA.meta&&DATA.meta.isoWeek;if(!wk)return;
+    if((ARCHIVE.weeks||[]).some(w=>w.isoWeek===wk))return;
+    fetch("/api/archive",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(snapshotWeek())})
+      .then(r=>r.ok?r.json():null).then(j=>{if(j&&j.archive)ARCHIVE=j.archive;if(curTab==="archives")renderArchives();}).catch(()=>{});
+  });
+}
+function renderArchives(){
+  const el=document.getElementById("view-archives");
+  if(!ARCHIVE){el.innerHTML='<div class="info">Chargement des archives…</div>';loadArchive().then(()=>{if(curTab==="archives")renderArchives();});return;}
+  const weeks=(ARCHIVE.weeks||[]).slice().sort((a,b)=>(b.isoWeek||"").localeCompare(a.isoWeek||""));
+  if(archiveWeek){
+    const w=weeks.find(x=>x.isoWeek===archiveWeek);
+    if(w){el.innerHTML=archiveDetailHTML(w);el.querySelector("[data-back]").onclick=()=>{archiveWeek=null;renderArchives();window.scrollTo({top:0,behavior:"smooth"});};bindCopies(el);return;}
+    archiveWeek=null;
+  }
+  let h='<div class="info"><span class="tt">📚 Semaines de tournage archivées</span>'
+    +'Relis le <b>script</b> et les <b>réels</b> d\'une semaine passée. Chaque semaine s\'archive automatiquement à l\'ouverture du cockpit.</div>';
+  if(!weeks.length){h+='<div class="info">Aucune semaine archivée pour l\'instant — l\'historique démarre maintenant.</div>';}
+  weeks.forEach(w=>{const vd=w.videoD||{};const cur=(DATA.meta&&w.isoWeek===DATA.meta.isoWeek);
+    h+='<button class="arch-item" data-week="'+escAttr(w.isoWeek)+'">'
+      +'<b>'+esc(w.weekLabel||w.isoWeek)+(cur?' <span class="src-tag live">● en cours</span>':'')+'</b>'
+      +'<span>'+esc(vd.title||"")+' · '+((w.script||[]).length)+' sections · '+((w.reels||[]).length)+' réels</span></button>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll("[data-week]").forEach(b=>b.onclick=e=>{archiveWeek=e.currentTarget.dataset.week;renderArchives();window.scrollTo({top:0,behavior:"smooth"});});
+}
+function archiveDetailHTML(w){
+  const vd=w.videoD||{};
+  let h='<button class="btn ghost" data-back style="margin-bottom:12px">← Toutes les semaines</button>';
+  h+='<div class="info"><span class="tt">'+esc(w.weekLabel||w.isoWeek)+'</span>'
+    +(vd.title?'Vidéo : <b>'+esc(vd.title)+'</b>'+(vd.theme?' — '+esc(vd.theme):''):'')+'</div>';
+  h+='<div class="sec-title">📜 Script long format</div>';
+  if(!(w.script||[]).length)h+='<div class="info">Pas de script archivé.</div>';
+  (w.script||[]).forEach(b=>{
+    h+='<div class="beat"><div class="bh"><span><span class="num">'+esc(b.num||"")+'</span> '+esc(b.title||"")+(b.timing?' <span class="tag">('+esc(b.timing)+')</span>':'')+'</span></div>';
+    (b.lines||[]).forEach(l=>{h+='<div class="line'+(l.quote?' q':'')+'">'+esc(l.t||"")+'</div>';});
+    (b.notes||[]).forEach(n=>{h+='<div class="cam">'+esc(n)+'</div>';});
+    h+='</div>';
+  });
+  h+='<div class="sec-title">🎬 Réels</div>';
+  if(!(w.reels||[]).length)h+='<div class="info">Pas de réels archivés.</div>';
+  (w.reels||[]).forEach(r=>{
+    h+='<div class="card"><div class="reel-h"><div class="l"><span class="n">'+esc(String(r.n||""))+'</span><span class="t">'+esc(r.title||"")+'</span></div></div>'
+      +'<div class="tag">'+esc(r.angle||"")+' · '+esc(r.dur||"")+' · '+esc(r.cam||"")+'</div>'
+      +'<div class="kv"><b>Plateformes :</b> '+esc(r.plats||"")+'</div>'
+      +'<div class="field"><div class="k">🎣 Hook</div><div class="copyrow"><div class="copytxt">'+esc(r.hook||"")+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.hook||"")+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">💬 Corps</div><div class="copyrow"><div class="copytxt">'+esc(r.corps||"")+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.corps||"")+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">📣 CTA</div><div class="copyrow"><div class="copytxt">'+esc(r.cta||"")+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.cta||"")+'">Copier</button></div></div></div>';
+  });
+  return h;
+}
+
 /* ---- boot ---- */
 loadDone();loadLinks();
 pipeLoading=loadPipe();
 pipeLoading.then(()=>{if(curTab==="prog")_renderProg();if(curTab==="idees")_renderIdees();});
 renderDays();renderJour();
+autoArchive();   // archive la semaine en cours (script + réels) pour consultation future
 </script>
 </body>
 </html>

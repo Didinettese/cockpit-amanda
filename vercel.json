@@ -3,6 +3,7 @@
   "buildCommand": "node scripts/build_cockpit.js",
   "outputDirectory": "public",
   "functions": {
-    "api/pipeline.js": { "maxDuration": 10 }
+    "api/pipeline.js": { "maxDuration": 10 },
+    "api/archive.js": { "maxDuration": 10 }
   }
 }
