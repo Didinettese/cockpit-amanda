@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cockpit — Les Pensées d'Amanda</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#160E1B">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cockpit">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#160E1B; --panel:#211527; --panel-2:#2B1A33; --line:#3A2743;
+  --ink:#F6EEF2; --muted:#A991B0; --now:#FF6E8A; --now-soft:#ff6e8a22;
+  --done:#E7B860; --done-soft:#e7b8601f;
+  --instagram:#E1477E; --telegram:#37A7E0; --youtube:#FF3B5C; --extrait:#B57BE0;
+  --tiktok:#25E7DE; --facebook:#4C8DF6; --reddit:#FF5722; --x:#E8E3EA; --snapchat:#FFFC00;
+  --radius:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+body{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 92px)}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.02em}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.top .date{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.top h1{font-size:23px;font-weight:800;line-height:1;margin-top:4px}
+.top .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.ring{position:relative;width:52px;height:52px;flex:0 0 auto}
+.ring svg{transform:rotate(-90deg)}
+.ring .val{position:absolute;inset:0;display:grid;place-items:center;font-size:12px;font-weight:700;font-family:"Bricolage Grotesque"}
+
+/* global day bar */
+.days{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 auto;padding:8px 13px;border-radius:12px;background:var(--panel);border:1px solid var(--line);
+  font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.15s}
+.day.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.day .n{display:block;font-size:10px;font-weight:700;opacity:.7;margin-top:1px}
+.day.done-day{color:var(--done)}
+.day.active.done-day{color:var(--bg)}
+
+/* mode toggle + platform chips */
+.modebar{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:4px;margin-bottom:12px}
+.modebtn{flex:1;padding:8px;border:none;background:none;color:var(--muted);font-weight:700;font-size:13px;border-radius:10px;cursor:pointer;font-family:Inter}
+.modebtn.active{background:var(--ink);color:var(--bg)}
+.chips{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:7px 12px;border-radius:99px;border:1px solid var(--line);background:var(--panel);
+  font-size:12.5px;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap}
+.chip.active{color:#160E1B}
+
+/* tabs */
+.tabs{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:0 auto;display:flex;
+  background:rgba(22,14,27,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:8px 6px calc(env(safe-area-inset-bottom) + 8px);z-index:40}
+.tab{position:relative;flex:1;text-align:center;padding:6px 2px;border-radius:12px;font-size:11px;font-weight:600;color:var(--muted);
+  cursor:pointer;transition:.15s;border:none;background:none;font-family:Inter}
+.tab .ic{display:block;font-size:19px;margin-bottom:2px;line-height:1}
+.tab.active{color:var(--ink)}
+.tab.active .ic{filter:drop-shadow(0 0 8px var(--now))}
+.tab .bdot{position:absolute;top:2px;right:calc(50% - 20px);width:8px;height:8px;border-radius:50%;background:var(--now);box-shadow:0 0 8px var(--now);display:none}
+.tab.has-alert .bdot{display:block}
+
+.now-card{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--now);
+  border-radius:var(--radius);padding:18px;margin-bottom:22px;position:relative;overflow:hidden;
+  box-shadow:0 0 0 4px var(--now-soft), 0 18px 40px -20px #000}
+.now-card::before{content:"";position:absolute;top:-40%;right:-20%;width:200px;height:200px;
+  background:radial-gradient(circle,var(--now-soft),transparent 70%);animation:pulse 3.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+.now-tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--now)}
+.now-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--now);box-shadow:0 0 10px var(--now)}
+.now-card.alldone{border-color:var(--done);box-shadow:0 0 0 4px var(--done-soft),0 18px 40px -20px #000}
+.now-card.alldone .now-tag{color:var(--done)}
+.now-card.alldone .now-tag .dot{background:var(--done);box-shadow:0 0 10px var(--done)}
+.alldone-msg{font-family:"Bricolage Grotesque";font-size:22px;font-weight:800;margin-top:10px}
+.alldone-sub{color:var(--muted);font-size:14px;margin-top:4px}
+
+.slot-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  margin:20px 4px 10px;display:flex;align-items:center;gap:8px}
+.slot-label .time{color:var(--ink);font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:0}
+.slot-label .bar{flex:1;height:1px;background:var(--line)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:15px;margin-bottom:12px;transition:.2s}
+.card.done{opacity:.5}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:9px;color:#160E1B}
+.badge .em{font-size:13px}
+.chk{width:30px;height:30px;border-radius:9px;border:1.6px solid var(--line);background:transparent;flex:0 0 auto;
+  display:grid;place-items:center;cursor:pointer;transition:.15s;color:transparent;font-weight:800;font-size:16px}
+.chk.on{background:var(--done);border-color:var(--done);color:var(--bg)}
+.meta-line{font-size:12px;color:var(--muted);margin:-4px 0 8px}
+.field{margin-top:10px}
+.field .k{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.copyrow{display:flex;gap:8px;align-items:stretch}
+.copytxt{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:11px 12px;
+  font-size:14px;line-height:1.45;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.copytxt.link{font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copybtn{flex:0 0 auto;width:52px;border-radius:11px;border:none;background:var(--now);color:#fff;font-weight:700;
+  font-size:12px;cursor:pointer;font-family:"Bricolage Grotesque";display:grid;place-items:center;transition:.12s}
+.copybtn:active{transform:scale(.92)}
+.copybtn.ok{background:var(--done);color:var(--bg)}
+.media{background:var(--panel-2);border:1px dashed var(--line);border-radius:11px;padding:11px 12px;font-size:13px;line-height:1.5;color:var(--muted)}
+.media b{color:var(--ink);font-weight:600}
+.note{font-size:12px;color:#d99;margin-top:9px;line-height:1.4}
+
+.info{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.55;color:var(--muted)}
+.info b{color:var(--ink);font-weight:600}
+.info .tt{font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;color:var(--ink);display:block;margin-bottom:6px}
+.sec-title{font-family:"Bricolage Grotesque";font-size:14px;font-weight:800;color:var(--ink);margin:18px 2px 10px;display:flex;align-items:center;gap:8px}
+.reel-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.reel-h .l{display:flex;align-items:center;gap:8px}
+.reel-h .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:18px;color:var(--now)}
+.reel-h .t{font-weight:700;font-size:15px}
+.tag{font-size:11px;color:var(--muted)}
+.kv{font-size:13px;line-height:1.5;margin:4px 0}
+.kv b{color:var(--now);font-weight:700}
+.beat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.beat.done{opacity:.5}
+.beat .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;margin-bottom:6px}
+.beat .bh .num{color:var(--done)}
+.beat .line{font-size:14px;line-height:1.5;margin:5px 0}
+.beat .q{color:var(--ink);font-style:italic;border-left:2px solid var(--now);padding-left:9px}
+.beat .cam{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:6px}
+.link-row{display:flex;flex-direction:column;gap:5px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px;margin-bottom:9px}
+.link-row .lk{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.link-row .lr{display:flex;gap:8px}
+.link-row input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 11px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;font-size:12.5px}
+
+/* idées */
+.idea-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.idea-card .ih{font-weight:700;font-size:15px;margin-bottom:4px}
+.idea-card .im{font-size:12px;color:var(--muted);margin-bottom:8px}
+.btn{width:100%;border:none;border-radius:11px;padding:11px;font-weight:700;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque"}
+.btn.primary{background:var(--now);color:#fff}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--muted)}
+.chosen{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--done);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 0 0 4px var(--done-soft)}
+.chosen .lab{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--done)}
+.chosen .tt{font-family:"Bricolage Grotesque";font-weight:800;font-size:18px;margin:8px 0}
+.validrow{display:flex;align-items:center;gap:11px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.validrow .txt{font-size:13px;color:var(--ink);line-height:1.4}
+.banner{background:#4a1020;border:1px solid var(--now);color:#ffd7e0;border-radius:14px;padding:13px 14px;margin-bottom:14px;font-size:13px;line-height:1.5;display:flex;gap:9px;align-items:flex-start}
+.banner b{color:#fff}
+
+#toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:99px;font-weight:700;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50;font-family:"Bricolage Grotesque";box-shadow:0 10px 30px -8px #000}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.foot{text-align:center;color:var(--muted);font-size:11.5px;margin-top:24px;line-height:1.6}
+.reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:8px 16px;font-size:12px;cursor:pointer;margin-top:14px;font-family:Inter}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div>
+    <div class="date" id="date">—</div>
+    <h1 id="dayTitle">—</h1>
+    <div class="sub" id="weekSub">—</div>
+  </div>
+  <div class="ring" id="ringWrap">
+    <svg width="52" height="52"><circle cx="26" cy="26" r="22" stroke="#3A2743" stroke-width="5" fill="none"/>
+      <circle id="ringFill" cx="26" cy="26" r="22" stroke="#E7B860" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="138"/></svg>
+    <div class="val" id="ringVal">0/0</div>
+  </div>
+</div>
+
+<!-- barre des jours GLOBALE : navigable depuis tous les onglets -->
+<div class="days" id="days"></div>
+
+<div id="view-jour"></div>
+<div id="view-reels" style="display:none"></div>
+<div id="view-script" style="display:none"></div>
+<div id="view-idees" style="display:none"></div>
+<div id="view-liens" style="display:none"></div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" data-v="jour"><span class="ic">📅</span>Jour</button>
+  <button class="tab" data-v="reels"><span class="ic">🎬</span>Réels</button>
+  <button class="tab" data-v="script"><span class="ic">📜</span>Script</button>
+  <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
+  <button class="tab" data-v="liens"><span class="ic">🔗</span>Liens</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const DATA = /*__BRIEF_DATA__*/ {};
+
+const PLAT = {
+  instagram:{n:"Instagram",em:"📸",c:"var(--instagram)"},
+  telegram:{n:"Telegram",em:"✈️",c:"var(--telegram)"},
+  youtube:{n:"YouTube",em:"▶️",c:"var(--youtube)"},
+  extrait:{n:"Extrait",em:"✂️",c:"var(--extrait)"},
+  tiktok:{n:"TikTok",em:"🎵",c:"var(--tiktok)"},
+  facebook:{n:"Facebook",em:"📘",c:"var(--facebook)"},
+  reddit:{n:"Reddit",em:"👽",c:"var(--reddit)"},
+  x:{n:"X",em:"✖️",c:"var(--x)"},
+  snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"}
+};
+const PLAT_ORDER=["youtube","instagram","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
+const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const WEEK=DATA.meta.isoWeek||"sem";
+const today=new Date();
+const todayIdx=(today.getDay()+6)%7;
+let viewIdx=Math.min(todayIdx, DATA.schedule.length-1);
+let calMode="day";               // "day" | "plat"
+let platFilter=null;             // platKey when in plat mode
+let curTab="jour";
+let done=new Set();
+
+/* ---- persistence ---- */
+function loadDone(){try{done=new Set(JSON.parse(localStorage.getItem("done:"+WEEK)||"[]"));}catch(e){done=new Set();}}
+function saveDone(){try{localStorage.setItem("done:"+WEEK,JSON.stringify([...done]));}catch(e){}}
+function setDone(id,on){on?done.add(id):done.delete(id);saveDone();}
+function loadLinks(){try{Object.assign(DATA.links,JSON.parse(localStorage.getItem("links:"+WEEK)||"{}"));}catch(e){}}
+function saveLink(k,v){try{const s=JSON.parse(localStorage.getItem("links:"+WEEK)||"{}");s[k]=v;localStorage.setItem("links:"+WEEK,JSON.stringify(s));DATA.links[k]=v;}catch(e){}}
+function loadIdea(){try{return JSON.parse(localStorage.getItem("idea:"+WEEK)||"null");}catch(e){return null;}}
+function saveIdea(o){try{localStorage.setItem("idea:"+WEEK,JSON.stringify(o));}catch(e){}}
+let idea=null;
+
+function resolveLien(name){if(!name||name==="—")return "—";return DATA.links[name]||name;}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1500);}
+async function copy(text,btn){let ok=false;try{await navigator.clipboard.writeText(text);ok=true;}catch(e){try{const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity=0;document.body.appendChild(ta);ta.select();ok=document.execCommand("copy");document.body.removeChild(ta);}catch(_){}}if(ok&&btn){btn.classList.add("ok");const o=btn.textContent;btn.textContent="✓";setTimeout(()=>{btn.classList.remove("ok");btn.textContent=o;},1100);}toast(ok?"Copié ✓":"Copie impossible");}
+function nowMin(){const n=new Date();return n.getHours()*60+n.getMinutes();}
+function toMin(t){const[a,b]=(t||"00:00").split(":").map(Number);return a*60+b;}
+const pid=(d,i)=>"p:"+d+":"+i;
+
+function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick=e=>copy(decodeURIComponent(e.currentTarget.dataset.c),e.currentTarget));}
+
+/* ============ TABS ============ */
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");curTab=b.dataset.v;
+  ["jour","reels","script","idees","liens"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
+  if(curTab==="jour")renderJour();
+  if(curTab==="reels")renderReels();
+  if(curTab==="script")renderScript();
+  if(curTab==="idees")renderIdees();
+  if(curTab==="liens")renderLiens();
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+function goto(tab){document.querySelector('.tab[data-v="'+tab+'"]').click();}
+
+/* ============ GLOBAL DAY BAR ============ */
+function postsForDay(d){const day=DATA.schedule[d];if(!day)return[];return day.posts.map((p,i)=>({...p,id:pid(d,i)}));}
+function renderDays(){
+  const days=document.getElementById("days");days.innerHTML="";
+  DAYS.forEach((d,i)=>{
+    const p=postsForDay(i);const allDone=p.length&&p.every(x=>done.has(x.id));
+    const el=document.createElement("div");
+    el.className="day"+(i===viewIdx&&calMode==="day"&&curTab==="jour"?" active":"")+(allDone?" done-day":"");
+    el.innerHTML=d.slice(0,3)+(i===todayIdx?'<span class="n">● auj.</span>':(allDone?'<span class="n">✓ fait</span>':'<span class="n">&nbsp;</span>'));
+    // depuis n'importe quel onglet : choisir un jour amène au calendrier de ce jour
+    el.onclick=()=>{viewIdx=i;calMode="day";if(curTab!=="jour"){goto("jour");}else{renderJour();renderDays();}window.scrollTo({top:0,behavior:"smooth"});};
+    days.appendChild(el);
+  });
+}
+
+/* ============ JOUR (calendrier) ============ */
+function renderJour(){
+  const v=document.getElementById("view-jour");
+  let html='<div class="modebar">'
+    +'<button class="modebtn'+(calMode==="day"?" active":"")+'" data-m="day">📅 Par jour</button>'
+    +'<button class="modebtn'+(calMode==="plat"?" active":"")+'" data-m="plat">📡 Par plateforme</button></div>';
+  v.innerHTML=html+'<div id="calbody"></div>';
+  v.querySelectorAll(".modebtn").forEach(b=>b.onclick=()=>{calMode=b.dataset.m;if(calMode==="plat"&&!platFilter){platFilter=firstPlatform();}document.getElementById("ringWrap").style.display=(calMode==="day")?"block":"none";renderJour();renderDays();});
+  if(calMode==="day")renderCalByDay();
+  else renderCalByPlat();
+  renderDays();
+}
+function firstPlatform(){for(const k of PLAT_ORDER){if(allWeekPosts().some(p=>p.platKey===k))return k;}return "instagram";}
+function allWeekPosts(){const out=[];DATA.schedule.forEach((d,di)=>d.posts.forEach((p,i)=>out.push({...p,day:d.day,date:d.date,dayIdx:di,id:pid(di,i)})));return out;}
+
+function renderCalByDay(){
+  const body=document.getElementById("calbody");
+  const posts=postsForDay(viewIdx);
+  const total=posts.length,nDone=posts.filter(p=>done.has(p.id)).length;
+  const d=DATA.schedule[viewIdx];
+  document.getElementById("date").textContent=(viewIdx===todayIdx?"Aujourd'hui · ":"")+(d?d.date:"");
+  document.getElementById("dayTitle").textContent=DAYS[viewIdx];
+  document.getElementById("weekSub").textContent=DATA.meta.weekLabel;
+  const ring=document.getElementById("ringFill");ring.style.strokeDashoffset=138*(1-(total?nDone/total:0));
+  document.getElementById("ringVal").textContent=nDone+"/"+total;
+
+  let h="";
+  if(viewIdx===todayIdx){
+    const undone=posts.filter(p=>!done.has(p.id));
+    if(!undone.length){h+='<div class="now-card alldone"><span class="now-tag"><span class="dot"></span>Terminé</span><div class="alldone-msg">Tout est posté ✨</div><div class="alldone-sub">Journée bouclée 📦</div></div>';}
+    else{const nm=nowMin();let next=undone.find(p=>toMin(p.time)>=nm-30)||undone[0];const pl=PLAT[next.platKey]||PLAT.instagram;
+      h+='<div class="now-card"><span class="now-tag"><span class="dot"></span>Maintenant · '+esc(next.time)+' '+esc(next.moment)+'</span>'
+        +'<div style="display:flex;align-items:center;gap:9px;margin:11px 0 3px"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(next.plats)+'</span>'
+        +'<span style="color:var(--muted);font-size:13px">'+undone.length+' restant'+(undone.length>1?"s":"")+'</span></div>'
+        +'<div class="field"><div class="k">Texte</div><div class="copyrow"><div class="copytxt">'+esc(next.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(next.texte)+'">Copier</button></div></div></div>';}
+  }
+  let lastMoment=null;
+  posts.forEach(p=>{
+    if(p.moment!==lastMoment){h+='<div class="slot-label"><span class="time">'+esc(p.time)+'</span> '+esc(p.moment)+'<span class="bar"></span></div>';lastMoment=p.moment;}
+    h+=postCard(p);
+  });
+  h+='<div style="text-align:center"><button class="reset" id="resetBtn">Réinitialiser ce jour</button></div>';
+  h+='<div class="foot">'+allWeekPosts().length+' posts programmés cette semaine · progression sauvegardée sur ce téléphone.</div>';
+  body.innerHTML=h;
+  bindCardEvents(body);
+  const rb=document.getElementById("resetBtn");if(rb)rb.onclick=()=>{posts.forEach(p=>setDone(p.id,false));renderJour();renderDays();toast("Jour réinitialisé");};
+}
+
+function renderCalByPlat(){
+  const body=document.getElementById("calbody");
+  document.getElementById("dayTitle").textContent="Par plateforme";
+  document.getElementById("date").textContent="Toute la semaine";
+  document.getElementById("weekSub").textContent=DATA.meta.weekLabel;
+  const present=PLAT_ORDER.filter(k=>allWeekPosts().some(p=>p.platKey===k));
+  let h='<div class="chips">';
+  present.forEach(k=>{const pl=PLAT[k];h+='<div class="chip'+(k===platFilter?" active":"")+'" data-k="'+k+'" style="'+(k===platFilter?"background:"+pl.c+";border-color:"+pl.c:"")+'">'+pl.em+' '+pl.n+'</div>';});
+  h+='</div>';
+  const posts=allWeekPosts().filter(p=>p.platKey===platFilter)
+    .sort((a,b)=>a.dayIdx-b.dayIdx||toMin(a.time)-toMin(b.time));
+  const nDone=posts.filter(p=>done.has(p.id)).length;
+  h+='<div class="meta-line" style="margin:0 2px 10px"><b>'+posts.length+'</b> post'+(posts.length>1?"s":"")+' · '+nDone+' fait'+(nDone>1?"s":"")+' cette semaine</div>';
+  let lastDay=null;
+  posts.forEach(p=>{
+    if(p.day!==lastDay){h+='<div class="slot-label"><span class="time">'+esc(p.day)+'</span> '+esc(p.date)+'<span class="bar"></span></div>';lastDay=p.day;}
+    h+=postCard(p,true);
+  });
+  body.innerHTML=h;
+  body.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{platFilter=c.dataset.k;renderCalByPlat();});
+  bindCardEvents(body);
+}
+
+function postCard(p,showTime){
+  const pl=PLAT[p.platKey]||PLAT.instagram;const on=done.has(p.id);const lien=resolveLien(p.lien);
+  return '<div class="card'+(on?" done":"")+'" data-id="'+p.id+'">'
+    +'<div class="card-head"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(p.plats)+'</span>'
+    +'<button class="chk'+(on?" on":"")+'" aria-label="Fait">✓</button></div>'
+    +'<div class="meta-line">'+(showTime?esc(p.time)+' · ':'')+esc(p.type)+'</div>'
+    +'<div class="field"><div class="k">Texte à copier</div><div class="copyrow"><div class="copytxt">'+esc(p.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(p.texte)+'">Copier</button></div></div>'
+    +(lien&&lien!=="—"?'<div class="field"><div class="k">Lien</div><div class="copyrow"><div class="copytxt link">'+esc(lien)+'</div><button class="copybtn" data-c="'+encodeURIComponent(lien)+'">Copier</button></div></div>':'')
+    +'<div class="field"><div class="k">Média à joindre</div><div class="media">'+p.media+'</div></div>'
+    +(p.astuce?'<div class="note">💡 '+esc(p.astuce)+'</div>':'')+'</div>';
+}
+function bindCardEvents(root){
+  bindCopies(root);
+  root.querySelectorAll(".card .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest(".card").dataset.id;setDone(id,!done.has(id));if(calMode==="day")renderCalByDay();else renderCalByPlat();renderDays();});
+}
+
+/* ============ RÉELS ============ */
+function renderReels(){
+  const el=document.getElementById("view-reels");
+  const jours=DATA.reels.map(r=>r.jour).filter(Boolean);
+  let h='<div class="info"><span class="tt">🎬 Réels à produire — semaine en cours</span>'
+    +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
+    +'Tournage batch : <b>mercredi 8 juillet</b>. Publiés en multi-plateforme sur la semaine de sortie (vidéo le <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b>).<br>'
+    +'Coche « validé » quand le réel est tourné et prêt.</div>';
+  const total=DATA.reels.length,nDone=DATA.reels.filter(r=>done.has("r:"+r.n)).length;
+  h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> réels validés</div>';
+  DATA.reels.forEach(r=>{
+    const on=done.has("r:"+r.n);
+    h+='<div class="card'+(on?" done":"")+'" data-rid="r:'+r.n+'">'
+      +'<div class="reel-h"><div class="l"><span class="n">'+r.n+'</span><span class="t">'+esc(r.title)+'</span></div>'
+      +'<button class="chk'+(on?" on":"")+'" aria-label="Validé">✓</button></div>'
+      +'<div class="tag">'+esc(r.angle)+' · '+esc(r.dur)+' · '+esc(r.cam)+'</div>'
+      +'<div class="kv"><b>Plateformes :</b> '+esc(r.plats)+'</div>'
+      +'<div class="field"><div class="k">🎣 Hook</div><div class="copyrow"><div class="copytxt">'+esc(r.hook)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.hook)+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">💬 Corps</div><div class="copyrow"><div class="copytxt">'+esc(r.corps)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.corps)+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">📣 CTA</div><div class="copyrow"><div class="copytxt">'+esc(r.cta)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.cta)+'">Copier</button></div></div></div>';
+  });
+  el.innerHTML=h;bindCopies(el);
+  el.querySelectorAll("[data-rid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-rid]").dataset.rid;setDone(id,!done.has(id));renderReels();});
+}
+
+/* ============ SCRIPT ============ */
+function renderScript(){
+  const el=document.getElementById("view-script");
+  let h='<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
+    +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
+    +'Tournage : <b>mercredi 8 juillet</b> · Sortie prévue : <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b> · Durée cible 5-10 min.<br>'
+    +'Coche « validé » chaque section une fois tournée.</div>';
+  const total=DATA.script.length,nDone=DATA.script.filter((b,i)=>done.has("b:"+i)).length;
+  h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> sections validées</div>';
+  DATA.script.forEach((b,i)=>{
+    const on=done.has("b:"+i);
+    h+='<div class="beat'+(on?" done":"")+'" data-bid="b:'+i+'"><div class="bh"><span><span class="num">'+b.num+'</span> '+esc(b.title)+(b.timing?' <span class="tag">('+esc(b.timing)+')</span>':'')+'</span>'
+      +'<button class="chk'+(on?" on":"")+'" aria-label="Validé">✓</button></div>';
+    b.lines.forEach(l=>{h+='<div class="line'+(l.quote?' q':'')+'">'+esc(l.t)+'</div>';});
+    (b.notes||[]).forEach(n=>{h+='<div class="cam">'+esc(n)+'</div>';});
+    h+='</div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll("[data-bid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-bid]").dataset.bid;setDone(id,!done.has(id));renderScript();});
+}
+
+/* ============ IDÉES ============ */
+function renderIdees(){
+  const el=document.getElementById("view-idees");
+  idea=loadIdea();
+  let h="";
+  const pending=idea&&!idea.validated;
+  if(pending&&(todayIdx>=6)){ // dimanche ou après
+    h+='<div class="banner"><span>⏰</span><div><b>Rappel :</b> tu as choisi une idée mais tu ne l\'as pas encore saisie dans le calendrier. Fais-le <b>avant lundi</b> — une nouvelle idée sera proposée lundi.</div></div>';
+  }
+  if(idea){
+    h+='<div class="chosen"><span class="lab">Idée choisie pour les prochaines semaines</span>'
+      +'<div class="tt">'+esc(idea.title)+'</div>'
+      +'<div class="tag">'+esc(idea.theme)+' · '+esc(idea.format||"Long format")+' · '+esc(idea.potentiel||"")+'</div>'
+      +'<div class="kv" style="margin-top:8px">'+esc(idea.hook||"")+'</div>'
+      +'<div class="validrow"><button class="chk'+(idea.validated?" on":"")+'" id="ideaChk" aria-label="Saisie faite">✓</button>'
+      +'<div class="txt">'+(idea.validated?'<b>Saisie dans le calendrier faite ✓</b>':'Coche quand tu as <b>saisi cette idée dans le calendrier</b> (à faire manuellement).')+'</div></div>'
+      +'<button class="btn ghost" id="changeIdea" style="margin-top:12px">Changer d\'idée</button></div>';
+    el.innerHTML=h;
+    document.getElementById("ideaChk").onclick=()=>{idea.validated=!idea.validated;saveIdea(idea);renderIdees();refreshAlerts();toast(idea.validated?"Saisie validée ✓":"Décoché");};
+    document.getElementById("changeIdea").onclick=()=>{if(confirm("Changer d'idée ? Le choix actuel sera remplacé."))  {localStorage.removeItem("idea:"+WEEK);idea=null;renderIdees();refreshAlerts();}};
+    return;
+  }
+  h+='<div class="info"><span class="tt">💡 Propositions de nouvelles idées</span>'
+    +'Pour les <b>prochaines semaines</b>. Choisis-en une : elle s\'affichera avec une case à cocher. '
+    +'C\'est à toi de <b>saisir l\'idée dans le calendrier</b> (Google Sheets), puis de cocher « saisie faite ».</div>';
+  (DATA.ideaProposals||[]).forEach((p,i)=>{
+    h+='<div class="idea-card"><div class="ih">'+esc(p.title)+'</div>'
+      +'<div class="im">'+esc(p.theme)+' · '+esc(p.format||"Long format")+' · '+esc(p.potentiel||"")+'</div>'
+      +'<div class="kv" style="margin-bottom:10px">'+esc(p.hook||"")+'</div>'
+      +'<button class="btn primary" data-i="'+i+'">Choisir cette idée</button></div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll(".btn.primary").forEach(b=>b.onclick=e=>{
+    const p=DATA.ideaProposals[+e.currentTarget.dataset.i];
+    if(confirm('Choisir « '+p.title+' » ?\n\nTu devras la saisir manuellement dans le calendrier.')){
+      idea={...p,validated:false,ts:Date.now()};saveIdea(idea);renderIdees();refreshAlerts();toast("Idée choisie ✓");
+      maybeNotify();
+    }
+  });
+}
+
+/* ---- alerts / notifications ---- */
+function refreshAlerts(){
+  const i=loadIdea();const pending=i&&!i.validated;
+  document.querySelector('.tab[data-v="idees"]').classList.toggle("has-alert",!!pending);
+}
+function maybeNotify(){
+  try{
+    if(!("Notification" in window))return;
+    if(Notification.permission==="default"){Notification.requestPermission();}
+  }catch(e){}
+}
+function sundayNudge(){
+  try{
+    const i=loadIdea();
+    if(i&&!i.validated&&todayIdx>=6&&"Notification"in window&&Notification.permission==="granted"){
+      new Notification("Cockpit — idée à saisir",{body:"Saisis l'idée choisie dans le calendrier avant lundi."});
+    }
+  }catch(e){}
+}
+
+/* ============ LIENS ============ */
+function renderLiens(){
+  const el=document.getElementById("view-liens");
+  const groups=[["Plateformes payantes",["OnlyFans","MYM"]],["Direct",["Telegram","PayPal","Snapchat"]],
+    ["Funnel direct",["X","Reddit"]],["Marque (réseaux)",["Instagram","YouTube","TikTok","Facebook","Threads"]],["Bio",["Bio"]]];
+  let h='<div class="info">Ton coffre à liens. Modifie une URL et elle est mémorisée sur ce téléphone. « Copier » pour la coller ailleurs.</div>';
+  groups.forEach(([g,keys])=>{h+='<div class="sec-title">'+g+'</div>';keys.forEach(k=>{const v=DATA.links[k]||"";
+    h+='<div class="link-row"><span class="lk">'+k+'</span><div class="lr"><input data-k="'+k+'" value="'+esc(v)+'" spellcheck="false"><button class="copybtn" data-c="'+encodeURIComponent(v)+'">Copier</button></div></div>';});});
+  el.innerHTML=h;
+  el.querySelectorAll("input").forEach(inp=>inp.onchange=e=>{const val=e.target.value.trim();saveLink(e.target.dataset.k,val);const b=e.target.parentNode.querySelector(".copybtn");if(b)b.dataset.c=encodeURIComponent(val);toast("Lien enregistré ✓");});
+  bindCopies(el);
+}
+
+/* ---- boot ---- */
+loadDone();loadLinks();idea=loadIdea();
+renderDays();renderJour();refreshAlerts();sundayNudge();
+</script>
+</body>
+</html>

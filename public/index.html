@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Cockpit — Les Pensées d'Amanda</title>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#160E1B">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Cockpit">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#160E1B; --panel:#211527; --panel-2:#2B1A33; --line:#3A2743;
+  --ink:#F6EEF2; --muted:#A991B0; --now:#FF6E8A; --now-soft:#ff6e8a22;
+  --done:#E7B860; --done-soft:#e7b8601f;
+  --instagram:#E1477E; --telegram:#37A7E0; --youtube:#FF3B5C; --extrait:#B57BE0;
+  --tiktok:#25E7DE; --facebook:#4C8DF6; --reddit:#FF5722; --x:#E8E3EA; --snapchat:#FFFC00;
+  --radius:18px;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif}
+body{max-width:520px;margin:0 auto;padding:calc(env(safe-area-inset-top) + 14px) 14px calc(env(safe-area-inset-bottom) + 92px)}
+h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.02em}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.top .date{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em;font-weight:600}
+.top h1{font-size:23px;font-weight:800;line-height:1;margin-top:4px}
+.top .sub{font-size:11px;color:var(--muted);margin-top:4px}
+.ring{position:relative;width:52px;height:52px;flex:0 0 auto}
+.ring svg{transform:rotate(-90deg)}
+.ring .val{position:absolute;inset:0;display:grid;place-items:center;font-size:12px;font-weight:700;font-family:"Bricolage Grotesque"}
+
+/* global day bar */
+.days{display:flex;gap:6px;margin-bottom:12px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.days::-webkit-scrollbar{display:none}
+.day{flex:0 0 auto;padding:8px 13px;border-radius:12px;background:var(--panel);border:1px solid var(--line);
+  font-size:13px;font-weight:600;color:var(--muted);cursor:pointer;white-space:nowrap;transition:.15s}
+.day.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.day .n{display:block;font-size:10px;font-weight:700;opacity:.7;margin-top:1px}
+.day.done-day{color:var(--done)}
+.day.active.done-day{color:var(--bg)}
+
+/* mode toggle + platform chips */
+.modebar{display:flex;gap:6px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:4px;margin-bottom:12px}
+.modebtn{flex:1;padding:8px;border:none;background:none;color:var(--muted);font-weight:700;font-size:13px;border-radius:10px;cursor:pointer;font-family:Inter}
+.modebtn.active{background:var(--ink);color:var(--bg)}
+.chips{display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;padding:7px 12px;border-radius:99px;border:1px solid var(--line);background:var(--panel);
+  font-size:12.5px;font-weight:700;color:var(--muted);cursor:pointer;white-space:nowrap}
+.chip.active{color:#160E1B}
+
+/* tabs */
+.tabs{position:fixed;bottom:0;left:0;right:0;max-width:520px;margin:0 auto;display:flex;
+  background:rgba(22,14,27,.94);backdrop-filter:blur(12px);border-top:1px solid var(--line);
+  padding:8px 6px calc(env(safe-area-inset-bottom) + 8px);z-index:40}
+.tab{position:relative;flex:1;text-align:center;padding:6px 2px;border-radius:12px;font-size:11px;font-weight:600;color:var(--muted);
+  cursor:pointer;transition:.15s;border:none;background:none;font-family:Inter}
+.tab .ic{display:block;font-size:19px;margin-bottom:2px;line-height:1}
+.tab.active{color:var(--ink)}
+.tab.active .ic{filter:drop-shadow(0 0 8px var(--now))}
+.tab .bdot{position:absolute;top:2px;right:calc(50% - 20px);width:8px;height:8px;border-radius:50%;background:var(--now);box-shadow:0 0 8px var(--now);display:none}
+.tab.has-alert .bdot{display:block}
+
+.now-card{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--now);
+  border-radius:var(--radius);padding:18px;margin-bottom:22px;position:relative;overflow:hidden;
+  box-shadow:0 0 0 4px var(--now-soft), 0 18px 40px -20px #000}
+.now-card::before{content:"";position:absolute;top:-40%;right:-20%;width:200px;height:200px;
+  background:radial-gradient(circle,var(--now-soft),transparent 70%);animation:pulse 3.5s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:1;transform:scale(1.15)}}
+.now-tag{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--now)}
+.now-tag .dot{width:7px;height:7px;border-radius:50%;background:var(--now);box-shadow:0 0 10px var(--now)}
+.now-card.alldone{border-color:var(--done);box-shadow:0 0 0 4px var(--done-soft),0 18px 40px -20px #000}
+.now-card.alldone .now-tag{color:var(--done)}
+.now-card.alldone .now-tag .dot{background:var(--done);box-shadow:0 0 10px var(--done)}
+.alldone-msg{font-family:"Bricolage Grotesque";font-size:22px;font-weight:800;margin-top:10px}
+.alldone-sub{color:var(--muted);font-size:14px;margin-top:4px}
+
+.slot-label{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
+  margin:20px 4px 10px;display:flex;align-items:center;gap:8px}
+.slot-label .time{color:var(--ink);font-family:"Bricolage Grotesque";font-weight:700;letter-spacing:0}
+.slot-label .bar{flex:1;height:1px;background:var(--line)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:15px;margin-bottom:12px;transition:.2s}
+.card.done{opacity:.5}
+.card-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:5px 11px;border-radius:9px;color:#160E1B}
+.badge .em{font-size:13px}
+.chk{width:30px;height:30px;border-radius:9px;border:1.6px solid var(--line);background:transparent;flex:0 0 auto;
+  display:grid;place-items:center;cursor:pointer;transition:.15s;color:transparent;font-weight:800;font-size:16px}
+.chk.on{background:var(--done);border-color:var(--done);color:var(--bg)}
+.meta-line{font-size:12px;color:var(--muted);margin:-4px 0 8px}
+.field{margin-top:10px}
+.field .k{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.copyrow{display:flex;gap:8px;align-items:stretch}
+.copytxt{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:11px 12px;
+  font-size:14px;line-height:1.45;color:var(--ink);white-space:pre-wrap;word-break:break-word}
+.copytxt.link{font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.copybtn{flex:0 0 auto;width:52px;border-radius:11px;border:none;background:var(--now);color:#fff;font-weight:700;
+  font-size:12px;cursor:pointer;font-family:"Bricolage Grotesque";display:grid;place-items:center;transition:.12s}
+.copybtn:active{transform:scale(.92)}
+.copybtn.ok{background:var(--done);color:var(--bg)}
+.media{background:var(--panel-2);border:1px dashed var(--line);border-radius:11px;padding:11px 12px;font-size:13px;line-height:1.5;color:var(--muted)}
+.media b{color:var(--ink);font-weight:600}
+.note{font-size:12px;color:#d99;margin-top:9px;line-height:1.4}
+
+.info{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:14px;font-size:13px;line-height:1.55;color:var(--muted)}
+.info b{color:var(--ink);font-weight:600}
+.info .tt{font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;color:var(--ink);display:block;margin-bottom:6px}
+.sec-title{font-family:"Bricolage Grotesque";font-size:14px;font-weight:800;color:var(--ink);margin:18px 2px 10px;display:flex;align-items:center;gap:8px}
+.reel-h{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.reel-h .l{display:flex;align-items:center;gap:8px}
+.reel-h .n{font-family:"Bricolage Grotesque";font-weight:800;font-size:18px;color:var(--now)}
+.reel-h .t{font-weight:700;font-size:15px}
+.tag{font-size:11px;color:var(--muted)}
+.kv{font-size:13px;line-height:1.5;margin:4px 0}
+.kv b{color:var(--now);font-weight:700}
+.beat{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.beat.done{opacity:.5}
+.beat .bh{display:flex;align-items:center;justify-content:space-between;gap:8px;font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;margin-bottom:6px}
+.beat .bh .num{color:var(--done)}
+.beat .line{font-size:14px;line-height:1.5;margin:5px 0}
+.beat .q{color:var(--ink);font-style:italic;border-left:2px solid var(--now);padding-left:9px}
+.beat .cam{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:6px}
+.link-row{display:flex;flex-direction:column;gap:5px;background:var(--panel);border:1px solid var(--line);border-radius:13px;padding:12px;margin-bottom:9px}
+.link-row .lk{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.link-row .lr{display:flex;gap:8px}
+.link-row input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 11px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;font-size:12.5px}
+
+/* idées */
+.idea-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px}
+.idea-card .ih{font-weight:700;font-size:15px;margin-bottom:4px}
+.idea-card .im{font-size:12px;color:var(--muted);margin-bottom:8px}
+.btn{width:100%;border:none;border-radius:11px;padding:11px;font-weight:700;font-size:13px;cursor:pointer;font-family:"Bricolage Grotesque"}
+.btn.primary{background:var(--now);color:#fff}
+.btn.ghost{background:none;border:1px solid var(--line);color:var(--muted)}
+.chosen{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--done);border-radius:16px;padding:16px;margin-bottom:12px;box-shadow:0 0 0 4px var(--done-soft)}
+.chosen .lab{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--done)}
+.chosen .tt{font-family:"Bricolage Grotesque";font-weight:800;font-size:18px;margin:8px 0}
+.validrow{display:flex;align-items:center;gap:11px;background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}
+.validrow .txt{font-size:13px;color:var(--ink);line-height:1.4}
+.banner{background:#4a1020;border:1px solid var(--now);color:#ffd7e0;border-radius:14px;padding:13px 14px;margin-bottom:14px;font-size:13px;line-height:1.5;display:flex;gap:9px;align-items:flex-start}
+.banner b{color:#fff}
+
+#toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:11px 20px;border-radius:99px;font-weight:700;font-size:14px;opacity:0;pointer-events:none;transition:.25s;z-index:50;font-family:"Bricolage Grotesque";box-shadow:0 10px 30px -8px #000}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.foot{text-align:center;color:var(--muted);font-size:11.5px;margin-top:24px;line-height:1.6}
+.reset{background:none;border:1px solid var(--line);color:var(--muted);border-radius:99px;padding:8px 16px;font-size:12px;cursor:pointer;margin-top:14px;font-family:Inter}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<div class="top">
+  <div>
+    <div class="date" id="date">—</div>
+    <h1 id="dayTitle">—</h1>
+    <div class="sub" id="weekSub">—</div>
+  </div>
+  <div class="ring" id="ringWrap">
+    <svg width="52" height="52"><circle cx="26" cy="26" r="22" stroke="#3A2743" stroke-width="5" fill="none"/>
+      <circle id="ringFill" cx="26" cy="26" r="22" stroke="#E7B860" stroke-width="5" fill="none" stroke-linecap="round" stroke-dasharray="138" stroke-dashoffset="138"/></svg>
+    <div class="val" id="ringVal">0/0</div>
+  </div>
+</div>
+
+<!-- barre des jours GLOBALE : navigable depuis tous les onglets -->
+<div class="days" id="days"></div>
+
+<div id="view-jour"></div>
+<div id="view-reels" style="display:none"></div>
+<div id="view-script" style="display:none"></div>
+<div id="view-idees" style="display:none"></div>
+<div id="view-liens" style="display:none"></div>
+
+<div class="tabs" id="tabs">
+  <button class="tab active" data-v="jour"><span class="ic">📅</span>Jour</button>
+  <button class="tab" data-v="reels"><span class="ic">🎬</span>Réels</button>
+  <button class="tab" data-v="script"><span class="ic">📜</span>Script</button>
+  <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
+  <button class="tab" data-v="liens"><span class="ic">🔗</span>Liens</button>
+</div>
+
+<div id="toast"></div>
+
+<script>
+const DATA = {
+  "meta": {
+    "channel": "Les Pensées d'Amanda",
+    "handle": "@blondymandise",
+    "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
+    "briefDate": "2026-06-29",
+    "isoWeek": "2026-W27",
+    "previous": {
+      "title": "10 règles pour débuter le libertinage",
+      "date": "2026-06-26"
+    },
+    "videoA": {
+      "title": "10 questions génantes sur le libertinage",
+      "date": "2026-07-03"
+    },
+    "videoB": {
+      "title": "Don Juan VS Nympho",
+      "date": "2026-07-10"
+    },
+    "videoC": {
+      "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
+      "date": "2026-07-17"
+    },
+    "videoD": {
+      "title": "On a tous 3 personnes en nous",
+      "theme": "Moi, sur-moi et ça",
+      "date": "2026-07-24",
+      "next": "Les femmes au foyer"
+    }
+  },
+  "links": {
+    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
+    "MYM": "https://mym.fans/A_COMPLETER",
+    "Telegram": "https://t.me/A_COMPLETER",
+    "PayPal": "https://paypal.me/A_COMPLETER",
+    "Instagram": "https://instagram.com/blondymandise",
+    "YouTube": "https://youtube.com/@blondymandise",
+    "TikTok": "https://tiktok.com/@A_COMPLETER",
+    "Facebook": "https://facebook.com/A_COMPLETER",
+    "Threads": "https://threads.net/@blondymandise",
+    "Reddit": "https://reddit.com/user/A_COMPLETER",
+    "Bio": "https://linktr.ee/A_COMPLETER",
+    "X": "https://x.com/A_COMPLETER",
+    "Snapchat": "https://snapchat.com/add/A_COMPLETER"
+  },
+  "schedule": [
+    {
+      "day": "Lundi",
+      "date": "29/06",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story engagement (relance commentaires)",
+          "texte": "La vidéo de vendredi vous a chauffé les commentaires 🔥 Balancez-moi VOTRE règle n°1 avant de se lancer.",
+          "media": "Story fond uni + sticker questions. Capture d'un top commentaire de la vidéo précédente.",
+          "lien": "Bio",
+          "astuce": "Republier le meilleur commentaire dès qu'il tombe pour lancer l'effet boule de neige."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "On m'a demandé mes « règles » perso… j'ai répondu sans filtre 😏 (le reste est ailleurs 👇)",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Petit débat du lundi : le libertinage, tabou ou libération ? Je donne mon avis (et un peu plus) sur mon profil.",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Coulisses de ma journée + un aperçu que je ne posterai nulle part ailleurs 👀 lien en story.",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "Message confession + vocal exclusif",
+          "texte": "Franchement ? Ma vraie règle n°1, je l'ai coupée au montage parce qu'elle était trop perso. Vous voulez que je vous la raconte en vocal ce soir ? 🎙",
+          "media": "Vocal exclusif de 30-60s envoyé à 21h.",
+          "lien": "OnlyFans",
+          "astuce": "Le vocal + le côté « rien que pour vous » fait réagir les abonnés."
+        }
+      ]
+    },
+    {
+      "day": "Mardi",
+      "date": "30/06",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story sondage (2 choix)",
+          "texte": "Le libertinage, ça se décide À DEUX ou ça peut venir d'un seul ? — A : à deux obligatoirement / B : un peut convaincre l'autre.",
+          "media": "Sticker sondage 2 options sur fond photo lifestyle.",
+          "lien": "—",
+          "astuce": "Poster le matin, commenter les résultats en fin de journée."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Team « à deux » ou team « chacun son tour » ? 😈 Je réponds cash là où il faut 👇",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Question sérieuse : le libertinage, ça vous rend plutôt curieux ou choqué ? (parfois je réponds en DM 😇)",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair requis : Photo (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Message question sur le vécu",
+          "texte": "Chez nous, c'est G qui a posé la question en premier… ou c'est moi ? 😏 Je vous raconte comment la conversation a VRAIMENT commencé. Et vous, qui oserait lancer le sujet dans votre couple ?",
+          "media": "Photo complice (couple/lifestyle) en teaser.",
+          "lien": "—",
+          "astuce": "Invite aux réponses privées, Amanda répond à quelques-unes."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Aperçu du tournage de demain 🎬 la version soft est ici, la vraie est ailleurs.",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "22:00",
+          "moment": "Nuit",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Il est tard, je m'ennuie… viens voir ce que je poste quand personne ne regarde 🌙",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        }
+      ]
+    },
+    {
+      "day": "Mercredi",
+      "date": "01/07",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story Q&A + behind the scenes tournage",
+          "texte": "Vos questions les + gênantes sur le libertinage : je réponds sans filtre ce soir. Osez.",
+          "media": "Sticker questions + clip BTS « journée studio ».",
+          "lien": "—",
+          "astuce": "Jour de tournage : montrer les coulisses crée l'accès VIP."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Message exclu tournage",
+          "texte": "Aujourd'hui je tourne 🎥 Petit avant-goût : la question la plus WTF qu'on m'ait posée sur le libertinage… je vous la lis en exclu. Envoyez-moi la vôtre, les plus crues passent en priorité.",
+          "media": "Photo/clip du setup de tournage.",
+          "lien": "—",
+          "astuce": "Collecter des questions pour nourrir la vidéo D."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Jour de tournage pour ma chaîne. Petit teaser de l'ambiance (et de la tenue) sur mon profil.",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Journée tournage 🎥 spoiler : j'ai dit des choses que YouTube ne laissera jamais passer. La version non censurée ? Tu sais où 😏",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Behind the scenes du tournage, rien que pour vous 🎬",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        }
+      ]
+    },
+    {
+      "day": "Jeudi",
+      "date": "02/07",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story citation / punchline",
+          "texte": "Le libertinage ne détruit pas les couples solides. Il révèle ceux qui ne l'étaient pas. — Amanda",
+          "media": "Texte sur fond aubergine, format partageable 9:16.",
+          "lien": "—",
+          "astuce": "Inciter au repost en story."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "09:30",
+          "moment": "Matin",
+          "type": "Message confession",
+          "texte": "La phrase que je n'ai pas osé dire face caméra : parfois ce n'est pas le libertinage le problème, c'est ce qu'on refuse de s'avouer AVANT. On en parle ?",
+          "media": "Selfie intime ou fond sombre.",
+          "lien": "—",
+          "astuce": "Prévenir qu'un debrief arrive demain soir."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "J'ai répondu à 10 questions gênantes en vidéo (elle sort demain). Les plus hot, je les garde pour mon profil 😇",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchNSFW · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Story teaser mystérieux (ne pas nommer le sujet)",
+          "texte": "Demain 8h, je réponds à 10 questions… tellement gênantes que j'ai hésité à les poster. 👀",
+          "media": "Teaser flou / gros plan visage.",
+          "lien": "—",
+          "astuce": "Poster vers 20h-21h pour le pic d'audience."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Demain, grosse vidéo. Ce soir, gros mood 🔥 un avant-goût par ici 👇",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "20:05",
+          "moment": "Soir",
+          "type": "Story sondage anticipation",
+          "texte": "Vous pensez que je vais assumer OU esquiver ? — Assume / Esquive.",
+          "media": "Sticker sondage 2 options.",
+          "lien": "—",
+          "astuce": "Capitaliser sur les votes le lendemain."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Teasing de la vidéo de demain + un snap que je n'assumerais pas en public 🙈",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "Message teasing debrief exclusif",
+          "texte": "Demain, la vidéo. Mais VOUS aurez le debrief que personne d'autre n'aura : les questions que j'ai reçues et que je n'ai PAS osé mettre dans la vidéo. Rendez-vous vendredi soir ici. 🔒",
+          "media": "Photo teaser + cadenas.",
+          "lien": "OnlyFans",
+          "astuce": "Le debrief post-vidéo devient un rendez-vous attendu."
+        }
+      ]
+    },
+    {
+      "day": "Vendredi",
+      "date": "03/07",
+      "posts": [
+        {
+          "platKey": "youtube",
+          "plats": "YouTube",
+          "time": "08:00",
+          "moment": "8h — Sortie",
+          "type": "Publication vidéo A + description",
+          "texte": "10 questions gênantes sur le libertinage — et mes réponses sans filtre.\n\nVous me les avez posées, j'ai osé toutes y répondre. Pas de langue de bois, pas de sujet tabou.\n→ Les 10 questions qui reviennent le plus\n→ Ce que j'ai vraiment vécu (et ce que non)\n→ Les idées reçues à jeter à la poubelle\n→ Ma limite personnelle, celle que je ne franchis pas\n\n📲 Instagram @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#libertinage #couple #sexualité #lespenséesdamanda #blondymandise",
+          "media": "Miniature face-cam + overlay « 10 QUESTIONS GÊNANTES ». Publication programmée 8h (heure FR).",
+          "lien": "YouTube",
+          "astuce": "Publier à 8h pile. Relancer à midi avec un extrait choc."
+        },
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "08:00",
+          "moment": "8h — Sortie",
+          "type": "Post feed de sortie + CTA",
+          "texte": "10 questions gênantes, 10 réponses cash. Nouvelle vidéo en ligne 🔗 lien en bio. Regardez et dites-moi si j'ai eu du cran. Laquelle vous auriez osé poser ? 👇",
+          "media": "Carrousel : miniature + 2-3 extraits texte. Pas de lien dans le post (lien en bio).",
+          "lien": "Bio",
+          "astuce": "Épingler en commentaire « lien en bio »."
+        },
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "08:05",
+          "moment": "8h — Sortie",
+          "type": "Story annonce + sticker lien",
+          "texte": "ÇA Y EST 🚨 10 questions gênantes, 10 réponses cash. La vidéo est en ligne — lien en bio. Regardez !",
+          "media": "Story avec sticker lien vers YouTube.",
+          "lien": "Bio",
+          "astuce": "Relancer à midi avec un extrait."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "08:15",
+          "moment": "8h — Sortie",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Nouvelle vidéo 🔥 « 10 questions gênantes sur le libertinage ». Version YouTube = soft. Le reste = 👇",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "extrait",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Extrait long format (vidéo A) — cross-plateforme",
+          "texte": "La question n°1 qu'on me pose sur le libertinage… et ma réponse cash. Vidéo complète en bio.",
+          "media": "Clip 9:16 < 30s, hook fort en ouverture, sous-titres. SFW strict pour TikTok/Reels/FB.",
+          "lien": "Bio",
+          "astuce": "Poster à la main sur Facebook (jamais programmé)."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Ma nouvelle vidéo sur le libertinage vient de sortir — je réponds à tout, même à ce qu'on ne me demande pas 😉 (profil en bio).",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Story résultat sondage + réaction",
+          "texte": "Vous étiez 68% à parier que j'allais assumer 😎 Verdict dans la vidéo. Vos réactions me tuent, continuez en commentaire !",
+          "media": "Capture du sondage + réaction visage.",
+          "lien": "Bio",
+          "astuce": "Republier 2-3 réactions marquantes."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "DEBRIEF EXCLUSIF (anecdotes coupées)",
+          "texte": "Ok, entre nous. La question n°6, je l'ai vécue pour de vrai — et la vraie réponse, je vous la donne SEULEMENT ici. Voilà ce que j'ai coupé au montage… 🔓",
+          "media": "Vocal ou vidéo exclusive + anecdote non dite.",
+          "lien": "OnlyFans",
+          "astuce": "Le rendez-vous phare de la semaine : récompense l'abonnement."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Jour de sortie 🎬 réactions en direct + exclu snap premium.",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Vous avez aimé la vidéo ? Le debrief coquin est dispo ce soir 🔓",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        }
+      ]
+    },
+    {
+      "day": "Samedi",
+      "date": "04/07",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Story repost commentaires + question ouverte",
+          "texte": "Ce commentaire m'a fait réfléchir 👇 Et vous, vous auriez répondu quoi à la question n°4 ?",
+          "media": "Capture d'un commentaire clivant + sticker questions.",
+          "lien": "—",
+          "astuce": "Choisir un commentaire clivant pour max de réponses."
+        },
+        {
+          "platKey": "extrait",
+          "plats": "TikTok + Reels + Shorts + Facebook",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Extrait long format (vidéo A) — cross-plateforme",
+          "texte": "Le passage que tout le monde m'a demandé de reposter. Vous comprendrez pourquoi.",
+          "media": "Clip 9:16 < 30s, moment fort de la vidéo, sous-titres.",
+          "lien": "Bio",
+          "astuce": "Varier le hook de l'extrait de vendredi."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Le passage que tout le monde m'a demandé de reposter… il est en entier là où il faut 👀",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "On m'a posé LA question n°9 en commentaire. Ma vraie réponse est un peu trop pour YouTube 😏 (profil).",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair requis : Photo (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Message question intime (Amanda commence)",
+          "texte": "Question un peu plus perso ce soir 😏 Il y a une de ces 10 questions que VOUS n'oseriez jamais répondre à voix haute ? Moi je commence : c'est la n°9. À vous.",
+          "media": "Selfie complice.",
+          "lien": "—",
+          "astuce": "Amanda partage en premier pour briser la glace."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Samedi soir mood 🌙 snap privé pour mes préférés.",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        }
+      ]
+    },
+    {
+      "day": "Dimanche",
+      "date": "05/07",
+      "posts": [
+        {
+          "platKey": "instagram",
+          "plats": "Instagram",
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Story recap semaine + amorce vendredi prochain",
+          "texte": "Semaine intense 🖤 Merci pour tous vos messages. Vendredi prochain, un sujet qui va faire débat entre les femmes ET les hommes… 👀 Devinez.",
+          "media": "Recap léger + teasing vidéo B (Don Juan VS Nympho) sans trop en dire.",
+          "lien": "—",
+          "astuce": "Format récap léger."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Récap de ma semaine de contenu (SFW ici, le reste sur mon profil). Bon dimanche 🤍",
+          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "extrait",
+          "plats": "TikTok + Reels + Shorts + Facebook + Reddit",
+          "time": "17:00",
+          "moment": "Après-midi",
+          "type": "Extrait long format (vidéo A) — cross-plateforme",
+          "texte": "Le moment le plus honnête de la vidéo. Sans filtre.",
+          "media": "Clip 9:16 < 30s. Sur Reddit : image/clip + titre adapté au sub, vérifier le flair.",
+          "lien": "Bio",
+          "astuce": "Reddit : jamais 2× la même image le même jour, répondre aux commentaires."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "17:00",
+          "moment": "Après-midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Bilan de la semaine : vous avez été sages ? La récompense est par ici 😈",
+          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Bilan intime + teasing exclusivité",
+          "texte": "Cette semaine avec vous ici, c'était fort. La semaine prochaine, exclu Telegram rien que pour vous : mes règles hot qu'on ne dit JAMAIS en public. Restez, ça va être chaud. 🔥🔒",
+          "media": "Photo intime + cadenas.",
+          "lien": "OnlyFans",
+          "astuce": "Donne une raison de rester abonné."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story / Snap (manuel)",
+          "texte": "Bilan intime de la semaine + teasing de la semaine prochaine 🔥",
+          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+        }
+      ]
+    }
+  ],
+  "reels": [
+    {
+      "n": 1,
+      "title": "La stat qui fait peur",
+      "angle": "STAT",
+      "dur": "20-25 sec",
+      "cam": "face cam serré, punchy",
+      "hook": "8 millions de rendez-vous chez le psy en un an en France. On n'a jamais eu aussi peur de se rencontrer soi-même.",
+      "corps": "On veut tous se connaître, mais on flippe de ce qu'on va trouver dans notre tête. Spoiler : vous êtes trois personnes, pas une.",
+      "cta": "La vidéo complète sort vendredi — abonnez-vous.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Lundi 20/07"
+    },
+    {
+      "n": 2,
+      "title": "Mon opinion cash",
+      "angle": "OPINION",
+      "dur": "25-30 sec",
+      "cam": "regard direct, assumé",
+      "hook": "Arrêtez de dire « je suis quelqu'un de simple ». Personne n'est simple.",
+      "corps": "Vous avez un ça qui veut tout, un sur-moi qui juge, un moi qui rame au milieu. Celui qui se croit « simple », c'est juste celui qui ne s'écoute pas.",
+      "cta": "Vous êtes plutôt ça ou sur-moi ? Commentaire.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Mardi 21/07"
+    },
+    {
+      "n": 3,
+      "title": "Mes 3 prénoms",
+      "angle": "INTIME",
+      "dur": "30-40 sec",
+      "cam": "doux, confidence",
+      "hook": "J'ai trois prénoms. Et chacun cache une partie de moi que vous ne connaissez pas toute.",
+      "corps": "La sage qu'on m'a demandé d'être. Amandine, mon quotidien. Et Amanda — celle que vous suivez, mon ça complètement assumé.",
+      "cta": "Le vrai moi, c'est sur mon Telegram. Lien en bio.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Vendredi 24/07 (sortie)"
+    },
+    {
+      "n": 4,
+      "title": "Le test du dimanche soir",
+      "angle": "ANECDOTE",
+      "dur": "25-30 sec",
+      "cam": "léger, complice",
+      "hook": "Vous voulez rencontrer vos 3 personnalités ? Attendez dimanche soir.",
+      "corps": "Le ça veut rester au lit. Le sur-moi dit « prépare ta semaine ». Le moi négocie « une heure PUIS je m'y mets ». Voilà, vous les avez toutes les trois.",
+      "cta": "Ça vous parle ? Mettez un 🙋 en commentaire.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Dimanche 26/07"
+    },
+    {
+      "n": 5,
+      "title": "Comment calmer votre sur-moi",
+      "angle": "CONSEIL",
+      "dur": "30-40 sec",
+      "cam": "posé, utile",
+      "hook": "Si vous culpabilisez pour tout, votre problème a un nom : un sur-moi trop fort.",
+      "corps": "Astuce : quand la petite voix dit « tu devrais avoir honte », demandez-lui « dit qui ? ». Souvent c'est la voix de quelqu'un d'autre, pas la vôtre.",
+      "cta": "Enregistrez ce réel, vous en aurez besoin.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Mercredi 22/07"
+    },
+    {
+      "n": 6,
+      "title": "Le ça ou le sur-moi ?",
+      "angle": "QUESTION CLIVANTE",
+      "dur": "15-20 sec",
+      "cam": "rapide, cut sec",
+      "hook": "Il est 23h. Vous avez ENVIE de lui écrire. Vous écrivez ou vous vous retenez ?",
+      "corps": "Si vous écrivez : bonjour le ça. Si vous vous retenez : coucou le sur-moi. Aucune mauvaise réponse — juste qui commande chez vous.",
+      "cta": "Team écrire ou team se retenir ? 👇",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Jeudi 23/07 (soir)"
+    },
+    {
+      "n": 7,
+      "title": "Freud n'a rien inventé",
+      "angle": "HUMOUR",
+      "dur": "20-25 sec",
+      "cam": "sourire, punch",
+      "hook": "L'ange et le démon sur l'épaule dans les dessins animés ? Bravo, vous connaissiez déjà Freud sans le savoir.",
+      "corps": "Le démon = le ça. L'ange = le sur-moi. Et vous, la tête au milieu qui transpire = le moi. Vous avez fait de la psycho devant les dessins animés.",
+      "cta": "Abonnez-vous, on rend la psycho fun.",
+      "plats": "TikTok + Reels + Shorts + Facebook",
+      "jour": "Samedi 25/07"
+    },
+    {
+      "n": 8,
+      "title": "3 signes que vos voix se disputent",
+      "angle": "LISTE",
+      "dur": "35-45 sec",
+      "cam": "dynamique, rythmé",
+      "hook": "3 signes que vos 3 personnalités sont en guerre — le 3 va vous piquer.",
+      "corps": "1 : vous procrastinez alors que vous SAVEZ quoi faire. 2 : vous vous sentez coupable après un plaisir totalement inoffensif. 3 : vous dites « oui » tout haut en pensant « non » tout bas.",
+      "cta": "Vous vous reconnaissez ? Vidéo complète en lien.",
+      "plats": "TikTok + Reels + Shorts + Facebook + Reddit",
+      "jour": "Dimanche 26/07"
+    }
+  ],
+  "script": [
+    {
+      "num": "①",
+      "title": "HOOK",
+      "timing": "0-8 sec",
+      "lines": [
+        {
+          "t": "Il y a quelqu'un dans votre tête qui veut des choses que vous n'oseriez avouer à personne. Et le pire… c'est que c'est vous.",
+          "quote": true
+        }
+      ],
+      "notes": [
+        "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+      ]
+    },
+    {
+      "num": "②",
+      "title": "CONTEXTE & STATS",
+      "timing": "15-60 sec",
+      "lines": [
+        {
+          "t": "On croit tous être « une » personne, cohérente, du matin au soir. Sauf que non. Vous n'êtes pas la même au boulot, avec votre mère, ou seul·e à 2h du matin. Et ce n'est pas de l'hypocrisie — c'est de la psychologie.",
+          "quote": false
+        },
+        {
+          "t": "En France, on n'a jamais autant essayé de se comprendre : les consultations chez le psy ont bondi de près de 14% en un an, plus de 8 millions de rendez-vous. Et pourtant, 73% des Français pensent qu'il faut « du courage » juste pour aller voir un psy.",
+          "quote": false
+        }
+      ],
+      "notes": [
+        "Caméra : même cadre, ton posé.",
+        "Montage : insert texte « +14% de consultations psy en 2024 » et « 73% : il faut du courage ». GIF : https://tenor.com/view/inner-demons-gif-13982762090204352166"
+      ]
+    },
+    {
+      "num": "③",
+      "title": "LANCEMENT SIGNATURE",
+      "timing": "",
+      "lines": [
+        {
+          "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+          "quote": true
+        }
+      ],
+      "notes": [
+        "Caméra : léger sourire, ton plus doux."
+      ]
+    },
+    {
+      "num": "④",
+      "title": "MON OPINION D'ABORD",
+      "timing": "20 sec",
+      "lines": [
+        {
+          "t": "Pour moi, on n'a pas une personnalité : on en a trois. Freud avait déjà tout dit il y a un siècle. Le ça — mes envies brutes. Le sur-moi — la morale, la culpabilité. Et le moi, coincé au milieu, qui négocie toute la journée. Assumer les trois, c'est ça, se connaître.",
+          "quote": false
+        }
+      ],
+      "notes": [
+        "Caméra : ton affirmé, direct."
+      ]
+    },
+    {
+      "num": "⑤",
+      "title": "DÉVELOPPEMENT",
+      "timing": "4-5 min",
+      "lines": [
+        {
+          "t": "Le ça, c'est l'enfant capricieux en vous. Il veut le gâteau, le message à minuit, le plaisir tout de suite. Il ne connaît pas le mot « demain ».",
+          "quote": false
+        },
+        {
+          "t": "Le sur-moi, c'est la voix de votre mère, de la société. « Ça ne se fait pas. » « Qu'est-ce que les gens vont penser ? » C'est lui qui vous fait culpabiliser après le gâteau.",
+          "quote": false
+        },
+        {
+          "t": "Le moi, c'est l'arbitre épuisé au milieu du ring. Quand vous hésitez, que vous procrastinez, que vous vous sentez tiraillé — c'est cette bagarre-là.",
+          "quote": false
+        },
+        {
+          "t": "Le dimanche soir : le ça veut rester au lit, le sur-moi dit « sois productive », le moi négocie « une heure PUIS je m'y mets ». C'est vos trois voix en réunion de crise.",
+          "quote": false
+        },
+        {
+          "t": "La plupart des gens détestent une de leurs trois voix. Le vrai équilibre, ce n'est pas d'en tuer une. C'est de les faire dialoguer.",
+          "quote": false
+        },
+        {
+          "t": "Et moi ? J'ai littéralement trois prénoms. La version sage qu'on m'a demandé d'être. Amandine — le quotidien, le moi. Et Amanda — celle que vous suivez, mon ça assumé.",
+          "quote": false
+        }
+      ],
+      "notes": [
+        "Montage : GIF ange/démon pendant « ça vs sur-moi » : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-15606468775788725702",
+        "Montage : insert « 31% des Français ont déjà consulté un psy ».",
+        "Caméra : ton spontané, comme une confidence."
+      ]
+    },
+    {
+      "num": "⑥",
+      "title": "MOMENT CLÉ",
+      "timing": "",
+      "lines": [
+        {
+          "t": "Vous n'avez pas à choisir laquelle de vos trois voix est la vraie. Elles le sont toutes. La paix, c'est le jour où vous arrêtez de faire taire l'une pour plaire à l'autre.",
+          "quote": true
+        }
+      ],
+      "notes": [
+        "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après."
+      ]
+    },
+    {
+      "num": "⑦",
+      "title": "QUESTION OUVERTE",
+      "timing": "",
+      "lines": [
+        {
+          "t": "Laquelle de vos trois voix parle le plus fort en ce moment : le ça, le moi, ou le sur-moi ? Dites-le-moi en commentaire.",
+          "quote": false
+        }
+      ],
+      "notes": []
+    },
+    {
+      "num": "⑧",
+      "title": "TEASING",
+      "timing": "",
+      "lines": [
+        {
+          "t": "Et vendredi prochain, on reste dans l'intime mais on change de terrain : je vous parle des femmes au foyer — choix assumé ou piège doré ? Ça va faire débat.",
+          "quote": false
+        }
+      ],
+      "notes": [
+        "Prochain épisode au planning : « Les femmes au foyer » — 31/07."
+      ]
+    },
+    {
+      "num": "⑨",
+      "title": "CLÔTURE SIGNATURE",
+      "timing": "",
+      "lines": [
+        {
+          "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+          "quote": true
+        }
+      ],
+      "notes": [
+        "Caméra : plan légèrement élargi, ton doux."
+      ]
+    },
+    {
+      "num": "⑩",
+      "title": "CTA — ÉCRAN DE FIN",
+      "timing": "20 sec",
+      "lines": [
+        {
+          "t": "Si cette vidéo vous a parlé, abonnez-vous. Le vrai moi, sans filtre, c'est sur Instagram @blondymandise et sur mon Telegram. Et pour le reste… vous savez où me trouver. 😉",
+          "quote": false
+        }
+      ],
+      "notes": [
+        "Montage : superposer les cards YouTube pendant ces 20 sec."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Consultations psy +13,8% en 2024, 8M+ RDV (Doctolib / assurland)",
+      "url": "https://www.assurland.com/mutuelle-sante/actualites/augmentation-importante-des-consultations-psychologiques-en-2024_141766.html"
+    },
+    {
+      "label": "73% des Français : il faut du « courage » pour consulter (YouGov/HuffPost)",
+      "url": "https://www.ma-grande-taille.com/psycho/confiance-en-soi/73-pourcent-francais-pensent-courage-consulter-psy-etude-yougov-huffpost-292195"
+    },
+    {
+      "label": "Les Français et les psy — 31% ont déjà consulté (IFEMDR)",
+      "url": "https://www.ifemdr.fr/les-francais-et-les-psy-2/"
+    }
+  ],
+  "ideaProposals": [
+    {
+      "theme": "Couple",
+      "title": "Faut-il tout se dire dans le couple ?",
+      "format": "Long format",
+      "hook": "La transparence totale : preuve d'amour ou piège ?",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "theme": "Femme & Société",
+      "title": "Le female gaze : et si les femmes mataient aussi ?",
+      "format": "Long format",
+      "hook": "Renverser le regard — le désir vu du côté des femmes",
+      "potentiel": "🔥🔥"
+    },
+    {
+      "theme": "Sexualité",
+      "title": "Coucher au premier rendez-vous : ça change quoi ?",
+      "format": "Long format",
+      "hook": "Double standard + vécu perso sans filtre",
+      "potentiel": "🔥🔥🔥"
+    }
+  ]
+};
+
+const PLAT = {
+  instagram:{n:"Instagram",em:"📸",c:"var(--instagram)"},
+  telegram:{n:"Telegram",em:"✈️",c:"var(--telegram)"},
+  youtube:{n:"YouTube",em:"▶️",c:"var(--youtube)"},
+  extrait:{n:"Extrait",em:"✂️",c:"var(--extrait)"},
+  tiktok:{n:"TikTok",em:"🎵",c:"var(--tiktok)"},
+  facebook:{n:"Facebook",em:"📘",c:"var(--facebook)"},
+  reddit:{n:"Reddit",em:"👽",c:"var(--reddit)"},
+  x:{n:"X",em:"✖️",c:"var(--x)"},
+  snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"}
+};
+const PLAT_ORDER=["youtube","instagram","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
+const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
+const WEEK=DATA.meta.isoWeek||"sem";
+const today=new Date();
+const todayIdx=(today.getDay()+6)%7;
+let viewIdx=Math.min(todayIdx, DATA.schedule.length-1);
+let calMode="day";               // "day" | "plat"
+let platFilter=null;             // platKey when in plat mode
+let curTab="jour";
+let done=new Set();
+
+/* ---- persistence ---- */
+function loadDone(){try{done=new Set(JSON.parse(localStorage.getItem("done:"+WEEK)||"[]"));}catch(e){done=new Set();}}
+function saveDone(){try{localStorage.setItem("done:"+WEEK,JSON.stringify([...done]));}catch(e){}}
+function setDone(id,on){on?done.add(id):done.delete(id);saveDone();}
+function loadLinks(){try{Object.assign(DATA.links,JSON.parse(localStorage.getItem("links:"+WEEK)||"{}"));}catch(e){}}
+function saveLink(k,v){try{const s=JSON.parse(localStorage.getItem("links:"+WEEK)||"{}");s[k]=v;localStorage.setItem("links:"+WEEK,JSON.stringify(s));DATA.links[k]=v;}catch(e){}}
+function loadIdea(){try{return JSON.parse(localStorage.getItem("idea:"+WEEK)||"null");}catch(e){return null;}}
+function saveIdea(o){try{localStorage.setItem("idea:"+WEEK,JSON.stringify(o));}catch(e){}}
+let idea=null;
+
+function resolveLien(name){if(!name||name==="—")return "—";return DATA.links[name]||name;}
+function esc(s){return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
+function toast(m){const t=document.getElementById("toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),1500);}
+async function copy(text,btn){let ok=false;try{await navigator.clipboard.writeText(text);ok=true;}catch(e){try{const ta=document.createElement("textarea");ta.value=text;ta.style.position="fixed";ta.style.opacity=0;document.body.appendChild(ta);ta.select();ok=document.execCommand("copy");document.body.removeChild(ta);}catch(_){}}if(ok&&btn){btn.classList.add("ok");const o=btn.textContent;btn.textContent="✓";setTimeout(()=>{btn.classList.remove("ok");btn.textContent=o;},1100);}toast(ok?"Copié ✓":"Copie impossible");}
+function nowMin(){const n=new Date();return n.getHours()*60+n.getMinutes();}
+function toMin(t){const[a,b]=(t||"00:00").split(":").map(Number);return a*60+b;}
+const pid=(d,i)=>"p:"+d+":"+i;
+
+function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick=e=>copy(decodeURIComponent(e.currentTarget.dataset.c),e.currentTarget));}
+
+/* ============ TABS ============ */
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  b.classList.add("active");curTab=b.dataset.v;
+  ["jour","reels","script","idees","liens"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
+  if(curTab==="jour")renderJour();
+  if(curTab==="reels")renderReels();
+  if(curTab==="script")renderScript();
+  if(curTab==="idees")renderIdees();
+  if(curTab==="liens")renderLiens();
+  window.scrollTo({top:0,behavior:"smooth"});
+});
+function goto(tab){document.querySelector('.tab[data-v="'+tab+'"]').click();}
+
+/* ============ GLOBAL DAY BAR ============ */
+function postsForDay(d){const day=DATA.schedule[d];if(!day)return[];return day.posts.map((p,i)=>({...p,id:pid(d,i)}));}
+function renderDays(){
+  const days=document.getElementById("days");days.innerHTML="";
+  DAYS.forEach((d,i)=>{
+    const p=postsForDay(i);const allDone=p.length&&p.every(x=>done.has(x.id));
+    const el=document.createElement("div");
+    el.className="day"+(i===viewIdx&&calMode==="day"&&curTab==="jour"?" active":"")+(allDone?" done-day":"");
+    el.innerHTML=d.slice(0,3)+(i===todayIdx?'<span class="n">● auj.</span>':(allDone?'<span class="n">✓ fait</span>':'<span class="n">&nbsp;</span>'));
+    // depuis n'importe quel onglet : choisir un jour amène au calendrier de ce jour
+    el.onclick=()=>{viewIdx=i;calMode="day";if(curTab!=="jour"){goto("jour");}else{renderJour();renderDays();}window.scrollTo({top:0,behavior:"smooth"});};
+    days.appendChild(el);
+  });
+}
+
+/* ============ JOUR (calendrier) ============ */
+function renderJour(){
+  const v=document.getElementById("view-jour");
+  let html='<div class="modebar">'
+    +'<button class="modebtn'+(calMode==="day"?" active":"")+'" data-m="day">📅 Par jour</button>'
+    +'<button class="modebtn'+(calMode==="plat"?" active":"")+'" data-m="plat">📡 Par plateforme</button></div>';
+  v.innerHTML=html+'<div id="calbody"></div>';
+  v.querySelectorAll(".modebtn").forEach(b=>b.onclick=()=>{calMode=b.dataset.m;if(calMode==="plat"&&!platFilter){platFilter=firstPlatform();}document.getElementById("ringWrap").style.display=(calMode==="day")?"block":"none";renderJour();renderDays();});
+  if(calMode==="day")renderCalByDay();
+  else renderCalByPlat();
+  renderDays();
+}
+function firstPlatform(){for(const k of PLAT_ORDER){if(allWeekPosts().some(p=>p.platKey===k))return k;}return "instagram";}
+function allWeekPosts(){const out=[];DATA.schedule.forEach((d,di)=>d.posts.forEach((p,i)=>out.push({...p,day:d.day,date:d.date,dayIdx:di,id:pid(di,i)})));return out;}
+
+function renderCalByDay(){
+  const body=document.getElementById("calbody");
+  const posts=postsForDay(viewIdx);
+  const total=posts.length,nDone=posts.filter(p=>done.has(p.id)).length;
+  const d=DATA.schedule[viewIdx];
+  document.getElementById("date").textContent=(viewIdx===todayIdx?"Aujourd'hui · ":"")+(d?d.date:"");
+  document.getElementById("dayTitle").textContent=DAYS[viewIdx];
+  document.getElementById("weekSub").textContent=DATA.meta.weekLabel;
+  const ring=document.getElementById("ringFill");ring.style.strokeDashoffset=138*(1-(total?nDone/total:0));
+  document.getElementById("ringVal").textContent=nDone+"/"+total;
+
+  let h="";
+  if(viewIdx===todayIdx){
+    const undone=posts.filter(p=>!done.has(p.id));
+    if(!undone.length){h+='<div class="now-card alldone"><span class="now-tag"><span class="dot"></span>Terminé</span><div class="alldone-msg">Tout est posté ✨</div><div class="alldone-sub">Journée bouclée 📦</div></div>';}
+    else{const nm=nowMin();let next=undone.find(p=>toMin(p.time)>=nm-30)||undone[0];const pl=PLAT[next.platKey]||PLAT.instagram;
+      h+='<div class="now-card"><span class="now-tag"><span class="dot"></span>Maintenant · '+esc(next.time)+' '+esc(next.moment)+'</span>'
+        +'<div style="display:flex;align-items:center;gap:9px;margin:11px 0 3px"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(next.plats)+'</span>'
+        +'<span style="color:var(--muted);font-size:13px">'+undone.length+' restant'+(undone.length>1?"s":"")+'</span></div>'
+        +'<div class="field"><div class="k">Texte</div><div class="copyrow"><div class="copytxt">'+esc(next.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(next.texte)+'">Copier</button></div></div></div>';}
+  }
+  let lastMoment=null;
+  posts.forEach(p=>{
+    if(p.moment!==lastMoment){h+='<div class="slot-label"><span class="time">'+esc(p.time)+'</span> '+esc(p.moment)+'<span class="bar"></span></div>';lastMoment=p.moment;}
+    h+=postCard(p);
+  });
+  h+='<div style="text-align:center"><button class="reset" id="resetBtn">Réinitialiser ce jour</button></div>';
+  h+='<div class="foot">'+allWeekPosts().length+' posts programmés cette semaine · progression sauvegardée sur ce téléphone.</div>';
+  body.innerHTML=h;
+  bindCardEvents(body);
+  const rb=document.getElementById("resetBtn");if(rb)rb.onclick=()=>{posts.forEach(p=>setDone(p.id,false));renderJour();renderDays();toast("Jour réinitialisé");};
+}
+
+function renderCalByPlat(){
+  const body=document.getElementById("calbody");
+  document.getElementById("dayTitle").textContent="Par plateforme";
+  document.getElementById("date").textContent="Toute la semaine";
+  document.getElementById("weekSub").textContent=DATA.meta.weekLabel;
+  const present=PLAT_ORDER.filter(k=>allWeekPosts().some(p=>p.platKey===k));
+  let h='<div class="chips">';
+  present.forEach(k=>{const pl=PLAT[k];h+='<div class="chip'+(k===platFilter?" active":"")+'" data-k="'+k+'" style="'+(k===platFilter?"background:"+pl.c+";border-color:"+pl.c:"")+'">'+pl.em+' '+pl.n+'</div>';});
+  h+='</div>';
+  const posts=allWeekPosts().filter(p=>p.platKey===platFilter)
+    .sort((a,b)=>a.dayIdx-b.dayIdx||toMin(a.time)-toMin(b.time));
+  const nDone=posts.filter(p=>done.has(p.id)).length;
+  h+='<div class="meta-line" style="margin:0 2px 10px"><b>'+posts.length+'</b> post'+(posts.length>1?"s":"")+' · '+nDone+' fait'+(nDone>1?"s":"")+' cette semaine</div>';
+  let lastDay=null;
+  posts.forEach(p=>{
+    if(p.day!==lastDay){h+='<div class="slot-label"><span class="time">'+esc(p.day)+'</span> '+esc(p.date)+'<span class="bar"></span></div>';lastDay=p.day;}
+    h+=postCard(p,true);
+  });
+  body.innerHTML=h;
+  body.querySelectorAll(".chip").forEach(c=>c.onclick=()=>{platFilter=c.dataset.k;renderCalByPlat();});
+  bindCardEvents(body);
+}
+
+function postCard(p,showTime){
+  const pl=PLAT[p.platKey]||PLAT.instagram;const on=done.has(p.id);const lien=resolveLien(p.lien);
+  return '<div class="card'+(on?" done":"")+'" data-id="'+p.id+'">'
+    +'<div class="card-head"><span class="badge" style="background:'+pl.c+'"><span class="em">'+pl.em+'</span>'+esc(p.plats)+'</span>'
+    +'<button class="chk'+(on?" on":"")+'" aria-label="Fait">✓</button></div>'
+    +'<div class="meta-line">'+(showTime?esc(p.time)+' · ':'')+esc(p.type)+'</div>'
+    +'<div class="field"><div class="k">Texte à copier</div><div class="copyrow"><div class="copytxt">'+esc(p.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(p.texte)+'">Copier</button></div></div>'
+    +(lien&&lien!=="—"?'<div class="field"><div class="k">Lien</div><div class="copyrow"><div class="copytxt link">'+esc(lien)+'</div><button class="copybtn" data-c="'+encodeURIComponent(lien)+'">Copier</button></div></div>':'')
+    +'<div class="field"><div class="k">Média à joindre</div><div class="media">'+p.media+'</div></div>'
+    +(p.astuce?'<div class="note">💡 '+esc(p.astuce)+'</div>':'')+'</div>';
+}
+function bindCardEvents(root){
+  bindCopies(root);
+  root.querySelectorAll(".card .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest(".card").dataset.id;setDone(id,!done.has(id));if(calMode==="day")renderCalByDay();else renderCalByPlat();renderDays();});
+}
+
+/* ============ RÉELS ============ */
+function renderReels(){
+  const el=document.getElementById("view-reels");
+  const jours=DATA.reels.map(r=>r.jour).filter(Boolean);
+  let h='<div class="info"><span class="tt">🎬 Réels à produire — semaine en cours</span>'
+    +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
+    +'Tournage batch : <b>mercredi 8 juillet</b>. Publiés en multi-plateforme sur la semaine de sortie (vidéo le <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b>).<br>'
+    +'Coche « validé » quand le réel est tourné et prêt.</div>';
+  const total=DATA.reels.length,nDone=DATA.reels.filter(r=>done.has("r:"+r.n)).length;
+  h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> réels validés</div>';
+  DATA.reels.forEach(r=>{
+    const on=done.has("r:"+r.n);
+    h+='<div class="card'+(on?" done":"")+'" data-rid="r:'+r.n+'">'
+      +'<div class="reel-h"><div class="l"><span class="n">'+r.n+'</span><span class="t">'+esc(r.title)+'</span></div>'
+      +'<button class="chk'+(on?" on":"")+'" aria-label="Validé">✓</button></div>'
+      +'<div class="tag">'+esc(r.angle)+' · '+esc(r.dur)+' · '+esc(r.cam)+'</div>'
+      +'<div class="kv"><b>Plateformes :</b> '+esc(r.plats)+'</div>'
+      +'<div class="field"><div class="k">🎣 Hook</div><div class="copyrow"><div class="copytxt">'+esc(r.hook)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.hook)+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">💬 Corps</div><div class="copyrow"><div class="copytxt">'+esc(r.corps)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.corps)+'">Copier</button></div></div>'
+      +'<div class="field"><div class="k">📣 CTA</div><div class="copyrow"><div class="copytxt">'+esc(r.cta)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.cta)+'">Copier</button></div></div></div>';
+  });
+  el.innerHTML=h;bindCopies(el);
+  el.querySelectorAll("[data-rid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-rid]").dataset.rid;setDone(id,!done.has(id));renderReels();});
+}
+
+/* ============ SCRIPT ============ */
+function renderScript(){
+  const el=document.getElementById("view-script");
+  let h='<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
+    +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
+    +'Tournage : <b>mercredi 8 juillet</b> · Sortie prévue : <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b> · Durée cible 5-10 min.<br>'
+    +'Coche « validé » chaque section une fois tournée.</div>';
+  const total=DATA.script.length,nDone=DATA.script.filter((b,i)=>done.has("b:"+i)).length;
+  h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> sections validées</div>';
+  DATA.script.forEach((b,i)=>{
+    const on=done.has("b:"+i);
+    h+='<div class="beat'+(on?" done":"")+'" data-bid="b:'+i+'"><div class="bh"><span><span class="num">'+b.num+'</span> '+esc(b.title)+(b.timing?' <span class="tag">('+esc(b.timing)+')</span>':'')+'</span>'
+      +'<button class="chk'+(on?" on":"")+'" aria-label="Validé">✓</button></div>';
+    b.lines.forEach(l=>{h+='<div class="line'+(l.quote?' q':'')+'">'+esc(l.t)+'</div>';});
+    (b.notes||[]).forEach(n=>{h+='<div class="cam">'+esc(n)+'</div>';});
+    h+='</div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll("[data-bid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-bid]").dataset.bid;setDone(id,!done.has(id));renderScript();});
+}
+
+/* ============ IDÉES ============ */
+function renderIdees(){
+  const el=document.getElementById("view-idees");
+  idea=loadIdea();
+  let h="";
+  const pending=idea&&!idea.validated;
+  if(pending&&(todayIdx>=6)){ // dimanche ou après
+    h+='<div class="banner"><span>⏰</span><div><b>Rappel :</b> tu as choisi une idée mais tu ne l\'as pas encore saisie dans le calendrier. Fais-le <b>avant lundi</b> — une nouvelle idée sera proposée lundi.</div></div>';
+  }
+  if(idea){
+    h+='<div class="chosen"><span class="lab">Idée choisie pour les prochaines semaines</span>'
+      +'<div class="tt">'+esc(idea.title)+'</div>'
+      +'<div class="tag">'+esc(idea.theme)+' · '+esc(idea.format||"Long format")+' · '+esc(idea.potentiel||"")+'</div>'
+      +'<div class="kv" style="margin-top:8px">'+esc(idea.hook||"")+'</div>'
+      +'<div class="validrow"><button class="chk'+(idea.validated?" on":"")+'" id="ideaChk" aria-label="Saisie faite">✓</button>'
+      +'<div class="txt">'+(idea.validated?'<b>Saisie dans le calendrier faite ✓</b>':'Coche quand tu as <b>saisi cette idée dans le calendrier</b> (à faire manuellement).')+'</div></div>'
+      +'<button class="btn ghost" id="changeIdea" style="margin-top:12px">Changer d\'idée</button></div>';
+    el.innerHTML=h;
+    document.getElementById("ideaChk").onclick=()=>{idea.validated=!idea.validated;saveIdea(idea);renderIdees();refreshAlerts();toast(idea.validated?"Saisie validée ✓":"Décoché");};
+    document.getElementById("changeIdea").onclick=()=>{if(confirm("Changer d'idée ? Le choix actuel sera remplacé."))  {localStorage.removeItem("idea:"+WEEK);idea=null;renderIdees();refreshAlerts();}};
+    return;
+  }
+  h+='<div class="info"><span class="tt">💡 Propositions de nouvelles idées</span>'
+    +'Pour les <b>prochaines semaines</b>. Choisis-en une : elle s\'affichera avec une case à cocher. '
+    +'C\'est à toi de <b>saisir l\'idée dans le calendrier</b> (Google Sheets), puis de cocher « saisie faite ».</div>';
+  (DATA.ideaProposals||[]).forEach((p,i)=>{
+    h+='<div class="idea-card"><div class="ih">'+esc(p.title)+'</div>'
+      +'<div class="im">'+esc(p.theme)+' · '+esc(p.format||"Long format")+' · '+esc(p.potentiel||"")+'</div>'
+      +'<div class="kv" style="margin-bottom:10px">'+esc(p.hook||"")+'</div>'
+      +'<button class="btn primary" data-i="'+i+'">Choisir cette idée</button></div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll(".btn.primary").forEach(b=>b.onclick=e=>{
+    const p=DATA.ideaProposals[+e.currentTarget.dataset.i];
+    if(confirm('Choisir « '+p.title+' » ?\n\nTu devras la saisir manuellement dans le calendrier.')){
+      idea={...p,validated:false,ts:Date.now()};saveIdea(idea);renderIdees();refreshAlerts();toast("Idée choisie ✓");
+      maybeNotify();
+    }
+  });
+}
+
+/* ---- alerts / notifications ---- */
+function refreshAlerts(){
+  const i=loadIdea();const pending=i&&!i.validated;
+  document.querySelector('.tab[data-v="idees"]').classList.toggle("has-alert",!!pending);
+}
+function maybeNotify(){
+  try{
+    if(!("Notification" in window))return;
+    if(Notification.permission==="default"){Notification.requestPermission();}
+  }catch(e){}
+}
+function sundayNudge(){
+  try{
+    const i=loadIdea();
+    if(i&&!i.validated&&todayIdx>=6&&"Notification"in window&&Notification.permission==="granted"){
+      new Notification("Cockpit — idée à saisir",{body:"Saisis l'idée choisie dans le calendrier avant lundi."});
+    }
+  }catch(e){}
+}
+
+/* ============ LIENS ============ */
+function renderLiens(){
+  const el=document.getElementById("view-liens");
+  const groups=[["Plateformes payantes",["OnlyFans","MYM"]],["Direct",["Telegram","PayPal","Snapchat"]],
+    ["Funnel direct",["X","Reddit"]],["Marque (réseaux)",["Instagram","YouTube","TikTok","Facebook","Threads"]],["Bio",["Bio"]]];
+  let h='<div class="info">Ton coffre à liens. Modifie une URL et elle est mémorisée sur ce téléphone. « Copier » pour la coller ailleurs.</div>';
+  groups.forEach(([g,keys])=>{h+='<div class="sec-title">'+g+'</div>';keys.forEach(k=>{const v=DATA.links[k]||"";
+    h+='<div class="link-row"><span class="lk">'+k+'</span><div class="lr"><input data-k="'+k+'" value="'+esc(v)+'" spellcheck="false"><button class="copybtn" data-c="'+encodeURIComponent(v)+'">Copier</button></div></div>';});});
+  el.innerHTML=h;
+  el.querySelectorAll("input").forEach(inp=>inp.onchange=e=>{const val=e.target.value.trim();saveLink(e.target.dataset.k,val);const b=e.target.parentNode.querySelector(".copybtn");if(b)b.dataset.c=encodeURIComponent(val);toast("Lien enregistré ✓");});
+  bindCopies(el);
+}
+
+/* ---- boot ---- */
+loadDone();loadLinks();idea=loadIdea();
+renderDays();renderJour();refreshAlerts();sundayNudge();
+</script>
+</body>
+</html>

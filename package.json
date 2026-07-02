@@ -1,0 +1,14 @@
+{
+  "name": "cockpit-pensees-amanda",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brief du lundi + cockpit mobile pour la chaîne Les Pensées d'Amanda. Source de vérité: data/brief-data.json.",
+  "scripts": {
+    "build:brief": "node scripts/build_brief.js",
+    "build:cockpit": "node scripts/build_cockpit.js",
+    "build": "node scripts/build_brief.js && node scripts/build_cockpit.js"
+  },
+  "dependencies": {
+    "docx": "^9.0.0"
+  }
+}

@@ -1,0 +1,102 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Les Pensees d'Amanda//Cockpit Reminders//FR
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cockpit — Rappels publication
+BEGIN:VTIMEZONE
+TZID:Europe/Paris
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:CEST
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:CET
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:cockpit-0900@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260629T090000
+DURATION:PT10M
+RRULE:FREQ=DAILY
+SUMMARY:📸 Post du matin — ouvre le cockpit
+DESCRIPTION:Story / post du matin. Ouvre le cockpit et copie le texte du jour.
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:📸 Post du matin
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cockpit-1200@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260629T120000
+DURATION:PT10M
+RRULE:FREQ=DAILY
+SUMMARY:🕛 Post de midi — extrait / relance
+DESCRIPTION:Post de midi (extrait cross-plateforme ou relance).
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:🕛 Post de midi
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cockpit-1600@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260629T160000
+DURATION:PT10M
+RRULE:FREQ=DAILY
+SUMMARY:🎵 Post de l'après-midi
+DESCRIPTION:Post de l'après-midi (extrait / cross-plateforme).
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:🎵 Post de l'après-midi
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cockpit-2000@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260629T200000
+DURATION:PT10M
+RRULE:FREQ=DAILY
+SUMMARY:✈️ Post du soir — Telegram / résultat
+DESCRIPTION:Post du soir (Telegram intime, résultat sondage, debrief).
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:✈️ Post du soir
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cockpit-2200@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260629T220000
+DURATION:PT10M
+RRULE:FREQ=DAILY
+SUMMARY:🌙 Dernier post — nuit
+DESCRIPTION:Dernier post de la journée. Coche tes posts faits dans le cockpit.
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:🌙 Dernier post
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:cockpit-idea-sunday@pensees-amanda
+DTSTART;TZID=Europe/Paris:20260705T180000
+DURATION:PT15M
+RRULE:FREQ=WEEKLY;BYDAY=SU
+SUMMARY:💡 Saisir l'idée choisie dans le calendrier (avant lundi)
+DESCRIPTION:Ouvre le cockpit, onglet Idées. Saisis l'idée choisie dans le calendrier Google Sheets et coche « saisie faite » avant lundi (nouvelle idée générée lundi).
+BEGIN:VALARM
+TRIGGER:PT0M
+ACTION:DISPLAY
+DESCRIPTION:💡 Idée à saisir dans le calendrier avant lundi
+END:VALARM
+END:VEVENT
+END:VCALENDAR
