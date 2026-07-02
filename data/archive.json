@@ -272,6 +272,557 @@
           "jour": "Samedi 25/07"
         }
       ]
+    },
+    {
+      "isoWeek": "2026-W26",
+      "weekLabel": "Semaine du lundi 22 juin au dimanche 28 juin 2026",
+      "briefDate": "2026-06-22",
+      "videoD": {
+        "title": "Grossesse gériatrique : périmée à 35 ans ?",
+        "theme": "Femme & Société",
+        "date": "2026-07-17"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "À 35 ans, pour la médecine, ton corps est officiellement… gériatrique. Gériatrique. Le mot qu’on utilise pour les personnes en fin de vie. Tu as bien entendu.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : face cam serré, regard direct, pas de sourire, pause de 2 sec avant de parler"
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "\"Grossesse gériatrique.\" C’est le vrai terme médical pour une grossesse à partir de 35 ans. Sauf qu’en France, l’âge moyen pour devenir mère dépasse aujourd’hui 31 ans — contre 26,5 ans dans les années 70. On fait des enfants de plus en plus tard, c’est la norme… et pourtant le vocabulaire, lui, n’a pas bougé. Près d’une naissance sur cinq concerne une femme de plus de 35 ans. Donc une femme sur cinq se fait coller l’étiquette \"gériatrique\" pendant l’un des plus beaux moments de sa vie."
+            }
+          ],
+          "notes": [
+            "Note caméra : même cadre, ton posé",
+            "Note montage : inserts texte à l’écran : « 31 ans = âge moyen maternité (FR, 2022) » et « grossesse 'gériatrique' = dès 35 ans ». GIF réaction yeux écarquillés : tenor.com/search/say-what-gifs"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "Lancement signature",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément… dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : léger sourire, ton plus doux"
+          ]
+        },
+        {
+          "num": "④",
+          "title": "Mon opinion d’abord",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Mon avis ? Ce mot n’est pas une erreur de traduction. C’est le symptôme d’un truc plus large : un vocabulaire pensé PAR des hommes, POUR décrire — et juger — le corps des femmes. Et tant qu’on l’accepte sans broncher, on laisse d’autres décider de notre date de péremption."
+            }
+          ],
+          "notes": [
+            "Note caméra : ton affirmé, directe"
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "Développement",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Reprenons ce mot : gériatrie, c’est la médecine des personnes âgées. Donc à 35 ans, on te met dans la même case linguistique que ta grand-mère. Pourquoi ? Parce que le risque augmente avec l’âge, me diront les médecins. Et c’est vrai, biologiquement il y a des réalités : la fertilité baisse, certains risques montent. Je ne nie pas la science. Ce que je questionne, c’est le MOT. Parce qu’on aurait pu dire \"grossesse tardive\". On a choisi \"gériatrique\"."
+            },
+            {
+              "t": "Et ce n’est pas un cas isolé. Faites la liste avec moi. Une femme qui désire beaucoup ? \"Nymphomane\". Un homme pareil ? \"Un sacré tombeur\". Une femme qui exprime trop d’émotions ? \"Hystérique\" — un mot qui vient littéralement du grec \"utérus\". Une femme célibataire après 30 ans ? \"Vieille fille\". Un homme ? \"Célibataire endurci\", presque un compliment. Une femme qui veut un enfant ? On lui parle d’\"horloge biologique\" qui \"tourne\", comme une bombe à retardement."
+            },
+            {
+              "t": "Le point commun ? Tous ces mots transforment une caractéristique neutre en défaut. Et presque tous concernent notre corps, notre désir, notre capacité à enfanter. Comme si la valeur d’une femme avait une date limite imprimée dessus, façon yaourt."
+            },
+            {
+              "t": "Le contre-argument que j’entends : \"C’est juste du vocabulaire médical, faut pas tout politiser.\" OK. Mais les mots façonnent comment on se voit. Une femme de 36 ans qui entend \"gériatrique\" à son premier rendez-vous gynéco, ça la marque. Moi la première. Les mots ne sont jamais \"juste\" des mots."
+            },
+            {
+              "t": "Alors qu’est-ce qu’on fait ? On n’attend pas que la médecine se réveille. On reprend le pouvoir sur les mots. On dit \"grossesse tardive\" ou juste \"ma grossesse\". On arrête de dire qu’on est \"déjà vieille\" à 35 ans. Et surtout, on apprend à nos filles que leur corps n’a pas de date de péremption."
+            }
+          ],
+          "notes": [
+            "Note montage : lister les mots à l’écran un par un, façon liste qui s’empile. GIF horloge : tenor.com/search/ticking-clock-gifs"
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "Moment clé",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Ton corps n’est pas un yaourt. Il n’a pas de date de péremption — il a une histoire.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : zoom très léger, regard intense, silence 2 sec avant et après"
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "Question ouverte",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Dis-moi en commentaire : quel mot a-t-on déjà utilisé pour parler de TON corps, et qui t’a marquée ?"
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "Teasing",
+          "timing": "",
+          "lines": [
+            {
+              "t": "La semaine prochaine, on va encore plus loin dans ma tête : je vous explique pourquoi on a tous TROIS personnes en nous… et je vous révèle mes trois prénoms. Vous n’êtes pas prêts."
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑨",
+          "title": "Clôture signature",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n’oubliez pas que chacun a ses raisons de penser ce qu’il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : plan légèrement élargi, ton doux"
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CTA — écran de fin",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo t’a fait réfléchir, abonne-toi, c’est gratuit et ça change tout pour la chaîne. Le débat continue sur mon Instagram @blondymandise, et pour celles et ceux qui veulent les conversations vraiment sans filtre, vous savez où me trouver. À vendredi prochain."
+            }
+          ],
+          "notes": [
+            "Note montage : superposer les cards YouTube (abonnement + vidéo suivante) pendant ces 20 sec"
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "Le mot interdit",
+          "angle": "stat",
+          "dur": "20-25 sec",
+          "cam": "face cam serré",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Lundi 13/07 (lancement de semaine), sous-titres bold sur le mot 'gériatrique'.",
+          "hook": "Le mot que la médecine utilise pour ton corps à 35 ans va te choquer.",
+          "corps": "Grossesse \"gériatrique\". À 35 ans. Alors que l’âge moyen pour devenir mère en France dépasse 31 ans. La norme a changé, le mot non.",
+          "cta": "Tu connaissais ce terme ? Commente."
+        },
+        {
+          "n": "2",
+          "title": "L’horloge biologique",
+          "angle": "opinion",
+          "dur": "30-35 sec",
+          "cam": "ton affirmé",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Mardi 14/07. GIF horloge en insert : tenor.com/search/ticking-clock-gifs.",
+          "hook": "Arrêtez de me parler de mon \"horloge biologique\".",
+          "corps": "On dit qu’elle \"tourne\", qu’elle \"sonne\", comme une bombe. On ne dit jamais ça aux hommes. Pourtant leur fertilité baisse aussi. Bizarre, non ?",
+          "cta": "D’accord ou pas ? Dis-moi."
+        },
+        {
+          "n": "3",
+          "title": "Chez le gynéco",
+          "angle": "anecdote",
+          "dur": "35-40 sec",
+          "cam": "intime, presque chuchoté",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Mercredi 15/07. Fort potentiel de partage en DM.",
+          "hook": "Ce que mon gynéco m’a dit, et que je n’ai toujours pas digéré.",
+          "corps": "\"À votre âge, faut pas trop attendre.\" J’avais 34 ans. Sortie du cabinet, je me suis sentie en retard sur ma propre vie. Un mot, et tu doutes de tout.",
+          "cta": "Ça t’est déjà arrivé ? Raconte."
+        },
+        {
+          "n": "4",
+          "title": "3 mots à bannir",
+          "angle": "conseil",
+          "dur": "30 sec",
+          "cam": "dynamique, énergique",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Jeudi 16/07 (veille de sortie), format liste à l’écran 1-2-3.",
+          "hook": "3 mots à ne plus JAMAIS utiliser pour parler du corps d’une femme.",
+          "corps": "Un : \"gériatrique\". Deux : \"hystérique\" — ça vient du mot utérus, je vous jure. Trois : \"vieille fille\". Trois mots, zéro respect.",
+          "cta": "Tu en ajoutes lequel ?"
+        },
+        {
+          "n": "5",
+          "title": "En retard ?",
+          "angle": "question clivante",
+          "dur": "25 sec",
+          "cam": "regard direct, défi",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Vendredi 17/07 matin (jour de sortie), pousse le trafic vers la vidéo.",
+          "hook": "Une femme de 38 ans qui veut un premier enfant : elle est en retard ?",
+          "corps": "Si t’as hésité à répondre, c’est exactement le problème. Pourquoi on poserait même la question ?",
+          "cta": "Réponds en commentaire, sois honnête."
+        },
+        {
+          "n": "6",
+          "title": "Si on parlait des hommes pareil",
+          "angle": "humour",
+          "dur": "30-35 sec",
+          "cam": "ton pince-sans-rire",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Vendredi 17/07 soir. Potentiel viral, ton comique.",
+          "hook": "Et si on parlait des hommes comme on parle des femmes ?",
+          "corps": "\"Monsieur, à 45 ans, votre paternité serait gériatrique.\" \"Votre horloge biologique sonne, il faudrait vous dépêcher.\" Ça sonne absurde ? Exactement.",
+          "cta": "Tag un mec qui doit entendre ça 😏"
+        },
+        {
+          "n": "7",
+          "title": "Ce que ça m’a fait",
+          "angle": "intime",
+          "dur": "40-45 sec",
+          "cam": "face cam doux, sincère",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Samedi 18/07. Réel « cœur » de la semaine, fort en sauvegardes.",
+          "hook": "Le jour où on a parlé de mon corps comme d’un produit périmé.",
+          "corps": "J’ai longtemps cru que ma valeur baissait avec mon âge. Aujourd’hui je sais que c’est faux. Mon corps n’a pas de date de péremption — il a une histoire. Et la tienne aussi.",
+          "cta": "Envoie ça à une femme qui a besoin de l’entendre."
+        },
+        {
+          "n": "8",
+          "title": "Le lexique sexiste",
+          "angle": "liste",
+          "dur": "40-50 sec",
+          "cam": "rythme soutenu",
+          "plats": "TikTok + Instagram + YouTube + Facebook",
+          "jour": "Montage / publication : Dimanche 19/07 (recap), carrousel de mots à l’écran, clôture de semaine.",
+          "hook": "5 mots du lexique sexiste qu’on subit toutes.",
+          "corps": "Gériatrique. Nymphomane. Hystérique. Vieille fille. Fille facile. Cinq mots qui transforment une femme normale en problème. Et leur équivalent masculin ? Souvent un compliment.",
+          "cta": "Lequel t’a déjà visée ?"
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W24",
+      "weekLabel": "Semaine du lundi 8 juin au dimanche 14 juin 2026",
+      "briefDate": "2026-06-08",
+      "videoD": {
+        "title": "10 questions gênantes sur le libertinage",
+        "theme": "Libertinage",
+        "date": "2026-07-03"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "Tu as déjà voulu poser une question sur le libertinage... mais tu n'as pas osé. Parce que tu avais peur d'avoir l'air naïf. Ou bizarre. Ou trop curieux. Bonne nouvelle : aujourd'hui, je réponds à tout.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : Face cam serré, regard direct caméra, pas de sourire, pause de 1 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "En France, selon une étude Ifop, 5% des couples ont déjà pratiqué l'échangisme — c'est le double du chiffre des années 90. Et si on parle plus largement de libertinage, c'est environ 10% des Français qui ont essayé au moins une fois. Pourtant... on en parle presque jamais vraiment. Parce que le sujet fait encore peur. Alors aujourd'hui, on lève le voile."
+            }
+          ],
+          "notes": [
+            "Note caméra : Même cadre, ton posé.",
+            "Note montage : Insert texte à l'écran : \"5% des couples français → échangisme (Ifop)\" et \"10% ont pratiqué le libertinage\". Lien mème suggéré : tenor.com/search/taboo-surprised pour une réaction humoristique."
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : Léger sourire, ton plus doux, regard qui s'adoucit."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Avant de commencer : je ne suis ni pour ni contre le libertinage. Je suis pour la liberté de chacun de vivre sa sexualité comme il l'entend, tant que c'est consenti et honnête. Ce que je ne supporte pas, en revanche, c'est les gens qui jugent sans comprendre. Alors voilà, c'est dit."
+            }
+          ],
+          "notes": [
+            "Note caméra : Ton affirmé, directe, regard ancré."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT — Les 10 questions",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "▸ Question 1 : C'est quoi exactement le libertinage ?"
+            },
+            {
+              "t": "Le libertinage, c'est large. Ça va du couple ouvert à l'échangisme, en passant par les clubs, les rencontres à plusieurs, ou simplement regarder son partenaire avec quelqu'un d'autre. Il n'y a pas UNE définition. Il y a autant de formes de libertinage que de personnes qui le pratiquent."
+            },
+            {
+              "t": "▸ Question 2 : Est-ce qu'on peut être jaloux et libertin ?"
+            },
+            {
+              "t": "Oui. Absolument. La jalousie ne disparaît pas parce qu'on a choisi d'ouvrir sa relation. Ce qu'on apprend, c'est à la gérer différemment. À en parler. D'ailleurs, les couples libertins sont souvent PLUS communicants que les couples classiques."
+            },
+            {
+              "t": "▸ Question 3 : Comment on aborde le sujet avec son partenaire ?"
+            },
+            {
+              "t": "Avec honnêteté, sans pression, et surtout pas après l'amour — parce que là, tout le monde est vulnérable. Choisissez un moment neutre, posez la question de façon ouverte : \"Est-ce que t'as déjà réfléchi à...\" Observez la réaction. Ne forcez rien."
+            },
+            {
+              "t": "▸ Question 4 : Faut-il des règles ? Des limites ?"
+            },
+            {
+              "t": "Indispensable. Les couples qui réussissent dans le libertinage sont ceux qui ont défini clairement leurs limites AVANT — pas pendant, pas après. Qui, comment, où, quand. Et ces limites peuvent changer avec le temps."
+            },
+            {
+              "t": "▸ Question 5 : Est-ce que ça détruit les couples ?"
+            },
+            {
+              "t": "Ça peut. Mais pas plus que la monogamie mal vécue. Ce qui détruit les couples, c'est le mensonge, la pression, et le manque de communication. Pas le libertinage en soi."
+            },
+            {
+              "t": "▸ Question 6 : On peut être libertin sans aller en club ?"
+            },
+            {
+              "t": "Complètement. Les clubs sont une option parmi d'autres. Beaucoup de gens pratiquent via des applications, des rencontres privées, ou simplement en invitant une tierce personne dans leur vie de couple — sans jamais franchir la porte d'un club."
+            },
+            {
+              "t": "▸ Question 7 : Et si l'un des deux veut arrêter ?"
+            },
+            {
+              "t": "C'est une vraie conversation à avoir en amont. Et si ça arrive en cours de route ? On s'arrête. Point. Aucune pratique sexuelle ne vaut plus que la sécurité émotionnelle de votre partenaire."
+            },
+            {
+              "t": "▸ Question 8 : C'est quoi la différence entre libertinage et tromperie ?"
+            },
+            {
+              "t": "La transparence et le consentement. Dans le libertinage, les deux partenaires sont informés et d'accord. Dans la tromperie, non. C'est aussi simple et aussi fondamental que ça."
+            },
+            {
+              "t": "▸ Question 9 : Est-ce que ça m'a changée, moi ?"
+            },
+            {
+              "t": "Oui. Ça m'a appris à mieux communiquer. À exprimer mes besoins sans honte. À faire confiance à mon partenaire d'une façon que je n'aurais pas imaginée avant. C'est pas pour tout le monde — mais pour moi, c'était une école de l'honnêteté."
+            },
+            {
+              "t": "▸ Question 10 : Est-ce que je le conseille ?"
+            },
+            {
+              "t": "Je conseille de l'explorer — en pensée d'abord. De se poser les vraies questions : pourquoi est-ce que ça m'attire ? Qu'est-ce que j'en attends ? Ce que je déconseille : le faire pour sauver un couple qui se noie. Ça ne sauve rien."
+            }
+          ],
+          "notes": [
+            "Note montage : Insert mème : \"jalousie.jpeg\" ou giphy.com/search/jealous-surprised pour réaction humoristique."
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Le libertinage, ce n'est pas l'absence d'amour. C'est une autre façon de le définir.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : Zoom très léger, regard intense. Silence de 2 secondes avant et après cette phrase."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "pour les commentaires",
+          "lines": [
+            {
+              "t": "Et vous — quelle est la question sur le libertinage que vous n'avez jamais osé poser ? Dites-moi en commentaire. Je lis tout."
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING — Prochain épisode",
+          "timing": "",
+          "lines": [
+            {
+              "t": "La semaine prochaine, on pousse le sujet encore plus loin avec une question qui me tient à cœur : Don Juan VS Nympho. Le double standard entre un homme et une femme qui ont beaucoup de partenaires — est-ce que c'est toujours d'actualité en 2026 ? Spoiler : j'ai une opinion très claire là-dessus. À vendredi prochain."
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑨",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Note caméra : Plan légèrement élargi, ton doux, regard bienveillant."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Pour encore plus de contenu proche et sans filtre, retrouvez-moi sur OnlyFans et MYM — le lien est dans la description. Abonnez-vous si ce n'est pas encore fait, et activez la cloche pour ne rater aucun épisode."
+            }
+          ],
+          "notes": [
+            "Note montage : Superposer les cards YouTube pendant ces 20 secondes. Mettre en avant la vidéo suivante et la chaîne."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "LA STAT",
+          "angle": "chiffre choc",
+          "dur": "20-25 sec",
+          "cam": "Face cam, fond neutre, regard direct.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier lundi ou mardi pour chauffer l'audience avant la sortie.",
+          "hook": "10% des Français ont déjà pratiqué le libertinage. Et pourtant... personne n'en parle.",
+          "corps": "En 1992, c'était 2,5% des couples. Aujourd'hui c'est 5 fois plus. Le libertinage n'est plus une exception. C'est juste encore un tabou.",
+          "cta": "Je réponds à vos 10 questions les plus gênantes sur le sujet — vendredi sur YouTube."
+        },
+        {
+          "n": "2",
+          "title": "MON OPINION",
+          "angle": "prise de position",
+          "dur": "30-35 sec",
+          "cam": "Face cam, ton directe, sans sourire au début.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier mercredi ou jeudi — parfait pour le débat en commentaires.",
+          "hook": "Le libertinage, c'est pas pour tout le monde. Et c'est très bien comme ça.",
+          "corps": "Ce qui me dérange, c'est pas les gens qui le pratiquent. C'est les gens qui le jugent sans l'avoir jamais vraiment compris. La monogamie est un choix. Le libertinage aussi. Ni l'un ni l'autre n'est supérieur.",
+          "cta": "Mon épisode complet sur le sujet sort vendredi. Questions gênantes incluses."
+        },
+        {
+          "n": "3",
+          "title": "ANECDOTE",
+          "angle": "intime / révélation",
+          "dur": "40-50 sec",
+          "cam": "Face cam, ton plus doux, comme si on parlait à une amie.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier vendredi matin avec la vidéo — parfait pour la sortie.",
+          "hook": "La première fois qu'on m'a parlé de libertinage, j'ai répondu \"euh non merci\" — et j'ai raccroché.",
+          "corps": "Et pourtant, aujourd'hui je réponds à 10 questions gênantes sur le sujet. La vie réserve des surprises. Ce que j'ai compris, c'est que le jugement vient souvent de l'ignorance. Pas de la morale. Alors j'ai commencé à m'informer. Et ça a tout changé.",
+          "cta": "La vidéo complète est dispo vendredi — lien dans ma bio."
+        },
+        {
+          "n": "4",
+          "title": "CONSEIL",
+          "angle": "pratique / éducatif",
+          "dur": "30-40 sec",
+          "cam": "Face cam, ton professionnel mais chaleureux.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier mardi ou mercredi. Bon pour l'engagement car très pratique.",
+          "hook": "Comment aborder le sujet du libertinage avec son partenaire sans que ça parte en dispute ?",
+          "corps": "3 règles : 1/ Choisir le bon moment — pas après l'amour. 2/ Formuler une question ouverte, pas une proposition. 3/ Accepter que la réponse soit non — sans pression. La communication, c'est la base de tout.",
+          "cta": "J'en parle en détail dans mon épisode de vendredi — 10 questions gênantes sur le libertinage."
+        },
+        {
+          "n": "5",
+          "title": "QUESTION CLIVANTE",
+          "angle": "débat",
+          "dur": "20-30 sec",
+          "cam": "Face cam, ton provocateur, légère pause avant la question.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier jeudi soir. Fort pour créer de l'anticipation le soir avant la sortie.",
+          "hook": "Libertinage = moins d'amour ? Répondez en commentaire.",
+          "corps": "Parce que moi j'ai une réponse très claire. Et je pense que vous allez être surpris·es. Un couple libertin peut s'aimer profondément — parfois plus, parce qu'ils ont été obligés de tout mettre sur la table.",
+          "cta": "Mon épisode complet sur le libertinage — vendredi. Je réponds à tout."
+        },
+        {
+          "n": "6",
+          "title": "HUMOUR",
+          "angle": "idées reçues",
+          "dur": "25-35 sec",
+          "cam": "Face cam, ton léger, sourire.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier lundi ou mardi. L'humour marche bien en début de semaine pour lancer la conversation.",
+          "hook": "Les idées reçues sur les clubs libertins — on met les choses au clair.",
+          "corps": "Non, c'est pas une orgie permanente. Non, tout le monde n'est pas en string. Non, vous ne serez pas obligé·e de faire quoi que ce soit. Les règles y sont souvent plus strictes que dans une boîte de nuit classique. Consentement = fondamental.",
+          "cta": "Je réponds à toutes vos vraies questions vendredi. Lien dans ma bio."
+        },
+        {
+          "n": "7",
+          "title": "INTIME",
+          "angle": "ce que ça m'a appris",
+          "dur": "40-50 sec",
+          "cam": "Face cam, ton confidentiel, regard sincère.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier vendredi soir ou samedi — parfait comme complément émotionnel après la vidéo principale.",
+          "hook": "Ce que le libertinage m'a appris sur moi-même — que je n'aurais jamais découvert autrement.",
+          "corps": "À mieux communiquer. À ne pas supposer ce que l'autre ressent. À dire clairement ce que je veux et ce que je ne veux pas. Et surtout — à faire confiance. Vraiment. Pas la confiance aveugle. La confiance construite.",
+          "cta": "Mon épisode complet sort vendredi — \"10 questions gênantes sur le libertinage\"."
+        },
+        {
+          "n": "8",
+          "title": "LISTE",
+          "angle": "éducatif / comparaison",
+          "dur": "35-45 sec",
+          "cam": "Face cam, ton pédagogique.",
+          "plats": "Instagram + TikTok",
+          "jour": "Publication : Publier mercredi ou jeudi. Les formats \"liste\" ont un fort taux de sauvegarde (saves = bon pour l'algorithme).",
+          "hook": "5 différences entre libertinage et infidélité — parce que c'est pas du tout la même chose.",
+          "corps": "1/ Transparence vs mensonge. 2/ Consentement mutuel vs acte unilatéral. 3/ Règles établies vs improvisation cachée. 4/ Renforce le couple vs le fragilise. 5/ Se vit ensemble vs se vit dans l'ombre.",
+          "cta": "Je développe tout ça dans mon épisode de vendredi. Lien dans ma bio."
+        }
+      ]
     }
   ]
 }
