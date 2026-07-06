@@ -1,6 +1,293 @@
 {
   "weeks": [
     {
+      "isoWeek": "2026-W28",
+      "weekLabel": "Semaine du lundi 6 juillet au dimanche 12 juillet 2026",
+      "briefDate": "2026-07-06",
+      "videoD": {
+        "title": "La jalousie – toxique ou preuve d'amour ?",
+        "theme": "Psycho",
+        "date": "2026-07-31"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "« S'il est jaloux, c'est qu'il t'aime. » C'est la plus belle arnaque qu'on ait vendue aux couples. Et j'y ai cru.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "On a tous grandi avec l'idée qu'un amour sans jalousie, ce n'est pas un vrai amour. Que s'énerver parce que l'autre parle à quelqu'un, c'est romantique. Sauf qu'à force, on a confondu « tenir à quelqu'un » et « avoir peur de le perdre ». Ce n'est pas la même chose.",
+              "quote": false
+            },
+            {
+              "t": "Et les chiffres le montrent : 41% des Français en couple ressentent de la jalousie rien qu'en voyant leur partenaire sur les réseaux sociaux. Pas une infidélité — juste un scroll. Et quand la jalousie vire à l'infidélité réelle, ça pardonne mal : environ 40% des divorces en France sont directement liés à une infidélité. La jalousie, c'est le thermomètre de nos peurs, pas de notre amour.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé.",
+            "Montage : insert texte à l'écran « 41% jaloux à cause des réseaux sociaux » et « ~40% des divorces liés à une infidélité ». GIF réseaux/side-eye : https://tenor.com/view/jealous-eye-roll-annoyed-gif-27220056"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Pour moi, la jalousie n'est jamais une preuve d'amour. C'est une preuve de peur. La peur de ne pas suffire, la peur d'être remplacé·e, la peur qu'on découvre qu'on n'est pas à la hauteur. Un peu de jalousie, c'est humain, ça arrive à tout le monde. Mais quand elle décide à ta place, quand elle te fait fouiller, contrôler, surveiller — là, ce n'est plus de l'amour. C'est une prison avec deux détenus.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : ton affirmé, direct."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "D'abord, il faut comprendre d'où ça vient. La jalousie, ce n'est pas un signal sur l'autre, c'est un signal sur soi. Quand je suis jalouse, mon cerveau ne me dit pas « il va te tromper ». Il me dit « tu as peur de ne pas être assez ». Nuance énorme. Parce que tant qu'on croit que le problème vient de l'autre, on essaie de contrôler l'autre. Alors que le vrai chantier, il est à l'intérieur de nous.",
+              "quote": false
+            },
+            {
+              "t": "Prenez un exemple ultra banal du quotidien : votre partenaire like la photo d'une autre personne sur Instagram. En trois secondes, votre cœur s'emballe, et vous avez déjà écrit tout un scénario : il la trouve plus belle, il s'ennuie avec vous, ça va mal finir. Le film complet, générique compris. Alors que ce like, neuf fois sur dix, ne voulait absolument rien dire. Ce n'est pas le like qui vous a blessé·e. C'est l'histoire que vous vous êtes racontée par-dessus.",
+              "quote": false
+            },
+            {
+              "t": "Et cette histoire, elle est presque toujours plus ancienne que votre couple actuel. On projette. On ramène les trahisons d'avant, les mots d'un parent, les fois où on s'est senti pas choisi. La personne en face paie pour des gens qu'elle n'a jamais rencontrés. C'est injuste, mais c'est humain.",
+              "quote": false
+            },
+            {
+              "t": "Maintenant, je vais être honnête avec vous, parce que je ne suis pas là pour vous faire la leçon depuis un piédestal. Moi aussi j'ai dérapé. Une fois — une seule, mais une fois de trop — j'ai attrapé le téléphone de mon mec pendant qu'il dormait. Le cœur qui bat à 200, les mains qui tremblent, cette petite voix qui me disait « arrête, tu vaux mieux que ça ». Je ne l'ai pas écoutée.",
+              "quote": false
+            },
+            {
+              "t": "Vous savez ce que j'ai trouvé ? Rien. Absolument rien. Des conversations banales, des memes envoyés à ses potes, une commande de pizza. Et vous savez ce que j'ai perdu, moi, cette nuit-là ? Un peu de respect pour moi-même. Parce que la fille qui fouille en douce, ce n'était pas celle que je voulais être. La jalousie m'avait transformée en quelqu'un que je ne reconnaissais pas.",
+              "quote": false
+            },
+            {
+              "t": "Et le plus dingue, c'est que ça ne m'a même pas rassurée. C'est ça, le piège : la jalousie ne se nourrit jamais de preuves, elle se nourrit d'elle-même. Tu vérifies, tu ne trouves rien, tu es soulagé·e dix minutes, et puis le doute revient, plus gros. C'est un puits sans fond. Aucune preuve d'innocence ne suffit jamais, parce que le problème n'a jamais été l'autre.",
+              "quote": false
+            },
+            {
+              "t": "Alors qu'est-ce qu'on fait ? On ne se transforme pas en robot sans émotion, ce n'est pas le but. Le jour où j'ai commencé à aller mieux, c'est le jour où j'ai appris à dire les choses au lieu de les traquer. « Là, tout de suite, je me sens en insécurité, j'ai besoin que tu me rassures. » C'est mille fois plus courageux — et plus efficace — que d'ouvrir un téléphone en cachette. Ça demande d'être vulnérable. Mais c'est ça, la confiance : ce n'est pas l'absence de doute, c'est choisir de parler plutôt que de surveiller.",
+              "quote": false
+            },
+            {
+              "t": "Et il faut savoir distinguer deux jalousies. Il y a celle qui te traverse, une petite pointe, tu la nommes, elle repart — ça, c'est humain, ce n'est pas grave. Et il y a celle qui s'installe et qui prend les commandes : celle qui te fait contrôler qui l'autre voit, fouiller, isoler, te sentir soulagé·e quand ton ou ta partenaire annule avec ses amis. Cette jalousie-là n'a rien de romantique. C'est le premier étage du contrôle, et parfois de bien pire.",
+              "quote": false
+            },
+            {
+              "t": "Parce qu'il faut le dire clairement : « il est jaloux, c'est mignon » a servi d'excuse à trop de comportements qui n'avaient rien de mignons. Contrôler une tenue, un téléphone, des fréquentations, ce n'est pas de l'amour intense. C'est de la possession. Et confondre les deux, c'est exactement ce qui piège tant de gens dans des relations qui les rétrécissent au lieu de les faire grandir.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Montage : B-roll d'un téléphone qui s'allume dans le noir pendant l'anecdote du téléphone, ambiance tendue.",
+            "Montage : insert texte « 41% jaloux à cause des réseaux » quand je parle du like Instagram. GIF side-eye jalousie : https://tenor.com/view/snow-white-jealous-jealous-side-eye-rachel-zegler-gif-13131029037297145898",
+            "Caméra : ton spontané, comme une confidence entre amies ; ralentir et baisser la voix sur l'aveu du téléphone."
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "La jalousie ne prouve pas que tu aimes. Elle prouve que tu as peur. Et la confiance, ce n'est pas ne jamais douter — c'est choisir de parler plutôt que de surveiller.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Soyez honnêtes avec moi : pour vous, un peu de jalousie dans un couple, c'est sain… ou c'est déjà le début du problème ? Dites-le-moi en commentaire.",
+              "quote": false
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Vendredi prochain, on reste dans l'intime du couple mais on va plus loin : je vous parle de la différence entre aimer quelqu'un et être juste attaché·e à lui. Parce que ce n'est PAS la même chose — et confondre les deux, ça gâche des années.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Prochain épisode : « L'amour vs l'attachement – la différence »."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "La stat qui pique",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 27/07",
+          "hook": "41% des gens en couple ressentent de la jalousie rien qu'en voyant leur partenaire scroller sur les réseaux. Quarante et un pour cent.",
+          "corps": "Alors dites-moi : la jalousie, c'est une preuve d'amour… ou juste la peur de ne pas suffire ? Moi j'ai une réponse tranchée.",
+          "cta": "La vidéo complète sort vendredi — abonnez-vous."
+        },
+        {
+          "n": "2",
+          "title": "Preuve d'amour, vraiment ?",
+          "angle": "OPINION",
+          "dur": "20-25 sec",
+          "cam": "face cam frontal, ton assumé",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 27/07",
+          "hook": "« S'il est jaloux, c'est qu'il t'aime. » Non. S'il est jaloux, c'est qu'il a peur. Ce n'est pas pareil.",
+          "corps": "L'amour te fait confiance. La jalousie te surveille. On a confondu les deux pendant trop longtemps.",
+          "cta": "Je développe tout vendredi."
+        },
+        {
+          "n": "3",
+          "title": "Ma pire crise de jalousie",
+          "angle": "INTIME",
+          "dur": "25-30 sec",
+          "cam": "face cam doux, lumière chaude",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 28/07",
+          "hook": "Je vais vous avouer un truc pas glorieux : j'ai déjà fouillé un téléphone. Une fois. Et je m'en veux encore.",
+          "corps": "Ce que j'ai trouvé ? Rien. Ce que j'ai perdu ? Un peu de respect pour moi-même. La jalousie te fait faire des trucs que tu ne reconnais pas.",
+          "cta": "L'histoire complète vendredi."
+        },
+        {
+          "n": "4",
+          "title": "Le vrai déclencheur",
+          "angle": "CONSEIL",
+          "dur": "20-25 sec",
+          "cam": "face cam posé",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 28/07",
+          "hook": "La jalousie, ça ne parle presque jamais de l'autre. Ça parle de toi.",
+          "corps": "Le conseil : la prochaine fois que tu es jaloux·se, demande-toi « de quoi j'ai peur, là, vraiment ? ». La réponse est rarement « il me trompe ». Souvent c'est « je ne me sens pas assez ».",
+          "cta": "La méthode complète vendredi."
+        },
+        {
+          "n": "5",
+          "title": "L'exemple du quotidien",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mercredi 29/07",
+          "hook": "Il like la photo d'une autre. Ton cœur fait un bond. En 3 secondes t'as écrit un scénario de rupture dans ta tête.",
+          "corps": "On l'a TOUS fait. Et 99% du temps, ce like ne voulait rien dire. C'est pas le like le problème, c'est le film qu'on se fait.",
+          "cta": "Pourquoi on fait ça → vendredi."
+        },
+        {
+          "n": "6",
+          "title": "La question qui divise",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "15-20 sec",
+          "cam": "face cam, regard caméra",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 30/07",
+          "hook": "Vraie question : un couple sans AUCUNE jalousie, c'est un couple sain… ou un couple qui s'en fout ?",
+          "corps": "Moi je pense qu'un peu de jalousie, c'est humain. Zéro jalousie, ça m'interroge. Mais je sais que ça va vous faire réagir. Team « un peu » ou team « zéro » ?",
+          "cta": "Donnez votre camp en commentaire."
+        },
+        {
+          "n": "7",
+          "title": "Le truc que personne n'avoue",
+          "angle": "HUMOUR",
+          "dur": "15-20 sec",
+          "cam": "face cam + montage réaction",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 30/07",
+          "hook": "« Moi ? Jalouse ? Jamais. » *regarde discrètement qui a liké sa story* 👀",
+          "corps": "On joue tous les détachés en public et Sherlock Holmes en privé. Assumons : la jalousie, c'est le sport national des couples.",
+          "cta": "On en rit (et on en parle) vendredi."
+        },
+        {
+          "n": "8",
+          "title": "3 signes que ta jalousie déraille",
+          "angle": "LISTE",
+          "dur": "20-25 sec",
+          "cam": "face cam + texte à l'écran",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 01/08",
+          "hook": "3 signes que ta jalousie n'est plus « mignonne » mais toxique 👇",
+          "corps": "1. Tu vérifies son téléphone. 2. Tu contrôles qui il voit. 3. Tu te sens soulagé·e quand il annule avec ses potes. Si tu coches 2 sur 3, faut qu'on parle.",
+          "cta": "Ce qu'il faut faire → vidéo de vendredi."
+        }
+      ]
+    },
+    {
       "isoWeek": "2026-W27",
       "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
       "briefDate": "2026-07-02",
