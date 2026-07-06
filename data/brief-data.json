@@ -2,30 +2,30 @@
   "meta": {
     "channel": "Les Pensées d'Amanda",
     "handle": "@blondymandise",
-    "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
-    "briefDate": "2026-07-02",
-    "isoWeek": "2026-W27",
+    "weekLabel": "Semaine du lundi 6 juillet au dimanche 12 juillet 2026",
+    "briefDate": "2026-07-06",
+    "isoWeek": "2026-W28",
     "previous": {
-      "title": "10 règles pour débuter le libertinage",
-      "date": "2026-06-26"
-    },
-    "videoA": {
       "title": "10 questions gênantes sur le libertinage",
       "date": "2026-07-03"
     },
-    "videoB": {
+    "videoA": {
       "title": "Don Juan VS Nympho",
       "date": "2026-07-10"
     },
-    "videoC": {
+    "videoB": {
       "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
       "date": "2026-07-17"
     },
-    "videoD": {
+    "videoC": {
       "title": "On a tous 3 personnes en nous",
-      "theme": "Moi, sur-moi et ça",
-      "date": "2026-07-24",
-      "next": "La jalousie – toxique ou preuve d'amour ?"
+      "date": "2026-07-24"
+    },
+    "videoD": {
+      "title": "La jalousie – toxique ou preuve d'amour ?",
+      "theme": "Psycho",
+      "date": "2026-07-31",
+      "next": "L'amour vs l'attachement – la différence"
     }
   },
   "links": {
@@ -45,16 +45,16 @@
   "schedule": [
     {
       "day": "Lundi",
-      "date": "29/06",
+      "date": "06/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
-          "type": "Story engagement (relance débutants)",
-          "texte": "La vidéo de vendredi a lancé le débat 🔥 Vraie question : c'est quoi VOTRE règle n°1 avant de se lancer dans le libertinage ? Balancez en sticker.",
-          "media": "Story fond uni + sticker questions. Capture d'un top commentaire de la vidéo précédente.",
+          "type": "Story engagement (thème précédent)",
+          "texte": "La vidéo de vendredi sur le libertinage a lâché des vérités 🔥 La question n°6 vous a marqués ? Balancez-moi VOS questions gênantes en sticker, je réponds cash.",
+          "media": "Story face-cam + sticker questions. Repost d'un top commentaire de la vidéo précédente.",
           "lien": "Bio",
           "astuce": "Republier le meilleur commentaire dès qu'il tombe pour lancer l'effet boule de neige."
         },
@@ -64,7 +64,7 @@
           "time": "16:00",
           "moment": "Après-midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Mes « 10 règles » version YouTube = les soft. La règle que j'ai coupée au montage… elle est ailleurs 😏👇",
+          "texte": "Mes « 10 questions gênantes » version YouTube = les soft. La 11e, celle que j'ai coupée au montage… elle est ailleurs 😏👇",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
@@ -75,7 +75,7 @@
           "time": "19:00",
           "moment": "Soir",
           "type": "Teaser (renvoi profil)",
-          "texte": "Débat du lundi : le libertinage, on encadre ou on lâche prise ? Je donne mon avis (et un peu plus) sur mon profil.",
+          "texte": "Débat du lundi : le libertinage, ça se raconte ou ça se vit ? Je donne mon avis (et un peu plus) sur mon profil 😉",
           "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
@@ -97,7 +97,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Message confession + vocal exclusif",
-          "texte": "Entre nous… ma vraie règle n°1 pour débuter, je l'ai jamais dite en vidéo parce qu'elle est trop intime. Vous voulez que je vous la raconte en vocal ce soir ? 🎙",
+          "texte": "Entre nous… la vraie réponse à la question la plus gênante qu'on m'ait posée sur le libertinage, je l'ai jamais dite en vidéo. Vous la voulez en vocal ce soir ? 🎙",
           "media": "Vocal exclusif de 30-60s envoyé à 21h.",
           "lien": "OnlyFans",
           "astuce": "Le vocal + le côté « rien que pour vous » fait réagir les abonnés."
@@ -106,15 +106,15 @@
     },
     {
       "day": "Mardi",
-      "date": "30/06",
+      "date": "07/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
           "type": "Story coulisses (thème précédent)",
-          "texte": "On m'a demandé si j'avais eu peur ma première fois libertine. Réponse honnête en story 👇 posez-moi vos questions, je réponds cash.",
+          "texte": "On m'a demandé si le libertinage rendait jaloux 😳 Réponse honnête en story — et devinez quoi, c'est PILE le thème qui arrive bientôt. Posez vos questions 👇",
           "media": "Story face-cam courte + sticker questions.",
           "lien": "Bio",
           "astuce": "Répondre en story à 2-3 questions pour nourrir l'engagement toute la journée."
@@ -125,7 +125,7 @@
           "time": "12:00",
           "moment": "Midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Le libertinage pour débutants, tout le monde en parle en théorie. Moi je vous montre la pratique 😏👇",
+          "texte": "Le libertinage, tout le monde en parle en théorie. Moi je vous montre la pratique 😏👇",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
@@ -136,7 +136,7 @@
           "time": "13:00",
           "moment": "Midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Débutante en libertinage ? J'ai fait toutes les erreurs pour vous. Mon retour d'expérience (et plus) sur mon profil 😉",
+          "texte": "J'ai fait toutes les erreurs de débutante pour vous. Mon retour d'expérience (et plus) sur mon profil 😉",
           "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
@@ -146,8 +146,8 @@
           "plats": "X",
           "time": "18:00",
           "moment": "Soir",
-          "type": "Teaser promo → OnlyFans (2e)",
-          "texte": "Petit rappel : ce que je poste ici est la version tout public. Le reste, c'est réservé 🔓",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Rappel : ce que je poste ici, c'est la version tout public. Le reste, c'est réservé 🔓",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
@@ -169,7 +169,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Message confession intime",
-          "texte": "Confession du soir 🔓 la règle que j'aurais aimé qu'on me donne AVANT de me lancer… je vous la donne, à vous.",
+          "texte": "Confession du soir 🔓 la fois où la jalousie a failli tout gâcher entre nous… je vous raconte comment on a géré. Rien que pour vous.",
           "media": "Message texte intime + photo exclusive.",
           "lien": "OnlyFans",
           "astuce": "Alterner texte confession et média exclusif pour garder le rythme."
@@ -178,18 +178,18 @@
     },
     {
       "day": "Mercredi",
-      "date": "01/07",
+      "date": "08/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
           "type": "Story coulisses tournage",
-          "texte": "Jour de tournage 🎬 aujourd'hui je filme une vidéo qui va faire parler. Indice : on est tous plusieurs dans notre tête 👀 Vous voyez de quoi je parle ?",
+          "texte": "Jour de tournage 🎬 aujourd'hui je filme une vidéo qui va diviser tous les couples. Indice : ça commence par un J et ça finit rarement bien 👀 Vous voyez ?",
           "media": "Story coulisses studio + sticker questions.",
           "lien": "Bio",
-          "astuce": "Teaser le thème de la future vidéo D sans le révéler pour créer l'attente."
+          "astuce": "Teaser le thème des futures vidéos sans le révéler pour créer l'attente."
         },
         {
           "platKey": "x",
@@ -230,7 +230,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Message coulisses + vocal",
-          "texte": "Vous savez quoi ? Sur le tournage d'aujourd'hui j'ai lâché un truc trop perso, je vais sûrement le couper. Je vous l'envoie en vocal, rien que pour vous 🎙",
+          "texte": "Sur le tournage d'aujourd'hui j'ai lâché un aveu trop perso sur ma propre jalousie, je vais sûrement le couper. Je vous l'envoie en vocal, rien que pour vous 🎙",
           "media": "Vocal exclusif coulisses de 30-60s.",
           "lien": "OnlyFans",
           "astuce": "Le côté « en direct du tournage » crée un sentiment de privilège."
@@ -239,18 +239,18 @@
     },
     {
       "day": "Jeudi",
-      "date": "02/07",
+      "date": "09/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
           "type": "Story thème précédent (dernière relance)",
-          "texte": "Dernier jour avant la nouvelle vidéo 😱 Avant ça : votre plus grosse idée reçue sur le libertinage ? Je la démonte demain.",
+          "texte": "Dernier jour avant la nouvelle vidéo 😱 Avant ça : votre plus grosse idée reçue sur le libertinage ? Je la démonte… juste avant de changer complètement de sujet demain.",
           "media": "Story sticker questions + fond dynamique.",
           "lien": "Bio",
-          "astuce": "Collecter les idées reçues aujourd'hui pour rebondir dessus vendredi."
+          "astuce": "Collecter les idées reçues aujourd'hui pour rebondir dessus."
         },
         {
           "platKey": "x",
@@ -258,7 +258,7 @@
           "time": "12:00",
           "moment": "Midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Demain je réponds à 10 questions gênantes sur le libertinage. Ici, je réponds à celles que YouTube censurerait 😏👇",
+          "texte": "Demain, nouvelle vidéo : « Don Juan VS Nympho ». Un homme qui multiplie = un tombeur. Une femme qui fait pareil = … 😏 Ici, je vous montre laquelle je suis 👇",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
@@ -269,18 +269,18 @@
           "time": "13:00",
           "moment": "Midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Nouvelle vidéo demain : 10 questions gênantes sur le libertinage. La version non censurée est déjà sur mon profil 😉",
+          "texte": "Nouvelle vidéo demain : « Don Juan VS Nympho ». La version non censurée du débat est déjà sur mon profil 😉",
           "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "19:00",
           "moment": "Soir",
           "type": "Story TEASING vidéo A",
-          "texte": "DEMAIN 8h 🚨 « 10 questions gênantes sur le libertinage » — et j'ai osé répondre à TOUT. Même à la question n°6. Compte à rebours activé ⏳",
+          "texte": "DEMAIN 8h 🚨 « Don Juan VS Nympho » — pourquoi un homme est un héros et une femme une « facile » pour EXACTEMENT la même chose ? Compte à rebours activé ⏳",
           "media": "Story teaser miniature floutée + sticker compte à rebours.",
           "lien": "Bio",
           "astuce": "Le sticker compte à rebours notifie automatiquement les abonnés à la sortie."
@@ -302,16 +302,16 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Teasing vidéo A (intime)",
-          "texte": "Demain, LA vidéo. 10 questions gênantes… mais il y en a une 11e, tellement intime que je l'ai gardée que pour vous. Elle arrive demain soir 🔓",
+          "texte": "Demain, LA vidéo : « Don Juan VS Nympho ». Et vous savez de quel côté je suis 😏 Le débrief vraiment sans filtre, je vous le garde ici pour demain soir 🔓",
           "media": "Message teasing + photo exclusive.",
           "lien": "OnlyFans",
-          "astuce": "Créer l'attente du debrief exclusif de vendredi soir."
+          "astuce": "Créer l'attente du débrief exclusif de vendredi soir."
         }
       ]
     },
     {
       "day": "Vendredi",
-      "date": "03/07",
+      "date": "10/07",
       "posts": [
         {
           "platKey": "youtube",
@@ -319,32 +319,32 @@
           "time": "08:00",
           "moment": "8h — Sortie",
           "type": "Publication vidéo A + description",
-          "texte": "10 questions gênantes sur le libertinage — et mes réponses sans filtre.\n\nVous me les avez posées, j'ai osé toutes y répondre. Pas de langue de bois, pas de sujet tabou.\n→ Les 10 questions qui reviennent le plus\n→ Ce que j'ai vraiment vécu (et ce que non)\n→ Les idées reçues à jeter à la poubelle\n→ Ma limite perso, celle que je ne franchis pas\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#libertinage #couple #sexualité #lespenséesdamanda #blondymandise",
-          "media": "Miniature face-cam + overlay « 10 QUESTIONS GÊNANTES ». Publication programmée 8h (heure FR).",
+          "texte": "Don Juan VS Nympho — pourquoi le même comportement fait d'un homme un héros et d'une femme une coupable.\n\nUn homme qui collectionne les conquêtes, on l'admire. Une femme qui fait pareil, on la juge. Aujourd'hui je démonte ce double standard, sans langue de bois.\n→ D'où vient vraiment le mot « nympho »\n→ Les phrases qu'on dit aux femmes (et jamais aux hommes)\n→ Mon vécu de femme libre face au regard des autres\n→ Comment j'ai arrêté d'avoir honte\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#donjuan #doublestandard #couple #sexualité #lespenséesdamanda #blondymandise",
+          "media": "Miniature face-cam + overlay « DON JUAN VS NYMPHO ». Publication programmée 8h (heure FR).",
           "lien": "YouTube",
           "astuce": "Publier à 8h pile. Relancer à midi avec un extrait choc."
         },
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "08:00",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
+          "time": "08:05",
           "moment": "8h — Sortie",
-          "type": "Post feed de sortie + CTA",
-          "texte": "10 questions gênantes, 10 réponses cash. Nouvelle vidéo en ligne 🔗 lien en bio. Laquelle vous n'auriez JAMAIS osé poser ? 👇",
-          "media": "Carrousel : miniature + 2-3 extraits texte. Pas de lien dans le post (lien en bio).",
+          "type": "Story annonce + sticker lien",
+          "texte": "ÇA Y EST 🚨 « Don Juan VS Nympho ». Le double standard qui va vous énerver est en ligne — lien en bio 🔗",
+          "media": "Story avec sticker lien vers YouTube.",
           "lien": "Bio",
-          "astuce": "Épingler en commentaire « lien en bio »."
+          "astuce": "Relancer à midi avec un extrait."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "08:05",
+          "time": "08:10",
           "moment": "8h — Sortie",
-          "type": "Story annonce + sticker lien",
-          "texte": "ÇA Y EST 🚨 10 questions gênantes, 10 réponses cash. La vidéo est en ligne — lien en bio 🔗",
-          "media": "Story avec sticker lien vers YouTube.",
+          "type": "Post feed de sortie + CTA",
+          "texte": "Un homme = un tombeur. Une femme = une « facile ». Pour la MÊME chose. Nouvelle vidéo en ligne 🔗 lien en bio. Vous êtes team double standard ou team égalité ? 👇",
+          "media": "Carrousel : miniature + 2-3 extraits texte. Pas de lien dans le post (lien en bio).",
           "lien": "Bio",
-          "astuce": "Relancer à midi avec un extrait."
+          "astuce": "Épingler en commentaire « lien en bio »."
         },
         {
           "platKey": "x",
@@ -352,19 +352,19 @@
           "time": "08:15",
           "moment": "8h — Sortie",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Nouvelle vidéo 🔥 « 10 questions gênantes sur le libertinage ». Version YouTube = soft. La 11e question = 👇",
+          "texte": "Nouvelle vidéo 🔥 « Don Juan VS Nympho ». La version YouTube pose la question. Ici, j'assume complètement la réponse 😏👇",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         },
         {
           "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
+          "plats": "TikTok + YouTube + Facebook",
           "time": "12:00",
           "moment": "Midi",
-          "type": "Extrait long format (vidéo A) — cross-plateforme",
-          "texte": "La question la plus gênante qu'on m'ait posée sur le libertinage… et ma réponse cash 😳 Vidéo complète en bio.",
-          "media": "Clip 9:16 < 30s, hook fort en ouverture, sous-titres. SFW strict pour TikTok/Reels/FB.",
+          "type": "Extrait réel (vidéo A) — diffusion cross-plateforme",
+          "texte": "« Pourquoi un homme qui couche beaucoup est un héros, et une femme une salope ? » Ma réponse cash 😳 Vidéo complète en bio.",
+          "media": "Clip 9:16 < 30s (réel écrit il y a 3 sem), hook fort en ouverture, sous-titres. SFW strict pour TikTok/YouTube/FB.",
           "lien": "Bio",
           "astuce": "Poster à la main sur Facebook (jamais programmé)."
         },
@@ -374,18 +374,18 @@
           "time": "12:00",
           "moment": "Midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Ma nouvelle vidéo « 10 questions gênantes sur le libertinage » vient de sortir — je réponds à tout, même au reste 😉 (profil en bio).",
+          "texte": "Ma nouvelle vidéo « Don Juan VS Nympho » vient de sortir — j'assume tout, même le reste 😉 (profil en bio).",
           "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "20:00",
           "moment": "Soir",
           "type": "Story résultat sondage + réaction",
-          "texte": "Vous étiez 71% à parier que je n'oserais pas répondre à la n°6 😎 Verdict dans la vidéo. Vos réactions me tuent, continuez !",
+          "texte": "Vous étiez 68% à dire que le double standard existe encore 😎 On est d'accord. Vos réactions me tuent, continuez !",
           "media": "Capture du sondage + réaction visage.",
           "lien": "Bio",
           "astuce": "Republier 2-3 réactions marquantes."
@@ -395,8 +395,8 @@
           "plats": "Telegram",
           "time": "20:30",
           "moment": "Soir",
-          "type": "DEBRIEF EXCLUSIF (la 11e question)",
-          "texte": "Ok, entre nous. La fameuse 11e question — celle que je n'ai PAS posée sur YouTube — je vous donne ma vraie réponse ici, et seulement ici 🔓",
+          "type": "DEBRIEF EXCLUSIF",
+          "texte": "Ok, entre nous. Ce que ça fait VRAIMENT d'être vue comme « la nympho » quand on est libre… et ce que ça m'a coûté. Je vous raconte ici, et seulement ici 🔓",
           "media": "Vocal ou vidéo exclusive + anecdote non dite.",
           "lien": "OnlyFans",
           "astuce": "Le rendez-vous phare de la semaine : récompense l'abonnement."
@@ -418,7 +418,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Teaser promo → OnlyFans (2e)",
-          "texte": "Vous avez aimé la vidéo ? Le debrief coquin de la 11e question est dispo ce soir 🔓",
+          "texte": "Vous avez aimé la vidéo ? Le débrief vraiment cru, sans YouTube pour me censurer, c'est dispo ce soir 🔓",
           "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
@@ -427,27 +427,27 @@
     },
     {
       "day": "Samedi",
-      "date": "04/07",
+      "date": "11/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "10:00",
           "moment": "Matin",
           "type": "Story rebond thème vidéo A",
-          "texte": "Vos réactions à la vidéo d'hier sont folles 😅 La question qui vous a le plus choqués ? Dites-moi, je réagis en story.",
+          "texte": "Vos réactions à la vidéo d'hier sont folles 😅 La phrase sexiste qu'on vous a déjà balancée, à VOUS ? Dites-moi, je réagis en story.",
           "media": "Story sticker questions + repost réactions.",
           "lien": "Bio",
           "astuce": "Capitaliser sur le pic d'audience du lendemain de sortie."
         },
         {
           "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
+          "plats": "TikTok + YouTube + Facebook",
           "time": "12:00",
           "moment": "Midi",
-          "type": "Extrait long format (vidéo A) — cross-plateforme",
-          "texte": "« Est-ce qu'on peut être libertin ET jaloux ? » Ma réponse a surpris tout le monde 👀 Vidéo complète en bio.",
-          "media": "Clip 9:16 < 30s, hook question, sous-titres. SFW strict.",
+          "type": "Extrait réel (vidéo A) — diffusion cross-plateforme",
+          "texte": "« Don Juan, c'est un compliment. Nympho, c'est une insulte. » Personne ne s'était posé la question 👀 Vidéo complète en bio.",
+          "media": "Clip 9:16 < 30s (réel écrit il y a 3 sem), hook question, sous-titres. SFW strict.",
           "lien": "Bio",
           "astuce": "Choisir un extrait différent de vendredi pour toucher un nouveau public."
         },
@@ -457,7 +457,7 @@
           "time": "14:00",
           "moment": "Après-midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Samedi coquin 😉 Nouvelle vidéo dispo + du contenu que je ne montre que sur mon profil.",
+          "texte": "Samedi assumé 😉 Nouvelle vidéo dispo + du contenu que je ne montre que sur mon profil.",
           "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
@@ -490,7 +490,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Message confession week-end",
-          "texte": "Petite confidence de samedi soir 🔓 la question de la vidéo que j'ai vécue en vrai… je vous raconte comment ça s'est VRAIMENT passé.",
+          "texte": "Petite confidence de samedi soir 🔓 la première fois qu'on m'a traitée de « fille facile »… et pourquoi aujourd'hui j'en ris. Je vous raconte tout.",
           "media": "Message intime + média exclusif.",
           "lien": "OnlyFans",
           "astuce": "Le samedi soir = fort taux d'ouverture, idéal pour un contenu premium."
@@ -499,15 +499,15 @@
     },
     {
       "day": "Dimanche",
-      "date": "05/07",
+      "date": "12/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "11:00",
           "moment": "Matin",
           "type": "Story question ouverte (thème vidéo A)",
-          "texte": "Question du dimanche 🌸 Le libertinage, ça peut renforcer un couple ou ça le fragilise forcément ? Votre avis en sticker.",
+          "texte": "Question du dimanche 🌸 Le double standard homme/femme sur le sexe, ça s'améliore ou pas du tout ? Votre avis en sticker.",
           "media": "Story sticker sondage + fond doux.",
           "lien": "Bio",
           "astuce": "Le sondage du dimanche alimente les idées de contenu de la semaine suivante."
@@ -536,12 +536,12 @@
         },
         {
           "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
+          "plats": "TikTok + YouTube + Facebook",
           "time": "17:00",
           "moment": "Après-midi",
-          "type": "Extrait long format (vidéo A) — best-of",
-          "texte": "Le moment de la vidéo que vous avez le plus repartagé 🔥 Version complète en bio.",
-          "media": "Clip 9:16 < 30s, best-of, sous-titres. SFW strict.",
+          "type": "Extrait réel (vidéo A) — best-of",
+          "texte": "Le moment de la vidéo que vous avez le plus repartagé 🔥 « Don Juan VS Nympho », version complète en bio.",
+          "media": "Clip 9:16 < 30s (réel écrit il y a 3 sem), best-of, sous-titres. SFW strict.",
           "lien": "Bio",
           "astuce": "Poster le dimanche fin d'après-midi : gros pic de scroll."
         },
@@ -562,7 +562,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Confession + teasing semaine prochaine",
-          "texte": "Avant de dormir 🔓 petite confidence… et un indice sur vendredi prochain : « Don Juan VS Nympho », le double standard qui va vous énerver. Vous êtes team qui ? 😏",
+          "texte": "Avant de dormir 🔓 petite confidence… et un indice sur vendredi prochain : « Vocabulaire d'hommes pour les femmes » — genre « grossesse gériatrique ». Vous allez halluciner sur les mots qu'on nous colle 😤",
           "media": "Message intime + teaser vidéo B.",
           "lien": "OnlyFans",
           "astuce": "Terminer la semaine en teasant la vidéo B pour fidéliser jusqu'à vendredi prochain."
@@ -573,63 +573,63 @@
   "reels": [
     {
       "n": 1,
-      "title": "La stat qui dérange",
+      "title": "La stat qui pique",
       "angle": "STAT",
       "dur": "20-25 sec",
       "cam": "face cam serré, punchy",
-      "hook": "En France, on est passés de 34 000 à plus de 43 000 psys en dix ans. On n'a jamais eu autant besoin de comprendre ce qu'on a dans la tête.",
-      "corps": "Et si le problème, c'était qu'on refuse d'admettre qu'on n'est pas UNE personne, mais trois ? Le moi, le sur-moi, et le ça.",
+      "hook": "41% des gens en couple ressentent de la jalousie rien qu'en voyant leur partenaire scroller sur les réseaux. Quarante et un pour cent.",
+      "corps": "Alors dites-moi : la jalousie, c'est une preuve d'amour… ou juste la peur de ne pas suffire ? Moi j'ai une réponse tranchée.",
       "cta": "La vidéo complète sort vendredi — abonnez-vous.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Lundi 20/07"
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Lundi 27/07"
     },
     {
       "n": 2,
-      "title": "L'ange et le démon",
-      "angle": "HUMOUR",
-      "dur": "15-20 sec",
-      "cam": "face cam + montage split",
-      "hook": "Vous savez, le petit ange et le petit démon sur les épaules ? Freud avait mis des noms dessus il y a 100 ans.",
-      "corps": "L'ange = le sur-moi (la morale). Le démon = le ça (les pulsions). Et vous, coincé au milieu, c'est le moi qui arbitre. Bon courage.",
-      "cta": "Je vous explique tout vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Lundi 20/07"
-    },
-    {
-      "n": 3,
-      "title": "Mes 3 prénoms",
-      "angle": "INTIME",
-      "dur": "25-30 sec",
-      "cam": "face cam doux, lumière chaude",
-      "hook": "Je vais vous avouer un truc que personne ne sait : j'ai littéralement trois prénoms, un pour chaque partie de moi.",
-      "corps": "Il y a celle qui se tient bien, celle qui vit, et celle qui ose tout. Vendredi, je vous les présente toutes les trois.",
-      "cta": "Rendez-vous vendredi 8h.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mardi 21/07"
-    },
-    {
-      "n": 4,
-      "title": "L'opinion qui pique",
+      "title": "Preuve d'amour, vraiment ?",
       "angle": "OPINION",
       "dur": "20-25 sec",
       "cam": "face cam frontal, ton assumé",
-      "hook": "Arrêtez de dire « je suis comme ça, c'est tout ». Non. Vous êtes plusieurs, et vous laissez toujours le même gagner.",
-      "corps": "Se connaître, ce n'est pas se trouver une étiquette. C'est savoir lequel de vos trois « vous » tient le volant aujourd'hui.",
-      "cta": "On en parle en profondeur vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mardi 21/07"
+      "hook": "« S'il est jaloux, c'est qu'il t'aime. » Non. S'il est jaloux, c'est qu'il a peur. Ce n'est pas pareil.",
+      "corps": "L'amour te fait confiance. La jalousie te surveille. On a confondu les deux pendant trop longtemps.",
+      "cta": "Je développe tout vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Lundi 27/07"
     },
     {
-      "n": 5,
-      "title": "L'erreur qu'on fait tous",
+      "n": 3,
+      "title": "Ma pire crise de jalousie",
+      "angle": "INTIME",
+      "dur": "25-30 sec",
+      "cam": "face cam doux, lumière chaude",
+      "hook": "Je vais vous avouer un truc pas glorieux : j'ai déjà fouillé un téléphone. Une fois. Et je m'en veux encore.",
+      "corps": "Ce que j'ai trouvé ? Rien. Ce que j'ai perdu ? Un peu de respect pour moi-même. La jalousie te fait faire des trucs que tu ne reconnais pas.",
+      "cta": "L'histoire complète vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mardi 28/07"
+    },
+    {
+      "n": 4,
+      "title": "Le vrai déclencheur",
       "angle": "CONSEIL",
       "dur": "20-25 sec",
       "cam": "face cam posé",
-      "hook": "Le jour où j'ai arrêté de me détester, c'est le jour où j'ai compris que ce n'était pas « moi » qui déraillait, mais mon ça.",
-      "corps": "Le conseil ? Ne fusionnez pas avec vos pulsions. Observez-les. Nommez-les. Elles ne SONT pas vous, elles font partie de vous.",
+      "hook": "La jalousie, ça ne parle presque jamais de l'autre. Ça parle de toi.",
+      "corps": "Le conseil : la prochaine fois que tu es jaloux·se, demande-toi « de quoi j'ai peur, là, vraiment ? ». La réponse est rarement « il me trompe ». Souvent c'est « je ne me sens pas assez ».",
       "cta": "La méthode complète vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mercredi 22/07"
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mardi 28/07"
+    },
+    {
+      "n": 5,
+      "title": "L'exemple du quotidien",
+      "angle": "ANECDOTE",
+      "dur": "25-30 sec",
+      "cam": "face cam, ton complice",
+      "hook": "Il like la photo d'une autre. Ton cœur fait un bond. En 3 secondes t'as écrit un scénario de rupture dans ta tête.",
+      "corps": "On l'a TOUS fait. Et 99% du temps, ce like ne voulait rien dire. C'est pas le like le problème, c'est le film qu'on se fait.",
+      "cta": "Pourquoi on fait ça → vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mercredi 29/07"
     },
     {
       "n": 6,
@@ -637,35 +637,35 @@
       "angle": "QUESTION CLIVANTE",
       "dur": "15-20 sec",
       "cam": "face cam, regard caméra",
-      "hook": "Vraie question : est-ce qu'on peut faire taire complètement son « ça », ou est-ce qu'on finit toujours par craquer ?",
-      "corps": "Moi je pense qu'on ne le fait pas taire — on négocie avec. Mais je sais que ça va vous faire réagir. Team refoulement ou team lâcher-prise ?",
+      "hook": "Vraie question : un couple sans AUCUNE jalousie, c'est un couple sain… ou un couple qui s'en fout ?",
+      "corps": "Moi je pense qu'un peu de jalousie, c'est humain. Zéro jalousie, ça m'interroge. Mais je sais que ça va vous faire réagir. Team « un peu » ou team « zéro » ?",
       "cta": "Donnez votre camp en commentaire.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Jeudi 23/07"
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Jeudi 30/07"
     },
     {
       "n": 7,
-      "title": "L'anecdote gênante",
-      "angle": "ANECDOTE",
-      "dur": "25-30 sec",
-      "cam": "face cam, ton complice",
-      "hook": "Un jour, en pleine réunion pro, mon « ça » a voulu dire un truc absolument pas professionnel. Mon sur-moi a hurlé « NON ».",
-      "corps": "Ce petit combat intérieur, on le vit tous, dix fois par jour. Sauf qu'on ne met jamais de mots dessus. Moi si, maintenant.",
-      "cta": "L'histoire complète vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Jeudi 23/07"
+      "title": "Le truc que personne n'avoue",
+      "angle": "HUMOUR",
+      "dur": "15-20 sec",
+      "cam": "face cam + montage réaction",
+      "hook": "« Moi ? Jalouse ? Jamais. » *regarde discrètement qui a liké sa story* 👀",
+      "corps": "On joue tous les détachés en public et Sherlock Holmes en privé. Assumons : la jalousie, c'est le sport national des couples.",
+      "cta": "On en rit (et on en parle) vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Jeudi 30/07"
     },
     {
       "n": 8,
-      "title": "3 signes que votre ça gagne",
+      "title": "3 signes que ta jalousie déraille",
       "angle": "LISTE",
       "dur": "20-25 sec",
       "cam": "face cam + texte à l'écran",
-      "hook": "3 signes que c'est votre « ça » qui commande votre vie en ce moment 👇",
-      "corps": "1. Vous dites « je verrai demain » à tout. 2. Vous fuyez ce qui vous ferait grandir. 3. Vous culpabilisez sans jamais changer. On se reconnaît ?",
+      "hook": "3 signes que ta jalousie n'est plus « mignonne » mais toxique 👇",
+      "corps": "1. Tu vérifies son téléphone. 2. Tu contrôles qui il voit. 3. Tu te sens soulagé·e quand il annule avec ses potes. Si tu coches 2 sur 3, faut qu'on parle.",
       "cta": "Ce qu'il faut faire → vidéo de vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Samedi 25/07"
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Samedi 01/08"
     }
   ],
   "script": [
@@ -675,7 +675,7 @@
       "timing": "0-8 sec",
       "lines": [
         {
-          "t": "Il y a quelqu'un dans votre tête qui veut des choses que vous n'oseriez avouer à personne. Et le pire… c'est que c'est vous.",
+          "t": "« S'il est jaloux, c'est qu'il t'aime. » C'est la plus belle arnaque qu'on ait vendue aux couples. Et j'y ai cru.",
           "quote": true
         }
       ],
@@ -689,15 +689,15 @@
       "timing": "15-60 sec",
       "lines": [
         {
-          "t": "On croit tous être « une » personne, cohérente, du matin au soir. Sauf que non. Vous n'êtes pas la même au boulot, avec votre mère, ou seul·e à 2h du matin. Et ce n'est pas de l'hypocrisie — c'est de la psychologie."
+          "t": "On a tous grandi avec l'idée qu'un amour sans jalousie, ce n'est pas un vrai amour. Que s'énerver parce que l'autre parle à quelqu'un, c'est romantique. Sauf qu'à force, on a confondu « tenir à quelqu'un » et « avoir peur de le perdre ». Ce n'est pas la même chose."
         },
         {
-          "t": "En France, on n'a jamais autant essayé de se comprendre : les consultations chez le psy ont bondi de près de 14% en un an, plus de 8 millions de rendez-vous. Et pourtant, 73% des Français pensent qu'il faut « du courage » juste pour aller voir un psy. On veut se connaître… mais on a peur de ce qu'on va trouver."
+          "t": "Et les chiffres le montrent : 41% des Français en couple ressentent de la jalousie rien qu'en voyant leur partenaire sur les réseaux sociaux. Pas une infidélité — juste un scroll. Et quand la jalousie vire à l'infidélité réelle, ça pardonne mal : environ 40% des divorces en France sont directement liés à une infidélité. La jalousie, c'est le thermomètre de nos peurs, pas de notre amour."
         }
       ],
       "notes": [
         "Caméra : même cadre, ton posé.",
-        "Montage : insert texte à l'écran « +14% de consultations psy en 2024 » et « 73% : il faut du courage pour consulter ». GIF possible : https://tenor.com/view/inner-demons-gif-13982762090204352166"
+        "Montage : insert texte à l'écran « 41% jaloux à cause des réseaux sociaux » et « ~40% des divorces liés à une infidélité ». GIF réseaux/side-eye : https://tenor.com/view/jealous-eye-roll-annoyed-gif-27220056"
       ]
     },
     {
@@ -720,7 +720,7 @@
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Pour moi, on n'a pas une personnalité : on en a trois. Et Freud avait déjà tout dit il y a un siècle. Il y a le ça — mes envies brutes. Le sur-moi — la morale, les règles, la culpabilité. Et le moi, coincé au milieu, qui négocie toute la journée. Assumer les trois, c'est ça, se connaître."
+          "t": "Pour moi, la jalousie n'est jamais une preuve d'amour. C'est une preuve de peur. La peur de ne pas suffire, la peur d'être remplacé·e, la peur qu'on découvre qu'on n'est pas à la hauteur. Un peu de jalousie, c'est humain, ça arrive à tout le monde. Mais quand elle décide à ta place, quand elle te fait fouiller, contrôler, surveiller — là, ce n'est plus de l'amour. C'est une prison avec deux détenus."
         }
       ],
       "notes": [
@@ -733,37 +733,37 @@
       "timing": "4-5 min",
       "lines": [
         {
-          "t": "Le ça, c'est l'enfant capricieux en vous. Il veut le gâteau, le message à minuit, le plaisir tout de suite, sans se demander si c'est raisonnable. Il ne connaît pas le mot « demain »."
+          "t": "D'abord, il faut comprendre d'où ça vient. La jalousie, ce n'est pas un signal sur l'autre, c'est un signal sur soi. Quand je suis jalouse, mon cerveau ne me dit pas « il va te tromper ». Il me dit « tu as peur de ne pas être assez ». Nuance énorme. Parce que tant qu'on croit que le problème vient de l'autre, on essaie de contrôler l'autre. Alors que le vrai chantier, il est à l'intérieur de nous."
         },
         {
-          "t": "Le sur-moi, c'est la voix de votre mère, de la société, de l'école. « Ça ne se fait pas. » « Qu'est-ce que les gens vont penser ? » C'est lui qui vous fait culpabiliser après avoir mangé le gâteau."
+          "t": "Prenez un exemple ultra banal du quotidien : votre partenaire like la photo d'une autre personne sur Instagram. En trois secondes, votre cœur s'emballe, et vous avez déjà écrit tout un scénario : il la trouve plus belle, il s'ennuie avec vous, ça va mal finir. Le film complet, générique compris. Alors que ce like, neuf fois sur dix, ne voulait absolument rien dire. Ce n'est pas le like qui vous a blessé·e. C'est l'histoire que vous vous êtes racontée par-dessus."
         },
         {
-          "t": "Et le moi, c'est l'arbitre épuisé au milieu du ring. Toute la journée il essaie de contenter le ça sans se faire engueuler par le sur-moi. Quand vous hésitez, que vous procrastinez, que vous vous sentez « tiraillé » — c'est cette bagarre-là."
+          "t": "Et cette histoire, elle est presque toujours plus ancienne que votre couple actuel. On projette. On ramène les trahisons d'avant, les mots d'un parent, les fois où on s'est senti pas choisi. La personne en face paie pour des gens qu'elle n'a jamais rencontrés. C'est injuste, mais c'est humain."
         },
         {
-          "t": "Prenez un exemple tout bête : le dimanche soir. Le ça veut rester au lit et commander à manger. Le sur-moi dit « tu dois préparer ta semaine, être productive ». Le moi finit par négocier : « ok, une heure de repos PUIS je m'y mets ». Ça vous parle ? C'est vos trois voix en réunion de crise."
+          "t": "Maintenant, je vais être honnête avec vous, parce que je ne suis pas là pour vous faire la leçon depuis un piédestal. Moi aussi j'ai dérapé. Une fois — une seule, mais une fois de trop — j'ai attrapé le téléphone de mon mec pendant qu'il dormait. Le cœur qui bat à 200, les mains qui tremblent, cette petite voix qui me disait « arrête, tu vaux mieux que ça ». Je ne l'ai pas écoutée."
         },
         {
-          "t": "Là où ça devient intéressant : la plupart des gens détestent une de leurs trois voix. Certains passent leur vie à faire taire leur ça — et deviennent rigides, frustrés, tristes. D'autres n'écoutent que leur ça — et brûlent tout autour d'eux. Le vrai équilibre, ce n'est pas d'en tuer une. C'est de les faire dialoguer."
+          "t": "Vous savez ce que j'ai trouvé ? Rien. Absolument rien. Des conversations banales, des memes envoyés à ses potes, une commande de pizza. Et vous savez ce que j'ai perdu, moi, cette nuit-là ? Un peu de respect pour moi-même. Parce que la fille qui fouille en douce, ce n'était pas celle que je voulais être. La jalousie m'avait transformée en quelqu'un que je ne reconnaissais pas."
         },
         {
-          "t": "Et moi là-dedans ? Je vous ai promis un truc. J'ai littéralement trois prénoms, et ce n'est pas un hasard :"
+          "t": "Et le plus dingue, c'est que ça ne m'a même pas rassurée. C'est ça, le piège : la jalousie ne se nourrit jamais de preuves, elle se nourrit d'elle-même. Tu vérifies, tu ne trouves rien, tu es soulagé·e dix minutes, et puis le doute revient, plus gros. C'est un puits sans fond. Aucune preuve d'innocence ne suffit jamais, parce que le problème n'a jamais été l'autre."
         },
         {
-          "t": "Il y a Claude (rien à voir avec l'agent IA), une version sage qu'on m'a demandé d'être, qui veut faire attention à elle, qui veut avoir une bonne hygiène de vie, qui est douce et patiente. C'est un surnom qu'on m'avait donné quand je travaillais dans l'animation, la profession où je me sentais le plus en sécurité."
+          "t": "Alors qu'est-ce qu'on fait ? On ne se transforme pas en robot sans émotion, ce n'est pas le but. Le jour où j'ai commencé à aller mieux, c'est le jour où j'ai appris à dire les choses au lieu de les traquer. « Là, tout de suite, je me sens en insécurité, j'ai besoin que tu me rassures. » C'est mille fois plus courageux — et plus efficace — que d'ouvrir un téléphone en cachette. Ça demande d'être vulnérable. Mais c'est ça, la confiance : ce n'est pas l'absence de doute, c'est choisir de parler plutôt que de surveiller."
         },
         {
-          "t": "Il y a Amandine — celle du quotidien, l'équilibre, le moi. Et il y a Amanda — celle que vous suivez, mon ça assumé, celle qui dit tout haut ce que les autres pensent tout bas, celle qui assume ce qu'elle est, sans se soucier du regard des autres. Celle qui n'arrive pas à se contrôler quand il s'agit de manger du sucre."
+          "t": "Et il faut savoir distinguer deux jalousies. Il y a celle qui te traverse, une petite pointe, tu la nommes, elle repart — ça, c'est humain, ce n'est pas grave. Et il y a celle qui s'installe et qui prend les commandes : celle qui te fait contrôler qui l'autre voit, fouiller, isoler, te sentir soulagé·e quand ton ou ta partenaire annule avec ses amis. Cette jalousie-là n'a rien de romantique. C'est le premier étage du contrôle, et parfois de bien pire."
         },
         {
-          "t": "Je n'ai pas encore fait la paix avec mes 3 voix intérieures, car Amanda est finalement pas mal rejetée par les autres. Même Amandine au fond se dit qu'on aurait moins de souci sans Amanda. Claude en est persuadé."
+          "t": "Parce qu'il faut le dire clairement : « il est jaloux, c'est mignon » a servi d'excuse à trop de comportements qui n'avaient rien de mignons. Contrôler une tenue, un téléphone, des fréquentations, ce n'est pas de l'amour intense. C'est de la possession. Et confondre les deux, c'est exactement ce qui piège tant de gens dans des relations qui les rétrécissent au lieu de les faire grandir."
         }
       ],
       "notes": [
-        "Montage : couper sur B-roll quand je décris chaque voix. GIF ange/démon sur l'épaule pendant « le ça vs le sur-moi » : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-15606468775788725702",
-        "Montage : insert texte « 31% des Français ont déjà consulté un psy » quand je parle de se connaître.",
-        "Caméra : ton spontané, comme une confidence entre amis."
+        "Montage : B-roll d'un téléphone qui s'allume dans le noir pendant l'anecdote du téléphone, ambiance tendue.",
+        "Montage : insert texte « 41% jaloux à cause des réseaux » quand je parle du like Instagram. GIF side-eye jalousie : https://tenor.com/view/snow-white-jealous-jealous-side-eye-rachel-zegler-gif-13131029037297145898",
+        "Caméra : ton spontané, comme une confidence entre amies ; ralentir et baisser la voix sur l'aveu du téléphone."
       ]
     },
     {
@@ -772,7 +772,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Vous n'avez pas à choisir laquelle de vos trois voix est la vraie. Elles le sont toutes. La paix, c'est le jour où vous arrêtez de faire taire l'une pour plaire à l'autre.",
+          "t": "La jalousie ne prouve pas que tu aimes. Elle prouve que tu as peur. Et la confiance, ce n'est pas ne jamais douter — c'est choisir de parler plutôt que de surveiller.",
           "quote": true
         }
       ],
@@ -786,7 +786,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Laquelle de vos trois voix parle le plus fort en ce moment : le ça, le moi, ou le sur-moi ? Dites-le-moi en commentaire."
+          "t": "Soyez honnêtes avec moi : pour vous, un peu de jalousie dans un couple, c'est sain… ou c'est déjà le début du problème ? Dites-le-moi en commentaire."
         }
       ],
       "notes": []
@@ -797,15 +797,28 @@
       "timing": "",
       "lines": [
         {
-          "t": "Vendredi prochain, on reste dans l'intime mais on change de terrain : je vous parle des femmes au foyer — choix assumé ou piège doré ? Ça va faire débat."
+          "t": "Vendredi prochain, on reste dans l'intime du couple mais on va plus loin : je vous parle de la différence entre aimer quelqu'un et être juste attaché·e à lui. Parce que ce n'est PAS la même chose — et confondre les deux, ça gâche des années."
         }
       ],
       "notes": [
-        "Prochain épisode au planning : « Les femmes au foyer » — 31/07."
+        "Prochain épisode : « L'amour vs l'attachement – la différence »."
       ]
     },
     {
       "num": "⑨",
+      "title": "CTA — ÉCRAN DE FIN",
+      "timing": "20 sec",
+      "lines": [
+        {
+          "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
+        }
+      ],
+      "notes": [
+        "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
+      ]
+    },
+    {
+      "num": "⑩",
       "title": "CLÔTURE SIGNATURE",
       "timing": "",
       "lines": [
@@ -817,55 +830,42 @@
       "notes": [
         "Caméra : plan légèrement élargi, ton doux."
       ]
-    },
-    {
-      "num": "⑩",
-      "title": "CTA — ÉCRAN DE FIN",
-      "timing": "20 sec",
-      "lines": [
-        {
-          "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
-        }
-      ],
-      "notes": [
-        "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
-      ]
     }
   ],
   "sources": [
     {
-      "label": "Psychologues en France : 34 000 → 43 000+ en 10 ans, densité ~113/100 000 hab. (Association M3P, 2024)",
-      "url": "https://associationm3p-psychologues.fr/les-psychologues-en-france-chiffres-2024/"
+      "label": "41% des personnes en couple jalouses face aux réseaux sociaux ; ~40% des divorces liés à une infidélité (Stop-adultère, 2024)",
+      "url": "https://www.stop-adultere.com/blog/statistiques-sur-linfidelite-en-france-un-phenomene-en-constante-evolution/"
     },
     {
-      "label": "MonSoutienPsy : ~1,8 M de bénéficiaires, x5 entre 2022 et 2025 (info.gouv.fr, 2026)",
-      "url": "https://www.info.gouv.fr/actualite/sante-mentale-formation-soins-numerique-ce-qui-change-des-2026"
+      "label": "37% des Français en couple ont déjà été ou pourraient être infidèles (Ipsos)",
+      "url": "https://www.ipsos.com/fr-fr/37-des-francais-en-couple-ont-deja-ete-ou-pourraient-etre-infideles"
     },
     {
-      "label": "Développement personnel : +37% de requêtes, 52% des Français dépensent en bien-être chaque mois (Réseau Addictions 28, 2026)",
-      "url": "https://www.reseau-addictions28.fr/2026/02/08/developpement-personnel-chiffres-pratiques-et-science-pour-mieux-vivre/"
+      "label": "Statistiques infidélité et sondages nationaux (Love Intelligence)",
+      "url": "https://www.love-intelligence.fr/evolution-rapports-amoureux/statistiques-sur-l-infidelite-et-resultats-de-sondages-nationaux"
     }
   ],
   "ideaProposals": [
     {
-      "theme": "Sexualité",
-      "title": "Les fantasmes qu'on n'ose jamais avouer",
+      "theme": "Couple",
+      "title": "Le contrôle déguisé en amour : les 5 phrases qui doivent alerter",
       "format": "Long format",
-      "hook": "Confessions anonymes de mon audience + les miens, sans filtre",
+      "hook": "Reconnaître la possession sous le romantisme + mon vécu",
       "potentiel": "🔥🔥🔥"
     },
     {
       "theme": "Psycho",
-      "title": "Pourquoi on garde nos ex dans un coin de la tête",
+      "title": "Pourquoi on est attiré·e par ceux qui nous font souffrir",
       "format": "Long format",
-      "hook": "La mémoire du cœur : science + vécu perso",
+      "hook": "Attachement anxieux expliqué simplement + confessions",
       "potentiel": "🔥🔥"
     },
     {
-      "theme": "Femme & Société",
-      "title": "Le « pretty privilege » : être belle, un atout ou un piège ?",
+      "theme": "Sexualité",
+      "title": "La jalousie au lit : fantasme ou poison ?",
       "format": "Long format",
-      "hook": "Le privilège dont personne n'ose parler, et son revers",
+      "hook": "Quand la jalousie s'invite dans le désir — tabou assumé",
       "potentiel": "🔥🔥"
     }
   ]

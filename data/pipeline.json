@@ -167,9 +167,27 @@
       "date": "2026-07-31",
       "theme": "Psycho",
       "title": "La jalousie – toxique ou preuve d'amour ?",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
-      "notes": "Question clivante = fort engagement"
+      "notes": "Question clivante = fort engagement",
+      "titleOptions": [
+        {
+          "text": "La jalousie – toxique ou preuve d'amour ?",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "« S'il est jaloux, c'est qu'il t'aime » : le plus gros mensonge du couple",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "J'ai fouillé son téléphone (et voilà ce que ça m'a appris)",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "La jalousie, c'est une preuve d'amour ou le début du contrôle ? Aujourd'hui je tranche — et je vous avoue la fois où la mienne a dérapé.\n\n• D'où vient vraiment la jalousie (spoiler : ça parle de toi, pas de l'autre)\n• Preuve d'amour VS possession : la ligne à ne pas franchir\n• Mon aveu : la nuit où j'ai fouillé un téléphone\n• Comment remplacer la surveillance par la confiance\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#jalousie #couple #psychologie #confiance #lespenséesdamanda #blondymandise"
     }
   ],
   "ideas": [
@@ -220,6 +238,14 @@
       "format": "Long format",
       "hook": "Transparence + coulisses du couple",
       "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-controle-amour",
+      "theme": "Couple",
+      "title": "Le contrôle déguisé en amour",
+      "format": "Long format",
+      "hook": "Reconnaître la possession sous le romantisme + vécu perso",
+      "potentiel": "🔥🔥🔥"
     }
   ],
   "links": {
