@@ -34,7 +34,9 @@
       "title": "Qui est Amanda ?",
       "status": "publie",
       "lieu": "Facebook & Telegram",
-      "notes": "1er épisode"
+      "notes": "1er épisode",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-08",
@@ -43,7 +45,9 @@
       "title": "Femme respectable VS femme désirée",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-15",
@@ -52,7 +56,9 @@
       "title": "Quelles femmes plaisent aux hommes ?",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-22",
@@ -61,7 +67,9 @@
       "title": "Pourquoi on ne veut plus avoir d'enfants ?",
       "status": "publie",
       "lieu": "Facebook & Telegram",
-      "notes": "Annonce surprise en fin"
+      "notes": "Annonce surprise en fin",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-29",
@@ -70,7 +78,9 @@
       "title": "Derrière chaque femme se trouve un homme",
       "status": "publie",
       "lieu": "YouTube",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-05",
@@ -79,7 +89,9 @@
       "title": "Amanda en intimité",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Questions intimes"
+      "notes": "Questions intimes",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-12",
@@ -88,7 +100,9 @@
       "title": "Sexe VS sentiments",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Méthode anti-jalousie"
+      "notes": "Méthode anti-jalousie",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-19",
@@ -97,7 +111,9 @@
       "title": "Le libertinage : Est-ce pour tout le monde ?",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Ma première fois"
+      "notes": "Ma première fois",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-26",
@@ -106,7 +122,9 @@
       "title": "10 règles pour débuter le libertinage",
       "status": "monte",
       "lieu": "OnlyFans & MYM",
-      "notes": "Guide pratique accessible"
+      "notes": "Guide pratique accessible",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-03",
@@ -115,7 +133,9 @@
       "title": "10 questions gênantes sur le libertinage",
       "status": "tourne",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-10",
@@ -124,7 +144,9 @@
       "title": "Don Juan VS Nympho",
       "status": "script",
       "lieu": "OnlyFans & MYM",
-      "notes": "Double standard hommes/femmes"
+      "notes": "Double standard hommes/femmes",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-17",
@@ -133,7 +155,9 @@
       "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
       "status": "script",
       "lieu": "OnlyFans & MYM",
-      "notes": "Lexique patriarcal"
+      "notes": "Lexique patriarcal",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-24",
@@ -249,7 +273,7 @@
     }
   ],
   "links": {
-    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
+    "OnlyFans": "https://onlyfans.com/cutyamanda",
     "MYM": "https://mym.fans/A_COMPLETER",
     "Telegram": "https://t.me/A_COMPLETER",
     "PayPal": "https://paypal.me/A_COMPLETER",
@@ -262,5 +286,6 @@
     "X": "https://x.com/A_COMPLETER",
     "Snapchat": "https://snapchat.com/add/A_COMPLETER"
   },
-  "progress": {}
+  "progress": {},
+  "linkCats": {}
 }
