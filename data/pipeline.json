@@ -314,8 +314,7 @@
     "Reddit": "https://reddit.com/user/A_COMPLETER",
     "Bio": "https://getmysocial.com/blondymandise",
     "X": "https://x.com/la_mandiise",
-    "Snapchat": "https://snapchat.com/t/Il3EdfGi",
-    "Vidéo youtube vendredi": "https://youtu.be/Ae7BtkCj8Qs"
+    "Snapchat": "https://snapchat.com/t/Il3EdfGi"
   },
   "progress": {
     "2026-W28": [
@@ -351,8 +350,6 @@
     ]
   },
   "linkCats": {
-    "Bio": [
-      "Vidéo youtube vendredi"
-    ]
+    "Bio": []
   }
 }
