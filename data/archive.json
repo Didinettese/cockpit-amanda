@@ -1,6 +1,289 @@
 {
   "weeks": [
     {
+      "isoWeek": "2026-W29",
+      "weekLabel": "Semaine du lundi 13 juillet au dimanche 19 juillet 2026",
+      "briefDate": "2026-07-13",
+      "videoD": {
+        "title": "10 conseils pour ta première fois au village naturiste du Cap d'Agde",
+        "theme": "Naturisme & libertinage en couple",
+        "date": "2026-08-07"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "On m'avait dit « le Cap d'Agde c'est un immense bordel à ciel ouvert ». J'y suis allée. Et tout ce que je croyais savoir était faux.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "Le naturisme, en France, ce n'est pas un truc de marginaux. On est la première destination naturiste du monde, avec environ 2,6 millions de pratiquants réguliers selon France 4 Naturisme, et près de 4 millions de personnes qui passent des vacances naturistes chaque année. C'est un secteur qui pèse 350 millions d'euros et 8 millions de nuitées. Autrement dit : c'est massif, et pourtant on continue d'en parler à voix basse.",
+              "quote": false
+            },
+            {
+              "t": "Et au milieu de tout ça, il y a un lieu à part : le village naturiste du Cap d'Agde. Le plus grand d'Europe, jusqu'à 40 000 personnes en pleine saison, 7 kilomètres de plage. La journée, c'est des familles, des retraités, du farniente. Le soir, dans une partie bien précise, l'ambiance devient libertine. Et c'est cette confusion entre les deux qui alimente tous les fantasmes… et toutes les bêtises qu'on entend.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé, pédagogue.",
+            "Montage : insert texte « 2,6 M de pratiquants réguliers · 1re destination mondiale » et « Cap d'Agde : jusqu'à 40 000 personnes l'été ». Source à l'écran en petit : France 4 Naturisme / Tourmag 2024.",
+            "GIF ambiance plage/soleil en cutaway léger : https://tenor.com/view/summer-beach-vibes-gif-15515981"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Mon avis, tranché : le Cap d'Agde n'est ni le paradis sulfureux qu'on fantasme, ni l'enfer glauque qu'on imagine. C'est un endroit qui te renvoie exactement ce que tu y amènes. Tu viens curieux et respectueux, tu vis une expérience libératrice. Tu viens pour « chasser » ou forcer quoi que ce soit, tu passes un sale moment. La liberté là-bas, elle repose entièrement sur une seule chose : le consentement.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : plan un peu plus serré sur « le consentement », appuyer le mot."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Reprenons depuis le début, parce que la première confusion est là. Naturisme et libertinage, ce ne sont pas des synonymes. Le naturisme, c'est une philosophie du corps nu sans connotation sexuelle : on bronze, on nage, on déjeune, on vit, simplement sans vêtements. Le libertinage, c'est une pratique sexuelle qui, elle, peut exister habillée n'importe où ailleurs. Le Cap d'Agde a la particularité rare de mélanger les deux sur un même territoire — mais à des moments et dans des zones différents. La plage familiale à midi n'a rien à voir avec certains bars le soir. Confondre les deux, c'est comme croire qu'une ville entière est une boîte de nuit parce qu'il y a une boîte de nuit dedans.",
+              "quote": false
+            },
+            {
+              "t": "Deuxième chose que personne ne vous prépare : le premier obstacle n'est pas les autres, c'est vous. Le vrai vertige de la première fois, c'est d'enlever son maillot en plein jour devant des inconnus. On croit tous qu'on va être scruté, jugé, comparé. La réalité, et ça, aucune brochure ne le dit vraiment : au bout de dix minutes, plus personne ne regarde. Le cerveau s'habitue à une vitesse hallucinante. La nudité devient banale, presque ennuyeuse. Et c'est précisément dans cet ennui-là que naît un truc rare aujourd'hui : la paix avec son corps.",
+              "quote": false
+            },
+            {
+              "t": "Je vais vous raconter ma première fois, la vraie. Je suis arrivée tendue, persuadée que j'allais détester. J'ai gardé mon paréo une heure, assise sur ma serviette à observer tout le monde comme une intruse. Et puis une femme de soixante-dix ans est passée devant moi, tranquille, un bouquin sous le bras, absolument zéro complexe. Elle m'a juste souri. Et là quelque chose a lâché. J'ai enlevé le paréo. Personne n'a bronché. Pour la première fois de ma vie d'adulte, mon corps n'était pas un objet de désir ou de jugement — il était juste… là. J'ai pleuré, en fait. De soulagement. Moi qui monnaie mon image, qui gère mon corps comme un business, j'ai redécouvert ce que c'était de l'habiter juste pour moi.",
+              "quote": false
+            },
+            {
+              "t": "Prenons un exemple très concret du quotidien là-bas, parce que les gens imaginent des scènes de film. La vraie journée type ? Tu te lèves, tu vas chercher ton pain à la boulangerie — nu, avec ton sac en toile. Tu croises ton voisin, vous parlez de la météo. Tu bronzes, tu lis, tu te baignes, tu déjeunes en terrasse. Bref, une journée de vacances parfaitement banale, sauf le dress code. Le côté sulfureux, si tu le cherches, tu le trouveras le soir, dans des lieux identifiés, avec des codes précis. Mais tu peux aussi passer une semaine entière au Cap d'Agde sans jamais y mettre les pieds. Ça, ça surprend tout le monde.",
+              "quote": false
+            },
+            {
+              "t": "Maintenant, parlons du couple, parce que c'est là que ça se corse. Le Cap d'Agde, à deux, c'est un révélateur. Ça met une loupe sur votre relation. J'ai vu des couples en ressortir soudés, complices, fiers d'avoir partagé quelque chose d'intense et de choisi. Et j'en ai vu d'autres exploser en trois jours, parce que l'un rêvait d'ouverture et l'autre a découvert une jalousie qu'il ne se connaissait pas. La règle absolue que je répète tout le temps : on ne va JAMAIS dans un lieu libertin pour « sauver » ou « pimenter » un couple qui va mal. Ça n'a jamais réparé personne. Ça révèle, ça n'ajoute pas.",
+              "quote": false
+            },
+            {
+              "t": "Et puis il y a la règle qui rend tout l'endroit vivable, celle sans laquelle rien ne tient : le consentement, partout, tout le temps. Là-bas, prendre une photo de quelqu'un sans son accord, c'est la faute ultime, celle qui te fait dégager immédiatement. Un « non » est un « non » définitif, sur la plage comme dans un bar à 2h du matin. Personne ne te doit rien, jamais, quel que soit l'endroit ou l'heure. Paradoxalement, c'est cette rigueur sur le respect qui fait qu'un lieu aussi libre peut être aussi safe. La liberté sans le consentement, ce n'est pas de la liberté, c'est juste de l'agression avec un décor de vacances.",
+              "quote": false
+            },
+            {
+              "t": "Dernier point, le plus terre-à-terre et le plus utile : la logistique. Personne ne vous le dit, mais la crème solaire devient votre meilleure amie, sur absolument toutes les zones — je vous laisse imaginer les coups de soleil aux endroits qui n'ont jamais vu la lumière. Prévoyez une serviette reconnaissable, parce que tout le monde a la même. Et surtout, arrivez par la journée, par le naturisme simple, avant même de penser au reste. Apprivoisez le regard d'abord. Le reste, vous déciderez plus tard, à votre rythme, ou jamais. Il n'y a aucune obligation, et c'est ça la vraie beauté de l'endroit.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "B-roll : plage large, village, terrasses (flou pudique), pour illustrer le « quotidien banal ».",
+            "Montage : réincruster l'insert « 2,6 M de pratiquants · 350 M€ » quand Amanda rappelle l'ampleur du phénomène.",
+            "Insert émotion sur l'anecdote perso (paréo qui tombe) : ralenti léger, musique douce, laisser respirer.",
+            "GIF gêne/timide sur le passage 'on croit qu'on va être jugé' : https://tenor.com/view/shy-awkward-nervous-covering-gif-16060409"
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Le Cap d'Agde ne te transforme pas. Il enlève juste le costume — et te met face à qui tu es vraiment, à poil, au sens propre comme au figuré.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan fixe, silence de 2 sec après la phrase pour laisser l'impact."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Alors dites-moi franchement en commentaire : vous seriez capable d'enlever votre maillot devant des inconnus… ou rien que l'idée vous met déjà mal à l'aise ?",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : sourire complice, inviter vraiment au débat."
+          ]
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et parce que vous êtes nombreux à me demander comment on gère tout ça à deux : vendredi prochain, je vous ouvre les coulisses de « Avoir un OnlyFans en couple : les règles qu'on s'est fixées ». On va parler cash de ce qui tient un couple quand le corps devient aussi un métier.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : ton complice, teaser l'épisode suivant sans tout dévoiler."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a fait voir le naturisme autrement, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat, et sur mon Telegram pour la version bien plus intime — celle que YouTube ne me laisserait jamais poster. Les liens sont en description.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : écran de fin, cartes d'abonnement, rappel Facebook + Telegram à l'écran."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "La stat qui fait tomber les clichés",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 03/08",
+          "hook": "La France est la première destination naturiste au monde : environ 2,6 millions de pratiquants réguliers. Deux virgule six millions.",
+          "corps": "Et pourtant, dès qu'on dit « naturiste », tout le monde pense à autre chose. Le Cap d'Agde, plus grand village naturiste d'Europe, c'est jusqu'à 40 000 personnes en plein été. On va parler de ce que c'est vraiment.",
+          "cta": "Ma vidéo « première fois au Cap d'Agde » sort vendredi — abonnez-vous."
+        },
+        {
+          "n": "2",
+          "title": "Naturisme ≠ ce que vous croyez",
+          "angle": "OPINION",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton posé puis tranché",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 03/08",
+          "hook": "Non, le village naturiste ce n'est pas un immense partouze géante. Voilà ce que personne n'ose vous expliquer.",
+          "corps": "La journée sur la plage, c'est des familles, des retraités, des gens qui bronzent, point. Le soir, dans une partie précise du village, l'ambiance devient libertine — mais c'est un choix, pas une obligation. Confondre les deux, c'est le cliché n°1.",
+          "cta": "Je décortique tout ça vendredi."
+        },
+        {
+          "n": "3",
+          "title": "Ma première fois là-bas",
+          "angle": "INTIME",
+          "dur": "30-35 sec",
+          "cam": "face cam, confidence, lumière douce",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 04/08",
+          "hook": "La première fois que j'ai enlevé mon maillot sur cette plage, j'ai cru que tout le monde allait me regarder.",
+          "corps": "Et en fait… personne. C'est ça qui m'a bouleversée. Pour la première fois de ma vie, mon corps n'était pas un spectacle. Je m'attendais à un jugement permanent, j'ai trouvé une indifférence totale — et une paix que je ne connaissais pas.",
+          "cta": "Je vous raconte tout, sans filtre, vendredi."
+        },
+        {
+          "n": "4",
+          "title": "Le conseil que j'aurais aimé avoir",
+          "angle": "CONSEIL",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 04/08",
+          "hook": "Conseil n°1 pour ta première fois au Cap d'Agde : ne commence PAS par le soir.",
+          "corps": "Arrive en journée, sur la plage, dans le naturisme « pur ». Habitue-toi au regard, ou plutôt à l'absence de regard. Le côté libertin du village, tu iras l'explorer après, si tu en as envie, à ton rythme. Brûler les étapes, c'est le meilleur moyen de flipper.",
+          "cta": "Mes 10 conseils complets vendredi."
+        },
+        {
+          "n": "5",
+          "title": "Le moment le plus gênant",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, sourire, autodérision",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mercredi 05/08",
+          "hook": "Le moment le plus gênant de ma première fois ? Croiser mon voisin de camping. À poil. Aux deux.",
+          "corps": "On s'est regardés deux secondes, on a éclaté de rire, on a parlé météo comme si de rien n'était. Et là j'ai compris le vrai truc du naturisme : au bout de dix minutes, tu ne vois même plus la nudité. Le cerveau s'habitue à une vitesse folle.",
+          "cta": "D'autres anecdotes gênantes vendredi 😅"
+        },
+        {
+          "n": "6",
+          "title": "La question qui divise les couples",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, regard direct",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 06/08",
+          "hook": "Vraie question : est-ce que tu emmènerais ton copain ou ta copine dans un lieu libertin ?",
+          "corps": "Parce que le Cap d'Agde, en couple, ça teste des choses. Certains y renforcent leur complicité, d'autres découvrent des jalousies qu'ils ne soupçonnaient pas. Il n'y a pas de bonne réponse — mais il y a une règle : on n'y va jamais pour « sauver » un couple.",
+          "cta": "Je donne mon avis tranché vendredi."
+        },
+        {
+          "n": "7",
+          "title": "Le truc que personne n'avoue",
+          "angle": "HUMOUR",
+          "dur": "20-25 sec",
+          "cam": "face cam, ton léger",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 06/08",
+          "hook": "Personne ne vous le dit mais le vrai défi du naturisme, c'est… où poser vos affaires quand tout le monde a la même serviette.",
+          "corps": "Et le coup de soleil à des endroits qui n'ont JAMAIS vu le soleil. Crème solaire partout, vraiment partout, c'est mon conseil le moins glamour mais le plus utile de toute la vidéo.",
+          "cta": "Mes conseils les plus pratiques vendredi 😂"
+        },
+        {
+          "n": "8",
+          "title": "3 règles à connaître avant d'y aller",
+          "angle": "LISTE",
+          "dur": "30-35 sec",
+          "cam": "face cam, énumération dynamique",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 08/08",
+          "hook": "3 règles d'or avant ta première fois au village naturiste, et la 3e sauve des couples.",
+          "corps": "Un : jamais de photo sans consentement, c'est la faute ultime là-bas. Deux : « non » veut dire non, partout, tout le temps, y compris le soir. Trois : décidez de vos limites en couple AVANT d'arriver, pas dans le feu de l'action. Le respect, c'est ce qui rend l'endroit safe.",
+          "cta": "Les 10 conseils au complet, vendredi sur la chaîne."
+        }
+      ]
+    },
+    {
       "isoWeek": "2026-W28",
       "weekLabel": "Semaine du lundi 6 juillet au dimanche 12 juillet 2026",
       "briefDate": "2026-07-06",
