@@ -101,6 +101,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .copytxt{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:11px 12px;
   font-size:14px;line-height:1.45;color:var(--ink);white-space:pre-wrap;word-break:break-word}
 .copytxt.link{font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ytlink{flex:1;min-width:0;background:var(--bg);border:1px solid var(--youtube);border-radius:11px;padding:11px 12px;
+  font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace}
+.ytlink:focus{outline:none;border-color:var(--telegram)}
+.ytlink::placeholder{color:var(--muted);font-family:Inter}
 .copybtn{flex:0 0 auto;width:52px;border-radius:11px;border:none;background:var(--now);color:#fff;font-weight:700;
   font-size:12px;cursor:pointer;font-family:"Bricolage Grotesque";display:grid;place-items:center;transition:.12s}
 .copybtn:active{transform:scale(.92)}
@@ -245,30 +249,30 @@ const DATA = {
   "meta": {
     "channel": "Les Pensées d'Amanda",
     "handle": "@blondymandise",
-    "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
-    "briefDate": "2026-07-02",
-    "isoWeek": "2026-W27",
+    "weekLabel": "Semaine du lundi 13 juillet au dimanche 19 juillet 2026",
+    "briefDate": "2026-07-13",
+    "isoWeek": "2026-W29",
     "previous": {
-      "title": "10 règles pour débuter le libertinage",
-      "date": "2026-06-26"
-    },
-    "videoA": {
-      "title": "10 questions gênantes sur le libertinage",
-      "date": "2026-07-03"
-    },
-    "videoB": {
       "title": "Don Juan VS Nympho",
       "date": "2026-07-10"
     },
-    "videoC": {
+    "videoA": {
       "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
       "date": "2026-07-17"
     },
-    "videoD": {
+    "videoB": {
       "title": "On a tous 3 personnes en nous",
-      "theme": "Moi, sur-moi et ça",
-      "date": "2026-07-24",
-      "next": "La jalousie – toxique ou preuve d'amour ?"
+      "date": "2026-07-24"
+    },
+    "videoC": {
+      "title": "La jalousie – toxique ou preuve d'amour ?",
+      "date": "2026-07-31"
+    },
+    "videoD": {
+      "title": "10 conseils pour ta première fois au village naturiste du Cap d'Agde",
+      "theme": "Naturisme & libertinage en couple",
+      "date": "2026-08-07",
+      "next": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées"
     }
   },
   "links": {
@@ -288,16 +292,16 @@ const DATA = {
   "schedule": [
     {
       "day": "Lundi",
-      "date": "29/06",
+      "date": "13/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
-          "type": "Story engagement (relance débutants)",
-          "texte": "La vidéo de vendredi a lancé le débat 🔥 Vraie question : c'est quoi VOTRE règle n°1 avant de se lancer dans le libertinage ? Balancez en sticker.",
-          "media": "Story fond uni + sticker questions. Capture d'un top commentaire de la vidéo précédente.",
+          "type": "Story engagement (thème précédent)",
+          "texte": "La vidéo de vendredi « Don Juan VS Nympho » vous a remués 🔥 Pour vous, un homme qui multiplie les conquêtes et une femme qui fait pareil, c'est vraiment jugé pareil ? Répondez au sondage 👇",
+          "media": "Story face-cam + sticker sondage (Oui / Non). Repost du meilleur commentaire de vendredi.",
           "lien": "Bio",
           "astuce": "Republier le meilleur commentaire dès qu'il tombe pour lancer l'effet boule de neige."
         },
@@ -307,8 +311,8 @@ const DATA = {
           "time": "16:00",
           "moment": "Après-midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Mes « 10 règles » version YouTube = les soft. La règle que j'ai coupée au montage… elle est ailleurs 😏👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Sur YouTube j'ai posé la question du double standard. Ici je vous montre la femme libre que ça dérange tant 😏👇",
+          "media": "Photo/clip teaser un peu plus spicy. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         },
@@ -318,18 +322,18 @@ const DATA = {
           "time": "19:00",
           "moment": "Soir",
           "type": "Teaser (renvoi profil)",
-          "texte": "Débat du lundi : le libertinage, on encadre ou on lâche prise ? Je donne mon avis (et un peu plus) sur mon profil.",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "texte": "Débat du lundi : une femme qui assume son désir, c'est une « nympho » ou juste une femme libre ? Mon avis (et un peu plus) sur mon profil 😉",
+          "media": "Photo verticale, cadrage taille, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "20:30",
+          "time": "20:00",
           "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "Coulisses de ma journée + un aperçu que je ne posterai nulle part ailleurs 👀 lien en story.",
+          "type": "Story engageante (manuel)",
+          "texte": "On refait le débat de vendredi entre nous 👀 Team double standard ou team égalité ? Swipe up.",
           "media": "Story verticale + snap premium. Publication 100% manuelle.",
           "lien": "OnlyFans",
           "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
@@ -339,28 +343,28 @@ const DATA = {
           "plats": "Telegram",
           "time": "21:00",
           "moment": "Soir",
-          "type": "Message confession + vocal exclusif",
-          "texte": "Entre nous… ma vraie règle n°1 pour débuter, je l'ai jamais dite en vidéo parce qu'elle est trop intime. Vous voulez que je vous la raconte en vocal ce soir ? 🎙",
-          "media": "Vocal exclusif de 30-60s envoyé à 21h.",
+          "type": "Confession intime (thème précédent)",
+          "texte": "Entre nous 🔓 La première fois qu'on m'a traitée de « facile », j'avais 19 ans. Je vous raconte ce que ça m'a fait — et pourquoi j'ai arrêté d'avoir honte. Ici et seulement ici.",
+          "media": "Vocal intime ou vidéo exclusive + anecdote non dite sur YouTube.",
           "lien": "OnlyFans",
-          "astuce": "Le vocal + le côté « rien que pour vous » fait réagir les abonnés."
+          "astuce": "Ton confidence : récompense l'abonnement, crée le lien."
         }
       ]
     },
     {
       "day": "Mardi",
-      "date": "30/06",
+      "date": "14/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
-          "type": "Story coulisses (thème précédent)",
-          "texte": "On m'a demandé si j'avais eu peur ma première fois libertine. Réponse honnête en story 👇 posez-moi vos questions, je réponds cash.",
-          "media": "Story face-cam courte + sticker questions.",
+          "type": "Story engagement (thème précédent)",
+          "texte": "Vous étiez 71% à dire que le double standard existe encore 😳 Alors dites-moi : le mot « nympho », vous l'avez déjà entendu balancé à un mec ? Jamais, hein.",
+          "media": "Capture du sondage + réaction visage.",
           "lien": "Bio",
-          "astuce": "Répondre en story à 2-3 questions pour nourrir l'engagement toute la journée."
+          "astuce": "Enchaîner sondage → réaction pour garder le fil narratif."
         },
         {
           "platKey": "x",
@@ -368,21 +372,10 @@ const DATA = {
           "time": "12:00",
           "moment": "Midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Le libertinage pour débutants, tout le monde en parle en théorie. Moi je vous montre la pratique 😏👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "« Elle a un passé. » Comme si le mien vous regardait 😏 Ce que j'assume, c'est ici 👇",
+          "media": "Photo/clip teaser. Lien OnlyFans direct.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Débutante en libertinage ? J'ai fait toutes les erreurs pour vous. Mon retour d'expérience (et plus) sur mon profil 😉",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "x",
@@ -390,49 +383,60 @@ const DATA = {
           "time": "18:00",
           "moment": "Soir",
           "type": "Teaser promo → OnlyFans (2e)",
-          "texte": "Petit rappel : ce que je poste ici est la version tout public. Le reste, c'est réservé 🔓",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Le contenu que YouTube ne me laisserait jamais poster est à un clic 🔓👇",
+          "media": "Clip teaser spicy. Lien OnlyFans direct.",
           "lien": "OnlyFans",
-          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+          "astuce": "2e teaser du jour : varier l'accroche, jamais la même image."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Femme libre et fière de l'être. Ceux que ça dérange peuvent scroller… les autres, mon profil est en bio 😉",
+          "media": "Photo verticale, plein pied, lumière naturelle. Watermark discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "Ma journée en coulisses + exclu snap premium ce soir 👀",
-          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "type": "Story engageante (manuel)",
+          "texte": "Question du soir sur le snap : le pire mot qu'on ait collé sur une femme selon vous ? 👀",
+          "media": "Story verticale + snap premium. 100% manuel.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+          "astuce": "100% manuel. Teaser vers OnlyFans."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
           "moment": "Soir",
-          "type": "Message confession intime",
-          "texte": "Confession du soir 🔓 la règle que j'aurais aimé qu'on me donne AVANT de me lancer… je vous la donne, à vous.",
-          "media": "Message texte intime + photo exclusive.",
+          "type": "Coulisses intimes (thème précédent)",
+          "texte": "Coulisses 🔓 Ce que je n'ai pas dit dans la vidéo : la vraie raison pour laquelle j'assume tout aujourd'hui. Un aveu que je garde pour vous.",
+          "media": "Vidéo/vocal exclusif, ton confidence.",
           "lien": "OnlyFans",
-          "astuce": "Alterner texte confession et média exclusif pour garder le rythme."
+          "astuce": "L'exclu Telegram = la récompense de l'intimité."
         }
       ]
     },
     {
       "day": "Mercredi",
-      "date": "01/07",
+      "date": "15/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "09:00",
           "moment": "Matin",
           "type": "Story coulisses tournage",
-          "texte": "Jour de tournage 🎬 aujourd'hui je filme une vidéo qui va faire parler. Indice : on est tous plusieurs dans notre tête 👀 Vous voyez de quoi je parle ?",
-          "media": "Story coulisses studio + sticker questions.",
+          "texte": "Jour de tournage 🎬 Aujourd'hui on batch la vidéo de vendredi + les réels. Devinez le thème de vendredi rien qu'avec un indice : « les mots que les hommes ont inventés pour nous »… 👀",
+          "media": "Behind the scenes plateau, teasing léger du thème A. Sticker « devine le sujet ».",
           "lien": "Bio",
-          "astuce": "Teaser le thème de la future vidéo D sans le révéler pour créer l'attente."
+          "astuce": "Le behind-the-scenes du mercredi crée de l'attente pour vendredi."
         },
         {
           "platKey": "x",
@@ -440,8 +444,8 @@ const DATA = {
           "time": "16:00",
           "moment": "Après-midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Journée tournage = journée où je suis à 200%. Le behind the scenes non censuré, c'est ailleurs 😏👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Pause tournage. Et forcément, la pause est plus intéressante que le tournage 😏 Elle est ici 👇",
+          "media": "Selfie/clip coulisses teaser. Lien OnlyFans direct.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         },
@@ -451,110 +455,110 @@ const DATA = {
           "time": "19:00",
           "moment": "Soir",
           "type": "Teaser (renvoi profil)",
-          "texte": "Jour de tournage pour ma chaîne. Envie de voir la version que YouTube ne verra jamais ? Profil en bio 😉",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "texte": "Journée tournage terminée, place au vrai contenu 😉 Tout est sur mon profil (en bio).",
+          "media": "Photo verticale coulisses, regard caméra, watermark discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "20:30",
-          "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "Coulisses tournage en direct + snap premium exclusif 🎬",
-          "media": "Story verticale + snap premium. Publication 100% manuelle.",
-          "lien": "OnlyFans",
-          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
-        },
-        {
-          "platKey": "telegram",
-          "plats": "Telegram",
-          "time": "21:00",
-          "moment": "Soir",
-          "type": "Message coulisses + vocal",
-          "texte": "Vous savez quoi ? Sur le tournage d'aujourd'hui j'ai lâché un truc trop perso, je vais sûrement le couper. Je vous l'envoie en vocal, rien que pour vous 🎙",
-          "media": "Vocal exclusif coulisses de 30-60s.",
-          "lien": "OnlyFans",
-          "astuce": "Le côté « en direct du tournage » crée un sentiment de privilège."
-        }
-      ]
-    },
-    {
-      "day": "Jeudi",
-      "date": "02/07",
-      "posts": [
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "09:00",
-          "moment": "Matin",
-          "type": "Story thème précédent (dernière relance)",
-          "texte": "Dernier jour avant la nouvelle vidéo 😱 Avant ça : votre plus grosse idée reçue sur le libertinage ? Je la démonte demain.",
-          "media": "Story sticker questions + fond dynamique.",
-          "lien": "Bio",
-          "astuce": "Collecter les idées reçues aujourd'hui pour rebondir dessus vendredi."
-        },
-        {
-          "platKey": "x",
-          "plats": "X",
-          "time": "12:00",
-          "moment": "Midi",
-          "type": "Teaser promo → OnlyFans",
-          "texte": "Demain je réponds à 10 questions gênantes sur le libertinage. Ici, je réponds à celles que YouTube censurerait 😏👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
-          "lien": "OnlyFans",
-          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Nouvelle vidéo demain : 10 questions gênantes sur le libertinage. La version non censurée est déjà sur mon profil 😉",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "19:00",
-          "moment": "Soir",
-          "type": "Story TEASING vidéo A",
-          "texte": "DEMAIN 8h 🚨 « 10 questions gênantes sur le libertinage » — et j'ai osé répondre à TOUT. Même à la question n°6. Compte à rebours activé ⏳",
-          "media": "Story teaser miniature floutée + sticker compte à rebours.",
-          "lien": "Bio",
-          "astuce": "Le sticker compte à rebours notifie automatiquement les abonnés à la sortie."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "J-1 avant la nouvelle vidéo 🎬 teaser exclu + snap premium ce soir.",
-          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "type": "Story engageante (manuel)",
+          "texte": "Snap coulisses du tournage 🎬 + un extrait que vous ne verrez nulle part ailleurs.",
+          "media": "Story verticale + snap premium. 100% manuel.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+          "astuce": "100% manuel. Teaser vers OnlyFans."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
           "moment": "Soir",
-          "type": "Teasing vidéo A (intime)",
-          "texte": "Demain, LA vidéo. 10 questions gênantes… mais il y en a une 11e, tellement intime que je l'ai gardée que pour vous. Elle arrive demain soir 🔓",
-          "media": "Message teasing + photo exclusive.",
+          "type": "Confession intime (thème précédent)",
+          "texte": "Entre nous 🔓 On a fini de tourner tard. Je vous parle vraiment, sans caméra pro, sans montage — juste moi. Ce que j'ai ressenti aujourd'hui.",
+          "media": "Vocal brut, intime, non monté.",
           "lien": "OnlyFans",
-          "astuce": "Créer l'attente du debrief exclusif de vendredi soir."
+          "astuce": "Le côté brut/non monté renforce l'intimité."
+        }
+      ]
+    },
+    {
+      "day": "Jeudi",
+      "date": "16/07",
+      "posts": [
+        {
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story engagement (thème précédent)",
+          "texte": "Dernier mot sur « Don Juan VS Nympho » avant de tourner la page 😌 Votre commentaire préféré sous la vidéo, je le republie dans 1h. À vos claviers 👇",
+          "media": "Story face-cam + repost commentaires.",
+          "lien": "Bio",
+          "astuce": "Clore proprement le cycle de la vidéo précédente avant le teasing du soir."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Teaser promo → OnlyFans",
+          "texte": "Demain nouvelle vidéo. Ce soir, tout ce que je ne peux pas dire sur YouTube 🔓👇",
+          "media": "Clip teaser spicy. Lien OnlyFans direct.",
+          "lien": "OnlyFans",
+          "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Teaser (renvoi profil)",
+          "texte": "Grosse vidéo demain sur la chaîne 👀 Mais le vrai contenu, vous savez où il est (profil en bio).",
+          "media": "Photo verticale, plein pied, watermark discret.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Story TEASING vidéo A (demain)",
+          "texte": "DEMAIN 8h 🚨 « Vocabulaire d'hommes pour les femmes ». Grossesse gériatrique, hystérique, vieille fille… ces mots qu'on nous colle et jamais aux hommes. Ça va piquer. Notif activée ? 🔔",
+          "media": "Teaser vertical + sticker compte à rebours pour vendredi 8h.",
+          "lien": "Bio",
+          "astuce": "Le teasing du jeudi soir = pic de notifications avant la sortie."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:30",
+          "moment": "Soir",
+          "type": "Story engageante (manuel)",
+          "texte": "Teasing snap 🔥 Demain je démonte le vocabulaire que les hommes ont inventé pour nous ranger dans des cases. Sneak peek premium ici.",
+          "media": "Story verticale teasing + snap premium. 100% manuel.",
+          "lien": "OnlyFans",
+          "astuce": "100% manuel. Teaser vers OnlyFans."
+        },
+        {
+          "platKey": "telegram",
+          "plats": "Telegram",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "TEASING intime vidéo A",
+          "texte": "Demain 8h, nouvelle vidéo 🔓 Le mot qui m'a le plus blessée dans ma vie de femme, je l'ai gardé pour vous — je vous le raconte ici avant tout le monde.",
+          "media": "Vocal intime, teasing du thème A sans tout dévoiler.",
+          "lien": "OnlyFans",
+          "astuce": "Teasing exclusif = donne une raison d'être abonné AVANT la sortie."
         }
       ]
     },
     {
       "day": "Vendredi",
-      "date": "03/07",
+      "date": "17/07",
       "posts": [
         {
           "platKey": "youtube",
@@ -562,32 +566,32 @@ const DATA = {
           "time": "08:00",
           "moment": "8h — Sortie",
           "type": "Publication vidéo A + description",
-          "texte": "10 questions gênantes sur le libertinage — et mes réponses sans filtre.\n\nVous me les avez posées, j'ai osé toutes y répondre. Pas de langue de bois, pas de sujet tabou.\n→ Les 10 questions qui reviennent le plus\n→ Ce que j'ai vraiment vécu (et ce que non)\n→ Les idées reçues à jeter à la poubelle\n→ Ma limite perso, celle que je ne franchis pas\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#libertinage #couple #sexualité #lespenséesdamanda #blondymandise",
-          "media": "Miniature face-cam + overlay « 10 QUESTIONS GÊNANTES ». Publication programmée 8h (heure FR).",
+          "texte": "Vocabulaire d'hommes pour les femmes — ces mots qu'on nous colle et jamais à eux.\n\n« Grossesse gériatrique » à 35 ans, « hystérique » quand on hausse le ton, « vieille fille » quand on est libre… Ce lexique n'est pas neutre : il range les femmes dans des cases. Aujourd'hui je le décortique, sans langue de bois.\n→ D'où viennent vraiment ces mots\n→ Ce qu'ils disent de la société (et pas de nous)\n→ Mon vécu face à ces étiquettes\n→ Comment j'ai appris à les retourner\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#femmeetsociété #patriarcat #sexisme #couple #lespenséesdamanda #blondymandise",
+          "media": "Miniature face-cam + overlay « VOCABULAIRE D'HOMMES ». Publication programmée 8h (heure FR).",
           "lien": "YouTube",
           "astuce": "Publier à 8h pile. Relancer à midi avec un extrait choc."
         },
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "08:00",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
+          "time": "08:05",
           "moment": "8h — Sortie",
-          "type": "Post feed de sortie + CTA",
-          "texte": "10 questions gênantes, 10 réponses cash. Nouvelle vidéo en ligne 🔗 lien en bio. Laquelle vous n'auriez JAMAIS osé poser ? 👇",
-          "media": "Carrousel : miniature + 2-3 extraits texte. Pas de lien dans le post (lien en bio).",
+          "type": "Story annonce + sticker lien",
+          "texte": "ÇA Y EST 🚨 « Vocabulaire d'hommes pour les femmes ». Ces mots vont vous énerver autant que moi — lien en bio 🔗",
+          "media": "Story avec sticker lien vers YouTube.",
           "lien": "Bio",
-          "astuce": "Épingler en commentaire « lien en bio »."
+          "astuce": "Relancer à midi avec un extrait."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "08:05",
+          "time": "08:10",
           "moment": "8h — Sortie",
-          "type": "Story annonce + sticker lien",
-          "texte": "ÇA Y EST 🚨 10 questions gênantes, 10 réponses cash. La vidéo est en ligne — lien en bio 🔗",
-          "media": "Story avec sticker lien vers YouTube.",
+          "type": "Post feed de sortie + CTA",
+          "texte": "« Grossesse gériatrique. » On dit ça d'une femme de 35 ans. Vous connaissez l'équivalent pour un homme ? Non. Nouvelle vidéo en ligne 🔗 lien en bio. Ces mots vous choquent aussi ? 👇",
+          "media": "Carrousel : miniature + 2-3 extraits texte. Pas de lien dans le post (lien en bio).",
           "lien": "Bio",
-          "astuce": "Relancer à midi avec un extrait."
+          "astuce": "Épingler en commentaire « lien en bio »."
         },
         {
           "platKey": "x",
@@ -595,19 +599,19 @@ const DATA = {
           "time": "08:15",
           "moment": "8h — Sortie",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Nouvelle vidéo 🔥 « 10 questions gênantes sur le libertinage ». Version YouTube = soft. La 11e question = 👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Nouvelle vidéo 🔥 « Vocabulaire d'hommes pour les femmes ». Sur YouTube je démonte les mots. Ici, j'assume la femme qu'ils essaient de faire taire 😏👇",
+          "media": "Photo/clip teaser un peu plus spicy. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         },
         {
           "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
+          "plats": "TikTok + YouTube + Facebook",
           "time": "12:00",
           "moment": "Midi",
-          "type": "Extrait long format (vidéo A) — cross-plateforme",
-          "texte": "La question la plus gênante qu'on m'ait posée sur le libertinage… et ma réponse cash 😳 Vidéo complète en bio.",
-          "media": "Clip 9:16 < 30s, hook fort en ouverture, sous-titres. SFW strict pour TikTok/Reels/FB.",
+          "type": "Extrait réel (vidéo A) — diffusion cross-plateforme",
+          "texte": "« Un homme de 35 ans qui veut un enfant : normal. Une femme : grossesse gériatrique. » Vous la sentez la différence ? 😳 Vidéo complète en bio.",
+          "media": "Clip 9:16 < 30s (réel écrit il y a 3 sem), hook fort en ouverture, sous-titres. SFW strict pour TikTok/YouTube/FB.",
           "lien": "Bio",
           "astuce": "Poster à la main sur Facebook (jamais programmé)."
         },
@@ -617,19 +621,19 @@ const DATA = {
           "time": "12:00",
           "moment": "Midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Ma nouvelle vidéo « 10 questions gênantes sur le libertinage » vient de sortir — je réponds à tout, même au reste 😉 (profil en bio).",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "texte": "Ma nouvelle vidéo « Vocabulaire d'hommes pour les femmes » vient de sortir — j'assume tout, même le reste 😉 (profil en bio).",
+          "media": "Photo verticale, cadrage taille, regard caméra, lumière naturelle. Watermark discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "20:00",
           "moment": "Soir",
           "type": "Story résultat sondage + réaction",
-          "texte": "Vous étiez 71% à parier que je n'oserais pas répondre à la n°6 😎 Verdict dans la vidéo. Vos réactions me tuent, continuez !",
-          "media": "Capture du sondage + réaction visage.",
+          "texte": "Vous êtes des centaines à m'avoir balancé LE mot sexiste qu'on vous a collé 😤 J'en republie quelques-uns, ça fait mal. Continuez à partager.",
+          "media": "Reposts de réponses + réaction visage.",
           "lien": "Bio",
           "astuce": "Republier 2-3 réactions marquantes."
         },
@@ -638,8 +642,8 @@ const DATA = {
           "plats": "Telegram",
           "time": "20:30",
           "moment": "Soir",
-          "type": "DEBRIEF EXCLUSIF (la 11e question)",
-          "texte": "Ok, entre nous. La fameuse 11e question — celle que je n'ai PAS posée sur YouTube — je vous donne ma vraie réponse ici, et seulement ici 🔓",
+          "type": "DEBRIEF EXCLUSIF",
+          "texte": "Ok, entre nous 🔓 Le mot qui m'a le plus détruite, celui que j'ai coupé au montage parce que c'était trop perso. Je vous le raconte ici, et seulement ici.",
           "media": "Vocal ou vidéo exclusive + anecdote non dite.",
           "lien": "OnlyFans",
           "astuce": "Le rendez-vous phare de la semaine : récompense l'abonnement."
@@ -661,8 +665,8 @@ const DATA = {
           "time": "21:00",
           "moment": "Soir",
           "type": "Teaser promo → OnlyFans (2e)",
-          "texte": "Vous avez aimé la vidéo ? Le debrief coquin de la 11e question est dispo ce soir 🔓",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Vous avez aimé la vidéo ? Le débrief sans filtre, sans YouTube pour me censurer, c'est dispo ce soir 🔓",
+          "media": "Photo/clip teaser spicy. Lien OnlyFans direct dans le post.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         }
@@ -670,29 +674,29 @@ const DATA = {
     },
     {
       "day": "Samedi",
-      "date": "04/07",
+      "date": "18/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "10:00",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
+          "time": "11:00",
           "moment": "Matin",
-          "type": "Story rebond thème vidéo A",
-          "texte": "Vos réactions à la vidéo d'hier sont folles 😅 La question qui vous a le plus choqués ? Dites-moi, je réagis en story.",
-          "media": "Story sticker questions + repost réactions.",
+          "type": "Story rebond thème A",
+          "texte": "Toujours sur le vocabulaire sexiste 😏 « Elle se laisse aller » quand une femme vit sa vie. Vous en avez d'autres ? Balancez, j'en fais une story demain.",
+          "media": "Story face-cam + sticker questions.",
           "lien": "Bio",
-          "astuce": "Capitaliser sur le pic d'audience du lendemain de sortie."
+          "astuce": "Faire durer le thème A tout le week-end via l'UGC des abonnés."
         },
         {
           "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
+          "plats": "TikTok + YouTube + Facebook",
           "time": "12:00",
           "moment": "Midi",
-          "type": "Extrait long format (vidéo A) — cross-plateforme",
-          "texte": "« Est-ce qu'on peut être libertin ET jaloux ? » Ma réponse a surpris tout le monde 👀 Vidéo complète en bio.",
-          "media": "Clip 9:16 < 30s, hook question, sous-titres. SFW strict.",
+          "type": "Extrait réel (vidéo A) — diffusion cross-plateforme",
+          "texte": "« Hystérique » vient du grec « utérus ». On a littéralement inventé une maladie pour faire taire les femmes 🤯 Extrait de ma vidéo — complète en bio.",
+          "media": "Clip 9:16 < 30s (réel vidéo A n°2), sous-titres, SFW strict.",
           "lien": "Bio",
-          "astuce": "Choisir un extrait différent de vendredi pour toucher un nouveau public."
+          "astuce": "Poster à la main sur Facebook (jamais programmé)."
         },
         {
           "platKey": "reddit",
@@ -700,19 +704,19 @@ const DATA = {
           "time": "14:00",
           "moment": "Après-midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Samedi coquin 😉 Nouvelle vidéo dispo + du contenu que je ne montre que sur mon profil.",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "texte": "Week-end tranquille… ou pas 😉 Mon profil, lui, ne prend jamais de week-end (en bio).",
+          "media": "Photo verticale, lumière naturelle, watermark discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "16:00",
+          "time": "17:00",
           "moment": "Après-midi",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Le week-end, c'est le moment où je me lâche le plus ici 😏 Vous savez où me retrouver 👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "Samedi soir, mauvaises idées 😈 La meilleure est ici 👇",
+          "media": "Clip teaser spicy. Lien OnlyFans direct.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
         },
@@ -721,94 +725,94 @@ const DATA = {
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "Samedi soir en mode détente + snap premium exclusif 👀",
-          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "type": "Story engageante (manuel)",
+          "texte": "Snap du samedi soir 🔥 Ambiance + exclu premium que je ne poste nulle part ailleurs.",
+          "media": "Story verticale + snap premium. 100% manuel.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+          "astuce": "100% manuel. Teaser vers OnlyFans."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
           "moment": "Soir",
-          "type": "Message confession week-end",
-          "texte": "Petite confidence de samedi soir 🔓 la question de la vidéo que j'ai vécue en vrai… je vous raconte comment ça s'est VRAIMENT passé.",
-          "media": "Message intime + média exclusif.",
+          "type": "Contenu intime week-end (thème A)",
+          "texte": "Samedi soir entre nous 🔓 Je continue sur les mots qui blessent… et je vous montre celle que je suis vraiment quand personne ne me juge.",
+          "media": "Contenu exclusif suggestif + confidence.",
           "lien": "OnlyFans",
-          "astuce": "Le samedi soir = fort taux d'ouverture, idéal pour un contenu premium."
+          "astuce": "Le samedi soir = pic d'engagement intime, en profiter."
         }
       ]
     },
     {
       "day": "Dimanche",
-      "date": "05/07",
+      "date": "19/07",
       "posts": [
         {
-          "platKey": "facebook",
-          "plats": "Facebook",
+          "platKey": "story",
+          "plats": "TikTok + Facebook",
           "time": "11:00",
           "moment": "Matin",
-          "type": "Story question ouverte (thème vidéo A)",
-          "texte": "Question du dimanche 🌸 Le libertinage, ça peut renforcer un couple ou ça le fragilise forcément ? Votre avis en sticker.",
-          "media": "Story sticker sondage + fond doux.",
+          "type": "Story récap thème A",
+          "texte": "Vos mots sexistes reçus cette semaine 😱 J'en ai fait une compil. Le pire selon vous ? Votez 👇 (et matez la vidéo si c'est pas fait, lien en bio).",
+          "media": "Story compilation UGC + sticker vote + rappel lien vidéo.",
           "lien": "Bio",
-          "astuce": "Le sondage du dimanche alimente les idées de contenu de la semaine suivante."
+          "astuce": "Le dimanche = dernière relance douce vers la vidéo de vendredi."
+        },
+        {
+          "platKey": "extrait",
+          "plats": "TikTok + YouTube + Facebook",
+          "time": "14:00",
+          "moment": "Après-midi",
+          "type": "Extrait réel (vidéo A) — diffusion cross-plateforme",
+          "texte": "« Vieille fille » à 30 ans. Le mot pour un homme célibataire ? « Célibataire endurci » — un compliment 🙄 Extrait — vidéo complète en bio.",
+          "media": "Clip 9:16 < 30s (réel vidéo A n°3), sous-titres, SFW strict.",
+          "lien": "Bio",
+          "astuce": "Poster à la main sur Facebook (jamais programmé)."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
+          "time": "16:00",
+          "moment": "Après-midi",
           "type": "Teaser (renvoi profil)",
-          "texte": "Dimanche tranquille 😉 Mon profil, lui, l'est beaucoup moins. Venez voir.",
-          "media": "Photo verticale, cadrage taille ou plein pied, regard caméra, lumière naturelle. Watermark @blondymandise discret.",
+          "texte": "Dimanche cocooning 😌 Enfin… pas tout le temps 😉 Profil en bio pour la version non-cocooning.",
+          "media": "Photo verticale, lumière douce, watermark discret.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "15:00",
-          "moment": "Après-midi",
+          "time": "18:00",
+          "moment": "Soir",
           "type": "Teaser promo → OnlyFans",
-          "texte": "Dimanche cocooning 😏 Je vous ai préparé quelque chose d'un peu spécial ce soir 👇",
-          "media": "Photo/clip teaser, un peu plus spicy ok. Lien OnlyFans direct dans le post.",
+          "texte": "On termine le week-end comme il faut 😏 Tout est là 👇",
+          "media": "Clip teaser spicy. Lien OnlyFans direct.",
           "lien": "OnlyFans",
           "astuce": "Teaser direct, lien OnlyFans autorisé dans le post."
-        },
-        {
-          "platKey": "extrait",
-          "plats": "TikTok + Reels + Shorts + Facebook",
-          "time": "17:00",
-          "moment": "Après-midi",
-          "type": "Extrait long format (vidéo A) — best-of",
-          "texte": "Le moment de la vidéo que vous avez le plus repartagé 🔥 Version complète en bio.",
-          "media": "Clip 9:16 < 30s, best-of, sous-titres. SFW strict.",
-          "lien": "Bio",
-          "astuce": "Poster le dimanche fin d'après-midi : gros pic de scroll."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story / Snap (manuel)",
-          "texte": "Dimanche soir cosy + un dernier snap premium avant la semaine 👀",
-          "media": "Story verticale + snap premium. Publication 100% manuelle.",
+          "type": "Story engageante (manuel)",
+          "texte": "Dernier snap du week-end 🌙 Bilan de la semaine + petit exclu pour bien commencer la suivante.",
+          "media": "Story verticale + snap premium. 100% manuel.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel : story publique + snap premium/privé. Teaser vers OnlyFans."
+          "astuce": "100% manuel. Teaser vers OnlyFans."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
           "moment": "Soir",
-          "type": "Confession + teasing semaine prochaine",
-          "texte": "Avant de dormir 🔓 petite confidence… et un indice sur vendredi prochain : « Don Juan VS Nympho », le double standard qui va vous énerver. Vous êtes team qui ? 😏",
-          "media": "Message intime + teaser vidéo B.",
+          "type": "Confidence de fin de semaine",
+          "texte": "Dimanche soir, moment calme 🔓 Merci d'être là chaque semaine. Je vous laisse une pensée (et un contenu) rien que pour vous avant d'attaquer une nouvelle semaine.",
+          "media": "Vocal doux + contenu exclusif de remerciement.",
           "lien": "OnlyFans",
-          "astuce": "Terminer la semaine en teasant la vidéo B pour fidéliser jusqu'à vendredi prochain."
+          "astuce": "Fidéliser : le dimanche soir crée le rendez-vous récurrent."
         }
       ]
     }
@@ -816,99 +820,99 @@ const DATA = {
   "reels": [
     {
       "n": 1,
-      "title": "La stat qui dérange",
+      "title": "La stat qui fait tomber les clichés",
       "angle": "STAT",
       "dur": "20-25 sec",
       "cam": "face cam serré, punchy",
-      "hook": "En France, on est passés de 34 000 à plus de 43 000 psys en dix ans. On n'a jamais eu autant besoin de comprendre ce qu'on a dans la tête.",
-      "corps": "Et si le problème, c'était qu'on refuse d'admettre qu'on n'est pas UNE personne, mais trois ? Le moi, le sur-moi, et le ça.",
-      "cta": "La vidéo complète sort vendredi — abonnez-vous.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Lundi 20/07"
+      "hook": "La France est la première destination naturiste au monde : environ 2,6 millions de pratiquants réguliers. Deux virgule six millions.",
+      "corps": "Et pourtant, dès qu'on dit « naturiste », tout le monde pense à autre chose. Le Cap d'Agde, plus grand village naturiste d'Europe, c'est jusqu'à 40 000 personnes en plein été. On va parler de ce que c'est vraiment.",
+      "cta": "Ma vidéo « première fois au Cap d'Agde » sort vendredi — abonnez-vous.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Lundi 03/08"
     },
     {
       "n": 2,
-      "title": "L'ange et le démon",
-      "angle": "HUMOUR",
-      "dur": "15-20 sec",
-      "cam": "face cam + montage split",
-      "hook": "Vous savez, le petit ange et le petit démon sur les épaules ? Freud avait mis des noms dessus il y a 100 ans.",
-      "corps": "L'ange = le sur-moi (la morale). Le démon = le ça (les pulsions). Et vous, coincé au milieu, c'est le moi qui arbitre. Bon courage.",
-      "cta": "Je vous explique tout vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Lundi 20/07"
+      "title": "Naturisme ≠ ce que vous croyez",
+      "angle": "OPINION",
+      "dur": "25-30 sec",
+      "cam": "face cam, ton posé puis tranché",
+      "hook": "Non, le village naturiste ce n'est pas un immense partouze géante. Voilà ce que personne n'ose vous expliquer.",
+      "corps": "La journée sur la plage, c'est des familles, des retraités, des gens qui bronzent, point. Le soir, dans une partie précise du village, l'ambiance devient libertine — mais c'est un choix, pas une obligation. Confondre les deux, c'est le cliché n°1.",
+      "cta": "Je décortique tout ça vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Lundi 03/08"
     },
     {
       "n": 3,
-      "title": "Mes 3 prénoms",
+      "title": "Ma première fois là-bas",
       "angle": "INTIME",
-      "dur": "25-30 sec",
-      "cam": "face cam doux, lumière chaude",
-      "hook": "Je vais vous avouer un truc que personne ne sait : j'ai littéralement trois prénoms, un pour chaque partie de moi.",
-      "corps": "Il y a celle qui se tient bien, celle qui vit, et celle qui ose tout. Vendredi, je vous les présente toutes les trois.",
-      "cta": "Rendez-vous vendredi 8h.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mardi 21/07"
+      "dur": "30-35 sec",
+      "cam": "face cam, confidence, lumière douce",
+      "hook": "La première fois que j'ai enlevé mon maillot sur cette plage, j'ai cru que tout le monde allait me regarder.",
+      "corps": "Et en fait… personne. C'est ça qui m'a bouleversée. Pour la première fois de ma vie, mon corps n'était pas un spectacle. Je m'attendais à un jugement permanent, j'ai trouvé une indifférence totale — et une paix que je ne connaissais pas.",
+      "cta": "Je vous raconte tout, sans filtre, vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mardi 04/08"
     },
     {
       "n": 4,
-      "title": "L'opinion qui pique",
-      "angle": "OPINION",
-      "dur": "20-25 sec",
-      "cam": "face cam frontal, ton assumé",
-      "hook": "Arrêtez de dire « je suis comme ça, c'est tout ». Non. Vous êtes plusieurs, et vous laissez toujours le même gagner.",
-      "corps": "Se connaître, ce n'est pas se trouver une étiquette. C'est savoir lequel de vos trois « vous » tient le volant aujourd'hui.",
-      "cta": "On en parle en profondeur vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mardi 21/07"
+      "title": "Le conseil que j'aurais aimé avoir",
+      "angle": "CONSEIL",
+      "dur": "25-30 sec",
+      "cam": "face cam, ton complice",
+      "hook": "Conseil n°1 pour ta première fois au Cap d'Agde : ne commence PAS par le soir.",
+      "corps": "Arrive en journée, sur la plage, dans le naturisme « pur ». Habitue-toi au regard, ou plutôt à l'absence de regard. Le côté libertin du village, tu iras l'explorer après, si tu en as envie, à ton rythme. Brûler les étapes, c'est le meilleur moyen de flipper.",
+      "cta": "Mes 10 conseils complets vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mardi 04/08"
     },
     {
       "n": 5,
-      "title": "L'erreur qu'on fait tous",
-      "angle": "CONSEIL",
-      "dur": "20-25 sec",
-      "cam": "face cam posé",
-      "hook": "Le jour où j'ai arrêté de me détester, c'est le jour où j'ai compris que ce n'était pas « moi » qui déraillait, mais mon ça.",
-      "corps": "Le conseil ? Ne fusionnez pas avec vos pulsions. Observez-les. Nommez-les. Elles ne SONT pas vous, elles font partie de vous.",
-      "cta": "La méthode complète vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Mercredi 22/07"
+      "title": "Le moment le plus gênant",
+      "angle": "ANECDOTE",
+      "dur": "25-30 sec",
+      "cam": "face cam, sourire, autodérision",
+      "hook": "Le moment le plus gênant de ma première fois ? Croiser mon voisin de camping. À poil. Aux deux.",
+      "corps": "On s'est regardés deux secondes, on a éclaté de rire, on a parlé météo comme si de rien n'était. Et là j'ai compris le vrai truc du naturisme : au bout de dix minutes, tu ne vois même plus la nudité. Le cerveau s'habitue à une vitesse folle.",
+      "cta": "D'autres anecdotes gênantes vendredi 😅",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Mercredi 05/08"
     },
     {
       "n": 6,
-      "title": "La question qui divise",
+      "title": "La question qui divise les couples",
       "angle": "QUESTION CLIVANTE",
-      "dur": "15-20 sec",
-      "cam": "face cam, regard caméra",
-      "hook": "Vraie question : est-ce qu'on peut faire taire complètement son « ça », ou est-ce qu'on finit toujours par craquer ?",
-      "corps": "Moi je pense qu'on ne le fait pas taire — on négocie avec. Mais je sais que ça va vous faire réagir. Team refoulement ou team lâcher-prise ?",
-      "cta": "Donnez votre camp en commentaire.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Jeudi 23/07"
+      "dur": "25-30 sec",
+      "cam": "face cam, regard direct",
+      "hook": "Vraie question : est-ce que tu emmènerais ton copain ou ta copine dans un lieu libertin ?",
+      "corps": "Parce que le Cap d'Agde, en couple, ça teste des choses. Certains y renforcent leur complicité, d'autres découvrent des jalousies qu'ils ne soupçonnaient pas. Il n'y a pas de bonne réponse — mais il y a une règle : on n'y va jamais pour « sauver » un couple.",
+      "cta": "Je donne mon avis tranché vendredi.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Jeudi 06/08"
     },
     {
       "n": 7,
-      "title": "L'anecdote gênante",
-      "angle": "ANECDOTE",
-      "dur": "25-30 sec",
-      "cam": "face cam, ton complice",
-      "hook": "Un jour, en pleine réunion pro, mon « ça » a voulu dire un truc absolument pas professionnel. Mon sur-moi a hurlé « NON ».",
-      "corps": "Ce petit combat intérieur, on le vit tous, dix fois par jour. Sauf qu'on ne met jamais de mots dessus. Moi si, maintenant.",
-      "cta": "L'histoire complète vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Jeudi 23/07"
+      "title": "Le truc que personne n'avoue",
+      "angle": "HUMOUR",
+      "dur": "20-25 sec",
+      "cam": "face cam, ton léger",
+      "hook": "Personne ne vous le dit mais le vrai défi du naturisme, c'est… où poser vos affaires quand tout le monde a la même serviette.",
+      "corps": "Et le coup de soleil à des endroits qui n'ont JAMAIS vu le soleil. Crème solaire partout, vraiment partout, c'est mon conseil le moins glamour mais le plus utile de toute la vidéo.",
+      "cta": "Mes conseils les plus pratiques vendredi 😂",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Jeudi 06/08"
     },
     {
       "n": 8,
-      "title": "3 signes que votre ça gagne",
+      "title": "3 règles à connaître avant d'y aller",
       "angle": "LISTE",
-      "dur": "20-25 sec",
-      "cam": "face cam + texte à l'écran",
-      "hook": "3 signes que c'est votre « ça » qui commande votre vie en ce moment 👇",
-      "corps": "1. Vous dites « je verrai demain » à tout. 2. Vous fuyez ce qui vous ferait grandir. 3. Vous culpabilisez sans jamais changer. On se reconnaît ?",
-      "cta": "Ce qu'il faut faire → vidéo de vendredi.",
-      "plats": "TikTok + Reels + Shorts + Facebook",
-      "jour": "Samedi 25/07"
+      "dur": "30-35 sec",
+      "cam": "face cam, énumération dynamique",
+      "hook": "3 règles d'or avant ta première fois au village naturiste, et la 3e sauve des couples.",
+      "corps": "Un : jamais de photo sans consentement, c'est la faute ultime là-bas. Deux : « non » veut dire non, partout, tout le temps, y compris le soir. Trois : décidez de vos limites en couple AVANT d'arriver, pas dans le feu de l'action. Le respect, c'est ce qui rend l'endroit safe.",
+      "cta": "Les 10 conseils au complet, vendredi sur la chaîne.",
+      "plats": "TikTok + YouTube + Facebook",
+      "jour": "Samedi 08/08"
     }
   ],
   "script": [
@@ -918,7 +922,7 @@ const DATA = {
       "timing": "0-8 sec",
       "lines": [
         {
-          "t": "Il y a quelqu'un dans votre tête qui veut des choses que vous n'oseriez avouer à personne. Et le pire… c'est que c'est vous.",
+          "t": "On m'avait dit « le Cap d'Agde c'est un immense bordel à ciel ouvert ». J'y suis allée. Et tout ce que je croyais savoir était faux.",
           "quote": true
         }
       ],
@@ -932,15 +936,16 @@ const DATA = {
       "timing": "15-60 sec",
       "lines": [
         {
-          "t": "On croit tous être « une » personne, cohérente, du matin au soir. Sauf que non. Vous n'êtes pas la même au boulot, avec votre mère, ou seul·e à 2h du matin. Et ce n'est pas de l'hypocrisie — c'est de la psychologie."
+          "t": "Le naturisme, en France, ce n'est pas un truc de marginaux. On est la première destination naturiste du monde, avec environ 2,6 millions de pratiquants réguliers selon France 4 Naturisme, et près de 4 millions de personnes qui passent des vacances naturistes chaque année. C'est un secteur qui pèse 350 millions d'euros et 8 millions de nuitées. Autrement dit : c'est massif, et pourtant on continue d'en parler à voix basse."
         },
         {
-          "t": "En France, on n'a jamais autant essayé de se comprendre : les consultations chez le psy ont bondi de près de 14% en un an, plus de 8 millions de rendez-vous. Et pourtant, 73% des Français pensent qu'il faut « du courage » juste pour aller voir un psy. On veut se connaître… mais on a peur de ce qu'on va trouver."
+          "t": "Et au milieu de tout ça, il y a un lieu à part : le village naturiste du Cap d'Agde. Le plus grand d'Europe, jusqu'à 40 000 personnes en pleine saison, 7 kilomètres de plage. La journée, c'est des familles, des retraités, du farniente. Le soir, dans une partie bien précise, l'ambiance devient libertine. Et c'est cette confusion entre les deux qui alimente tous les fantasmes… et toutes les bêtises qu'on entend."
         }
       ],
       "notes": [
-        "Caméra : même cadre, ton posé.",
-        "Montage : insert texte à l'écran « +14% de consultations psy en 2024 » et « 73% : il faut du courage pour consulter ». GIF possible : https://tenor.com/view/inner-demons-gif-13982762090204352166"
+        "Caméra : même cadre, ton posé, pédagogue.",
+        "Montage : insert texte « 2,6 M de pratiquants réguliers · 1re destination mondiale » et « Cap d'Agde : jusqu'à 40 000 personnes l'été ». Source à l'écran en petit : France 4 Naturisme / Tourmag 2024.",
+        "GIF ambiance plage/soleil en cutaway léger : https://tenor.com/view/summer-beach-vibes-gif-15515981"
       ]
     },
     {
@@ -963,11 +968,11 @@ const DATA = {
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Pour moi, on n'a pas une personnalité : on en a trois. Et Freud avait déjà tout dit il y a un siècle. Il y a le ça — mes envies brutes. Le sur-moi — la morale, les règles, la culpabilité. Et le moi, coincé au milieu, qui négocie toute la journée. Assumer les trois, c'est ça, se connaître."
+          "t": "Mon avis, tranché : le Cap d'Agde n'est ni le paradis sulfureux qu'on fantasme, ni l'enfer glauque qu'on imagine. C'est un endroit qui te renvoie exactement ce que tu y amènes. Tu viens curieux et respectueux, tu vis une expérience libératrice. Tu viens pour « chasser » ou forcer quoi que ce soit, tu passes un sale moment. La liberté là-bas, elle repose entièrement sur une seule chose : le consentement."
         }
       ],
       "notes": [
-        "Caméra : ton affirmé, direct."
+        "Caméra : plan un peu plus serré sur « le consentement », appuyer le mot."
       ]
     },
     {
@@ -976,37 +981,32 @@ const DATA = {
       "timing": "4-5 min",
       "lines": [
         {
-          "t": "Le ça, c'est l'enfant capricieux en vous. Il veut le gâteau, le message à minuit, le plaisir tout de suite, sans se demander si c'est raisonnable. Il ne connaît pas le mot « demain »."
+          "t": "Reprenons depuis le début, parce que la première confusion est là. Naturisme et libertinage, ce ne sont pas des synonymes. Le naturisme, c'est une philosophie du corps nu sans connotation sexuelle : on bronze, on nage, on déjeune, on vit, simplement sans vêtements. Le libertinage, c'est une pratique sexuelle qui, elle, peut exister habillée n'importe où ailleurs. Le Cap d'Agde a la particularité rare de mélanger les deux sur un même territoire — mais à des moments et dans des zones différents. La plage familiale à midi n'a rien à voir avec certains bars le soir. Confondre les deux, c'est comme croire qu'une ville entière est une boîte de nuit parce qu'il y a une boîte de nuit dedans."
         },
         {
-          "t": "Le sur-moi, c'est la voix de votre mère, de la société, de l'école. « Ça ne se fait pas. » « Qu'est-ce que les gens vont penser ? » C'est lui qui vous fait culpabiliser après avoir mangé le gâteau."
+          "t": "Deuxième chose que personne ne vous prépare : le premier obstacle n'est pas les autres, c'est vous. Le vrai vertige de la première fois, c'est d'enlever son maillot en plein jour devant des inconnus. On croit tous qu'on va être scruté, jugé, comparé. La réalité, et ça, aucune brochure ne le dit vraiment : au bout de dix minutes, plus personne ne regarde. Le cerveau s'habitue à une vitesse hallucinante. La nudité devient banale, presque ennuyeuse. Et c'est précisément dans cet ennui-là que naît un truc rare aujourd'hui : la paix avec son corps."
         },
         {
-          "t": "Et le moi, c'est l'arbitre épuisé au milieu du ring. Toute la journée il essaie de contenter le ça sans se faire engueuler par le sur-moi. Quand vous hésitez, que vous procrastinez, que vous vous sentez « tiraillé » — c'est cette bagarre-là."
+          "t": "Je vais vous raconter ma première fois, la vraie. Je suis arrivée tendue, persuadée que j'allais détester. J'ai gardé mon paréo une heure, assise sur ma serviette à observer tout le monde comme une intruse. Et puis une femme de soixante-dix ans est passée devant moi, tranquille, un bouquin sous le bras, absolument zéro complexe. Elle m'a juste souri. Et là quelque chose a lâché. J'ai enlevé le paréo. Personne n'a bronché. Pour la première fois de ma vie d'adulte, mon corps n'était pas un objet de désir ou de jugement — il était juste… là. J'ai pleuré, en fait. De soulagement. Moi qui monnaie mon image, qui gère mon corps comme un business, j'ai redécouvert ce que c'était de l'habiter juste pour moi."
         },
         {
-          "t": "Prenez un exemple tout bête : le dimanche soir. Le ça veut rester au lit et commander à manger. Le sur-moi dit « tu dois préparer ta semaine, être productive ». Le moi finit par négocier : « ok, une heure de repos PUIS je m'y mets ». Ça vous parle ? C'est vos trois voix en réunion de crise."
+          "t": "Prenons un exemple très concret du quotidien là-bas, parce que les gens imaginent des scènes de film. La vraie journée type ? Tu te lèves, tu vas chercher ton pain à la boulangerie — nu, avec ton sac en toile. Tu croises ton voisin, vous parlez de la météo. Tu bronzes, tu lis, tu te baignes, tu déjeunes en terrasse. Bref, une journée de vacances parfaitement banale, sauf le dress code. Le côté sulfureux, si tu le cherches, tu le trouveras le soir, dans des lieux identifiés, avec des codes précis. Mais tu peux aussi passer une semaine entière au Cap d'Agde sans jamais y mettre les pieds. Ça, ça surprend tout le monde."
         },
         {
-          "t": "Là où ça devient intéressant : la plupart des gens détestent une de leurs trois voix. Certains passent leur vie à faire taire leur ça — et deviennent rigides, frustrés, tristes. D'autres n'écoutent que leur ça — et brûlent tout autour d'eux. Le vrai équilibre, ce n'est pas d'en tuer une. C'est de les faire dialoguer."
+          "t": "Maintenant, parlons du couple, parce que c'est là que ça se corse. Le Cap d'Agde, à deux, c'est un révélateur. Ça met une loupe sur votre relation. J'ai vu des couples en ressortir soudés, complices, fiers d'avoir partagé quelque chose d'intense et de choisi. Et j'en ai vu d'autres exploser en trois jours, parce que l'un rêvait d'ouverture et l'autre a découvert une jalousie qu'il ne se connaissait pas. La règle absolue que je répète tout le temps : on ne va JAMAIS dans un lieu libertin pour « sauver » ou « pimenter » un couple qui va mal. Ça n'a jamais réparé personne. Ça révèle, ça n'ajoute pas."
         },
         {
-          "t": "Et moi là-dedans ? Je vous ai promis un truc. J'ai littéralement trois prénoms, et ce n'est pas un hasard :"
+          "t": "Et puis il y a la règle qui rend tout l'endroit vivable, celle sans laquelle rien ne tient : le consentement, partout, tout le temps. Là-bas, prendre une photo de quelqu'un sans son accord, c'est la faute ultime, celle qui te fait dégager immédiatement. Un « non » est un « non » définitif, sur la plage comme dans un bar à 2h du matin. Personne ne te doit rien, jamais, quel que soit l'endroit ou l'heure. Paradoxalement, c'est cette rigueur sur le respect qui fait qu'un lieu aussi libre peut être aussi safe. La liberté sans le consentement, ce n'est pas de la liberté, c'est juste de l'agression avec un décor de vacances."
         },
         {
-          "t": "Il y a Claude (rien à voir avec l'agent IA), une version sage qu'on m'a demandé d'être, qui veut faire attention à elle, qui veut avoir une bonne hygiène de vie, qui est douce et patiente. C'est un surnom qu'on m'avait donné quand je travaillais dans l'animation, la profession où je me sentais le plus en sécurité."
-        },
-        {
-          "t": "Il y a Amandine — celle du quotidien, l'équilibre, le moi. Et il y a Amanda — celle que vous suivez, mon ça assumé, celle qui dit tout haut ce que les autres pensent tout bas, celle qui assume ce qu'elle est, sans se soucier du regard des autres. Celle qui n'arrive pas à se contrôler quand il s'agit de manger du sucre."
-        },
-        {
-          "t": "Je n'ai pas encore fait la paix avec mes 3 voix intérieures, car Amanda est finalement pas mal rejetée par les autres. Même Amandine au fond se dit qu'on aurait moins de souci sans Amanda. Claude en est persuadé."
+          "t": "Dernier point, le plus terre-à-terre et le plus utile : la logistique. Personne ne vous le dit, mais la crème solaire devient votre meilleure amie, sur absolument toutes les zones — je vous laisse imaginer les coups de soleil aux endroits qui n'ont jamais vu la lumière. Prévoyez une serviette reconnaissable, parce que tout le monde a la même. Et surtout, arrivez par la journée, par le naturisme simple, avant même de penser au reste. Apprivoisez le regard d'abord. Le reste, vous déciderez plus tard, à votre rythme, ou jamais. Il n'y a aucune obligation, et c'est ça la vraie beauté de l'endroit."
         }
       ],
       "notes": [
-        "Montage : couper sur B-roll quand je décris chaque voix. GIF ange/démon sur l'épaule pendant « le ça vs le sur-moi » : https://tenor.com/view/supervising-devil-on-your-shoulder-angel-on-your-shoulder-conscience-kronk-gif-15606468775788725702",
-        "Montage : insert texte « 31% des Français ont déjà consulté un psy » quand je parle de se connaître.",
-        "Caméra : ton spontané, comme une confidence entre amis."
+        "B-roll : plage large, village, terrasses (flou pudique), pour illustrer le « quotidien banal ».",
+        "Montage : réincruster l'insert « 2,6 M de pratiquants · 350 M€ » quand Amanda rappelle l'ampleur du phénomène.",
+        "Insert émotion sur l'anecdote perso (paréo qui tombe) : ralenti léger, musique douce, laisser respirer.",
+        "GIF gêne/timide sur le passage 'on croit qu'on va être jugé' : https://tenor.com/view/shy-awkward-nervous-covering-gif-16060409"
       ]
     },
     {
@@ -1015,12 +1015,12 @@ const DATA = {
       "timing": "",
       "lines": [
         {
-          "t": "Vous n'avez pas à choisir laquelle de vos trois voix est la vraie. Elles le sont toutes. La paix, c'est le jour où vous arrêtez de faire taire l'une pour plaire à l'autre.",
+          "t": "Le Cap d'Agde ne te transforme pas. Il enlève juste le costume — et te met face à qui tu es vraiment, à poil, au sens propre comme au figuré.",
           "quote": true
         }
       ],
       "notes": [
-        "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
+        "Caméra : plan fixe, silence de 2 sec après la phrase pour laisser l'impact."
       ]
     },
     {
@@ -1029,10 +1029,12 @@ const DATA = {
       "timing": "",
       "lines": [
         {
-          "t": "Laquelle de vos trois voix parle le plus fort en ce moment : le ça, le moi, ou le sur-moi ? Dites-le-moi en commentaire."
+          "t": "Alors dites-moi franchement en commentaire : vous seriez capable d'enlever votre maillot devant des inconnus… ou rien que l'idée vous met déjà mal à l'aise ?"
         }
       ],
-      "notes": []
+      "notes": [
+        "Caméra : sourire complice, inviter vraiment au débat."
+      ]
     },
     {
       "num": "⑧",
@@ -1040,15 +1042,28 @@ const DATA = {
       "timing": "",
       "lines": [
         {
-          "t": "Vendredi prochain, on reste dans l'intime mais on change de terrain : je vous parle des femmes au foyer — choix assumé ou piège doré ? Ça va faire débat."
+          "t": "Et parce que vous êtes nombreux à me demander comment on gère tout ça à deux : vendredi prochain, je vous ouvre les coulisses de « Avoir un OnlyFans en couple : les règles qu'on s'est fixées ». On va parler cash de ce qui tient un couple quand le corps devient aussi un métier."
         }
       ],
       "notes": [
-        "Prochain épisode au planning : « Les femmes au foyer » — 31/07."
+        "Caméra : ton complice, teaser l'épisode suivant sans tout dévoiler."
       ]
     },
     {
       "num": "⑨",
+      "title": "CTA — ÉCRAN DE FIN",
+      "timing": "20 sec",
+      "lines": [
+        {
+          "t": "Si cette vidéo vous a fait voir le naturisme autrement, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat, et sur mon Telegram pour la version bien plus intime — celle que YouTube ne me laisserait jamais poster. Les liens sont en description."
+        }
+      ],
+      "notes": [
+        "Caméra : écran de fin, cartes d'abonnement, rappel Facebook + Telegram à l'écran."
+      ]
+    },
+    {
+      "num": "⑩",
       "title": "CLÔTURE SIGNATURE",
       "timing": "",
       "lines": [
@@ -1060,55 +1075,42 @@ const DATA = {
       "notes": [
         "Caméra : plan légèrement élargi, ton doux."
       ]
-    },
-    {
-      "num": "⑩",
-      "title": "CTA — ÉCRAN DE FIN",
-      "timing": "20 sec",
-      "lines": [
-        {
-          "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
-        }
-      ],
-      "notes": [
-        "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
-      ]
     }
   ],
   "sources": [
     {
-      "label": "Psychologues en France : 34 000 → 43 000+ en 10 ans, densité ~113/100 000 hab. (Association M3P, 2024)",
-      "url": "https://associationm3p-psychologues.fr/les-psychologues-en-france-chiffres-2024/"
+      "label": "Naturisme : ~2,6 millions de Français pratiquants réguliers ; 1re destination naturiste mondiale (Tourmag / France 4 Naturisme, 2024)",
+      "url": "https://www.tourmag.com/Naturisme-26-millions-de-Francais-pratiquants-reguliers_a80313.html"
     },
     {
-      "label": "MonSoutienPsy : ~1,8 M de bénéficiaires, x5 entre 2022 et 2025 (info.gouv.fr, 2026)",
-      "url": "https://www.info.gouv.fr/actualite/sante-mentale-formation-soins-numerique-ce-qui-change-des-2026"
+      "label": "Le naturisme en France en 2025 : 350 M€ de CA, 8 millions de nuitées, 140 plages (Naturisme TV)",
+      "url": "https://www.naturisme-tv.com/naturisme-france-2025/"
     },
     {
-      "label": "Développement personnel : +37% de requêtes, 52% des Français dépensent en bien-être chaque mois (Réseau Addictions 28, 2026)",
-      "url": "https://www.reseau-addictions28.fr/2026/02/08/developpement-personnel-chiffres-pratiques-et-science-pour-mieux-vivre/"
+      "label": "La France, première destination naturiste au monde (Vudailleurs)",
+      "url": "https://www.vudailleurs.com/24043-2/"
     }
   ],
   "ideaProposals": [
     {
-      "theme": "Sexualité",
-      "title": "Les fantasmes qu'on n'ose jamais avouer",
+      "theme": "Naturisme & Société",
+      "title": "Naturisme : pourquoi on confond nudité et sexualité ?",
       "format": "Long format",
-      "hook": "Confessions anonymes de mon audience + les miens, sans filtre",
+      "hook": "Déconstruire le tabou du corps nu + mon regard de créatrice",
       "potentiel": "🔥🔥🔥"
     },
     {
-      "theme": "Psycho",
-      "title": "Pourquoi on garde nos ex dans un coin de la tête",
+      "theme": "Couple",
+      "title": "Lieux libertins : ce que ça révèle vraiment de ton couple",
       "format": "Long format",
-      "hook": "La mémoire du cœur : science + vécu perso",
+      "hook": "Loupe sur la relation + témoignages + vécu",
       "potentiel": "🔥🔥"
     },
     {
       "theme": "Femme & Société",
-      "title": "Le « pretty privilege » : être belle, un atout ou un piège ?",
+      "title": "Mon corps est mon métier : ce que ça m'a appris sur la pudeur",
       "format": "Long format",
-      "hook": "Le privilège dont personne n'ose parler, et son revers",
+      "hook": "Confession + rapport au corps quand il devient business",
       "potentiel": "🔥🔥"
     }
   ]
@@ -1150,7 +1152,9 @@ const PIPE_EMBED = {
       "title": "Qui est Amanda ?",
       "status": "publie",
       "lieu": "Facebook & Telegram",
-      "notes": "1er épisode"
+      "notes": "1er épisode",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-08",
@@ -1159,7 +1163,9 @@ const PIPE_EMBED = {
       "title": "Femme respectable VS femme désirée",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-15",
@@ -1168,7 +1174,9 @@ const PIPE_EMBED = {
       "title": "Quelles femmes plaisent aux hommes ?",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-22",
@@ -1177,7 +1185,9 @@ const PIPE_EMBED = {
       "title": "Pourquoi on ne veut plus avoir d'enfants ?",
       "status": "publie",
       "lieu": "Facebook & Telegram",
-      "notes": "Annonce surprise en fin"
+      "notes": "Annonce surprise en fin",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-05-29",
@@ -1186,7 +1196,9 @@ const PIPE_EMBED = {
       "title": "Derrière chaque femme se trouve un homme",
       "status": "publie",
       "lieu": "YouTube",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-05",
@@ -1195,7 +1207,9 @@ const PIPE_EMBED = {
       "title": "Amanda en intimité",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Questions intimes"
+      "notes": "Questions intimes",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-12",
@@ -1204,7 +1218,9 @@ const PIPE_EMBED = {
       "title": "Sexe VS sentiments",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Méthode anti-jalousie"
+      "notes": "Méthode anti-jalousie",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-19",
@@ -1213,50 +1229,60 @@ const PIPE_EMBED = {
       "title": "Le libertinage : Est-ce pour tout le monde ?",
       "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Ma première fois"
+      "notes": "Ma première fois",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-06-26",
       "date": "2026-06-26",
       "theme": "Libertinage",
       "title": "10 règles pour débuter le libertinage",
-      "status": "monte",
+      "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Guide pratique accessible"
+      "notes": "Guide pratique accessible",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-03",
       "date": "2026-07-03",
       "theme": "Libertinage",
       "title": "10 questions gênantes sur le libertinage",
-      "status": "tourne",
+      "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": ""
+      "notes": "",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-10",
       "date": "2026-07-10",
       "theme": "Couple",
       "title": "Don Juan VS Nympho",
-      "status": "script",
+      "status": "publie",
       "lieu": "OnlyFans & MYM",
-      "notes": "Double standard hommes/femmes"
+      "notes": "Double standard hommes/femmes",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-17",
       "date": "2026-07-17",
       "theme": "Femme & Société",
       "title": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)",
-      "status": "script",
+      "status": "monte",
       "lieu": "OnlyFans & MYM",
-      "notes": "Lexique patriarcal"
+      "notes": "Lexique patriarcal",
+      "titleOptions": [],
+      "caption": ""
     },
     {
       "id": "ep-2026-07-24",
       "date": "2026-07-24",
       "theme": "Moi, sur-moi et ça",
       "title": "On a tous 3 personnes en nous",
-      "status": "script",
+      "status": "tourne",
       "lieu": "Facebook & Telegram",
       "notes": "Concept Freud vulgarisé + perso (mes 3 prénoms)",
       "titleOptions": [
@@ -1283,9 +1309,65 @@ const PIPE_EMBED = {
       "date": "2026-07-31",
       "theme": "Psycho",
       "title": "La jalousie – toxique ou preuve d'amour ?",
+      "status": "script",
+      "lieu": "",
+      "notes": "Question clivante = fort engagement",
+      "titleOptions": [
+        {
+          "text": "La jalousie – toxique ou preuve d'amour ?",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "« S'il est jaloux, c'est qu'il t'aime » : le plus gros mensonge du couple",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "J'ai fouillé son téléphone (et voilà ce que ça m'a appris)",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "La jalousie, c'est une preuve d'amour ou le début du contrôle ? Aujourd'hui je tranche — et je vous avoue la fois où la mienne a dérapé.\n\n• D'où vient vraiment la jalousie (spoiler : ça parle de toi, pas de l'autre)\n• Preuve d'amour VS possession : la ligne à ne pas franchir\n• Mon aveu : la nuit où j'ai fouillé un téléphone\n• Comment remplacer la surveillance par la confiance\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#jalousie #couple #psychologie #confiance #lespenséesdamanda #blondymandise"
+    },
+    {
+      "id": "ep-1783441094384",
+      "date": "2026-08-06",
+      "theme": "Vidéo à deux pour TOUT expliquer : arrivée, logement, lieux, la journée, la nuit, le libertinage, nos endroits préférés / qu’on aime moins, baie des cochons…",
+      "title": "10 conseils pour ta première fois au village naturiste du cap d’agde",
+      "status": "script",
+      "lieu": "",
+      "notes": "",
+      "titleOptions": [
+        {
+          "text": "10 conseils pour ta première fois au village naturiste du Cap d'Agde",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "J'ai testé le Cap d'Agde : tout ce qu'on m'avait dit était faux",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Naturiste ≠ libertin : la vérité sur le village du Cap d'Agde",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "On m'avait dit que le Cap d'Agde était « un bordel à ciel ouvert ». J'y suis allée en couple, et tout ce que je croyais savoir était faux. Mes 10 conseils pour ta première fois, sans tabou.\n\n• Naturisme ≠ libertinage : la confusion qui fausse tout\n• Ma première fois : ce que ça fait vraiment d'enlever son maillot\n• Le Cap d'Agde en couple : révélateur ou danger ?\n• La règle d'or qui rend tout l'endroit safe : le consentement\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#naturisme #capdagde #libertinage #couple #lespenséesdamanda #blondymandise"
+    },
+    {
+      "id": "ep-1783911078438",
+      "date": "2026-08-13",
+      "theme": "Couple",
+      "title": "Le contrôle déguisé en amour",
       "status": "idee",
       "lieu": "",
-      "notes": "Question clivante = fort engagement"
+      "notes": "Reconnaître la possession sous le romantisme + vécu perso",
+      "titleOptions": [],
+      "caption": ""
     }
   ],
   "ideas": [
@@ -1296,14 +1378,6 @@ const PIPE_EMBED = {
       "format": "Long format",
       "hook": "Prise de position + témoignage",
       "potentiel": "🔥🔥🔥"
-    },
-    {
-      "id": "id-foyer",
-      "theme": "Femme & Société",
-      "title": "Les femmes au foyer",
-      "format": "Long format",
-      "hook": "Débat moderne – choix ou contrainte ?",
-      "potentiel": "🔥🔥"
     },
     {
       "id": "id-creatrice",
@@ -1336,27 +1410,640 @@ const PIPE_EMBED = {
       "format": "Long format",
       "hook": "Transparence + coulisses du couple",
       "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-tout-se-dire",
+      "theme": "Sexualité",
+      "title": "Faut-il tout se dire dans un couple libertin ?",
+      "format": "Long format",
+      "hook": "Transparence, limites et jalousie : où placer le curseur + vécu",
+      "potentiel": "🔥🔥🔥"
     }
   ],
   "links": {
-    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
-    "MYM": "https://mym.fans/A_COMPLETER",
-    "Telegram": "https://t.me/A_COMPLETER",
-    "PayPal": "https://paypal.me/A_COMPLETER",
+    "OnlyFans": "https://onlyfans.com/cutyamanda",
+    "MYM": "https://mym.fans/la_mandiise",
+    "Telegram": "https://t.me/+XjHTw5anup4zMjY8",
+    "PayPal": "https://paypal.me/mandiise?country.x=FR&locale.x=fr_FR",
     "YouTube": "https://youtube.com/@blondymandise",
-    "TikTok": "https://tiktok.com/@A_COMPLETER",
-    "Facebook": "https://facebook.com/A_COMPLETER",
-    "Threads": "https://threads.net/@blondymandise",
+    "TikTok": "https://tiktok.com/@la_mandiiiise",
+    "Facebook": "https://www.facebook.com/share/1EgoqXbwPA/?mibextid=wwXIfr",
+    "Threads": "https://threads.net/@",
     "Reddit": "https://reddit.com/user/A_COMPLETER",
-    "Bio": "https://linktr.ee/A_COMPLETER",
-    "X": "https://x.com/A_COMPLETER",
-    "Snapchat": "https://snapchat.com/add/A_COMPLETER"
+    "Bio": "https://getmysocial.com/blondymandise",
+    "X": "https://x.com/la_mandiise",
+    "Snapchat": "https://snapchat.com/t/Il3EdfGi"
   },
-  "progress": {}
+  "progress": {
+    "2026-W28": [
+      "p:0:0",
+      "p:0:4",
+      "p:0:1",
+      "p:1:1",
+      "p:1:0",
+      "p:1:3",
+      "p:1:4",
+      "p:1:5",
+      "p:2:0",
+      "p:2:1",
+      "p:2:2",
+      "p:2:3",
+      "p:2:4",
+      "p:3:0",
+      "p:3:3",
+      "p:3:5",
+      "p:3:1",
+      "p:3:4",
+      "p:4:0",
+      "p:4:1",
+      "p:4:3",
+      "p:4:2",
+      "p:4:4",
+      "p:4:5",
+      "p:4:8",
+      "p:6:1",
+      "p:6:2",
+      "p:6:3",
+      "p:6:4"
+    ]
+  },
+  "linkCats": {
+    "Bio": []
+  }
 }
 ;
 const ARCHIVE_EMBED = {
   "weeks": [
+    {
+      "isoWeek": "2026-W29",
+      "weekLabel": "Semaine du lundi 13 juillet au dimanche 19 juillet 2026",
+      "briefDate": "2026-07-13",
+      "videoD": {
+        "title": "10 conseils pour ta première fois au village naturiste du Cap d'Agde",
+        "theme": "Naturisme & libertinage en couple",
+        "date": "2026-08-07"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "On m'avait dit « le Cap d'Agde c'est un immense bordel à ciel ouvert ». J'y suis allée. Et tout ce que je croyais savoir était faux.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "Le naturisme, en France, ce n'est pas un truc de marginaux. On est la première destination naturiste du monde, avec environ 2,6 millions de pratiquants réguliers selon France 4 Naturisme, et près de 4 millions de personnes qui passent des vacances naturistes chaque année. C'est un secteur qui pèse 350 millions d'euros et 8 millions de nuitées. Autrement dit : c'est massif, et pourtant on continue d'en parler à voix basse.",
+              "quote": false
+            },
+            {
+              "t": "Et au milieu de tout ça, il y a un lieu à part : le village naturiste du Cap d'Agde. Le plus grand d'Europe, jusqu'à 40 000 personnes en pleine saison, 7 kilomètres de plage. La journée, c'est des familles, des retraités, du farniente. Le soir, dans une partie bien précise, l'ambiance devient libertine. Et c'est cette confusion entre les deux qui alimente tous les fantasmes… et toutes les bêtises qu'on entend.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé, pédagogue.",
+            "Montage : insert texte « 2,6 M de pratiquants réguliers · 1re destination mondiale » et « Cap d'Agde : jusqu'à 40 000 personnes l'été ». Source à l'écran en petit : France 4 Naturisme / Tourmag 2024.",
+            "GIF ambiance plage/soleil en cutaway léger : https://tenor.com/view/summer-beach-vibes-gif-15515981"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Mon avis, tranché : le Cap d'Agde n'est ni le paradis sulfureux qu'on fantasme, ni l'enfer glauque qu'on imagine. C'est un endroit qui te renvoie exactement ce que tu y amènes. Tu viens curieux et respectueux, tu vis une expérience libératrice. Tu viens pour « chasser » ou forcer quoi que ce soit, tu passes un sale moment. La liberté là-bas, elle repose entièrement sur une seule chose : le consentement.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : plan un peu plus serré sur « le consentement », appuyer le mot."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Reprenons depuis le début, parce que la première confusion est là. Naturisme et libertinage, ce ne sont pas des synonymes. Le naturisme, c'est une philosophie du corps nu sans connotation sexuelle : on bronze, on nage, on déjeune, on vit, simplement sans vêtements. Le libertinage, c'est une pratique sexuelle qui, elle, peut exister habillée n'importe où ailleurs. Le Cap d'Agde a la particularité rare de mélanger les deux sur un même territoire — mais à des moments et dans des zones différents. La plage familiale à midi n'a rien à voir avec certains bars le soir. Confondre les deux, c'est comme croire qu'une ville entière est une boîte de nuit parce qu'il y a une boîte de nuit dedans.",
+              "quote": false
+            },
+            {
+              "t": "Deuxième chose que personne ne vous prépare : le premier obstacle n'est pas les autres, c'est vous. Le vrai vertige de la première fois, c'est d'enlever son maillot en plein jour devant des inconnus. On croit tous qu'on va être scruté, jugé, comparé. La réalité, et ça, aucune brochure ne le dit vraiment : au bout de dix minutes, plus personne ne regarde. Le cerveau s'habitue à une vitesse hallucinante. La nudité devient banale, presque ennuyeuse. Et c'est précisément dans cet ennui-là que naît un truc rare aujourd'hui : la paix avec son corps.",
+              "quote": false
+            },
+            {
+              "t": "Je vais vous raconter ma première fois, la vraie. Je suis arrivée tendue, persuadée que j'allais détester. J'ai gardé mon paréo une heure, assise sur ma serviette à observer tout le monde comme une intruse. Et puis une femme de soixante-dix ans est passée devant moi, tranquille, un bouquin sous le bras, absolument zéro complexe. Elle m'a juste souri. Et là quelque chose a lâché. J'ai enlevé le paréo. Personne n'a bronché. Pour la première fois de ma vie d'adulte, mon corps n'était pas un objet de désir ou de jugement — il était juste… là. J'ai pleuré, en fait. De soulagement. Moi qui monnaie mon image, qui gère mon corps comme un business, j'ai redécouvert ce que c'était de l'habiter juste pour moi.",
+              "quote": false
+            },
+            {
+              "t": "Prenons un exemple très concret du quotidien là-bas, parce que les gens imaginent des scènes de film. La vraie journée type ? Tu te lèves, tu vas chercher ton pain à la boulangerie — nu, avec ton sac en toile. Tu croises ton voisin, vous parlez de la météo. Tu bronzes, tu lis, tu te baignes, tu déjeunes en terrasse. Bref, une journée de vacances parfaitement banale, sauf le dress code. Le côté sulfureux, si tu le cherches, tu le trouveras le soir, dans des lieux identifiés, avec des codes précis. Mais tu peux aussi passer une semaine entière au Cap d'Agde sans jamais y mettre les pieds. Ça, ça surprend tout le monde.",
+              "quote": false
+            },
+            {
+              "t": "Maintenant, parlons du couple, parce que c'est là que ça se corse. Le Cap d'Agde, à deux, c'est un révélateur. Ça met une loupe sur votre relation. J'ai vu des couples en ressortir soudés, complices, fiers d'avoir partagé quelque chose d'intense et de choisi. Et j'en ai vu d'autres exploser en trois jours, parce que l'un rêvait d'ouverture et l'autre a découvert une jalousie qu'il ne se connaissait pas. La règle absolue que je répète tout le temps : on ne va JAMAIS dans un lieu libertin pour « sauver » ou « pimenter » un couple qui va mal. Ça n'a jamais réparé personne. Ça révèle, ça n'ajoute pas.",
+              "quote": false
+            },
+            {
+              "t": "Et puis il y a la règle qui rend tout l'endroit vivable, celle sans laquelle rien ne tient : le consentement, partout, tout le temps. Là-bas, prendre une photo de quelqu'un sans son accord, c'est la faute ultime, celle qui te fait dégager immédiatement. Un « non » est un « non » définitif, sur la plage comme dans un bar à 2h du matin. Personne ne te doit rien, jamais, quel que soit l'endroit ou l'heure. Paradoxalement, c'est cette rigueur sur le respect qui fait qu'un lieu aussi libre peut être aussi safe. La liberté sans le consentement, ce n'est pas de la liberté, c'est juste de l'agression avec un décor de vacances.",
+              "quote": false
+            },
+            {
+              "t": "Dernier point, le plus terre-à-terre et le plus utile : la logistique. Personne ne vous le dit, mais la crème solaire devient votre meilleure amie, sur absolument toutes les zones — je vous laisse imaginer les coups de soleil aux endroits qui n'ont jamais vu la lumière. Prévoyez une serviette reconnaissable, parce que tout le monde a la même. Et surtout, arrivez par la journée, par le naturisme simple, avant même de penser au reste. Apprivoisez le regard d'abord. Le reste, vous déciderez plus tard, à votre rythme, ou jamais. Il n'y a aucune obligation, et c'est ça la vraie beauté de l'endroit.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "B-roll : plage large, village, terrasses (flou pudique), pour illustrer le « quotidien banal ».",
+            "Montage : réincruster l'insert « 2,6 M de pratiquants · 350 M€ » quand Amanda rappelle l'ampleur du phénomène.",
+            "Insert émotion sur l'anecdote perso (paréo qui tombe) : ralenti léger, musique douce, laisser respirer.",
+            "GIF gêne/timide sur le passage 'on croit qu'on va être jugé' : https://tenor.com/view/shy-awkward-nervous-covering-gif-16060409"
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Le Cap d'Agde ne te transforme pas. Il enlève juste le costume — et te met face à qui tu es vraiment, à poil, au sens propre comme au figuré.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan fixe, silence de 2 sec après la phrase pour laisser l'impact."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Alors dites-moi franchement en commentaire : vous seriez capable d'enlever votre maillot devant des inconnus… ou rien que l'idée vous met déjà mal à l'aise ?",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : sourire complice, inviter vraiment au débat."
+          ]
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et parce que vous êtes nombreux à me demander comment on gère tout ça à deux : vendredi prochain, je vous ouvre les coulisses de « Avoir un OnlyFans en couple : les règles qu'on s'est fixées ». On va parler cash de ce qui tient un couple quand le corps devient aussi un métier.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : ton complice, teaser l'épisode suivant sans tout dévoiler."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a fait voir le naturisme autrement, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat, et sur mon Telegram pour la version bien plus intime — celle que YouTube ne me laisserait jamais poster. Les liens sont en description.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : écran de fin, cartes d'abonnement, rappel Facebook + Telegram à l'écran."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "La stat qui fait tomber les clichés",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 03/08",
+          "hook": "La France est la première destination naturiste au monde : environ 2,6 millions de pratiquants réguliers. Deux virgule six millions.",
+          "corps": "Et pourtant, dès qu'on dit « naturiste », tout le monde pense à autre chose. Le Cap d'Agde, plus grand village naturiste d'Europe, c'est jusqu'à 40 000 personnes en plein été. On va parler de ce que c'est vraiment.",
+          "cta": "Ma vidéo « première fois au Cap d'Agde » sort vendredi — abonnez-vous."
+        },
+        {
+          "n": "2",
+          "title": "Naturisme ≠ ce que vous croyez",
+          "angle": "OPINION",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton posé puis tranché",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 03/08",
+          "hook": "Non, le village naturiste ce n'est pas un immense partouze géante. Voilà ce que personne n'ose vous expliquer.",
+          "corps": "La journée sur la plage, c'est des familles, des retraités, des gens qui bronzent, point. Le soir, dans une partie précise du village, l'ambiance devient libertine — mais c'est un choix, pas une obligation. Confondre les deux, c'est le cliché n°1.",
+          "cta": "Je décortique tout ça vendredi."
+        },
+        {
+          "n": "3",
+          "title": "Ma première fois là-bas",
+          "angle": "INTIME",
+          "dur": "30-35 sec",
+          "cam": "face cam, confidence, lumière douce",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 04/08",
+          "hook": "La première fois que j'ai enlevé mon maillot sur cette plage, j'ai cru que tout le monde allait me regarder.",
+          "corps": "Et en fait… personne. C'est ça qui m'a bouleversée. Pour la première fois de ma vie, mon corps n'était pas un spectacle. Je m'attendais à un jugement permanent, j'ai trouvé une indifférence totale — et une paix que je ne connaissais pas.",
+          "cta": "Je vous raconte tout, sans filtre, vendredi."
+        },
+        {
+          "n": "4",
+          "title": "Le conseil que j'aurais aimé avoir",
+          "angle": "CONSEIL",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 04/08",
+          "hook": "Conseil n°1 pour ta première fois au Cap d'Agde : ne commence PAS par le soir.",
+          "corps": "Arrive en journée, sur la plage, dans le naturisme « pur ». Habitue-toi au regard, ou plutôt à l'absence de regard. Le côté libertin du village, tu iras l'explorer après, si tu en as envie, à ton rythme. Brûler les étapes, c'est le meilleur moyen de flipper.",
+          "cta": "Mes 10 conseils complets vendredi."
+        },
+        {
+          "n": "5",
+          "title": "Le moment le plus gênant",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, sourire, autodérision",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mercredi 05/08",
+          "hook": "Le moment le plus gênant de ma première fois ? Croiser mon voisin de camping. À poil. Aux deux.",
+          "corps": "On s'est regardés deux secondes, on a éclaté de rire, on a parlé météo comme si de rien n'était. Et là j'ai compris le vrai truc du naturisme : au bout de dix minutes, tu ne vois même plus la nudité. Le cerveau s'habitue à une vitesse folle.",
+          "cta": "D'autres anecdotes gênantes vendredi 😅"
+        },
+        {
+          "n": "6",
+          "title": "La question qui divise les couples",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, regard direct",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 06/08",
+          "hook": "Vraie question : est-ce que tu emmènerais ton copain ou ta copine dans un lieu libertin ?",
+          "corps": "Parce que le Cap d'Agde, en couple, ça teste des choses. Certains y renforcent leur complicité, d'autres découvrent des jalousies qu'ils ne soupçonnaient pas. Il n'y a pas de bonne réponse — mais il y a une règle : on n'y va jamais pour « sauver » un couple.",
+          "cta": "Je donne mon avis tranché vendredi."
+        },
+        {
+          "n": "7",
+          "title": "Le truc que personne n'avoue",
+          "angle": "HUMOUR",
+          "dur": "20-25 sec",
+          "cam": "face cam, ton léger",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 06/08",
+          "hook": "Personne ne vous le dit mais le vrai défi du naturisme, c'est… où poser vos affaires quand tout le monde a la même serviette.",
+          "corps": "Et le coup de soleil à des endroits qui n'ont JAMAIS vu le soleil. Crème solaire partout, vraiment partout, c'est mon conseil le moins glamour mais le plus utile de toute la vidéo.",
+          "cta": "Mes conseils les plus pratiques vendredi 😂"
+        },
+        {
+          "n": "8",
+          "title": "3 règles à connaître avant d'y aller",
+          "angle": "LISTE",
+          "dur": "30-35 sec",
+          "cam": "face cam, énumération dynamique",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 08/08",
+          "hook": "3 règles d'or avant ta première fois au village naturiste, et la 3e sauve des couples.",
+          "corps": "Un : jamais de photo sans consentement, c'est la faute ultime là-bas. Deux : « non » veut dire non, partout, tout le temps, y compris le soir. Trois : décidez de vos limites en couple AVANT d'arriver, pas dans le feu de l'action. Le respect, c'est ce qui rend l'endroit safe.",
+          "cta": "Les 10 conseils au complet, vendredi sur la chaîne."
+        }
+      ]
+    },
+    {
+      "isoWeek": "2026-W28",
+      "weekLabel": "Semaine du lundi 6 juillet au dimanche 12 juillet 2026",
+      "briefDate": "2026-07-06",
+      "videoD": {
+        "title": "La jalousie – toxique ou preuve d'amour ?",
+        "theme": "Psycho",
+        "date": "2026-07-31"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "« S'il est jaloux, c'est qu'il t'aime. » C'est la plus belle arnaque qu'on ait vendue aux couples. Et j'y ai cru.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "On a tous grandi avec l'idée qu'un amour sans jalousie, ce n'est pas un vrai amour. Que s'énerver parce que l'autre parle à quelqu'un, c'est romantique. Sauf qu'à force, on a confondu « tenir à quelqu'un » et « avoir peur de le perdre ». Ce n'est pas la même chose.",
+              "quote": false
+            },
+            {
+              "t": "Et les chiffres le montrent : 41% des Français en couple ressentent de la jalousie rien qu'en voyant leur partenaire sur les réseaux sociaux. Pas une infidélité — juste un scroll. Et quand la jalousie vire à l'infidélité réelle, ça pardonne mal : environ 40% des divorces en France sont directement liés à une infidélité. La jalousie, c'est le thermomètre de nos peurs, pas de notre amour.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé.",
+            "Montage : insert texte à l'écran « 41% jaloux à cause des réseaux sociaux » et « ~40% des divorces liés à une infidélité ». GIF réseaux/side-eye : https://tenor.com/view/jealous-eye-roll-annoyed-gif-27220056"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Pour moi, la jalousie n'est jamais une preuve d'amour. C'est une preuve de peur. La peur de ne pas suffire, la peur d'être remplacé·e, la peur qu'on découvre qu'on n'est pas à la hauteur. Un peu de jalousie, c'est humain, ça arrive à tout le monde. Mais quand elle décide à ta place, quand elle te fait fouiller, contrôler, surveiller — là, ce n'est plus de l'amour. C'est une prison avec deux détenus.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : ton affirmé, direct."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "D'abord, il faut comprendre d'où ça vient. La jalousie, ce n'est pas un signal sur l'autre, c'est un signal sur soi. Quand je suis jalouse, mon cerveau ne me dit pas « il va te tromper ». Il me dit « tu as peur de ne pas être assez ». Nuance énorme. Parce que tant qu'on croit que le problème vient de l'autre, on essaie de contrôler l'autre. Alors que le vrai chantier, il est à l'intérieur de nous.",
+              "quote": false
+            },
+            {
+              "t": "Prenez un exemple ultra banal du quotidien : votre partenaire like la photo d'une autre personne sur Instagram. En trois secondes, votre cœur s'emballe, et vous avez déjà écrit tout un scénario : il la trouve plus belle, il s'ennuie avec vous, ça va mal finir. Le film complet, générique compris. Alors que ce like, neuf fois sur dix, ne voulait absolument rien dire. Ce n'est pas le like qui vous a blessé·e. C'est l'histoire que vous vous êtes racontée par-dessus.",
+              "quote": false
+            },
+            {
+              "t": "Et cette histoire, elle est presque toujours plus ancienne que votre couple actuel. On projette. On ramène les trahisons d'avant, les mots d'un parent, les fois où on s'est senti pas choisi. La personne en face paie pour des gens qu'elle n'a jamais rencontrés. C'est injuste, mais c'est humain.",
+              "quote": false
+            },
+            {
+              "t": "Maintenant, je vais être honnête avec vous, parce que je ne suis pas là pour vous faire la leçon depuis un piédestal. Moi aussi j'ai dérapé. Une fois — une seule, mais une fois de trop — j'ai attrapé le téléphone de mon mec pendant qu'il dormait. Le cœur qui bat à 200, les mains qui tremblent, cette petite voix qui me disait « arrête, tu vaux mieux que ça ». Je ne l'ai pas écoutée.",
+              "quote": false
+            },
+            {
+              "t": "Vous savez ce que j'ai trouvé ? Rien. Absolument rien. Des conversations banales, des memes envoyés à ses potes, une commande de pizza. Et vous savez ce que j'ai perdu, moi, cette nuit-là ? Un peu de respect pour moi-même. Parce que la fille qui fouille en douce, ce n'était pas celle que je voulais être. La jalousie m'avait transformée en quelqu'un que je ne reconnaissais pas.",
+              "quote": false
+            },
+            {
+              "t": "Et le plus dingue, c'est que ça ne m'a même pas rassurée. C'est ça, le piège : la jalousie ne se nourrit jamais de preuves, elle se nourrit d'elle-même. Tu vérifies, tu ne trouves rien, tu es soulagé·e dix minutes, et puis le doute revient, plus gros. C'est un puits sans fond. Aucune preuve d'innocence ne suffit jamais, parce que le problème n'a jamais été l'autre.",
+              "quote": false
+            },
+            {
+              "t": "Alors qu'est-ce qu'on fait ? On ne se transforme pas en robot sans émotion, ce n'est pas le but. Le jour où j'ai commencé à aller mieux, c'est le jour où j'ai appris à dire les choses au lieu de les traquer. « Là, tout de suite, je me sens en insécurité, j'ai besoin que tu me rassures. » C'est mille fois plus courageux — et plus efficace — que d'ouvrir un téléphone en cachette. Ça demande d'être vulnérable. Mais c'est ça, la confiance : ce n'est pas l'absence de doute, c'est choisir de parler plutôt que de surveiller.",
+              "quote": false
+            },
+            {
+              "t": "Et il faut savoir distinguer deux jalousies. Il y a celle qui te traverse, une petite pointe, tu la nommes, elle repart — ça, c'est humain, ce n'est pas grave. Et il y a celle qui s'installe et qui prend les commandes : celle qui te fait contrôler qui l'autre voit, fouiller, isoler, te sentir soulagé·e quand ton ou ta partenaire annule avec ses amis. Cette jalousie-là n'a rien de romantique. C'est le premier étage du contrôle, et parfois de bien pire.",
+              "quote": false
+            },
+            {
+              "t": "Parce qu'il faut le dire clairement : « il est jaloux, c'est mignon » a servi d'excuse à trop de comportements qui n'avaient rien de mignons. Contrôler une tenue, un téléphone, des fréquentations, ce n'est pas de l'amour intense. C'est de la possession. Et confondre les deux, c'est exactement ce qui piège tant de gens dans des relations qui les rétrécissent au lieu de les faire grandir.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Montage : B-roll d'un téléphone qui s'allume dans le noir pendant l'anecdote du téléphone, ambiance tendue.",
+            "Montage : insert texte « 41% jaloux à cause des réseaux » quand je parle du like Instagram. GIF side-eye jalousie : https://tenor.com/view/snow-white-jealous-jealous-side-eye-rachel-zegler-gif-13131029037297145898",
+            "Caméra : ton spontané, comme une confidence entre amies ; ralentir et baisser la voix sur l'aveu du téléphone."
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "La jalousie ne prouve pas que tu aimes. Elle prouve que tu as peur. Et la confiance, ce n'est pas ne jamais douter — c'est choisir de parler plutôt que de surveiller.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Soyez honnêtes avec moi : pour vous, un peu de jalousie dans un couple, c'est sain… ou c'est déjà le début du problème ? Dites-le-moi en commentaire.",
+              "quote": false
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Vendredi prochain, on reste dans l'intime du couple mais on va plus loin : je vous parle de la différence entre aimer quelqu'un et être juste attaché·e à lui. Parce que ce n'est PAS la même chose — et confondre les deux, ça gâche des années.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Prochain épisode : « L'amour vs l'attachement – la différence »."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "La stat qui pique",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 27/07",
+          "hook": "41% des gens en couple ressentent de la jalousie rien qu'en voyant leur partenaire scroller sur les réseaux. Quarante et un pour cent.",
+          "corps": "Alors dites-moi : la jalousie, c'est une preuve d'amour… ou juste la peur de ne pas suffire ? Moi j'ai une réponse tranchée.",
+          "cta": "La vidéo complète sort vendredi — abonnez-vous."
+        },
+        {
+          "n": "2",
+          "title": "Preuve d'amour, vraiment ?",
+          "angle": "OPINION",
+          "dur": "20-25 sec",
+          "cam": "face cam frontal, ton assumé",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 27/07",
+          "hook": "« S'il est jaloux, c'est qu'il t'aime. » Non. S'il est jaloux, c'est qu'il a peur. Ce n'est pas pareil.",
+          "corps": "L'amour te fait confiance. La jalousie te surveille. On a confondu les deux pendant trop longtemps.",
+          "cta": "Je développe tout vendredi."
+        },
+        {
+          "n": "3",
+          "title": "Ma pire crise de jalousie",
+          "angle": "INTIME",
+          "dur": "25-30 sec",
+          "cam": "face cam doux, lumière chaude",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 28/07",
+          "hook": "Je vais vous avouer un truc pas glorieux : j'ai déjà fouillé un téléphone. Une fois. Et je m'en veux encore.",
+          "corps": "Ce que j'ai trouvé ? Rien. Ce que j'ai perdu ? Un peu de respect pour moi-même. La jalousie te fait faire des trucs que tu ne reconnais pas.",
+          "cta": "L'histoire complète vendredi."
+        },
+        {
+          "n": "4",
+          "title": "Le vrai déclencheur",
+          "angle": "CONSEIL",
+          "dur": "20-25 sec",
+          "cam": "face cam posé",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 28/07",
+          "hook": "La jalousie, ça ne parle presque jamais de l'autre. Ça parle de toi.",
+          "corps": "Le conseil : la prochaine fois que tu es jaloux·se, demande-toi « de quoi j'ai peur, là, vraiment ? ». La réponse est rarement « il me trompe ». Souvent c'est « je ne me sens pas assez ».",
+          "cta": "La méthode complète vendredi."
+        },
+        {
+          "n": "5",
+          "title": "L'exemple du quotidien",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mercredi 29/07",
+          "hook": "Il like la photo d'une autre. Ton cœur fait un bond. En 3 secondes t'as écrit un scénario de rupture dans ta tête.",
+          "corps": "On l'a TOUS fait. Et 99% du temps, ce like ne voulait rien dire. C'est pas le like le problème, c'est le film qu'on se fait.",
+          "cta": "Pourquoi on fait ça → vendredi."
+        },
+        {
+          "n": "6",
+          "title": "La question qui divise",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "15-20 sec",
+          "cam": "face cam, regard caméra",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 30/07",
+          "hook": "Vraie question : un couple sans AUCUNE jalousie, c'est un couple sain… ou un couple qui s'en fout ?",
+          "corps": "Moi je pense qu'un peu de jalousie, c'est humain. Zéro jalousie, ça m'interroge. Mais je sais que ça va vous faire réagir. Team « un peu » ou team « zéro » ?",
+          "cta": "Donnez votre camp en commentaire."
+        },
+        {
+          "n": "7",
+          "title": "Le truc que personne n'avoue",
+          "angle": "HUMOUR",
+          "dur": "15-20 sec",
+          "cam": "face cam + montage réaction",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 30/07",
+          "hook": "« Moi ? Jalouse ? Jamais. » *regarde discrètement qui a liké sa story* 👀",
+          "corps": "On joue tous les détachés en public et Sherlock Holmes en privé. Assumons : la jalousie, c'est le sport national des couples.",
+          "cta": "On en rit (et on en parle) vendredi."
+        },
+        {
+          "n": "8",
+          "title": "3 signes que ta jalousie déraille",
+          "angle": "LISTE",
+          "dur": "20-25 sec",
+          "cam": "face cam + texte à l'écran",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 01/08",
+          "hook": "3 signes que ta jalousie n'est plus « mignonne » mais toxique 👇",
+          "corps": "1. Tu vérifies son téléphone. 2. Tu contrôles qui il voit. 3. Tu te sens soulagé·e quand il annule avec ses potes. Si tu coches 2 sur 3, faut qu'on parle.",
+          "cta": "Ce qu'il faut faire → vidéo de vendredi."
+        }
+      ]
+    },
     {
       "isoWeek": "2026-W27",
       "weekLabel": "Semaine du lundi 29 juin au dimanche 5 juillet 2026",
@@ -1884,6 +2571,279 @@ const ARCHIVE_EMBED = {
       ]
     },
     {
+      "isoWeek": "2026-W25",
+      "weekLabel": "Semaine du lundi 15 juin au dimanche 21 juin 2026",
+      "briefDate": "2026-06-15",
+      "videoD": {
+        "title": "Don Juan VS Nympho",
+        "theme": "Couple",
+        "date": "2026-07-10",
+        "next": "Vocabulaire d'hommes pour les femmes (ex : grossesse gériatrique)"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "Un homme qui couche avec dix femmes, c'est un tombeur. Une femme qui couche avec dix hommes, c'est une salope. Même geste. Deux mondes.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "Prenez n'importe quelle langue, vous trouverez dix mots élogieux pour l'homme qui multiplie les conquêtes — tombeur, séducteur, Don Juan, sacré chaud lapin — et dix mots pour humilier la femme qui fait exactement la même chose : facile, nympho, marie-couche-toi-là. On n'a même pas inventé de mot valorisant pour elle. Ça, ce n'est pas un hasard, c'est un message."
+            },
+            {
+              "t": "Et les chiffres racontent la même histoire. En France, les hommes déclarent en moyenne 16,4 partenaires au cours de leur vie, les femmes 7,9 (contre 11,2 et 3,4 en 1992). Sauf que mathématiquement, dans une population, ces moyennes devraient être bien plus proches. Si l'écart persiste, c'est en grande partie parce que les hommes ont intérêt à gonfler leur chiffre… et les femmes à le baisser. On ne ment pas sur le sexe, on ment sur ce que la société récompense."
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé.",
+            "Montage : insert texte à l'écran « 16,4 partenaires déclarés (hommes) VS 7,9 (femmes) — France 2023 » et « en 1992 : 11,2 VS 3,4 ». GIF clin d'œil « tombeur » : https://tenor.com/view/flirt-flirty-flirting-wink-wink-wink-gif-5115023484778615734"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Pour moi, le double standard n'a jamais parlé de morale. Il parle de contrôle. Tant qu'on fait croire à une femme que sa valeur baisse à chaque partenaire, on la garde sage, disponible, et facile à juger. Le nombre de personnes avec qui tu as couché ne dit strictement rien de qui tu es. Et un homme « expérimenté » face à une femme « abîmée » pour le même parcours, c'est juste une arnaque qu'on répète depuis des siècles."
+            }
+          ],
+          "notes": [
+            "Caméra : ton affirmé, direct."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Commençons par le vocabulaire, parce que c'est là que tout se joue. Un homme qui enchaîne, on lui tape dans le dos : « quel tombeur ». Une femme qui enchaîne, on baisse la voix : « tu sais ce qu'on dit d'elle… ». Le même comportement devient un trophée pour l'un et une tache pour l'autre. Et le pire, c'est qu'on a tellement entendu ça qu'on le trouve normal."
+            },
+            {
+              "t": "Prenons un exemple tout bête, une soirée. Un mec repart avec quelqu'un : le lendemain, ses potes le charrient, mi-jaloux mi-admiratifs, « chaud le gars ». Une fille fait pareil, dans la même soirée : le lendemain, on chuchote, on ressort l'histoire pendant des mois, et c'est une autre femme qui lâchera la première « bah quand même, elle abuse ». Deux personnes, une seule nuit chacune, et un seul des deux se réveille avec une réputation."
+            },
+            {
+              "t": "Et cette phrase, « c'est une autre femme qui lâchera », elle est capitale. Parce que le double standard, on croit que ce sont les hommes qui l'imposent. Faux. On l'a tellement intégré qu'on se surveille entre nous. Combien de fois j'ai entendu des femmes juger une autre femme plus durement que n'importe quel mec ne l'aurait fait ? On nous a appris à être les gardiennes de notre propre prison."
+            },
+            {
+              "t": "Je vais être honnête avec vous, parce que je ne vous parle pas de loin. Moi, on m'a collé toutes ces étiquettes. « Facile », « elle se donne en spectacle », « pas étonnant vu ce qu'elle fait ». Le jour où j'ai lancé mon contenu sur OnlyFans et MYM, j'ai perdu des gens que je croyais proches, et gagné un paquet de commentaires sur ma « valeur ». Comme si assumer ma sexualité, publiquement, me retirait des points quelque part."
+            },
+            {
+              "t": "Et pendant un moment, ça m'a fait mal, je ne vais pas mentir. J'ai eu cette période où je surveillais mes mots, où je minimisais, où je disais « oh mais tu sais, je fais surtout de la vidéo, du contenu ». Comme une gamine qui s'excuse. Je jouais exactement le rôle qu'on attend d'une femme : celle qui a honte, qui se justifie, qui rend le monde plus confortable en se rapetissant."
+            },
+            {
+              "t": "Et puis un jour, le déclic. Je me suis demandé : est-ce qu'un homme qui gagne sa vie avec sa séduction, son corps, son image, il s'excuse, lui ? Non. On appelle ça un business, du charisme, un empire. Alors pourquoi moi je devrais chuchoter ce que lui crierait sur les toits ? J'ai arrêté de me justifier ce jour-là. Pas par provocation — par cohérence."
+            },
+            {
+              "t": "Parce qu'il faut comprendre d'où ça vient, ce deux poids deux mesures. Historiquement, contrôler la sexualité des femmes, ce n'était pas une question de vertu, c'était une question de propriété et de filiation : savoir de qui était l'enfant, garder la femme « intacte » comme un bien. La pudeur féminine n'a pas été inventée pour protéger les femmes, mais pour les posséder. Et quand un système est aussi vieux, on ne le voit même plus, on le prend pour de la « nature »."
+            },
+            {
+              "t": "Alors qu'est-ce qu'on fait, concrètement ? On commence par arrêter de traduire. La prochaine fois que le mot « facile » vous vient à propos d'une femme, posez-vous la question : est-ce que je dirais ça d'un homme dans la même situation ? Si la réponse est non, ce n'est pas elle le problème, c'est le filtre qu'on vous a installé dans la tête. Et ce filtre, on peut le désinstaller."
+            },
+            {
+              "t": "Et surtout, arrêtez de compter. Le nombre, ce n'est pas un compteur de valeur. Une personne qui a eu vingt partenaires n'est pas « moins » qu'une personne qui en a eu deux, elle a juste vécu, osé, cherché, parfois trouvé. Votre passé sexuel n'est pas un casier judiciaire. C'est une histoire. La vôtre. Et personne n'a le droit de vous la facturer."
+            }
+          ],
+          "notes": [
+            "Montage : B-roll soirée / téléphone qui vibre pendant l'exemple de la fête ; couper serré sur mon visage sur l'aveu OnlyFans.",
+            "Montage : insert texte « et si c'était un homme ? » quand je parle du mot « facile ». GIF eye-roll quand je cite les commentaires sur ma « valeur » : https://tenor.com/view/jealous-eye-roll-annoyed-gif-27220056",
+            "Caméra : ton spontané, comme une confidence entre amies ; ralentir et baisser la voix sur l'aveu perso."
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Le nombre de personnes avec qui tu as couché ne dit rien de qui tu es. Ça dit juste combien de fois tu as osé dire oui à ce que tu voulais.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : zoom très léger, regard intense, 2 sec de silence avant ET après la phrase."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Soyez honnêtes : la dernière fois que vous avez jugé quelqu'un sur son nombre de partenaires… c'était un homme, ou une femme ? Dites-le-moi en commentaire."
+            }
+          ],
+          "notes": []
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Vendredi prochain, on reste dans ce deux poids deux mesures mais côté mots : je vous fais le lexique des expressions qu'on réserve aux femmes — genre « grossesse gériatrique » à 35 ans. Vous allez halluciner sur le vocabulaire qu'on nous colle."
+            }
+          ],
+          "notes": [
+            "Prochain épisode : « Vocabulaire d'hommes pour les femmes » — 17/07."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a parlé, abonnez-vous, c'est gratuit et ça m'aide énormément. Le vrai moi, sans filtre, c'est sur Facebook @blondymandise et sur mon Telegram. Et pour celles et ceux qui veulent tout le reste… vous savez où me trouver. 😉"
+            }
+          ],
+          "notes": [
+            "Montage : superposer les cards YouTube (abonnement + vidéo précédente) pendant ces 20 sec."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": 1,
+          "title": "Tombeur VS salope",
+          "angle": "OPINION",
+          "dur": "20-25 sec",
+          "cam": "face cam frontal, ton assumé",
+          "hook": "Un homme avec dix conquêtes = un tombeur. Une femme avec dix conquêtes = une salope. Même geste, deux mots opposés.",
+          "corps": "Ce n'est pas de la morale, c'est du contrôle. On a inventé zéro mot valorisant pour une femme libre. Ça vous étonne encore ?",
+          "cta": "La vidéo complète sort vendredi — abonnez-vous.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 06/07"
+        },
+        {
+          "n": 2,
+          "title": "La stat qui ment",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, punchy",
+          "hook": "Les hommes déclarent 16,4 partenaires dans leur vie. Les femmes 7,9. Mathématiquement, c'est impossible que l'écart soit si grand.",
+          "corps": "La vérité ? Les hommes gonflent, les femmes minimisent. On ne ment pas sur le sexe — on ment sur ce que la société récompense.",
+          "cta": "Je vous explique tout vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 06/07"
+        },
+        {
+          "n": 3,
+          "title": "On m'a traitée de facile",
+          "angle": "INTIME",
+          "dur": "25-30 sec",
+          "cam": "face cam doux, lumière chaude",
+          "hook": "Le jour où j'ai lancé mon contenu, j'ai perdu des gens que je croyais proches. Et gagné plein d'avis sur ma « valeur ».",
+          "corps": "Pendant un temps, je minimisais, je m'excusais presque. Puis j'ai compris : un homme qui monétise son image, on appelle ça un empire.",
+          "cta": "Mon histoire complète vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 07/07"
+        },
+        {
+          "n": 4,
+          "title": "La même soirée",
+          "angle": "ANECDOTE",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton complice",
+          "hook": "Un mec repart avec quelqu'un : « chaud le gars ». Une fille fait pareil, même soirée : on en parle pendant des mois.",
+          "corps": "Deux personnes, une nuit chacune. Un seul des deux se réveille avec une réputation. Devinez lequel.",
+          "cta": "On en parle pour de vrai vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 07/07"
+        },
+        {
+          "n": 5,
+          "title": "Ce sont les femmes qui jugent",
+          "angle": "QUESTION CLIVANTE",
+          "dur": "15-20 sec",
+          "cam": "face cam, regard caméra",
+          "hook": "Vérité qui dérange : la personne qui juge le plus durement une femme libre, c'est souvent… une autre femme.",
+          "corps": "On nous a appris à être les gardiennes de notre propre prison. Team « je l'ai déjà fait » ou team « jamais » ? Soyez honnêtes.",
+          "cta": "Donnez votre camp en commentaire.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mercredi 08/07"
+        },
+        {
+          "n": 6,
+          "title": "Et si c'était un homme ?",
+          "angle": "CONSEIL",
+          "dur": "20-25 sec",
+          "cam": "face cam posé",
+          "hook": "Le test tout simple avant de juger quelqu'un sur sa vie sexuelle : « est-ce que je dirais ça d'un homme ? »",
+          "corps": "Si la réponse est non, ce n'est pas la personne le problème — c'est le filtre qu'on vous a installé. Et ça, ça se désinstalle.",
+          "cta": "La méthode complète vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 09/07"
+        },
+        {
+          "n": 7,
+          "title": "D'où vient vraiment le tabou",
+          "angle": "LISTE",
+          "dur": "20-25 sec",
+          "cam": "face cam + texte à l'écran",
+          "hook": "Pourquoi on contrôle la sexualité des femmes depuis toujours ? Spoiler : ce n'est pas pour les protéger.",
+          "corps": "1. Savoir de qui est l'enfant. 2. Garder la femme « intacte » comme un bien. 3. La rendre disponible et sage. La vertu n'a jamais été le vrai sujet.",
+          "cta": "Le décryptage complet vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 09/07"
+        },
+        {
+          "n": 8,
+          "title": "Arrête de compter",
+          "angle": "HUMOUR",
+          "dur": "15-20 sec",
+          "cam": "face cam + montage réaction",
+          "hook": "« T'as eu combien de partenaires ? » Mauvaise question. Ton passé sexuel, c'est pas un casier judiciaire.",
+          "corps": "Personne ne te demande combien de plats t'as goûtés dans ta vie pour juger si t'as bon goût. Là c'est pareil. Vis, point.",
+          "cta": "Pourquoi ça compte → vidéo de vendredi.",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 11/07"
+        }
+      ]
+    },
+    {
       "isoWeek": "2026-W24",
       "weekLabel": "Semaine du lundi 8 juin au dimanche 14 juin 2026",
       "briefDate": "2026-06-08",
@@ -2347,6 +3307,15 @@ function renderCalByPlat(){
   bindCardEvents(body);
 }
 
+/* Lien de la vidéo YouTube publiée — clé stable par vidéo (date de sortie), stockée dans les liens (git) */
+function ytKey(){return "yt:"+((DATA.meta&&DATA.meta.videoA&&DATA.meta.videoA.date)||WEEK);}
+function ytPasteField(){
+  const key=ytKey();const val=DATA.links[key]||"";
+  return '<div class="field"><div class="k">🔗 Lien de la vidéo publiée</div>'
+    +'<div class="copyrow"><input class="ytlink" type="url" inputmode="url" spellcheck="false" placeholder="Colle le lien YouTube ici…" value="'+escAttr(val)+'" data-ytkey="'+escAttr(key)+'">'
+    +'<button class="copybtn ytcopy" data-c="'+encodeURIComponent(val)+'">Copier</button></div>'
+    +'<div class="note" style="margin-top:6px">💾 Enregistré automatiquement — visible sur tous tes appareils.</div></div>';
+}
 function postCard(p,showTime){
   const pl=PLAT[p.platKey]||PLAT.facebook;const on=done.has(p.id);const lien=resolveLien(p.lien);
   return '<div class="card'+(on?" done":"")+'" data-id="'+p.id+'">'
@@ -2355,12 +3324,17 @@ function postCard(p,showTime){
     +'<div class="meta-line">'+(showTime?esc(p.time)+' · ':'')+esc(p.type)+'</div>'
     +'<div class="field"><div class="k">Texte à copier</div><div class="copyrow"><div class="copytxt">'+esc(p.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(p.texte)+'">Copier</button></div></div>'
     +(lien&&lien!=="—"?'<div class="field"><div class="k">Lien</div><div class="copyrow"><div class="copytxt link">'+esc(lien)+'</div><button class="copybtn" data-c="'+encodeURIComponent(lien)+'">Copier</button></div></div>':'')
+    +(p.platKey==="youtube"?ytPasteField():'')
     +'<div class="field"><div class="k">Média à joindre</div><div class="media">'+p.media+'</div></div>'
     +(p.astuce?'<div class="note">💡 '+esc(p.astuce)+'</div>':'')+'</div>';
 }
 function bindCardEvents(root){
   bindCopies(root);
   root.querySelectorAll(".card .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest(".card").dataset.id;setDone(id,!done.has(id));if(calMode==="day")renderCalByDay();else renderCalByPlat();renderDays();});
+  root.querySelectorAll("input.ytlink").forEach(inp=>inp.onchange=e=>{
+    const val=e.target.value.trim();saveLink(e.target.dataset.ytkey,val);
+    const b=e.target.closest(".copyrow").querySelector(".ytcopy");if(b)b.dataset.c=encodeURIComponent(val);
+    toast("Lien vidéo enregistré ✓");});
 }
 
 /* ============ RÉELS ============ */

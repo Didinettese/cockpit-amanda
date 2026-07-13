@@ -101,6 +101,10 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .copytxt{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:11px 12px;
   font-size:14px;line-height:1.45;color:var(--ink);white-space:pre-wrap;word-break:break-word}
 .copytxt.link{font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ytlink{flex:1;min-width:0;background:var(--bg);border:1px solid var(--youtube);border-radius:11px;padding:11px 12px;
+  font-size:12.5px;color:var(--telegram);font-family:ui-monospace,Menlo,monospace}
+.ytlink:focus{outline:none;border-color:var(--telegram)}
+.ytlink::placeholder{color:var(--muted);font-family:Inter}
 .copybtn{flex:0 0 auto;width:52px;border-radius:11px;border:none;background:var(--now);color:#fff;font-weight:700;
   font-size:12px;cursor:pointer;font-family:"Bricolage Grotesque";display:grid;place-items:center;transition:.12s}
 .copybtn:active{transform:scale(.92)}
@@ -407,6 +411,15 @@ function renderCalByPlat(){
   bindCardEvents(body);
 }
 
+/* Lien de la vidéo YouTube publiée — clé stable par vidéo (date de sortie), stockée dans les liens (git) */
+function ytKey(){return "yt:"+((DATA.meta&&DATA.meta.videoA&&DATA.meta.videoA.date)||WEEK);}
+function ytPasteField(){
+  const key=ytKey();const val=DATA.links[key]||"";
+  return '<div class="field"><div class="k">🔗 Lien de la vidéo publiée</div>'
+    +'<div class="copyrow"><input class="ytlink" type="url" inputmode="url" spellcheck="false" placeholder="Colle le lien YouTube ici…" value="'+escAttr(val)+'" data-ytkey="'+escAttr(key)+'">'
+    +'<button class="copybtn ytcopy" data-c="'+encodeURIComponent(val)+'">Copier</button></div>'
+    +'<div class="note" style="margin-top:6px">💾 Enregistré automatiquement — visible sur tous tes appareils.</div></div>';
+}
 function postCard(p,showTime){
   const pl=PLAT[p.platKey]||PLAT.facebook;const on=done.has(p.id);const lien=resolveLien(p.lien);
   return '<div class="card'+(on?" done":"")+'" data-id="'+p.id+'">'
@@ -415,12 +428,17 @@ function postCard(p,showTime){
     +'<div class="meta-line">'+(showTime?esc(p.time)+' · ':'')+esc(p.type)+'</div>'
     +'<div class="field"><div class="k">Texte à copier</div><div class="copyrow"><div class="copytxt">'+esc(p.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(p.texte)+'">Copier</button></div></div>'
     +(lien&&lien!=="—"?'<div class="field"><div class="k">Lien</div><div class="copyrow"><div class="copytxt link">'+esc(lien)+'</div><button class="copybtn" data-c="'+encodeURIComponent(lien)+'">Copier</button></div></div>':'')
+    +(p.platKey==="youtube"?ytPasteField():'')
     +'<div class="field"><div class="k">Média à joindre</div><div class="media">'+p.media+'</div></div>'
     +(p.astuce?'<div class="note">💡 '+esc(p.astuce)+'</div>':'')+'</div>';
 }
 function bindCardEvents(root){
   bindCopies(root);
   root.querySelectorAll(".card .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest(".card").dataset.id;setDone(id,!done.has(id));if(calMode==="day")renderCalByDay();else renderCalByPlat();renderDays();});
+  root.querySelectorAll("input.ytlink").forEach(inp=>inp.onchange=e=>{
+    const val=e.target.value.trim();saveLink(e.target.dataset.ytkey,val);
+    const b=e.target.closest(".copyrow").querySelector(".ytcopy");if(b)b.dataset.c=encodeURIComponent(val);
+    toast("Lien vidéo enregistré ✓");});
 }
 
 /* ============ RÉELS ============ */
