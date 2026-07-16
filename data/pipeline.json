@@ -243,7 +243,7 @@
     {
       "id": "ep-1783911078438",
       "date": "2026-08-13",
-      "theme": "Couple",
+      "theme": "Comment reconnaître quelqu’un qui nous contrôle de quelqu’un qui nous aime ?",
       "title": "Le contrôle déguisé en amour",
       "status": "idee",
       "lieu": "",
@@ -314,8 +314,7 @@
     "Reddit": "https://reddit.com/user/A_COMPLETER",
     "Bio": "https://getmysocial.com/blondymandise",
     "X": "https://x.com/la_mandiise",
-    "Snapchat": "https://snapchat.com/t/Il3EdfGi",
-    "youtube vidéo": "https://youtu.be/W-otTRwgVG8"
+    "Snapchat": "https://snapchat.com/t/Il3EdfGi"
   },
   "progress": {
     "2026-W28": [
@@ -351,8 +350,6 @@
     ]
   },
   "linkCats": {
-    "Bio": [
-      "youtube vidéo"
-    ]
+    "Bio": []
   }
 }
