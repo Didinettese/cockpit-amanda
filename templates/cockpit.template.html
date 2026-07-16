@@ -267,9 +267,11 @@ const PLAT = {
   facebook:{n:"Facebook",em:"📘",c:"var(--facebook)"},
   reddit:{n:"Reddit",em:"👽",c:"var(--reddit)"},
   x:{n:"X",em:"✖️",c:"var(--x)"},
-  snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"}
+  snapchat:{n:"Snapchat",em:"👻",c:"var(--snapchat)"},
+  groupe:{n:"Groupe FB",em:"👥",c:"var(--facebook)"},
+  prive:{n:"Feed privé · OF/MYM",em:"🔒",c:"#00AFF0"}
 };
-const PLAT_ORDER=["youtube","story","x","reddit","snapchat","telegram","extrait","tiktok","facebook"];
+const PLAT_ORDER=["youtube","tiktok","facebook","groupe","x","reddit","snapchat","telegram","prive","extrait","story"];
 const DAYS=["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"];
 const WEEK=DATA.meta.isoWeek||"sem";
 const today=new Date();
@@ -428,7 +430,7 @@ function postCard(p,showTime){
     +'<div class="meta-line">'+(showTime?esc(p.time)+' · ':'')+esc(p.type)+'</div>'
     +'<div class="field"><div class="k">Texte à copier</div><div class="copyrow"><div class="copytxt">'+esc(p.texte)+'</div><button class="copybtn" data-c="'+encodeURIComponent(p.texte)+'">Copier</button></div></div>'
     +(lien&&lien!=="—"?'<div class="field"><div class="k">Lien</div><div class="copyrow"><div class="copytxt link">'+esc(lien)+'</div><button class="copybtn" data-c="'+encodeURIComponent(lien)+'">Copier</button></div></div>':'')
-    +(p.platKey==="youtube"?ytPasteField():'')
+    +((p.platKey==="youtube"&&(p.release||/8h|sortie|publication vid/i.test((p.moment||"")+" "+(p.type||""))))?ytPasteField():'')
     +'<div class="field"><div class="k">Média à joindre</div><div class="media">'+p.media+'</div></div>'
     +(p.astuce?'<div class="note">💡 '+esc(p.astuce)+'</div>':'')+'</div>';
 }
@@ -447,7 +449,7 @@ function renderReels(){
   const jours=DATA.reels.map(r=>r.jour).filter(Boolean);
   let h='<div class="info"><span class="tt">🎬 Réels à produire — semaine en cours</span>'
     +'Thème : <b>'+esc(DATA.meta.videoD.title)+'</b> — '+esc(DATA.meta.videoD.theme)+'.<br>'
-    +'Tournage batch : <b>mercredi 8 juillet</b>. Publiés en multi-plateforme sur la semaine de sortie (vidéo le <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b>).<br>'
+    +'<b>4 réels scriptés</b> à tourner au batch du <b>mercredi</b> + <b>extraits</b> à découper du long format (voir plus bas). Diffusés sur la semaine de sortie (vidéo le <b>'+esc(DATA.meta.videoD.date.split("-").reverse().join("/"))+'</b>).<br>'
     +'Coche « validé » quand le réel est tourné et prêt.</div>';
   const total=DATA.reels.length,nDone=DATA.reels.filter(r=>done.has("r:"+r.n)).length;
   h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+total+'</b> réels validés</div>';
@@ -462,6 +464,17 @@ function renderReels(){
       +'<div class="field"><div class="k">💬 Corps</div><div class="copyrow"><div class="copytxt">'+esc(r.corps)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.corps)+'">Copier</button></div></div>'
       +'<div class="field"><div class="k">📣 CTA</div><div class="copyrow"><div class="copytxt">'+esc(r.cta)+'</div><button class="copybtn" data-c="'+encodeURIComponent(r.cta)+'">Copier</button></div></div></div>';
   });
+  // Extraits à découper du long format (production, distincts des réels scriptés)
+  const ex=Array.isArray(DATA.extraits)?DATA.extraits:[];
+  if(ex.length){
+    h+='<div class="slot-label"><span class="time">✂️</span> Extraits à découper du long format<span class="bar"></span></div>';
+    ex.forEach(x=>{
+      h+='<div class="card"><div class="reel-h"><div class="l"><span class="n">'+esc(x.n)+'</span><span class="t">'+esc(x.quoi||"")+'</span></div></div>'
+        +'<div class="tag">'+esc(x.angle||"")+(x.tc?' · ⏱ '+esc(x.tc):'')+'</div>'
+        +'<div class="kv"><b>Plateformes :</b> '+esc(x.plats||"")+'</div>'
+        +(x.note?'<div class="note">💡 '+esc(x.note)+'</div>':'')+'</div>';
+    });
+  }
   el.innerHTML=h;bindCopies(el);
   el.querySelectorAll("[data-rid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-rid]").dataset.rid;setDone(id,!done.has(id));renderReels();});
 }
