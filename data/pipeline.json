@@ -281,13 +281,7 @@
       "status": "idee",
       "lieu": "",
       "notes": "Tabou + démystification",
-      "titleOptions": [
-        {
-          "text": "",
-          "potentiel": "🔥🔥",
-          "best": true
-        }
-      ],
+      "titleOptions": [],
       "caption": ""
     }
   ],
