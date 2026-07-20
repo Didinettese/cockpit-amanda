@@ -1,6 +1,241 @@
 {
   "weeks": [
     {
+      "isoWeek": "2026-W30",
+      "weekLabel": "Semaine du lundi 20 juillet au dimanche 26 juillet 2026",
+      "briefDate": "2026-07-20",
+      "videoD": {
+        "title": "Le contrôle déguisé en amour",
+        "theme": "Emprise & contrôle coercitif : reconnaître la possession sous le romantisme",
+        "date": "2026-08-13"
+      },
+      "script": [
+        {
+          "num": "①",
+          "title": "HOOK",
+          "timing": "0-8 sec",
+          "lines": [
+            {
+              "t": "« S'il est jaloux, c'est qu'il t'aime. » On m'a répété cette phrase toute ma vie. Aujourd'hui je vais vous montrer comment ces cinq mots-là servent à justifier les plus belles prisons.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : face cam serré, regard direct, aucun sourire, pause de 2 sec avant de parler."
+          ]
+        },
+        {
+          "num": "②",
+          "title": "CONTEXTE & STATS",
+          "timing": "15-60 sec",
+          "lines": [
+            {
+              "t": "L'emprise dans le couple, ce n'est pas un cas rare réservé aux autres. En 2024, les services de sécurité ont enregistré 272 400 victimes de violences conjugales en France, un niveau quasi stable d'après le Ministère de l'Intérieur. Mais ce chiffre ne dit pas tout, parce que la forme la plus courante ne laisse aucun bleu : elle s'appelle le contrôle coercitif. C'est cette accumulation de petits gestes — surveiller, isoler, rabaisser, contrôler l'argent, les horaires, les vêtements — qui installe une domination sans qu'on la voie jamais arriver.",
+              "quote": false
+            },
+            {
+              "t": "Et voici le chiffre qui m'a glacée quand je l'ai découvert : le contrôle coercitif est retrouvé dans 100 % des féminicides. Cent pour cent. Ça veut dire qu'avant les coups, avant le drame, il y a toujours eu ce contrôle qu'on avait pris pour de l'amour. C'est tellement vrai que la France a commencé, en 2025, à vouloir inscrire le contrôle coercitif comme un délit à part entière dans le code pénal. On met enfin des mots sur ce qui, pendant des siècles, n'en avait aucun.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : même cadre, ton posé, pédagogue mais grave.",
+            "Montage : insert texte « 272 400 victimes en 2024 » puis « contrôle coercitif : présent dans 100 % des féminicides ». Source à l'écran en petit : Ministère de l'Intérieur / SSMSI, 2024.",
+            "GIF red flag / relation toxique en cutaway léger : https://tenor.com/view/relationship-toxic-ew-break-up-gif-20285412"
+          ]
+        },
+        {
+          "num": "③",
+          "title": "LANCEMENT SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et maintenant je vous invite à entrer profondément... dans ma tête.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : léger sourire, ton plus doux."
+          ]
+        },
+        {
+          "num": "④",
+          "title": "MON OPINION D'ABORD",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Mon avis, sans détour : l'amour et le contrôle ne sont pas deux versions de la même chose, ce sont deux forces opposées. L'amour veut te voir grandir, même quand ça l'éloigne de toi. Le contrôle veut te garder petite, à portée de main, dépendante. Retenez une seule règle : dès qu'un geste rend votre vie plus petite au lieu de la rendre plus grande, ce n'est pas de l'amour. C'est de la mainmise. Point.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : plan un peu plus serré sur « plus petite / plus grande », appuyer l'opposition."
+          ]
+        },
+        {
+          "num": "⑤",
+          "title": "DÉVELOPPEMENT",
+          "timing": "4-5 min",
+          "lines": [
+            {
+              "t": "Reprenons depuis le début, parce que le piège est justement là. Le contrôle ne commence jamais par de la violence. Il commence par de l'attention. Énormément d'attention. Au début, c'est grisant : quelqu'un qui veut savoir où tu es, avec qui, qui t'écrit dix fois par jour, qui veut passer tout son temps avec toi. On appelle ça « l'intensité », on trouve ça romantique. Sauf que l'amour sain te laisse respirer, alors que le contrôle, lui, remplit tout l'espace jusqu'à ce qu'il ne reste plus rien qui soit à toi.",
+              "quote": false
+            },
+            {
+              "t": "Prenons un exemple très concret, celui que tout le monde a déjà vu de près ou de loin : le téléphone. « Montre-moi tes messages, si tu n'as rien à cacher. » « Envoie-moi ta localisation, c'est juste que je m'inquiète. » Sur le moment, ça se déguise en preuve d'attachement. Mais posez-vous la vraie question : est-ce que cette demande vous fait vous sentir aimée, ou surveillée ? La confiance ne réclame pas de preuves en permanence. Le contrôle, lui, transforme chaque silence, chaque sortie, chaque « like » en interrogatoire. Et petit à petit, vous vous censurez toute seule pour avoir la paix.",
+              "quote": false
+            },
+            {
+              "t": "Deuxième mécanisme, plus sournois encore : l'isolement. Ça ne se dit jamais frontalement. Ça passe par des phrases qui ont l'air bienveillantes. « Ta copine, je la trouve mauvaise pour toi. » « Ta famille te met trop de pression, on devrait les voir moins. » « On est tellement bien tous les deux, pourquoi tu as besoin des autres ? » Un par un, ces petits renoncements semblent raisonnables. Mis bout à bout, ils te coupent de tous ceux qui auraient pu te dire : « attends, là, ce n'est pas normal. » Quand il ne te reste plus qu'une seule personne dans ta vie, cette personne a tout pouvoir sur toi. C'est mathématique.",
+              "quote": false
+            },
+            {
+              "t": "Je vais vous raconter mon histoire, la vraie, parce que je ne suis pas au-dessus de ça. J'ai déjà confondu du contrôle avec de l'amour, et je ne l'ai compris que bien trop tard. Au début, ses « je m'inquiète pour toi » me touchaient droit au cœur ; je me disais qu'enfin quelqu'un tenait vraiment à moi. Puis il a fallu justifier chaque sortie. Puis prévenir avant, pendant, après. Puis choisir des vêtements « moins provocants » pour ne pas « créer de problèmes ». Un jour, je me suis retrouvée à annuler un dîner avec ma meilleure amie juste pour éviter une dispute, et en raccrochant, j'ai réalisé un truc qui m'a fait froid dans le dos : ma vie était devenue toute petite. J'avais rétréci sans m'en rendre compte, en croyant que c'était ça, aimer fort. Ce n'était pas de l'amour. C'était une laisse qu'on m'avait présentée comme un collier de perles.",
+              "quote": false
+            },
+            {
+              "t": "Il y a un troisième outil qu'il faut savoir nommer : la dévalorisation déguisée en humour ou en protection. « Je dis ça pour ton bien. » « Heureusement que je suis là, sans moi tu n'y arriverais pas. » « C'était une blague, tu es trop susceptible. » À force, tu finis par croire que tu ne vaux pas grand-chose, que tu as de la chance qu'on veuille bien de toi. Et c'est exactement le but : une personne qui doute d'elle-même ne part jamais. Le contrôle ne cherche pas à te rendre heureuse, il cherche à te rendre dépendante. Nuance énorme.",
+              "quote": false
+            },
+            {
+              "t": "Alors comment faire la différence, concrètement, sans se prendre la tête ? J'ai un test tout simple que je vous donne : demandez-vous si la relation agrandit votre vie ou si elle la rétrécit. L'amour vous donne envie de voir vos amis, de tenter des choses, de devenir une meilleure version de vous — et il s'en réjouit. Le contrôle vous éloigne de tout ça, un renoncement à la fois, et appelle ça de la fusion. Autre repère infaillible : l'amour respecte le « non ». Un partenaire qui t'aime accepte que tu dises non, que tu aies un jardin secret, une soirée sans lui, un avis différent. Celui qui punit chaque « non » par de la bouderie, de la colère ou du chantage ne t'aime pas librement : il te dresse.",
+              "quote": false
+            },
+            {
+              "t": "Et je veux finir sur un message d'espoir, parce que ce sujet est lourd mais il n'est pas une condamnation. Mettre un mot sur ce qu'on vit, c'est déjà reprendre du pouvoir. Si en m'écoutant vous vous êtes reconnue, ce n'est pas une preuve que vous êtes faible ou naïve — le contrôle est conçu précisément pour ne pas se voir de l'intérieur. Parlez-en à quelqu'un, une amie, un professionnel, une association. Rouvrez une porte, une seule, vers l'extérieur. Parce qu'une vie qui s'agrandit à nouveau, c'est le signe le plus sûr que vous revenez vers l'amour — le vrai.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "B-roll : mains sur un téléphone, porte qui se ferme doucement, fenêtre — pour illustrer surveillance et isolement.",
+            "Montage : réincruster l'insert « contrôle coercitif : présent dans 100 % des féminicides » quand Amanda rappelle la gravité.",
+            "Insert émotion sur l'anecdote perso (« ma vie était devenue toute petite ») : ralenti léger, musique douce, laisser respirer.",
+            "GIF / visuel red flag sur la liste des signes : https://tenor.com/search/red-flag-gifs"
+          ]
+        },
+        {
+          "num": "⑥",
+          "title": "MOMENT CLÉ",
+          "timing": "",
+          "lines": [
+            {
+              "t": "L'amour te donne des ailes. Le contrôle te donne une laisse — mais te fait croire que c'est un collier de perles.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan fixe, silence de 2 sec après la phrase pour laisser l'impact."
+          ]
+        },
+        {
+          "num": "⑦",
+          "title": "QUESTION OUVERTE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Alors dites-moi franchement en commentaire : vous avez déjà confondu de la jalousie avec de l'amour ? Et à quel moment, exactement, vous avez compris que ce n'était pas la même chose ?",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : sourire complice mais doux, inviter vraiment au partage."
+          ]
+        },
+        {
+          "num": "⑧",
+          "title": "TEASING",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et vendredi prochain, on change complètement d'ambiance, mais on reste sur le corps et la liberté : « Naturisme : pourquoi on confond nudité et sexualité ? » On va déconstruire ensemble un des plus vieux tabous — celui qui fait qu'un corps nu est immédiatement vu comme un corps sexuel. Croyez-moi, ça va vous surprendre.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : ton complice, teaser l'épisode suivant sans tout dévoiler."
+          ]
+        },
+        {
+          "num": "⑨",
+          "title": "CTA — ÉCRAN DE FIN",
+          "timing": "20 sec",
+          "lines": [
+            {
+              "t": "Si cette vidéo vous a aidée à voir plus clair, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat en commentaires, et sur mon Telegram pour la version bien plus intime et sans filtre — celle que YouTube ne me laisserait jamais poster. Tous les liens sont en description.",
+              "quote": false
+            }
+          ],
+          "notes": [
+            "Caméra : écran de fin, cartes d'abonnement, rappel Facebook + Telegram à l'écran."
+          ]
+        },
+        {
+          "num": "⑩",
+          "title": "CLÔTURE SIGNATURE",
+          "timing": "",
+          "lines": [
+            {
+              "t": "Et n'oubliez pas que chacun a ses raisons de penser ce qu'il pense.",
+              "quote": true
+            }
+          ],
+          "notes": [
+            "Caméra : plan légèrement élargi, ton doux."
+          ]
+        }
+      ],
+      "reels": [
+        {
+          "n": "1",
+          "title": "Le chiffre qui glace",
+          "angle": "STAT",
+          "dur": "20-25 sec",
+          "cam": "face cam serré, ton grave",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Lundi 10/08",
+          "hook": "Le contrôle coercitif est retrouvé dans 100 % des féminicides. Cent pour cent.",
+          "corps": "Ça veut dire qu'avant le drame, il y a toujours eu cette emprise qu'on a prise pour de l'amour. En 2024, 272 400 victimes de violences conjugales ont été recensées en France — et la forme la plus fréquente ne laisse aucun bleu.",
+          "cta": "Ma vidéo « Le contrôle déguisé en amour » arrive — abonnez-vous."
+        },
+        {
+          "n": "2",
+          "title": "Le plus gros mensonge du couple",
+          "angle": "OPINION",
+          "dur": "25-30 sec",
+          "cam": "face cam, ton tranché",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Mardi 11/08",
+          "hook": "« S'il est jaloux, c'est qu'il t'aime. » C'est le plus gros mensonge qu'on nous ait vendu.",
+          "corps": "La jalousie qui surveille, qui fouille, qui isole, ce n'est pas de l'amour : c'est de la peur qui a besoin de te contrôler. L'amour te fait confiance. Le contrôle te met en cage et appelle ça de la passion.",
+          "cta": "On en parle cash dans la vidéo. Dis-moi en commentaire si tu es d'accord."
+        },
+        {
+          "n": "3",
+          "title": "Ce que je n'avais pas vu venir",
+          "angle": "INTIME",
+          "dur": "30-35 sec",
+          "cam": "face cam doux, regard baissé puis caméra",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Jeudi 13/08",
+          "hook": "J'ai déjà confondu du contrôle avec de l'amour. Et je ne l'ai vu que bien trop tard.",
+          "corps": "Au début, ses « je m'inquiète pour toi » me touchaient. Puis il a fallu justifier chaque sortie, chaque message. Le jour où j'ai réalisé que ma vie était devenue toute petite, j'ai compris : ce n'était pas de l'amour, c'était une laisse.",
+          "cta": "Si ça te parle, cette vidéo est pour toi. Abonne-toi."
+        },
+        {
+          "n": "4",
+          "title": "3 red flags à repérer ce soir",
+          "angle": "CONSEIL / QUESTION CLIVANTE",
+          "dur": "30 sec",
+          "cam": "face cam dynamique, compte sur les doigts",
+          "plats": "TikTok + YouTube + Facebook",
+          "jour": "Samedi 15/08",
+          "hook": "3 phrases qui ressemblent à de l'amour mais qui sont du contrôle 🚩",
+          "corps": "Un : « Je regarde ton téléphone parce que je t'aime. » Deux : « Tes amies ont une mauvaise influence sur toi. » Trois : « Sans moi, tu n'y arriverais pas. » Aucune de ces phrases ne t'agrandit. Toutes te rétrécissent.",
+          "cta": "Tu en as déjà entendu une ? Dis-moi laquelle en commentaire."
+        }
+      ]
+    },
+    {
       "isoWeek": "2026-W29",
       "weekLabel": "Semaine du lundi 13 juillet au dimanche 19 juillet 2026",
       "briefDate": "2026-07-13",
