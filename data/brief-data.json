@@ -2,50 +2,50 @@
   "meta": {
     "channel": "Les Pensées d'Amanda",
     "handle": "@blondymandise",
-    "weekLabel": "Semaine du lundi 13 juillet au dimanche 19 juillet 2026",
-    "briefDate": "2026-07-13",
-    "isoWeek": "2026-W29",
+    "weekLabel": "Semaine du lundi 20 juillet au dimanche 26 juillet 2026",
+    "briefDate": "2026-07-20",
+    "isoWeek": "2026-W30",
     "previous": {
-      "title": "Don Juan VS Nympho",
-      "date": "2026-07-10"
-    },
-    "videoA": {
       "title": "Grossesse gériatrique : périmée à 35 ans ?",
       "date": "2026-07-17"
     },
-    "videoB": {
+    "videoA": {
       "title": "On a tous 3 personnes en nous",
       "date": "2026-07-24"
     },
-    "videoC": {
+    "videoB": {
       "title": "La jalousie – toxique ou preuve d'amour ?",
       "date": "2026-07-31"
     },
-    "videoD": {
+    "videoC": {
       "title": "10 conseils pour ta première fois au village naturiste du Cap d'Agde",
-      "theme": "Naturisme & libertinage en couple",
-      "date": "2026-08-07",
-      "next": "Avoir un OnlyFans en couple : les règles qu'on s'est fixées"
+      "date": "2026-08-06"
+    },
+    "videoD": {
+      "title": "Le contrôle déguisé en amour",
+      "theme": "Emprise & contrôle coercitif : reconnaître la possession sous le romantisme",
+      "date": "2026-08-13",
+      "next": "Naturisme : pourquoi on confond nudité et sexualité ?"
     }
   },
   "links": {
-    "OnlyFans": "https://onlyfans.com/A_COMPLETER",
-    "MYM": "https://mym.fans/A_COMPLETER",
-    "Telegram": "https://t.me/A_COMPLETER",
-    "PayPal": "https://paypal.me/A_COMPLETER",
+    "OnlyFans": "https://onlyfans.com/cutyamanda",
+    "MYM": "https://mym.fans/la_mandiise",
+    "Telegram": "https://t.me/+XjHTw5anup4zMjY8",
+    "PayPal": "https://paypal.me/mandiise?country.x=FR&locale.x=fr_FR",
     "YouTube": "https://youtube.com/@blondymandise",
-    "TikTok": "https://tiktok.com/@A_COMPLETER",
-    "Facebook": "https://facebook.com/A_COMPLETER",
-    "Threads": "https://threads.net/@blondymandise",
+    "TikTok": "https://tiktok.com/@la_mandiiiise",
+    "Facebook": "https://www.facebook.com/share/1EgoqXbwPA/?mibextid=wwXIfr",
+    "Threads": "https://threads.net/@",
     "Reddit": "https://reddit.com/user/A_COMPLETER",
-    "Bio": "https://linktr.ee/A_COMPLETER",
-    "X": "https://x.com/A_COMPLETER",
-    "Snapchat": "https://snapchat.com/add/A_COMPLETER"
+    "Bio": "https://getmysocial.com/blondymandise",
+    "X": "https://x.com/la_mandiise",
+    "Snapchat": "https://snapchat.com/t/Il3EdfGi"
   },
   "schedule": [
     {
       "day": "Lundi",
-      "date": "13/07",
+      "date": "20/07",
       "posts": [
         {
           "platKey": "youtube",
@@ -53,8 +53,8 @@
           "time": "09:00",
           "moment": "Matin",
           "type": "Post Communauté : sondage",
-          "texte": "Sondage : un homme qui multiplie les conquêtes = un tombeur. Une femme = une « facile ». Vous trouvez ça juste ? 🗳️",
-          "media": "Onglet Communauté YouTube : sondage 2 options + image miniature vidéo précédente.",
+          "texte": "Sondage : à partir de quel âge une femme est « trop vieille » pour avoir un enfant, selon vous ? Et un homme ? 🗳️",
+          "media": "Onglet Communauté YouTube : sondage 2 options + miniature vidéo précédente (grossesse gériatrique).",
           "lien": "YouTube",
           "astuce": "Le sondage Communauté relance les abonnés entre deux vidéos."
         },
@@ -64,8 +64,8 @@
           "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook réel)",
-          "texte": "« Pourquoi un homme qui couche beaucoup est un héros, et une femme une salope ? » 😳",
-          "media": "Réel vidéo précédente, hook 3 s, son tendance, sous-titres, AUCUN watermark. Caption courte + hashtags niche.",
+          "texte": "« Grossesse gériatrique. » C'est le VRAI mot médical pour une femme enceinte à 35 ans. 35 ans. 😳",
+          "media": "Extrait vidéo précédente, hook 3 s, son tendance, sous-titres, AUCUN watermark. Caption courte + hashtags niche.",
           "lien": "TikTok",
           "astuce": "Le son tendance = ticket FYP. Hook dans les 3 premières secondes."
         },
@@ -75,8 +75,8 @@
           "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "On refait le débat de vendredi 👀 Team double standard ou team égalité ?",
-          "media": "Story verticale rapide, sticker sondage.",
+          "texte": "On teste : citez UN mot qu'on colle aux femmes et jamais aux hommes 👀",
+          "media": "Story verticale rapide, sticker questions.",
           "lien": "Bio",
           "astuce": "Story TikTok = légère/tendance, distincte de FB."
         },
@@ -86,7 +86,7 @@
           "time": "12:30",
           "moment": "Midi",
           "type": "Post feed débat",
-          "texte": "Un homme = un tombeur. Une femme = une « facile ». Pour la MÊME chose. Vous êtes team double standard ou team égalité ? 👇",
+          "texte": "On dit d'une femme enceinte à 35 ans qu'elle fait une grossesse « gériatrique ». Pour un homme du même âge ? Aucun mot. Vous trouvez ça normal ? 👇",
           "media": "Texte + image. Pas de lien dans le post (bio). Répondre en commentaires.",
           "lien": "Bio",
           "astuce": "FB = le débat en commentaires, c'est le signal roi. Réponds aux premiers commentaires."
@@ -97,8 +97,8 @@
           "time": "12:35",
           "moment": "Midi",
           "type": "Story Facebook (débat)",
-          "texte": "Le mot « nympho », vous l'avez déjà entendu balancé à un mec ? Jamais, hein. Réagissez 👇",
-          "media": "Story FB propre (visuel + copie différents de TikTok), sticker questions.",
+          "texte": "« Horloge biologique. » Vous l'avez déjà entendue balancée à un homme, vous ? Réagissez 👇",
+          "media": "Story FB propre (visuel + copie différents de TikTok), sticker sondage.",
           "lien": "Bio",
           "astuce": "Story FB = angle débat/communauté, jamais le copier-coller de TikTok."
         },
@@ -108,7 +108,7 @@
           "time": "10:30",
           "moment": "Matin",
           "type": "Engagement / opinion",
-          "texte": "« Elle a un passé. » Comme si le vôtre vous rendait moins désirable, messieurs 😏 On en parle ?",
+          "texte": "« Périmée à 35 ans. » On parle d'un être humain ou d'un yaourt, là ? 🥴 On en discute.",
           "media": "Tweet texte, hot take. Inviter aux réponses.",
           "lien": "—",
           "astuce": "80% du contenu X = marque/engagement, 20% promo."
@@ -119,7 +119,7 @@
           "time": "20:30",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Sur YouTube j'ai posé la question du double standard. Ici je vous montre la femme libre que ça dérange tant 😏👇",
+          "texte": "Sur YouTube je démonte les mots qu'on colle aux femmes. Ici je te montre la femme qu'aucune date de péremption n'arrête 😏👇",
           "media": "Photo/clip teaser croppé. Lien OF direct dans le tweet.",
           "lien": "OnlyFans",
           "astuce": "Créneau soir = le meilleur pour convertir. Lien OF autorisé sur X."
@@ -130,7 +130,7 @@
           "time": "19:00",
           "moment": "Soir",
           "type": "Teaser (renvoi profil)",
-          "texte": "Débat du lundi : une femme qui assume son désir, c'est une « nympho » ou juste une femme libre ? Mon avis (et un peu plus) sur mon profil 😉",
+          "texte": "On m'a dit « trop vieille » à 35 ans. Voilà à quoi ressemble une femme « périmée » 😉 (un peu plus sur mon profil)",
           "media": "Photo verticale, regard caméra, watermark discret. Titre accrocheur, flair obligatoire.",
           "lien": "Reddit",
           "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
@@ -140,8 +140,8 @@
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story publique (nurture, manuel)",
-          "texte": "Entre nous sur Snap 👻 le débat de vendredi m'a fait repenser à un truc perso… je vous raconte.",
+          "type": "Story publique (nurture)",
+          "texte": "Entre nous sur Snap 👻 le mot « gériatrique », ça m'a fait un truc… je vous raconte pourquoi.",
           "media": "Story publique (Creator Profile). PAS de vente de snap privé. CTA soft OF.",
           "lien": "OnlyFans",
           "astuce": "Snap = profil PUBLIC + Spotlight. Le privé premium n'est plus fiable."
@@ -152,7 +152,7 @@
           "time": "21:00",
           "moment": "Soir",
           "type": "Confession intime (thème précédent)",
-          "texte": "Entre nous 🔓 La première fois qu'on m'a traitée de « facile », j'avais 19 ans. Ce que ça m'a fait — et pourquoi j'ai arrêté d'avoir honte.",
+          "texte": "Entre nous 🔓 La première fois qu'on m'a fait sentir que mon corps avait une « date limite », j'ai eu envie de tout envoyer valser. Je vous dis ce que ça m'a appris.",
           "media": "Vocal intime ou vidéo exclusive.",
           "lien": "OnlyFans",
           "astuce": "Contact quotidien = rétention. Le chat fait dépenser, pas juste l'image."
@@ -161,112 +161,112 @@
     },
     {
       "day": "Mardi",
-      "date": "14/07",
+      "date": "21/07",
       "posts": [
         {
           "platKey": "tiktok",
           "plats": "TikTok",
           "time": "10:00",
           "moment": "Matin",
-          "type": "Vidéo découverte (hook réel #2)",
-          "texte": "Le mot « nympho » vient du grec. On a littéralement inventé un mot pour faire honte aux femmes libres 🤯",
-          "media": "Réel #2, son tendance, 3 s hook, sous-titres, sans watermark.",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "Les 3 mots qu'on a inventés pour mettre la pression aux femmes (et zéro pour les hommes) 👇",
+          "media": "Extrait vidéo précédente, hook 3 s, son tendance, sous-titres, AUCUN watermark.",
           "lien": "TikTok",
-          "astuce": "Régularité = 4× l'engagement. Vise mardi-jeudi en priorité."
+          "astuce": "Format liste = fort taux de complétion. Annonce les 3 dès la 1re seconde."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "10:05",
-          "moment": "Matin",
+          "time": "18:30",
+          "moment": "Après-midi",
           "type": "Story TikTok (légère)",
-          "texte": "Question du jour : le pire mot qu'on ait collé sur une femme ? 👀",
-          "media": "Story rapide, sticker.",
+          "texte": "Sondage express : l'« horloge biologique », vraie contrainte ou pression sociale ? ⏰",
+          "media": "Story verticale, sticker sondage 2 choix.",
           "lien": "Bio",
-          "astuce": "Distincte de la story FB."
+          "astuce": "Story TikTok distincte de FB : ici on reste léger/ludique."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "13:00",
+          "time": "12:30",
           "moment": "Midi",
-          "type": "Reel Facebook #1 (cadré débat)",
-          "texte": "« Elle se laisse aller. » On dit ça d'une femme qui vit sa vie. L'équivalent pour un homme ? Il n'existe pas. Vous en avez d'autres ? 👇",
-          "media": "Reel natif 90-120 s (extrait plus développé), caption débat, question.",
+          "type": "Post feed débat",
+          "texte": "Mesdames : on vous a déjà fait sentir que votre corps avait une date de péremption ? Racontez, on est là pour en parler 👇",
+          "media": "Texte + image communauté. Pas de lien (bio). Modérer et répondre.",
           "lien": "Bio",
-          "astuce": "Reel FB peut être plus long que TikTok (90-120 s). Upload natif, sans watermark."
+          "astuce": "Question ouverte + vécu = commentaires longs = portée FB."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "13:05",
+          "time": "12:35",
           "moment": "Midi",
           "type": "Story Facebook (débat)",
-          "texte": "Balancez-moi LE mot sexiste qu'on vous a déjà collé. J'en fais une story demain.",
-          "media": "Story FB propre, sticker questions.",
+          "texte": "Un homme qui devient papa à 50 ans = « un roc ». Une femme à 40 = « un risque ». On accepte ça encore longtemps ? 👇",
+          "media": "Story FB propre, visuel + copie différents de TikTok.",
           "lien": "Bio",
-          "astuce": "UGC = fait durer le thème toute la semaine."
+          "astuce": "Angle société : ça fait réagir les 35-65 (cœur de cible acheteurs)."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "10:30",
+          "time": "11:00",
           "moment": "Matin",
-          "type": "Engagement / pod RT",
-          "texte": "Rappel du jour : votre valeur n'a pas de date de péremption. (Oui, ça vise quelqu'un 😌)",
-          "media": "Tweet perso + boost pod RT.",
+          "type": "Engagement / opinion",
+          "texte": "Le vocabulaire médical n'est jamais neutre. « Gériatrique » à 35 ans, ça vous choque autant que moi ? 🧵",
+          "media": "Tweet ouvrant un mini-thread. Inviter aux réponses.",
           "lien": "—",
-          "astuce": "Le pod de RT = levier de portée n°1 sur X."
+          "astuce": "Ouvre un thread : chaque réponse relance l'algo."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "20:30",
+          "time": "21:00",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Le contenu que YouTube ne me laisserait jamais poster est à un clic 🔓👇",
-          "media": "Clip teaser spicy. Lien OF direct.",
+          "texte": "« Trop vieille pour ci, trop tard pour ça. » Ici, aucune horloge. Juste moi, à mon rythme 😏 lien 👇",
+          "media": "Photo/clip suggestif croppé. Lien OF direct.",
           "lien": "OnlyFans",
-          "astuce": "Varier l'accroche, jamais la même image 2×."
+          "astuce": "Le soir convertit : garde le meilleur visuel pour ce créneau."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "19:00",
+          "time": "20:00",
           "moment": "Soir",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Femme libre et fière de l'être. Ceux que ça dérange peuvent scroller 😉 (profil en bio).",
-          "media": "Photo verticale, plein pied, watermark discret. Flair.",
+          "type": "Contribution + soft promo",
+          "texte": "35 ans et « périmée » d'après certains 🙄 pas franchement l'impression que ça se voit… votre avis ?",
+          "media": "Photo verticale qualité, regard caméra. Titre engageant, flair obligatoire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair requis : Vérifiée · Alterne les images, jamais 2× la même le même jour."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "20:00",
+          "time": "20:30",
           "moment": "Soir",
-          "type": "Story publique (manuel)",
-          "texte": "Snap du soir 👻 un aperçu de ma journée + une pensée un peu perso.",
-          "media": "Story publique + Spotlight si clip fort.",
+          "type": "Story publique (nurture)",
+          "texte": "Petite pensée du soir sur Snap 👻 pourquoi on met une pression de dingue aux femmes sur l'âge.",
+          "media": "Story publique Creator Profile, ton confidence. CTA soft OF.",
           "lien": "OnlyFans",
-          "astuce": "1-2 Spotlight/semaine pour la découverte froide."
+          "astuce": "Nurture : on crée du lien, on ne vend pas de snap privé."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
+          "time": "21:30",
           "moment": "Soir",
-          "type": "Coulisses intimes (précédent)",
-          "texte": "Coulisses 🔓 la vraie raison pour laquelle j'assume tout aujourd'hui. Un aveu que je garde pour vous.",
-          "media": "Vidéo/vocal exclusif, ton confidence.",
+          "type": "Coulisses / confession",
+          "texte": "Coulisses 🔓 Demain je tourne la vidéo sur l'emprise dans le couple. Un sujet qui me touche perso… je vous en dis un mot avant tout le monde.",
+          "media": "Message vocal + photo behind the scenes.",
           "lien": "OnlyFans",
-          "astuce": "L'exclu Telegram = la récompense de l'intimité."
+          "astuce": "Annoncer le tournage crée de l'attente et de l'exclusivité."
         }
       ]
     },
     {
       "day": "Mercredi",
-      "date": "15/07",
+      "date": "22/07",
       "posts": [
         {
           "platKey": "youtube",
@@ -274,231 +274,242 @@
           "time": "09:00",
           "moment": "Matin",
           "type": "Post Communauté : coulisses tournage",
-          "texte": "Jour de tournage 🎬 Indice sur la vidéo de vendredi : « les mots que les hommes ont inventés pour nous »… 👀",
-          "media": "Onglet Communauté : photo plateau + sticker « devine le sujet ».",
+          "texte": "Jour de tournage 🎬 Aujourd'hui je filme un sujet sensible : reconnaître l'amour… du contrôle. Une question qui vous parle ?",
+          "media": "Photo coulisses (setup, lumière) en onglet Communauté.",
           "lien": "YouTube",
-          "astuce": "La Communauté garde la chaîne vivante entre deux vidéos."
+          "astuce": "Les coulisses humanisent et boostent l'attente de la prochaine vidéo."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "11:00",
+          "time": "10:00",
           "moment": "Matin",
-          "type": "Vidéo découverte (coulisses #3)",
-          "texte": "POV : on tourne la vidéo qui va vous énerver vendredi 🎬",
-          "media": "Clip coulisses tournage, son tendance.",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "« Il t'aime » ou « il te contrôle » ? La nuance que personne ne t'apprend 👀",
+          "media": "Extrait/teaser tournage du jour, hook 3 s, son tendance, sans watermark.",
           "lien": "TikTok",
-          "astuce": "Le behind-the-scenes crée de l'attente."
+          "astuce": "Teaser du tournage = curiosité maximale, CTA « bio »."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "11:05",
-          "moment": "Matin",
-          "type": "Story TikTok (coulisses)",
-          "texte": "Sur le plateau 🎬 devinez le thème de vendredi.",
-          "media": "Story rapide plateau.",
+          "time": "19:00",
+          "moment": "Après-midi",
+          "type": "Story TikTok (légère)",
+          "texte": "Devinette 🎬 je tourne quoi aujourd'hui à votre avis ? Indice : couple + red flags 🚩",
+          "media": "Story verticale coulisses floutés, sticker questions.",
           "lien": "Bio",
-          "astuce": "Distincte de FB."
+          "astuce": "Story TikTok = jeu/coulisses, distincte de la story FB."
         },
         {
           "platKey": "groupe",
           "plats": "Groupe FB",
-          "time": "14:00",
-          "moment": "Après-midi",
-          "type": "Post Groupe (communauté)",
-          "texte": "Entre nous dans le groupe 👥 : je tourne aujourd'hui la vidéo de vendredi. Vous voulez que j'aborde quoi précisément sur le vocabulaire sexiste ? Vos idées passent peut-être au montage.",
-          "media": "Post dans le Groupe FB « La communauté des Pensées d'Amanda ». Répondre à chacun.",
-          "lien": "Bio",
-          "astuce": "Le Groupe = portée organique max + communauté que tu possèdes. 2 posts/sem."
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Post groupe (coulisses)",
+          "texte": "Team La communauté des Pensées d'Amanda 💜 je tourne aujourd'hui sur un sujet délicat : le contrôle déguisé en amour. Vous avez déjà vécu ça ? On en parle ici, en privé, entre nous. (Et le débrief le plus cash, c'est sur mon Telegram 👇)",
+          "media": "Post texte dans le groupe FB. Épingler.",
+          "lien": "Telegram",
+          "astuce": "Le groupe = communauté chaude → on la pousse vers Telegram (funnel)."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "14:05",
-          "moment": "Après-midi",
-          "type": "Story Facebook",
-          "texte": "Journée tournage 🎬 la version débat arrive vendredi.",
-          "media": "Story FB propre.",
+          "time": "12:30",
+          "moment": "Midi",
+          "type": "Post feed débat",
+          "texte": "« Il regarde mon téléphone parce qu'il tient à moi. » Preuve d'amour… ou premier signe de contrôle ? 👇",
+          "media": "Texte + image. Pas de lien (bio). Répondre aux commentaires.",
           "lien": "Bio",
-          "astuce": "Angle communauté."
+          "astuce": "Sujet clivant = engagement fort. Prépare-toi à modérer."
         },
         {
           "platKey": "prive",
-          "plats": "Feed privé · OF/MYM",
-          "time": "16:00",
+          "plats": "Feed privé OF/MYM",
+          "time": "17:00",
           "moment": "Après-midi",
-          "type": "Teaser suggestif (feed privé)",
-          "texte": "« Périmée à 35 ans. » C'est le mot qu'ils ont inventé pour les femmes comme moi. Sur YouTube j'en ris. Ici, viens me parler en privé… laisse-moi te faire changer d'avis. Tu débloques, on discute, je te montre. 🔓😏",
-          "media": "Post feed OF/MYM. Texte suggestif (pas explicite). Amorce le chat + PPV.",
+          "type": "Teaser suggestif (thème vidéo A)",
+          "texte": "On a tous 3 personnes en nous… 😈 Sur YouTube je te présente sagement le moi, le surmoi et le ça. Ici, je te laisse rencontrer celle que YouTube ne verra JAMAIS — la troisième, celle qui ne se retient pas. Tu débloques, on discute, et je te montre laquelle je suis vraiment ce soir. Viens me parler en DM. 💌",
+          "media": "Photo suggestive (jamais explicite visuellement), texte teaser. Lien OF.",
           "lien": "OnlyFans",
-          "astuce": "Feed privé = bas de funnel. Le chat/DM est ce qui fait dépenser."
+          "astuce": "Template privé : hameçon → retournement → rareté → bascule DM → « tu débloques, on discute »."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "16:30",
-          "moment": "Après-midi",
-          "type": "Teaser → OnlyFans",
-          "texte": "Pause tournage. Et forcément, la pause est plus intéressante que le tournage 😏 Elle est ici 👇",
-          "media": "Selfie/clip coulisses teaser. Lien OF direct.",
+          "time": "13:00",
+          "moment": "Midi",
+          "type": "Engagement / opinion",
+          "texte": "Contrôler le téléphone de l'autre, ce n'est pas de la jalousie mignonne. C'est le premier barreau de la cage. Je le dis. 🚩",
+          "media": "Tweet hot take. Inviter aux réponses.",
+          "lien": "—",
+          "astuce": "Prise de position claire = RT. Réponds aux citations."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "Teaser → OnlyFans + pod RT",
+          "texte": "Journée tournage terminée 🎬 récompense du soir par ici 😏 lien 👇 (et je RT mes copines créatrices, balancez vos comptes 💜)",
+          "media": "Photo/clip teaser. Lien OF direct. Round de RT entre créatrices (pod).",
           "lien": "OnlyFans",
-          "astuce": "Teaser coulisses = authentique, convertit bien."
+          "astuce": "Le pod de RT du soir élargit la portée entre créatrices."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "19:00",
+          "time": "20:00",
           "moment": "Soir",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Journée tournage terminée, place au vrai contenu 😉 Tout est sur mon profil (en bio).",
-          "media": "Photo verticale coulisses, watermark discret. Flair.",
+          "type": "Contribution + soft promo",
+          "texte": "Après une grosse journée de taf, un peu de douceur 😌 (plus sur mon profil)",
+          "media": "Photo verticale, ambiance intime, watermark discret. Flair obligatoire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/GoneWildFrance · Flair : Vérifiée (F) · Varie les subs et les images."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "20:00",
+          "time": "20:30",
           "moment": "Soir",
-          "type": "Story publique (manuel)",
-          "texte": "Snap coulisses du tournage 🎬 + un aperçu que vous ne verrez nulle part ailleurs.",
-          "media": "Story publique. CTA soft OF.",
+          "type": "Story publique + Spotlight",
+          "texte": "Coulisses de tournage sur Snap 👻 + un Spotlight qui va vous plaire ce soir 👀",
+          "media": "Story publique coulisses + 1 Spotlight vertical dynamique. CTA soft OF.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel, côté live/vrai."
+          "astuce": "1-2 Spotlight/sem : c'est la vitrine froide gratuite de Snap."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
-          "moment": "Soir",
-          "type": "Confession intime (précédent)",
-          "texte": "Entre nous 🔓 on a fini de tourner tard. Je vous parle vraiment, sans caméra pro, sans montage — juste moi.",
-          "media": "Vocal brut, non monté.",
+          "time": "22:00",
+          "moment": "Nuit",
+          "type": "Confession intime",
+          "texte": "Entre nous, tard 🔓 Aujourd'hui j'ai parlé d'emprise face caméra et ça a réveillé des trucs. Je vous confie ce que je n'ai pas dit dans la vidéo.",
+          "media": "Vocal intime, ton confidence.",
           "lien": "OnlyFans",
-          "astuce": "Le brut renforce l'intimité."
+          "astuce": "La confidence nocturne = le moment où le lien (et les dépenses) se créent."
         }
       ]
     },
     {
       "day": "Jeudi",
-      "date": "16/07",
+      "date": "23/07",
       "posts": [
         {
           "platKey": "tiktok",
           "plats": "TikTok",
           "time": "10:00",
           "moment": "Matin",
-          "type": "Vidéo découverte (teasing soft #4)",
-          "texte": "Demain je démonte le vocabulaire que les hommes ont inventé pour nous ranger dans des cases 🔥",
-          "media": "Réel #4, son tendance, teasing soft (pas de lien poussé).",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "Le mot « périmée » pour une femme de 35 ans : d'où ça vient vraiment ? La réponse va t'énerver 😤",
+          "media": "Extrait vidéo précédente, hook 3 s, son tendance, sans watermark.",
           "lien": "TikTok",
-          "astuce": "TikTok pénalise le push hors-app : rester soft."
+          "astuce": "Promesse d'info + émotion = complétion + partages."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "10:05",
-          "moment": "Matin",
-          "type": "Story TikTok (teasing)",
-          "texte": "Demain 8h, ça va piquer 👀",
-          "media": "Story rapide teasing.",
+          "time": "18:00",
+          "moment": "Après-midi",
+          "type": "Story TikTok (légère)",
+          "texte": "Demain, nouvelle vidéo 👀 indice : on a TOUS 3 personnes dans la tête 🧠 vous voyez de quoi je parle ?",
+          "media": "Story verticale teaser, sticker questions.",
           "lien": "Bio",
-          "astuce": "Distincte de FB."
+          "astuce": "Teaser léger sur TikTok, la version « débat » ira sur FB."
         },
         {
           "platKey": "youtube",
           "plats": "YouTube",
-          "time": "19:30",
-          "moment": "Soir",
-          "type": "Post Communauté : teasing",
-          "texte": "DEMAIN 8h 🚨 « Grossesse gériatrique : périmée à 35 ans ? » Notif activée ? 🔔",
-          "media": "Onglet Communauté : miniature + compte à rebours.",
-          "lien": "YouTube",
-          "astuce": "Le teasing Communauté du jeudi soir = pic de notifs avant la sortie."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Post feed teasing",
-          "texte": "« Grossesse gériatrique » à 35 ans. Vous connaissez l'équivalent pour un homme ? Non. Demain 8h, je démonte tout 🔗 lien en bio demain.",
-          "media": "Post feed teasing + miniature.",
-          "lien": "Bio",
-          "astuce": "Amorce le débat avant même la sortie."
+          "type": "Post Communauté : teasing vidéo A",
+          "texte": "DEMAIN 8h ⏰ nouvelle vidéo : « On a tous 3 personnes en nous ». Le moi, le surmoi, le ça… et pourquoi vous vous mentez à vous-même sans le savoir. Notez le rappel 🔔",
+          "media": "Miniature de la vidéo A en onglet Communauté. Activer la cloche.",
+          "lien": "YouTube",
+          "astuce": "Teasing J-1 au soir = pics de vues à la sortie du lendemain."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "20:05",
+          "time": "12:30",
+          "moment": "Midi",
+          "type": "Post feed débat",
+          "texte": "On a tous une petite voix qui dit « fais-le » et une autre qui dit « surtout pas ». Vous écoutez laquelle, vous ? 👇 (Nouvelle vidéo demain 8h)",
+          "media": "Texte + image. Teasing vidéo A. Pas de lien (bio).",
+          "lien": "Bio",
+          "astuce": "Amorcer le thème de demain = curiosité + rappel implicite."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "19:00",
           "moment": "Soir",
           "type": "Story Facebook (teasing)",
-          "texte": "Demain 8h 🚨 la vidéo qui va vous faire réagir. Notif ?",
-          "media": "Story FB propre teasing.",
+          "texte": "Demain 8h, on entre dans ma tête 🧠 « On a tous 3 personnes en nous ». Réglez le réveil 👀",
+          "media": "Story FB propre, visuel teaser vidéo A, sticker compte à rebours.",
           "lien": "Bio",
-          "astuce": "Angle communauté."
+          "astuce": "Sticker compte à rebours = rappel automatique pour la communauté."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "16:00",
-          "moment": "Après-midi",
-          "type": "Teaser → OnlyFans",
-          "texte": "Demain nouvelle vidéo. Ce soir, tout ce que je ne peux pas dire sur YouTube 🔓👇",
-          "media": "Clip teaser spicy. Lien OF direct.",
-          "lien": "OnlyFans",
-          "astuce": "Teaser direct."
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Engagement / opinion",
+          "texte": "Tu n'es pas UNE personne. Tu es un conseil d'administration de 3 voix qui se disputent en permanence 🧠 Vidéo demain.",
+          "media": "Tweet teaser thème vidéo A. Inviter aux réponses.",
+          "lien": "—",
+          "astuce": "Teaser intelligent = curiosité, engagement organique."
         },
         {
           "platKey": "x",
           "plats": "X",
           "time": "20:30",
           "moment": "Soir",
-          "type": "Teasing vidéo A → OnlyFans",
-          "texte": "« Périmée à 35 ans. » Demain je réponds sur YouTube. Ici, je vous prouve le contraire ce soir 😏🔓",
-          "media": "Teaser bascule thème A. Lien OF.",
+          "type": "Teaser → OnlyFans",
+          "texte": "Mes 3 « moi » sont d'accord sur un point ce soir 😏 et c'est par ici 👇",
+          "media": "Photo/clip teaser. Lien OF direct.",
           "lien": "OnlyFans",
-          "astuce": "Bascule vers le thème A jeudi soir."
+          "astuce": "Le soir convertit : associe le teaser au thème du lendemain."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "19:00",
+          "time": "19:30",
           "moment": "Soir",
           "type": "Teaser (renvoi profil)",
-          "texte": "Grosse vidéo demain 👀 Mais le vrai contenu, vous savez où il est (profil en bio).",
-          "media": "Photo verticale, watermark discret. Flair.",
+          "texte": "Version sage sur YouTube demain, version sans filtre sur mon profil ce soir 😉",
+          "media": "Photo verticale, regard caméra. Titre accrocheur, flair obligatoire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair : Vérifiée · 1 promo pour 3 contributions."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "20:30",
+          "time": "20:00",
           "moment": "Soir",
-          "type": "Story publique (teasing)",
-          "texte": "Teasing snap 🔥 demain je démonte les mots inventés pour nous. Aperçu ici.",
-          "media": "Story publique teasing.",
+          "type": "Story publique (nurture)",
+          "texte": "Snap du soir 👻 demain grosse vidéo, je vous montre les coulisses du montage 🎞️",
+          "media": "Story publique Creator Profile, coulisses montage. CTA soft OF.",
           "lien": "OnlyFans",
-          "astuce": "Nurture avant la sortie."
+          "astuce": "Coulisses = proximité, on prépare la sortie de demain."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
+          "time": "21:30",
           "moment": "Soir",
-          "type": "Teasing intime vidéo A",
-          "texte": "Demain 8h 🔓 le mot qui m'a le plus blessée dans ma vie de femme, je l'ai gardé pour vous — je vous le raconte ici avant tout le monde.",
-          "media": "Vocal intime, teasing A.",
+          "type": "Avant-première intime",
+          "texte": "Rien que pour vous 🔓 demain 8h la vidéo sort sur YouTube, mais ce soir je vous lis LA phrase la plus perso de l'épisode. Vous serez les seuls à l'avoir avant tout le monde.",
+          "media": "Vocal + extrait texte exclusif.",
           "lien": "OnlyFans",
-          "astuce": "Donne une raison d'être abonné AVANT la sortie."
+          "astuce": "L'avant-première Telegram récompense les fidèles et pousse au chat."
         }
       ]
     },
     {
       "day": "Vendredi",
-      "date": "17/07",
+      "date": "24/07",
       "posts": [
         {
           "platKey": "youtube",
@@ -506,7 +517,7 @@
           "time": "08:00",
           "moment": "8h — Sortie",
           "type": "Publication vidéo A (Première) + description",
-          "texte": "Grossesse gériatrique : périmée à 35 ans ? — ces mots qu'on colle aux femmes et jamais aux hommes.\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#grossessegériatrique #femmeetsociété #patriarcat #sexisme #lespenséesdamanda #blondymandise",
+          "texte": "On a tous 3 personnes en nous : le moi, le surmoi et le ça. Aujourd'hui je vous ouvre ma tête — sans filtre.\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#psychologie #couple #freud #moiça #lespenséesdamanda #blondymandise",
           "media": "Publication en Première 8h. Reste 15-20 min en chat live. Commentaire épinglé = question ouverte + Facebook/Telegram. Écran de fin vers vidéo précédente + abonnement.",
           "lien": "YouTube",
           "astuce": "Première + chat live 8h = boost de portée. Colle le lien de la vidéo publiée ci-dessous ⬇️",
@@ -515,101 +526,206 @@
         {
           "platKey": "youtube",
           "plats": "YouTube",
-          "time": "08:10",
-          "moment": "8h — Sortie",
-          "type": "Short YouTube (meilleur hook)",
-          "texte": "« Périmée à 35 ans. » Le vrai terme médical. Choquant, non ? Vidéo complète en description.",
-          "media": "Short 9:16, meilleur hook, cliffhanger → « complète en description ». Master ré-exporté (pas de watermark).",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Short (meilleur hook)",
+          "texte": "« Tu n'es pas une seule personne. Tu en es trois. » 🧠 (extrait de la vidéo du jour)",
+          "media": "Short vertical 30-45 s, meilleur hook de la vidéo A, sous-titres, lien vidéo longue en description.",
           "lien": "YouTube",
-          "astuce": "Le Short du jour de sortie rabat vers le long format."
+          "astuce": "Le Short du jour renvoie vers la vidéo longue : capte le trafic Shorts."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "08:15",
-          "moment": "8h — Sortie",
-          "type": "Post feed sortie + débat",
-          "texte": "« Grossesse gériatrique. » On dit ça d'une femme de 35 ans. L'équivalent masculin ? Il n'existe pas. Nouvelle vidéo en ligne 🔗 bio. Ça vous choque aussi ? 👇",
-          "media": "Carrousel miniature + extraits texte. Lien en bio.",
+          "time": "08:30",
+          "moment": "Matin",
+          "type": "Post feed sortie",
+          "texte": "🎬 NOUVELLE VIDÉO : « On a tous 3 personnes en nous ». Le moi, le surmoi, le ça — et laquelle vous pourrit la vie sans que vous le sachiez. À voir sur YouTube (lien en bio) 👇",
+          "media": "Post feed avec miniature + phrase d'accroche. Lien « Bio ».",
           "lien": "Bio",
-          "astuce": "Épingler « lien en bio » en commentaire."
+          "astuce": "FB = annonce communauté. Le lien reste en bio, jamais OF."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "08:20",
-          "moment": "8h — Sortie",
-          "type": "Story Facebook annonce",
-          "texte": "ÇA Y EST 🚨 la vidéo qui va vous faire réagir est en ligne — lien en bio 🔗",
-          "media": "Story FB avec sticker lien.",
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Story Facebook (annonce)",
+          "texte": "C'est en ligne 🧠 « On a tous 3 personnes en nous ». Foncez la voir 👀 (lien en bio)",
+          "media": "Story FB propre, visuel sortie + sticker lien vers la bio.",
           "lien": "Bio",
-          "astuce": "Relancer à midi."
+          "astuce": "Story d'annonce le matin = rappel pour la communauté FB."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "08:25",
-          "moment": "8h — Sortie",
-          "type": "Teaser sortie → OnlyFans",
-          "texte": "Nouvelle vidéo 🔥 « Grossesse gériatrique : périmée à 35 ans ? » Sur YouTube je démonte les mots. Ici, j'assume la femme qu'ils veulent faire taire 😏👇",
-          "media": "Photo/clip teaser spicy. Lien OF direct.",
-          "lien": "OnlyFans",
-          "astuce": "Teaser direct, lien OF autorisé."
+          "time": "09:00",
+          "moment": "Matin",
+          "type": "Engagement / opinion",
+          "texte": "Nouvelle vidéo : le moi, le surmoi, le ça 🧠 Dites-moi laquelle des trois commande chez vous. Chez moi c'est… ça dépend du jour 😏",
+          "media": "Tweet annonce SFW + question. Renvoi YouTube en réponse.",
+          "lien": "YouTube",
+          "astuce": "Version SFW le matin : on parle du thème, on convertit le soir."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "12:00",
-          "moment": "Midi",
-          "type": "Vidéo découverte (meilleur extrait #5)",
-          "texte": "« Un homme de 35 ans qui veut un enfant : normal. Une femme : grossesse gériatrique. » Vous la sentez la différence ? 😳",
-          "media": "Clip 9:16 <30s, hook fort, son tendance, sous-titres, sans watermark.",
-          "lien": "Bio",
-          "astuce": "Le meilleur extrait le jour de sortie."
+          "time": "10:00",
+          "moment": "Matin",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "Le « ça », c'est la partie de toi qui veut tout, tout de suite, sans culpabiliser 😈 tu la connais ?",
+          "media": "Extrait vidéo A, hook 3 s, son tendance, sans watermark. CTA « bio ».",
+          "lien": "TikTok",
+          "astuce": "Le hook le plus fort de la vidéo part sur TikTok le jour de sortie."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "12:05",
-          "moment": "Midi",
-          "type": "Story TikTok annonce",
-          "texte": "Nouvelle vidéo en ligne 🔥 lien en bio.",
-          "media": "Story rapide annonce.",
+          "time": "18:30",
+          "moment": "Après-midi",
+          "type": "Story TikTok (légère)",
+          "texte": "Team « moi » (raison), team « surmoi » (morale) ou team « ça » (désir) ? 🧠 Dites-moi !",
+          "media": "Story verticale, sticker sondage 3 choix.",
           "lien": "Bio",
-          "astuce": "Distincte de FB."
+          "astuce": "Story TikTok ludique, distincte de la story FB d'annonce."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "12:00",
-          "moment": "Midi",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Ma nouvelle vidéo vient de sortir — j'assume tout, même le reste 😉 (profil en bio).",
-          "media": "Photo verticale, regard caméra, watermark discret. Flair.",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Teaser → OnlyFans",
+          "texte": "Sur YouTube aujourd'hui je parle du « ça », cette part de nous qui assume tout. La mienne est par ici 😏",
+          "media": "Photo verticale assumée, regard caméra. Titre accrocheur, flair obligatoire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/GoneWildFrance · Flair : Vérifiée (F) · 1 promo pour 3 contributions."
         },
         {
           "platKey": "prive",
-          "plats": "Feed privé · OF/MYM",
-          "time": "20:00",
+          "plats": "Feed privé OF/MYM",
+          "time": "19:00",
           "moment": "Soir",
-          "type": "Teaser suggestif (feed privé)",
-          "texte": "On m'a dit « périmée à 35 ans ». Viens en privé, laisse-moi te prouver le contraire… et découvrir ce que YouTube ne verra jamais. Tu débloques, on discute, je te montre. 🔓😏",
-          "media": "Post feed OF/MYM le soir de sortie. Suggestif, amorce chat + PPV.",
+          "type": "Teaser suggestif (thème vidéo A)",
+          "texte": "Aujourd'hui sur YouTube j'ai présenté mes 3 « moi » bien sagement… 😈 Mais la troisième, le « ça », celle qui n'a ni morale ni frein — YouTube ne la verra jamais. Ici, tu la débloques, on discute en DM, et je te montre exactement ce dont elle a envie ce soir. Rareté totale. Viens. 💌",
+          "media": "Photo suggestive (jamais explicite visuellement), texte teaser. Lien OF.",
           "lien": "OnlyFans",
-          "astuce": "Feed privé = convertit le trafic chaud du jour de sortie."
+          "astuce": "Décliné du thème A : hameçon (« le ça ») → « ce que YouTube ne verra jamais » → bascule DM."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "20:30",
+          "time": "21:00",
           "moment": "Soir",
-          "type": "DÉBRIEF EXCLUSIF",
-          "texte": "Ok, entre nous 🔓 le mot qui m'a le plus détruite, celui que j'ai coupé au montage parce que c'était trop perso. Je vous le raconte ici, et seulement ici.",
-          "media": "Vocal ou vidéo exclusive + anecdote non dite. Pousser 1 PPV en avant-première.",
+          "type": "DÉBRIEF EXCLUSIF + PPV",
+          "texte": "Débrief exclusif du vendredi 🔓 La vidéo « 3 personnes en nous » est sortie ce matin — mais ce soir je vous montre MA troisième, celle du « ça ». J'ai deux exclus en avant-première rien que pour vous 👇 (déblocage direct)",
+          "media": "Message vocal débrief + 1-2 contenus PPV en avant-première (déblocage payant).",
           "lien": "OnlyFans",
-          "astuce": "Le RDV phare de la semaine : récompense l'abonnement."
+          "astuce": "Vendredi soir = pic de dépenses. Pousse 1-2 PPV en avant-première Telegram."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Story publique (nurture)",
+          "texte": "Vidéo du jour en ligne 👻 je vous dis laquelle de mes 3 « moi » a gagné aujourd'hui 😏",
+          "media": "Story publique Creator Profile. CTA soft OF.",
+          "lien": "OnlyFans",
+          "astuce": "Snap public = nurture le soir de sortie, on ne vend pas de privé."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "21:30",
+          "moment": "Soir",
+          "type": "Teaser → OnlyFans",
+          "texte": "Il est 21h30, mon « surmoi » est parti se coucher 😇➡️😈 la suite est par ici 👇",
+          "media": "Photo/clip teaser croppé. Lien OF direct.",
+          "lien": "OnlyFans",
+          "astuce": "Créneau soir = conversion max. Le clin d'œil au thème du jour cartonne."
+        }
+      ]
+    },
+    {
+      "day": "Samedi",
+      "date": "25/07",
+      "posts": [
+        {
+          "platKey": "youtube",
+          "plats": "YouTube",
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Short (trickle week-end)",
+          "texte": "« Ton surmoi, c'est la voix de ta mère qui te juge. » 😅 (extrait)",
+          "media": "Short vertical 30-45 s, 2e meilleur hook de la vidéo A, sous-titres.",
+          "lien": "YouTube",
+          "astuce": "Un Short le week-end = trickle de trafic vers la vidéo longue."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "Comment savoir qui commande dans ta tête : le moi, le surmoi ou le ça ? Test en 20 secondes 👇",
+          "media": "Extrait vidéo A format test, hook 3 s, son tendance, sans watermark.",
+          "lien": "TikTok",
+          "astuce": "Format « test » = interaction + partages le week-end."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
+          "time": "17:00",
+          "moment": "Après-midi",
+          "type": "Story TikTok (légère)",
+          "texte": "Samedi soir : c'est votre « ça » ou votre « surmoi » qui décide du programme ? 😏",
+          "media": "Story verticale, sticker sondage.",
+          "lien": "Bio",
+          "astuce": "Story week-end : ton léger, on garde le lien en bio."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Post feed débat",
+          "texte": "Il y a des jours où la raison gagne, et d'autres où l'envie prend le dessus. Racontez-moi votre dernier « j'aurais pas dû mais je l'ai fait » 😅👇",
+          "media": "Texte + image. Débat léger week-end. Pas de lien (bio).",
+          "lien": "Bio",
+          "astuce": "Question fun = commentaires nombreux, portée FB le week-end."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "13:00",
+          "moment": "Midi",
+          "type": "Engagement / opinion",
+          "texte": "Le « surmoi » c'est la petite voix qui gâche le plaisir en te rappelant les règles. Perso je négocie avec elle 😏",
+          "media": "Tweet hot take léger. Inviter aux réponses.",
+          "lien": "—",
+          "astuce": "Contenu marque/humour le week-end = engagement sans vendre."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "21:00",
+          "moment": "Soir",
+          "type": "Teaser → OnlyFans",
+          "texte": "Samedi soir, mon « ça » a pris les commandes 😈 tu veux voir jusqu'où ? 👇",
+          "media": "Photo/clip teaser. Lien OF direct.",
+          "lien": "OnlyFans",
+          "astuce": "Le samedi soir convertit très bien : garde un visuel fort."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Contribution + soft promo",
+          "texte": "Ambiance samedi soir 🔥 (la suite sur mon profil)",
+          "media": "Photo verticale qualité, regard caméra. Flair obligatoire.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair : Vérifiée · Varie les images du week-end."
         },
         {
           "platKey": "snapchat",
@@ -617,220 +733,137 @@
           "time": "20:30",
           "moment": "Soir",
           "type": "Story publique + Spotlight",
-          "texte": "Jour de sortie 🎬 réactions en direct + un extrait sur Spotlight.",
-          "media": "Story publique + 1 Spotlight (extrait). CTA soft OF.",
+          "texte": "Snap du samedi 👻 + un Spotlight pour bien commencer la soirée 👀",
+          "media": "Story publique + 1 Spotlight vertical. CTA soft OF.",
           "lien": "OnlyFans",
-          "astuce": "Spotlight = découverte froide côté Snap."
-        },
-        {
-          "platKey": "x",
-          "plats": "X",
-          "time": "21:00",
-          "moment": "Soir",
-          "type": "Teaser → OnlyFans (2e)",
-          "texte": "Vous avez aimé la vidéo ? Le débrief sans filtre, sans YouTube pour me censurer, c'est dispo ce soir 🔓",
-          "media": "Photo/clip teaser. Lien OF direct.",
-          "lien": "OnlyFans",
-          "astuce": "2e teaser du soir, pic week-end proche."
-        }
-      ]
-    },
-    {
-      "day": "Samedi",
-      "date": "18/07",
-      "posts": [
-        {
-          "platKey": "tiktok",
-          "plats": "TikTok",
-          "time": "11:00",
-          "moment": "Matin",
-          "type": "Vidéo découverte (extrait)",
-          "texte": "« Hystérique » vient du grec « utérus ». On a inventé une maladie pour faire taire les femmes 🤯",
-          "media": "Extrait vidéo A, son tendance, sous-titres, sans watermark.",
-          "lien": "Bio",
-          "astuce": "Extrait fort = longue traîne."
-        },
-        {
-          "platKey": "tiktok",
-          "plats": "TikTok",
-          "time": "11:05",
-          "moment": "Matin",
-          "type": "Story TikTok",
-          "texte": "Vous en avez d'autres, des mots comme ça ? 👀",
-          "media": "Story rapide.",
-          "lien": "Bio",
-          "astuce": "Distincte de FB."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Reel Facebook #2 (cadré débat)",
-          "texte": "« Vieille fille » à 30 ans. Le mot pour un homme célibataire ? « Célibataire endurci » — un compliment 🙄 Vous êtes d'accord ? 👇",
-          "media": "Reel natif 90-120 s, caption débat.",
-          "lien": "Bio",
-          "astuce": "Upload natif, sans watermark."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "13:05",
-          "moment": "Midi",
-          "type": "Story Facebook",
-          "texte": "Le pire mot reçu cette semaine, selon vous ? Votez 👇",
-          "media": "Story FB propre, sondage.",
-          "lien": "Bio",
-          "astuce": "Angle communauté."
-        },
-        {
-          "platKey": "x",
-          "plats": "X",
-          "time": "17:00",
-          "moment": "Après-midi",
-          "type": "Teaser → OnlyFans",
-          "texte": "Samedi soir, mauvaises idées 😈 La meilleure est ici 👇",
-          "media": "Clip teaser spicy. Lien OF direct.",
-          "lien": "OnlyFans",
-          "astuce": "Pic d'achat le week-end."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "14:00",
-          "moment": "Après-midi",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Week-end tranquille… ou pas 😉 Mon profil, lui, ne prend jamais de week-end (en bio).",
-          "media": "Photo verticale, watermark discret. Flair.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "20:00",
-          "moment": "Soir",
-          "type": "Story publique (manuel)",
-          "texte": "Snap du samedi soir 🔥 ambiance + un aperçu premium.",
-          "media": "Story publique. CTA soft OF.",
-          "lien": "OnlyFans",
-          "astuce": "100% manuel."
+          "astuce": "2e Spotlight de la semaine : maximise la vitrine froide gratuite."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
-          "moment": "Soir",
-          "type": "Contenu intime week-end (A)",
-          "texte": "Samedi soir entre nous 🔓 je continue sur les mots qui blessent… et je vous montre celle que je suis quand personne ne me juge.",
-          "media": "Contenu exclusif suggestif + confidence.",
+          "time": "22:00",
+          "moment": "Nuit",
+          "type": "Confession intime",
+          "texte": "Samedi soir, entre nous 🔓 je vous raconte la fois où j'ai laissé mon « ça » décider… et je ne regrette rien 😏",
+          "media": "Vocal intime, ton complice.",
           "lien": "OnlyFans",
-          "astuce": "Le samedi soir = pic d'engagement intime."
+          "astuce": "La confidence du samedi soir entretient le lien et les dépenses."
         }
       ]
     },
     {
       "day": "Dimanche",
-      "date": "19/07",
+      "date": "26/07",
       "posts": [
         {
           "platKey": "youtube",
           "plats": "YouTube",
-          "time": "15:00",
-          "moment": "Après-midi",
-          "type": "Short YouTube (trickle)",
-          "texte": "« Vieille fille » à 30 ans, « célibataire endurci » pour lui. Même situation, deux mondes. Vidéo complète en description.",
-          "media": "Short 9:16, cliffhanger, sans watermark.",
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Post Communauté : question de la semaine",
+          "texte": "Question du dimanche 🧠 Si vos 3 « moi » pouvaient parler, lequel a le plus besoin qu'on l'écoute en ce moment ? Le moi, le surmoi ou le ça ?",
+          "media": "Post texte onglet Communauté YouTube.",
           "lien": "YouTube",
-          "astuce": "Étalement des Shorts sur ~2 semaines = battement constant."
+          "astuce": "La question du dimanche relance l'engagement avant la semaine suivante."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "12:00",
-          "moment": "Midi",
-          "type": "Vidéo découverte (extrait)",
-          "texte": "« Vieille fille » à 30 ans. Le double standard du célibat 🙄",
-          "media": "Extrait vidéo A, son tendance, sans watermark.",
-          "lien": "Bio",
-          "astuce": "Extrait longue traîne."
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Vidéo découverte (hook réel)",
+          "texte": "Récap : le moi (la raison), le surmoi (la morale), le ça (le désir). Lequel es-tu à 80% ? 🧠",
+          "media": "Extrait vidéo A format récap, hook 3 s, son tendance, sans watermark.",
+          "lien": "TikTok",
+          "astuce": "Le récap du dimanche capte ceux qui ont raté la sortie."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "12:05",
-          "moment": "Midi",
-          "type": "Story TikTok",
-          "texte": "Récap de vos pires mots reçus 😱",
-          "media": "Story compil rapide.",
+          "time": "18:00",
+          "moment": "Après-midi",
+          "type": "Story TikTok (légère)",
+          "texte": "Dimanche cocooning : votre « surmoi » vous dit de bosser, votre « ça » de rien faire 😌 qui gagne ?",
+          "media": "Story verticale, sticker sondage.",
           "lien": "Bio",
-          "astuce": "Distincte de FB."
+          "astuce": "Ton doux du dimanche, distinct de la story FB."
         },
         {
           "platKey": "groupe",
           "plats": "Groupe FB",
-          "time": "18:00",
-          "moment": "Soir",
-          "type": "Post Groupe : question de la semaine",
-          "texte": "Question de la semaine dans le groupe 👥 : quel mot voudriez-vous voir disparaître du vocabulaire qu'on colle aux femmes ? Le plus voté, j'en fais une vidéo.",
-          "media": "Post Groupe FB, débat. Répondre à chacun. Inviter vers Telegram pour le contenu intime.",
-          "lien": "Bio",
-          "astuce": "2e post Groupe de la semaine. Funnel vers Telegram."
+          "time": "11:00",
+          "moment": "Matin",
+          "type": "Post groupe (question de la semaine)",
+          "texte": "La question de la semaine, team 💜 : dans votre couple, qui écoute le plus son « ça » et qui son « surmoi » ? Racontez ici. (Et pour les confidences plus cash, on se retrouve sur mon Telegram 👇)",
+          "media": "Post question dans le groupe FB. Épingler la semaine.",
+          "lien": "Telegram",
+          "astuce": "Question hebdo du groupe = communauté active → funnel Telegram."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "18:05",
-          "moment": "Soir",
-          "type": "Story Facebook",
-          "texte": "Matez la vidéo si c'est pas fait 😌 lien en bio.",
-          "media": "Story FB propre + rappel vidéo.",
+          "time": "12:30",
+          "moment": "Midi",
+          "type": "Post feed débat",
+          "texte": "Écouter son désir sans culpabiliser, c'est de l'égoïsme ou de la santé mentale ? 👇 (Pour ceux qui ont vu la vidéo de vendredi 😉)",
+          "media": "Texte + image, prolonge le thème vidéo A. Pas de lien (bio).",
           "lien": "Bio",
-          "astuce": "Dernière relance douce."
+          "astuce": "Prolonger le débat de la vidéo garde la communauté engagée."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "18:00",
+          "time": "13:00",
+          "moment": "Midi",
+          "type": "Engagement / opinion + pod RT",
+          "texte": "Dimanche : la journée où le « moi » et le « ça » se battent pour savoir si on sort du lit 😴 Vous en êtes où ? (je RT mes copines 💜)",
+          "media": "Tweet léger + round de RT entre créatrices.",
+          "lien": "—",
+          "astuce": "Pod de RT du dimanche = entraide de portée entre créatrices."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "21:00",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "On termine le week-end comme il faut 😏 Tout est là 👇",
-          "media": "Clip teaser spicy. Lien OF direct.",
+          "texte": "On clôture le week-end comme il faut 😏 mon « ça » a un dernier mot à dire, par ici 👇",
+          "media": "Photo/clip teaser. Lien OF direct.",
           "lien": "OnlyFans",
-          "astuce": "Teaser direct."
+          "astuce": "Le dimanche soir convertit les indécis avant la semaine."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "16:00",
-          "moment": "Après-midi",
-          "type": "Teaser (renvoi profil)",
-          "texte": "Dimanche cocooning 😌 enfin… pas tout le temps 😉 Profil en bio.",
-          "media": "Photo verticale, lumière douce, watermark discret. Flair.",
+          "time": "20:00",
+          "moment": "Soir",
+          "type": "Contribution + soft promo",
+          "texte": "Dernier de la semaine, tout en douceur 😌 (plus sur mon profil)",
+          "media": "Photo verticale intime, regard caméra. Flair obligatoire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/GoneWildFrance · Flair requis : Vérifiée (F) · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/GoneWildFrance · Flair : Vérifiée (F) · Clôture douce du week-end."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
           "time": "20:00",
           "moment": "Soir",
-          "type": "Story publique (manuel)",
-          "texte": "Dernier snap du week-end 🌙 bilan + un aperçu pour bien commencer la semaine.",
-          "media": "Story publique. CTA soft OF.",
+          "type": "Story publique (nurture)",
+          "texte": "Dernier Snap du dimanche 👻 merci pour cette semaine, on se retrouve demain 💜",
+          "media": "Story publique Creator Profile, bilan chaleureux. CTA soft OF.",
           "lien": "OnlyFans",
-          "astuce": "100% manuel."
+          "astuce": "Clôturer la semaine = fidélisation, ton chaleureux."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
+          "time": "21:30",
           "moment": "Soir",
-          "type": "Confidence de fin de semaine",
-          "texte": "Dimanche soir, moment calme 🔓 merci d'être là chaque semaine. Une pensée (et un contenu) rien que pour vous.",
-          "media": "Vocal doux + contenu exclusif de remerciement.",
+          "type": "Confession intime + teaser semaine",
+          "texte": "Dimanche soir, entre nous 🔓 merci d'être là. Cette semaine on entre dans un sujet fort : reconnaître le contrôle de l'amour. Préparez vos cœurs 💜 je vous embrasse.",
+          "media": "Vocal intime, bilan + teaser semaine suivante.",
           "lien": "OnlyFans",
-          "astuce": "Le dimanche soir crée le rendez-vous récurrent + renouvellement."
+          "astuce": "Boucler la semaine + amorcer la suivante = rétention maximale."
         }
       ]
     }
@@ -838,85 +871,85 @@
   "reels": [
     {
       "n": 1,
-      "title": "La stat qui fait tomber les clichés",
+      "title": "Le chiffre qui glace",
       "angle": "STAT",
       "dur": "20-25 sec",
-      "cam": "face cam serré, punchy",
-      "hook": "La France est la première destination naturiste au monde : environ 2,6 millions de pratiquants réguliers.",
-      "corps": "Et pourtant, dès qu'on dit « naturiste », tout le monde pense à autre chose. Le Cap d'Agde, plus grand village naturiste d'Europe, c'est jusqu'à 40 000 personnes en plein été.",
-      "cta": "Ma vidéo « première fois au Cap d'Agde » sort vendredi — abonnez-vous.",
+      "cam": "face cam serré, ton grave",
+      "hook": "Le contrôle coercitif est retrouvé dans 100 % des féminicides. Cent pour cent.",
+      "corps": "Ça veut dire qu'avant le drame, il y a toujours eu cette emprise qu'on a prise pour de l'amour. En 2024, 272 400 victimes de violences conjugales ont été recensées en France — et la forme la plus fréquente ne laisse aucun bleu.",
+      "cta": "Ma vidéo « Le contrôle déguisé en amour » arrive — abonnez-vous.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Lundi 03/08"
+      "jour": "Lundi 10/08"
     },
     {
       "n": 2,
-      "title": "Naturisme ≠ ce que vous croyez",
+      "title": "Le plus gros mensonge du couple",
       "angle": "OPINION",
       "dur": "25-30 sec",
-      "cam": "face cam, tranché",
-      "hook": "Non, le village naturiste ce n'est pas une immense partouze géante. Voilà ce que personne n'ose expliquer.",
-      "corps": "La journée sur la plage, c'est des familles, des retraités. Le soir, dans une partie précise, l'ambiance devient libertine — mais c'est un choix, pas une obligation.",
-      "cta": "Je décortique tout ça vendredi.",
+      "cam": "face cam, ton tranché",
+      "hook": "« S'il est jaloux, c'est qu'il t'aime. » C'est le plus gros mensonge qu'on nous ait vendu.",
+      "corps": "La jalousie qui surveille, qui fouille, qui isole, ce n'est pas de l'amour : c'est de la peur qui a besoin de te contrôler. L'amour te fait confiance. Le contrôle te met en cage et appelle ça de la passion.",
+      "cta": "On en parle cash dans la vidéo. Dis-moi en commentaire si tu es d'accord.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Mardi 04/08"
+      "jour": "Mardi 11/08"
     },
     {
       "n": 3,
-      "title": "Ma première fois là-bas",
+      "title": "Ce que je n'avais pas vu venir",
       "angle": "INTIME",
       "dur": "30-35 sec",
-      "cam": "face cam, confidence, lumière douce",
-      "hook": "La première fois que j'ai enlevé mon maillot sur cette plage, j'ai cru que tout le monde allait me regarder.",
-      "corps": "Et en fait… personne. Pour la première fois de ma vie, mon corps n'était pas un spectacle. J'ai trouvé une paix que je ne connaissais pas.",
-      "cta": "Je vous raconte tout, sans filtre, vendredi.",
+      "cam": "face cam doux, regard baissé puis caméra",
+      "hook": "J'ai déjà confondu du contrôle avec de l'amour. Et je ne l'ai vu que bien trop tard.",
+      "corps": "Au début, ses « je m'inquiète pour toi » me touchaient. Puis il a fallu justifier chaque sortie, chaque message. Le jour où j'ai réalisé que ma vie était devenue toute petite, j'ai compris : ce n'était pas de l'amour, c'était une laisse.",
+      "cta": "Si ça te parle, cette vidéo est pour toi. Abonne-toi.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Jeudi 06/08"
+      "jour": "Jeudi 13/08"
     },
     {
       "n": 4,
-      "title": "La question qui divise les couples",
-      "angle": "QUESTION CLIVANTE",
-      "dur": "25-30 sec",
-      "cam": "face cam, regard direct",
-      "hook": "Vraie question : est-ce que tu emmènerais ton copain ou ta copine dans un lieu libertin ?",
-      "corps": "Certains y renforcent leur complicité, d'autres découvrent des jalousies insoupçonnées. Il n'y a pas de bonne réponse — mais une règle : on n'y va jamais pour « sauver » un couple.",
-      "cta": "Je donne mon avis tranché vendredi.",
+      "title": "3 red flags à repérer ce soir",
+      "angle": "CONSEIL / QUESTION CLIVANTE",
+      "dur": "30 sec",
+      "cam": "face cam dynamique, compte sur les doigts",
+      "hook": "3 phrases qui ressemblent à de l'amour mais qui sont du contrôle 🚩",
+      "corps": "Un : « Je regarde ton téléphone parce que je t'aime. » Deux : « Tes amies ont une mauvaise influence sur toi. » Trois : « Sans moi, tu n'y arriverais pas. » Aucune de ces phrases ne t'agrandit. Toutes te rétrécissent.",
+      "cta": "Tu en as déjà entendu une ? Dis-moi laquelle en commentaire.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Samedi 08/08"
+      "jour": "Samedi 15/08"
     }
   ],
   "extraits": [
     {
       "n": "E1",
-      "quoi": "La stat d'ouverture (1re destination naturiste, 2,6 M)",
-      "tc": "~00:45",
+      "quoi": "La stat choc d'ouverture (100 % des féminicides · 272 400 victimes 2024)",
+      "tc": "~00:40",
       "angle": "STAT / accroche",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Insert texte du chiffre à l'écran."
+      "note": "Insert texte des deux chiffres à l'écran, source en petit (Ministère de l'Intérieur / SSMSI)."
     },
     {
       "n": "E2",
-      "quoi": "« Au bout de 10 min, plus personne ne regarde »",
-      "tc": "~02:30",
-      "angle": "RÉVÉLATION",
+      "quoi": "L'anecdote perso : « ma vie était devenue toute petite »",
+      "tc": "~03:10",
+      "angle": "INTIME / émotion",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Le moment le plus contre-intuitif = fort potentiel viral."
+      "note": "Ralenti léger + musique douce, laisser respirer la phrase clé."
     },
     {
       "n": "E3",
-      "quoi": "L'anecdote du paréo qui tombe (vécu perso)",
-      "tc": "~04:10",
-      "angle": "INTIME",
+      "quoi": "Le moment clé : « l'amour te donne des ailes, le contrôle te donne une laisse »",
+      "tc": "~06:20",
+      "angle": "PUNCH / citation",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Ralenti léger + musique douce au montage."
+      "note": "Plan fixe, silence de 2 s après la phrase, texte incrusté de la citation."
     },
     {
       "n": "E4",
-      "quoi": "Le consentement, la règle d'or du village",
-      "tc": "~06:00",
-      "angle": "CONSEIL / punch",
+      "quoi": "La liste des signes déguisés en amour (téléphone / isolement / dévalorisation)",
+      "tc": "~08:05",
+      "angle": "CONSEIL / liste",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Idéal en Short cliffhanger → vidéo complète."
+      "note": "Découper en 3 puces animées à l'écran, format checklist."
     }
   ],
   "script": [
@@ -926,7 +959,7 @@
       "timing": "0-8 sec",
       "lines": [
         {
-          "t": "On m'avait dit « le Cap d'Agde c'est un immense bordel à ciel ouvert ». J'y suis allée. Et tout ce que je croyais savoir était faux.",
+          "t": "« S'il est jaloux, c'est qu'il t'aime. » On m'a répété cette phrase toute ma vie. Aujourd'hui je vais vous montrer comment ces cinq mots-là servent à justifier les plus belles prisons.",
           "quote": true
         }
       ],
@@ -940,16 +973,16 @@
       "timing": "15-60 sec",
       "lines": [
         {
-          "t": "Le naturisme, en France, ce n'est pas un truc de marginaux. On est la première destination naturiste du monde, avec environ 2,6 millions de pratiquants réguliers selon France 4 Naturisme, et près de 4 millions de personnes qui passent des vacances naturistes chaque année. C'est un secteur qui pèse 350 millions d'euros et 8 millions de nuitées. Autrement dit : c'est massif, et pourtant on continue d'en parler à voix basse."
+          "t": "L'emprise dans le couple, ce n'est pas un cas rare réservé aux autres. En 2024, les services de sécurité ont enregistré 272 400 victimes de violences conjugales en France, un niveau quasi stable d'après le Ministère de l'Intérieur. Mais ce chiffre ne dit pas tout, parce que la forme la plus courante ne laisse aucun bleu : elle s'appelle le contrôle coercitif. C'est cette accumulation de petits gestes — surveiller, isoler, rabaisser, contrôler l'argent, les horaires, les vêtements — qui installe une domination sans qu'on la voie jamais arriver."
         },
         {
-          "t": "Et au milieu de tout ça, il y a un lieu à part : le village naturiste du Cap d'Agde. Le plus grand d'Europe, jusqu'à 40 000 personnes en pleine saison, 7 kilomètres de plage. La journée, c'est des familles, des retraités, du farniente. Le soir, dans une partie bien précise, l'ambiance devient libertine. Et c'est cette confusion entre les deux qui alimente tous les fantasmes… et toutes les bêtises qu'on entend."
+          "t": "Et voici le chiffre qui m'a glacée quand je l'ai découvert : le contrôle coercitif est retrouvé dans 100 % des féminicides. Cent pour cent. Ça veut dire qu'avant les coups, avant le drame, il y a toujours eu ce contrôle qu'on avait pris pour de l'amour. C'est tellement vrai que la France a commencé, en 2025, à vouloir inscrire le contrôle coercitif comme un délit à part entière dans le code pénal. On met enfin des mots sur ce qui, pendant des siècles, n'en avait aucun."
         }
       ],
       "notes": [
-        "Caméra : même cadre, ton posé, pédagogue.",
-        "Montage : insert texte « 2,6 M de pratiquants réguliers · 1re destination mondiale » et « Cap d'Agde : jusqu'à 40 000 personnes l'été ». Source à l'écran en petit : France 4 Naturisme / Tourmag 2024.",
-        "GIF ambiance plage/soleil en cutaway léger : https://tenor.com/view/summer-beach-vibes-gif-15515981"
+        "Caméra : même cadre, ton posé, pédagogue mais grave.",
+        "Montage : insert texte « 272 400 victimes en 2024 » puis « contrôle coercitif : présent dans 100 % des féminicides ». Source à l'écran en petit : Ministère de l'Intérieur / SSMSI, 2024.",
+        "GIF red flag / relation toxique en cutaway léger : https://tenor.com/view/relationship-toxic-ew-break-up-gif-20285412"
       ]
     },
     {
@@ -972,11 +1005,11 @@
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Mon avis, tranché : le Cap d'Agde n'est ni le paradis sulfureux qu'on fantasme, ni l'enfer glauque qu'on imagine. C'est un endroit qui te renvoie exactement ce que tu y amènes. Tu viens curieux et respectueux, tu vis une expérience libératrice. Tu viens pour « chasser » ou forcer quoi que ce soit, tu passes un sale moment. La liberté là-bas, elle repose entièrement sur une seule chose : le consentement."
+          "t": "Mon avis, sans détour : l'amour et le contrôle ne sont pas deux versions de la même chose, ce sont deux forces opposées. L'amour veut te voir grandir, même quand ça l'éloigne de toi. Le contrôle veut te garder petite, à portée de main, dépendante. Retenez une seule règle : dès qu'un geste rend votre vie plus petite au lieu de la rendre plus grande, ce n'est pas de l'amour. C'est de la mainmise. Point."
         }
       ],
       "notes": [
-        "Caméra : plan un peu plus serré sur « le consentement », appuyer le mot."
+        "Caméra : plan un peu plus serré sur « plus petite / plus grande », appuyer l'opposition."
       ]
     },
     {
@@ -985,32 +1018,32 @@
       "timing": "4-5 min",
       "lines": [
         {
-          "t": "Reprenons depuis le début, parce que la première confusion est là. Naturisme et libertinage, ce ne sont pas des synonymes. Le naturisme, c'est une philosophie du corps nu sans connotation sexuelle : on bronze, on nage, on déjeune, on vit, simplement sans vêtements. Le libertinage, c'est une pratique sexuelle qui, elle, peut exister habillée n'importe où ailleurs. Le Cap d'Agde a la particularité rare de mélanger les deux sur un même territoire — mais à des moments et dans des zones différents. La plage familiale à midi n'a rien à voir avec certains bars le soir. Confondre les deux, c'est comme croire qu'une ville entière est une boîte de nuit parce qu'il y a une boîte de nuit dedans."
+          "t": "Reprenons depuis le début, parce que le piège est justement là. Le contrôle ne commence jamais par de la violence. Il commence par de l'attention. Énormément d'attention. Au début, c'est grisant : quelqu'un qui veut savoir où tu es, avec qui, qui t'écrit dix fois par jour, qui veut passer tout son temps avec toi. On appelle ça « l'intensité », on trouve ça romantique. Sauf que l'amour sain te laisse respirer, alors que le contrôle, lui, remplit tout l'espace jusqu'à ce qu'il ne reste plus rien qui soit à toi."
         },
         {
-          "t": "Deuxième chose que personne ne vous prépare : le premier obstacle n'est pas les autres, c'est vous. Le vrai vertige de la première fois, c'est d'enlever son maillot en plein jour devant des inconnus. On croit tous qu'on va être scruté, jugé, comparé. La réalité, et ça, aucune brochure ne le dit vraiment : au bout de dix minutes, plus personne ne regarde. Le cerveau s'habitue à une vitesse hallucinante. La nudité devient banale, presque ennuyeuse. Et c'est précisément dans cet ennui-là que naît un truc rare aujourd'hui : la paix avec son corps."
+          "t": "Prenons un exemple très concret, celui que tout le monde a déjà vu de près ou de loin : le téléphone. « Montre-moi tes messages, si tu n'as rien à cacher. » « Envoie-moi ta localisation, c'est juste que je m'inquiète. » Sur le moment, ça se déguise en preuve d'attachement. Mais posez-vous la vraie question : est-ce que cette demande vous fait vous sentir aimée, ou surveillée ? La confiance ne réclame pas de preuves en permanence. Le contrôle, lui, transforme chaque silence, chaque sortie, chaque « like » en interrogatoire. Et petit à petit, vous vous censurez toute seule pour avoir la paix."
         },
         {
-          "t": "Je vais vous raconter ma première fois, la vraie. Je suis arrivée tendue, persuadée que j'allais détester. J'ai gardé mon paréo une heure, assise sur ma serviette à observer tout le monde comme une intruse. Et puis une femme de soixante-dix ans est passée devant moi, tranquille, un bouquin sous le bras, absolument zéro complexe. Elle m'a juste souri. Et là quelque chose a lâché. J'ai enlevé le paréo. Personne n'a bronché. Pour la première fois de ma vie d'adulte, mon corps n'était pas un objet de désir ou de jugement — il était juste… là. J'ai pleuré, en fait. De soulagement. Moi qui monnaie mon image, qui gère mon corps comme un business, j'ai redécouvert ce que c'était de l'habiter juste pour moi."
+          "t": "Deuxième mécanisme, plus sournois encore : l'isolement. Ça ne se dit jamais frontalement. Ça passe par des phrases qui ont l'air bienveillantes. « Ta copine, je la trouve mauvaise pour toi. » « Ta famille te met trop de pression, on devrait les voir moins. » « On est tellement bien tous les deux, pourquoi tu as besoin des autres ? » Un par un, ces petits renoncements semblent raisonnables. Mis bout à bout, ils te coupent de tous ceux qui auraient pu te dire : « attends, là, ce n'est pas normal. » Quand il ne te reste plus qu'une seule personne dans ta vie, cette personne a tout pouvoir sur toi. C'est mathématique."
         },
         {
-          "t": "Prenons un exemple très concret du quotidien là-bas, parce que les gens imaginent des scènes de film. La vraie journée type ? Tu te lèves, tu vas chercher ton pain à la boulangerie — nu, avec ton sac en toile. Tu croises ton voisin, vous parlez de la météo. Tu bronzes, tu lis, tu te baignes, tu déjeunes en terrasse. Bref, une journée de vacances parfaitement banale, sauf le dress code. Le côté sulfureux, si tu le cherches, tu le trouveras le soir, dans des lieux identifiés, avec des codes précis. Mais tu peux aussi passer une semaine entière au Cap d'Agde sans jamais y mettre les pieds. Ça, ça surprend tout le monde."
+          "t": "Je vais vous raconter mon histoire, la vraie, parce que je ne suis pas au-dessus de ça. J'ai déjà confondu du contrôle avec de l'amour, et je ne l'ai compris que bien trop tard. Au début, ses « je m'inquiète pour toi » me touchaient droit au cœur ; je me disais qu'enfin quelqu'un tenait vraiment à moi. Puis il a fallu justifier chaque sortie. Puis prévenir avant, pendant, après. Puis choisir des vêtements « moins provocants » pour ne pas « créer de problèmes ». Un jour, je me suis retrouvée à annuler un dîner avec ma meilleure amie juste pour éviter une dispute, et en raccrochant, j'ai réalisé un truc qui m'a fait froid dans le dos : ma vie était devenue toute petite. J'avais rétréci sans m'en rendre compte, en croyant que c'était ça, aimer fort. Ce n'était pas de l'amour. C'était une laisse qu'on m'avait présentée comme un collier de perles."
         },
         {
-          "t": "Maintenant, parlons du couple, parce que c'est là que ça se corse. Le Cap d'Agde, à deux, c'est un révélateur. Ça met une loupe sur votre relation. J'ai vu des couples en ressortir soudés, complices, fiers d'avoir partagé quelque chose d'intense et de choisi. Et j'en ai vu d'autres exploser en trois jours, parce que l'un rêvait d'ouverture et l'autre a découvert une jalousie qu'il ne se connaissait pas. La règle absolue que je répète tout le temps : on ne va JAMAIS dans un lieu libertin pour « sauver » ou « pimenter » un couple qui va mal. Ça n'a jamais réparé personne. Ça révèle, ça n'ajoute pas."
+          "t": "Il y a un troisième outil qu'il faut savoir nommer : la dévalorisation déguisée en humour ou en protection. « Je dis ça pour ton bien. » « Heureusement que je suis là, sans moi tu n'y arriverais pas. » « C'était une blague, tu es trop susceptible. » À force, tu finis par croire que tu ne vaux pas grand-chose, que tu as de la chance qu'on veuille bien de toi. Et c'est exactement le but : une personne qui doute d'elle-même ne part jamais. Le contrôle ne cherche pas à te rendre heureuse, il cherche à te rendre dépendante. Nuance énorme."
         },
         {
-          "t": "Et puis il y a la règle qui rend tout l'endroit vivable, celle sans laquelle rien ne tient : le consentement, partout, tout le temps. Là-bas, prendre une photo de quelqu'un sans son accord, c'est la faute ultime, celle qui te fait dégager immédiatement. Un « non » est un « non » définitif, sur la plage comme dans un bar à 2h du matin. Personne ne te doit rien, jamais, quel que soit l'endroit ou l'heure. Paradoxalement, c'est cette rigueur sur le respect qui fait qu'un lieu aussi libre peut être aussi safe. La liberté sans le consentement, ce n'est pas de la liberté, c'est juste de l'agression avec un décor de vacances."
+          "t": "Alors comment faire la différence, concrètement, sans se prendre la tête ? J'ai un test tout simple que je vous donne : demandez-vous si la relation agrandit votre vie ou si elle la rétrécit. L'amour vous donne envie de voir vos amis, de tenter des choses, de devenir une meilleure version de vous — et il s'en réjouit. Le contrôle vous éloigne de tout ça, un renoncement à la fois, et appelle ça de la fusion. Autre repère infaillible : l'amour respecte le « non ». Un partenaire qui t'aime accepte que tu dises non, que tu aies un jardin secret, une soirée sans lui, un avis différent. Celui qui punit chaque « non » par de la bouderie, de la colère ou du chantage ne t'aime pas librement : il te dresse."
         },
         {
-          "t": "Dernier point, le plus terre-à-terre et le plus utile : la logistique. Personne ne vous le dit, mais la crème solaire devient votre meilleure amie, sur absolument toutes les zones — je vous laisse imaginer les coups de soleil aux endroits qui n'ont jamais vu la lumière. Prévoyez une serviette reconnaissable, parce que tout le monde a la même. Et surtout, arrivez par la journée, par le naturisme simple, avant même de penser au reste. Apprivoisez le regard d'abord. Le reste, vous déciderez plus tard, à votre rythme, ou jamais. Il n'y a aucune obligation, et c'est ça la vraie beauté de l'endroit."
+          "t": "Et je veux finir sur un message d'espoir, parce que ce sujet est lourd mais il n'est pas une condamnation. Mettre un mot sur ce qu'on vit, c'est déjà reprendre du pouvoir. Si en m'écoutant vous vous êtes reconnue, ce n'est pas une preuve que vous êtes faible ou naïve — le contrôle est conçu précisément pour ne pas se voir de l'intérieur. Parlez-en à quelqu'un, une amie, un professionnel, une association. Rouvrez une porte, une seule, vers l'extérieur. Parce qu'une vie qui s'agrandit à nouveau, c'est le signe le plus sûr que vous revenez vers l'amour — le vrai."
         }
       ],
       "notes": [
-        "B-roll : plage large, village, terrasses (flou pudique), pour illustrer le « quotidien banal ».",
-        "Montage : réincruster l'insert « 2,6 M de pratiquants · 350 M€ » quand Amanda rappelle l'ampleur du phénomène.",
-        "Insert émotion sur l'anecdote perso (paréo qui tombe) : ralenti léger, musique douce, laisser respirer.",
-        "GIF gêne/timide sur le passage 'on croit qu'on va être jugé' : https://tenor.com/view/shy-awkward-nervous-covering-gif-16060409"
+        "B-roll : mains sur un téléphone, porte qui se ferme doucement, fenêtre — pour illustrer surveillance et isolement.",
+        "Montage : réincruster l'insert « contrôle coercitif : présent dans 100 % des féminicides » quand Amanda rappelle la gravité.",
+        "Insert émotion sur l'anecdote perso (« ma vie était devenue toute petite ») : ralenti léger, musique douce, laisser respirer.",
+        "GIF / visuel red flag sur la liste des signes : https://tenor.com/search/red-flag-gifs"
       ]
     },
     {
@@ -1019,7 +1052,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Le Cap d'Agde ne te transforme pas. Il enlève juste le costume — et te met face à qui tu es vraiment, à poil, au sens propre comme au figuré.",
+          "t": "L'amour te donne des ailes. Le contrôle te donne une laisse — mais te fait croire que c'est un collier de perles.",
           "quote": true
         }
       ],
@@ -1033,11 +1066,11 @@
       "timing": "",
       "lines": [
         {
-          "t": "Alors dites-moi franchement en commentaire : vous seriez capable d'enlever votre maillot devant des inconnus… ou rien que l'idée vous met déjà mal à l'aise ?"
+          "t": "Alors dites-moi franchement en commentaire : vous avez déjà confondu de la jalousie avec de l'amour ? Et à quel moment, exactement, vous avez compris que ce n'était pas la même chose ?"
         }
       ],
       "notes": [
-        "Caméra : sourire complice, inviter vraiment au débat."
+        "Caméra : sourire complice mais doux, inviter vraiment au partage."
       ]
     },
     {
@@ -1046,7 +1079,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Et parce que vous êtes nombreux à me demander comment on gère tout ça à deux : vendredi prochain, je vous ouvre les coulisses de « Avoir un OnlyFans en couple : les règles qu'on s'est fixées ». On va parler cash de ce qui tient un couple quand le corps devient aussi un métier."
+          "t": "Et vendredi prochain, on change complètement d'ambiance, mais on reste sur le corps et la liberté : « Naturisme : pourquoi on confond nudité et sexualité ? » On va déconstruire ensemble un des plus vieux tabous — celui qui fait qu'un corps nu est immédiatement vu comme un corps sexuel. Croyez-moi, ça va vous surprendre."
         }
       ],
       "notes": [
@@ -1059,7 +1092,7 @@
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Si cette vidéo vous a fait voir le naturisme autrement, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat, et sur mon Telegram pour la version bien plus intime — celle que YouTube ne me laisserait jamais poster. Les liens sont en description."
+          "t": "Si cette vidéo vous a aidée à voir plus clair, abonnez-vous, ça change tout pour moi. On se retrouve sur Facebook @blondymandise pour prolonger le débat en commentaires, et sur mon Telegram pour la version bien plus intime et sans filtre — celle que YouTube ne me laisserait jamais poster. Tous les liens sont en description."
         }
       ],
       "notes": [
@@ -1083,38 +1116,38 @@
   ],
   "sources": [
     {
-      "label": "Naturisme : ~2,6 millions de Français pratiquants réguliers ; 1re destination naturiste mondiale (Tourmag / France 4 Naturisme, 2024)",
-      "url": "https://www.tourmag.com/Naturisme-26-millions-de-Francais-pratiquants-reguliers_a80313.html"
+      "label": "Violences conjugales : 272 400 victimes enregistrées en 2024, quasi-stabilisation (Ministère de l'Intérieur / SSMSI)",
+      "url": "https://www.interieur.gouv.fr/actualites/communiques-de-presse/violences-conjugales-enregistrees-par-services-de-securite-quasi-stabilisation-en-2024"
     },
     {
-      "label": "Le naturisme en France en 2025 : 350 M€ de CA, 8 millions de nuitées, 140 plages (Naturisme TV)",
-      "url": "https://www.naturisme-tv.com/naturisme-france-2025/"
+      "label": "Violences conjugales : 272 382 victimes recensées en 2024 (Vie publique)",
+      "url": "https://www.vie-publique.fr/en-bref/300687-violences-conjugales-272-382-victimes-recensees-en-2024"
     },
     {
-      "label": "La France, première destination naturiste au monde (Vudailleurs)",
-      "url": "https://www.vudailleurs.com/24043-2/"
+      "label": "Contrôle coercitif : mécanisme retrouvé dans 100 % des féminicides + vers une nouvelle incrimination pénale en 2025 (Le Club des Juristes)",
+      "url": "https://www.leclubdesjuristes.com/societe/violences-faites-aux-femmes-vers-une-nouvelle-incrimination-du-controle-coercitif-9317/"
     }
   ],
   "ideaProposals": [
     {
-      "theme": "Naturisme & Société",
-      "title": "Naturisme : pourquoi on confond nudité et sexualité ?",
+      "theme": "Couple / Psycho",
+      "title": "Love bombing : quand trop d'amour, trop vite, cache un piège",
       "format": "Long format",
-      "hook": "Déconstruire le tabou du corps nu + mon regard de créatrice",
+      "hook": "Décrypter la phase de séduction excessive + vécu perso",
       "potentiel": "🔥🔥🔥"
     },
     {
-      "theme": "Couple",
-      "title": "Lieux libertins : ce que ça révèle vraiment de ton couple",
+      "theme": "Psychologie",
+      "title": "Pourquoi on retourne toujours vers nos ex toxiques ?",
       "format": "Long format",
-      "hook": "Loupe sur la relation + témoignages + vécu",
+      "hook": "Le cycle de l'attachement + confession",
       "potentiel": "🔥🔥"
     },
     {
       "theme": "Femme & Société",
-      "title": "Mon corps est mon métier : ce que ça m'a appris sur la pudeur",
+      "title": "« Elle l'a bien cherché » : comment on inverse la culpabilité",
       "format": "Long format",
-      "hook": "Confession + rapport au corps quand il devient business",
+      "hook": "Déconstruire le victim-blaming + prise de position",
       "potentiel": "🔥🔥"
     }
   ]

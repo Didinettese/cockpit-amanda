@@ -261,11 +261,27 @@
       "date": "2026-08-13",
       "theme": "Comment reconnaître quelqu’un qui nous contrôle de quelqu’un qui nous aime ?",
       "title": "Le contrôle déguisé en amour",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Reconnaître la possession sous le romantisme + vécu perso",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Le contrôle déguisé en amour",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "« S'il est jaloux, c'est qu'il t'aime » : le piège qu'on nous vend",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Amour ou emprise : comment faire la différence ?",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "« S'il est jaloux, c'est qu'il t'aime. » On m'a répété ça toute ma vie. Aujourd'hui je démonte la phrase — parce que l'amour et le contrôle ne sont pas deux versions de la même chose, ce sont deux forces opposées. Et le contrôle coercitif, cette emprise qui ne laisse aucun bleu, est retrouvé dans 100 % des féminicides. On met des mots dessus, ensemble.\n\n• Amour VS contrôle : la différence que personne ne t'apprend\n• Les 3 signes déguisés en amour : le téléphone, l'isolement, la dévalorisation\n• Mon aveu : la fois où ma vie est devenue « toute petite » sans que je le voie\n• Le test tout simple pour savoir de quel côté tu es\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#emprise #controlecoercitif #couple #violencespsychologiques #redflags #psychologie #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1784199162786",
@@ -316,6 +332,14 @@
       "title": "L'amour vs l'attachement – la différence",
       "format": "Long format",
       "hook": "Histoire perso + analyse psycho",
+      "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-silence-radio",
+      "theme": "Couple / Psycho",
+      "title": "Le silence radio : punition affective ou protection ?",
+      "format": "Long format",
+      "hook": "Ghosting, bouderie, ignorance : arme de manipulation ou droit de se protéger ? + vécu",
       "potentiel": "🔥🔥"
     }
   ],
