@@ -267,7 +267,7 @@
       "titleOptions": [
         {
           "text": "Le contrôle déguisé en amour",
-          "potentiel": "🔥",
+          "potentiel": "🔥🔥🔥",
           "best": true
         },
         {
@@ -277,6 +277,11 @@
         },
         {
           "text": "Amour ou emprise : comment faire la différence ?",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "",
           "potentiel": "🔥🔥",
           "best": false
         }
