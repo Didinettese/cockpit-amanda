@@ -288,11 +288,27 @@
       "date": "2026-08-20",
       "theme": "Naturisme & Société",
       "title": "Naturisme : pourquoi on confond nudité et sexualité ?",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Déconstruire le tabou du corps nu + mon regard de créatrice",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Naturisme : pourquoi on confond nudité et sexualité ?",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "J'ai vécu nue au milieu d'inconnus : il ne s'est RIEN passé",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Un corps nu n’est pas un corps sexuel (la preuve)",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "Un corps nu n'est pas un corps sexuel. Je sais, vous n'y croyez pas — moi non plus, avant d'avoir vécu nue au milieu de centaines d'inconnus sans qu'il ne se passe rien. 2,6 millions de Français pratiquent le naturisme, et pourtant on n'a jamais eu aussi peur de la simple nudité. Aujourd'hui je démonte cette confusion qui nous pourrit le rapport au corps.\n\n• Pourquoi notre cerveau associe nu = sexe (et qui nous l'a appris)\n• Le paradoxe français : pays n°1 du naturisme… où le topless disparaît (43 % → 16 %)\n• Ma première fois toute nue : ce qui se passe vraiment dans la tête\n• Sexualisation subie ≠ sensualité choisie : reprendre le pouvoir sur son corps\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#naturisme #nudité #corps #tabou #femmeetsociété #bodypositive #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1784199167204",
@@ -349,6 +365,14 @@
       "format": "Long format",
       "hook": "Déconstruire le victim-blaming + prise de position",
       "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-body-count",
+      "theme": "Sexualité / Société",
+      "title": "Body count : pourquoi ce chiffre obsède tout le monde",
+      "format": "Long format",
+      "hook": "Le double standard du « compteur » + prise de position + vécu",
+      "potentiel": "🔥🔥🔥"
     }
   ],
   "links": {
