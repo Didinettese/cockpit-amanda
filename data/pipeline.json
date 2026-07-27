@@ -342,6 +342,17 @@
       "notes": "Déconstruire le tabou du lit conjugal + témoignages",
       "titleOptions": [],
       "caption": ""
+    },
+    {
+      "id": "ep-1785123190096",
+      "date": "2026-09-17",
+      "theme": "Sexualité / Société",
+      "title": "Body count : pourquoi ce chiffre obsède tout le monde",
+      "status": "idee",
+      "lieu": "",
+      "notes": "Le double standard du « compteur » + prise de position + vécu",
+      "titleOptions": [],
+      "caption": ""
     }
   ],
   "ideas": [
@@ -376,14 +387,6 @@
       "format": "Long format",
       "hook": "Déconstruire le victim-blaming + prise de position",
       "potentiel": "🔥🔥"
-    },
-    {
-      "id": "id-body-count",
-      "theme": "Sexualité / Société",
-      "title": "Body count : pourquoi ce chiffre obsède tout le monde",
-      "format": "Long format",
-      "hook": "Le double standard du « compteur » + prise de position + vécu",
-      "potentiel": "🔥🔥🔥"
     }
   ],
   "links": {
