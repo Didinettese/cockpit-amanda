@@ -287,7 +287,7 @@
       "id": "ep-1784199162786",
       "date": "2026-08-20",
       "theme": "Naturisme & Société",
-      "title": "J'ai vécu nue au milieu d'inconnus : il ne s'est RIEN passé",
+      "title": "Naturisme : pourquoi on confond nudité et sexualité ?",
       "status": "script",
       "lieu": "",
       "notes": "Déconstruire le tabou du corps nu + mon regard de créatrice",
@@ -295,12 +295,12 @@
         {
           "text": "Naturisme : pourquoi on confond nudité et sexualité ?",
           "potentiel": "🔥🔥🔥",
-          "best": false
+          "best": true
         },
         {
           "text": "J'ai vécu nue au milieu d'inconnus : il ne s'est RIEN passé",
           "potentiel": "🔥🔥",
-          "best": true
+          "best": false
         },
         {
           "text": "Un corps nu n’est pas un corps sexuel (la preuve)",
