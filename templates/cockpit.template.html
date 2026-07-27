@@ -191,15 +191,18 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .tblk{background:linear-gradient(160deg,var(--panel-2),var(--panel));border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:16px}
 .tblk .hd{font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
 .tblk .sub{font-size:12px;color:var(--muted);margin-bottom:11px}
-.topt{display:flex;align-items:center;gap:8px;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:8px 9px;margin-bottom:8px}
+.topt{display:grid;grid-template-columns:26px 1fr;gap:7px 10px;align-items:start;background:var(--bg);border:1px solid var(--line);border-radius:11px;padding:9px 10px;margin-bottom:8px}
 .topt.best{border-color:var(--done);box-shadow:0 0 0 3px var(--done-soft)}
-.topt .pick{width:26px;height:26px;border-radius:50%;border:1.6px solid var(--line);background:transparent;flex:0 0 auto;cursor:pointer;display:grid;place-items:center;color:transparent;font-weight:800;font-size:14px}
+.topt .pick{width:26px;height:26px;border-radius:50%;border:1.6px solid var(--line);background:transparent;cursor:pointer;display:grid;place-items:center;color:transparent;font-weight:800;font-size:14px;grid-row:1/span 2;align-self:center}
 .topt.best .pick{background:var(--done);border-color:var(--done);color:var(--bg)}
-.topt input.tt{flex:1;background:transparent;border:none;color:var(--ink);font-size:14px;font-weight:600;font-family:Inter;min-width:0}
-.topt input.tt:focus{outline:none}
-.topt select.pot{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;font-size:12.5px;padding:5px 6px;cursor:pointer;flex:0 0 auto}
-.topt .reco{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--bg);background:var(--done);border-radius:99px;padding:3px 7px;flex:0 0 auto}
-.topt .delt{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer;flex:0 0 auto}
+.topt textarea.tt{width:100%;background:transparent;border:none;color:var(--ink);font-size:14px;font-weight:600;font-family:Inter;line-height:1.4;resize:none;overflow:hidden;min-height:22px;padding:2px 0 0}
+.topt textarea.tt:focus{outline:none}
+.topt .ctr{display:flex;align-items:center;gap:8px;min-width:0}
+.topt .ctr .delt{margin-left:auto}
+.topt select.pot{appearance:none;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;font-size:12.5px;padding:5px 6px;cursor:pointer}
+.topt .reco{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--bg);background:var(--done);border-radius:99px;padding:3px 7px}
+.topt .delt{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer}
+.tblk .tchosen{font-size:14px;font-weight:700;line-height:1.45;background:var(--bg);border:1px solid var(--done);border-radius:11px;padding:10px 12px;color:var(--ink);margin-bottom:4px;word-break:break-word}
 .tblk .cl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:13px 0 6px}
 .tblk textarea.cap{width:100%;min-height:130px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:13.5px;line-height:1.5;padding:11px;font-family:Inter;resize:vertical}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -499,23 +502,40 @@ function titleCaptionBlock(ep){
     const lvl=Math.max(0,POT_LEVELS.indexOf(o.potentiel||"🔥"));
     h+='<div class="topt'+(o.best?" best":"")+'" data-ti="'+i+'">'
       +'<button class="pick" title="Choisir ce titre">✓</button>'
-      +'<input class="tt" value="'+escAttr(o.text)+'" placeholder="Titre…">'
-      +'<select class="pot">'+POT_LEVELS.map((p,li)=>'<option value="'+p+'"'+(li===lvl?" selected":"")+'>'+p+'</option>').join("")+'</select>'
+      +'<textarea class="tt" rows="1" placeholder="Titre…">'+esc(o.text||"")+'</textarea>'
+      +'<div class="ctr"><select class="pot">'+POT_LEVELS.map((p,li)=>'<option value="'+p+'"'+(li===lvl?" selected":"")+'>'+p+'</option>').join("")+'</select>'
       +(o.best?'<span class="reco">Reco</span>':'')
-      +'<button class="delt" title="Supprimer">🗑</button></div>';
+      +'<button class="delt" title="Supprimer">🗑</button></div></div>';
   });
   h+='<button class="prog-add" id="addTitle" style="margin-bottom:2px">＋ Ajouter un titre</button>';
+  h+='<div class="cl">🏆 Titre choisi (officiel)</div>'
+    +'<div class="tchosen" id="chosenTitle">'+esc(ep.title||((ep.titleOptions||[]).find(o=>o.best)||{}).text||"—")+'</div>';
   h+='<div class="cl">📝 Description YouTube</div>'
     +'<textarea class="cap" id="capBox" placeholder="Description de la vidéo pour YouTube…">'+esc(ep.caption||"")+'</textarea></div>';
   return h;
 }
 function bindTitleCaption(root,ep){
   if(!ep)return;
+  // Répercute le nouveau titre : titre officiel, en-tête (Thème) et caption (remplace l'ancien titre s'il y figure)
+  const syncTitle=(oldT,newT)=>{
+    let capSynced=false;
+    if(newT){ep.title=newT;if(DATA.meta&&DATA.meta.videoD)DATA.meta.videoD.title=newT;}
+    if(oldT&&newT&&oldT!==newT&&typeof ep.caption==="string"&&ep.caption.indexOf(oldT)>=0){ep.caption=ep.caption.split(oldT).join(newT);capSynced=true;}
+    return capSynced;
+  };
+  const fit=t=>{t.style.height="auto";t.style.height=t.scrollHeight+"px";};
   root.querySelectorAll(".topt").forEach(row=>{
     const i=+row.dataset.ti;
-    row.querySelector(".tt").onchange=e=>{ep.titleOptions[i].text=e.target.value;if(ep.titleOptions[i].best)ep.title=e.target.value;queueSave();};
+    const tt=row.querySelector(".tt");
+    fit(tt);tt.addEventListener("input",()=>fit(tt));
+    tt.onchange=e=>{const old=ep.titleOptions[i].text;ep.titleOptions[i].text=e.target.value;if(ep.titleOptions[i].best)syncTitle(old,e.target.value);queueSave();renderScript();};
     row.querySelector(".pot").onchange=e=>{ep.titleOptions[i].potentiel=e.target.value;queueSave();};
-    row.querySelector(".pick").onclick=()=>{ep.titleOptions.forEach((o,j)=>o.best=(j===i));ep.title=ep.titleOptions[i].text||ep.title;queueSave();renderScript();toast("Titre choisi ✓");};
+    row.querySelector(".pick").onclick=()=>{
+      const old=((ep.titleOptions||[]).find(o=>o.best)||{}).text||ep.title;
+      ep.titleOptions.forEach((o,j)=>o.best=(j===i));
+      const capSynced=syncTitle(old,ep.titleOptions[i].text||ep.title);
+      queueSave();renderScript();toast(capSynced?"Titre choisi ✓ — caption mise à jour":"Titre choisi ✓");
+    };
     row.querySelector(".delt").onclick=()=>{ep.titleOptions.splice(i,1);queueSave();renderScript();};
   });
   const add=root.querySelector("#addTitle");
@@ -529,8 +549,9 @@ function _renderScript(){
   const entry=curEntry();                       // semaine en cours dans l'archive (éditable)
   const vd=DATA.meta.videoD||{};
   const epD=videoDEpisode();
+  const vdTitle=(epD&&epD.title)||vd.title;   // le titre choisi dans le pipeline fait foi
   let h=titleCaptionBlock(epD)+'<div class="info"><span class="tt">📜 Script long format — semaine en cours</span>'
-    +(vd.title?'Thème : <b>'+esc(vd.title)+'</b>'+(vd.theme?' — '+esc(vd.theme):'')+'.<br>':'')
+    +(vdTitle?'Thème : <b>'+esc(vdTitle)+'</b>'+(vd.theme?' — '+esc(vd.theme):'')+'.<br>':'')
     +(scriptEdit?'Mode édition : modifie le texte, ajoute/supprime des lignes, mets tes expériences. <b>Enregistré automatiquement.</b>'
                 :'Coche « validé » chaque section une fois tournée.')+'</div>';
   if(entry)h+='<button class="btn ghost" id="scEditToggle" style="margin-bottom:12px">'+(scriptEdit?'✓ Terminer l\'édition':'✏️ Modifier le script')+'</button>';
