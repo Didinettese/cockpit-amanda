@@ -1150,5 +1150,49 @@
       "hook": "Double standard homme/femme + question clivante",
       "potentiel": "🔥🔥🔥"
     }
-  ]
+  ],
+  "tournage": {
+    "objectif": "50 clips SFW en une séance — méthode matrice : 5 tenues × 10 trends",
+    "note": "Jour flexible : choisis ton créneau dans la semaine. Les 10 trends sont envoyées par Emma (dossier Drive de la semaine).",
+    "reglages": [
+      "Caméra en 4K, 60 images/seconde (Réglages → Appareil photo → Enregistrement vidéo)",
+      "Caméra arrière — jamais la caméra selfie (qualité deux fois meilleure)",
+      "Objectif nettoyé (un coup de chiffon change tout)",
+      "Lumière face à toi : fenêtre en journée ou ring light — jamais dans le dos",
+      "Batterie chargée + stockage suffisant"
+    ],
+    "avant": [
+      "5 tenues préparées et accessibles (suggestions dans la matrice ci-dessous)",
+      "Les 10 trends de la semaine ouvertes sur un deuxième écran (envoyées par Emma, dossier Drive)",
+      "Fond propre, lieu rangé"
+    ],
+    "tenues": [
+      {
+        "n": 1,
+        "suggestion": "jean + top uni clair — casual crédible pour les trends débat/opinion (raccord thème jalousie)"
+      },
+      {
+        "n": 2,
+        "suggestion": "robe d'été légère + paréo — clin d'œil Cap d'Agde / naturisme (100 % SFW)"
+      },
+      {
+        "n": 3,
+        "suggestion": "tenue chic de soirée — trends glam et teasers du soir (toujours SFW)"
+      },
+      {
+        "n": 4,
+        "suggestion": "brassière + legging sport — trends dynamiques et transitions"
+      },
+      {
+        "n": 5,
+        "suggestion": "pull oversize cosy — trends confidence / storytime intime"
+      }
+    ],
+    "apres": [
+      "Déposer tous les clips dans le dossier Drive de la semaine",
+      "Nommer simplement : Tenue X – Trend Y",
+      "Prévenir Emma que c'est déposé"
+    ],
+    "regleOr": "Tout le contenu reste 100 % safe Instagram/Facebook — pas de nudité, pas de sollicitation, pas de référence explicite. Un doute sur une trend → demande à Emma AVANT de filmer."
+  }
 }

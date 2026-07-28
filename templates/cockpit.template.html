@@ -203,6 +203,15 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 .topt .reco{font-size:9.5px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:var(--bg);background:var(--done);border-radius:99px;padding:3px 7px}
 .topt .delt{background:none;border:none;color:var(--muted);font-size:15px;cursor:pointer}
 .tblk .tchosen{font-size:14px;font-weight:700;line-height:1.45;background:var(--bg);border:1px solid var(--done);border-radius:11px;padding:10px 12px;color:var(--ink);margin-bottom:4px;word-break:break-word}
+
+/* ===== Onglet Tournage (checklist agence) ===== */
+.titem{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px dashed var(--line)}
+.titem:last-child{border-bottom:none}
+.titem .tx{flex:1;font-size:13.5px;line-height:1.5;padding-top:4px;color:var(--ink)}
+.titem.on .tx{opacity:.45;text-decoration:line-through}
+.titem .chk{width:26px;height:26px;border-radius:8px}
+.ruleor{background:rgba(255,90,90,.09);border:1px solid rgba(255,90,90,.5);border-radius:14px;padding:12px 14px;font-size:13px;line-height:1.55;margin-bottom:14px;color:var(--ink)}
+.ruleor b{color:#ff8a8a}
 .tblk .cl{font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:13px 0 6px}
 .tblk textarea.cap{width:100%;min-height:130px;background:var(--bg);border:1px solid var(--line);border-radius:11px;color:var(--ink);font-size:13.5px;line-height:1.5;padding:11px;font-family:Inter;resize:vertical}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
@@ -228,6 +237,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 
 <div id="view-jour"></div>
 <div id="view-reels" style="display:none"></div>
+<div id="view-tournage" style="display:none"></div>
 <div id="view-script" style="display:none"></div>
 <div id="view-prog" style="display:none"></div>
 <div id="view-idees" style="display:none"></div>
@@ -237,6 +247,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 <div class="tabs" id="tabs">
   <button class="tab active" data-v="jour"><span class="ic">📅</span>Jour</button>
   <button class="tab" data-v="reels"><span class="ic">🎬</span>Réels</button>
+  <button class="tab" data-v="tournage"><span class="ic">🎥</span>Tournage</button>
   <button class="tab" data-v="script"><span class="ic">📜</span>Script</button>
   <button class="tab" data-v="prog"><span class="ic">🗂️</span>Prog</button>
   <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
@@ -317,10 +328,11 @@ function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");curTab=b.dataset.v;
-  ["jour","reels","script","prog","idees","liens","archives"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  ["jour","reels","tournage","script","prog","idees","liens","archives"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
   document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
   if(curTab==="jour")renderJour();
   if(curTab==="reels")renderReels();
+  if(curTab==="tournage")renderTournage();
   if(curTab==="script")renderScript();
   if(curTab==="prog")renderProg();
   if(curTab==="idees")renderIdees();
@@ -480,6 +492,56 @@ function renderReels(){
   }
   el.innerHTML=h;bindCopies(el);
   el.querySelectorAll("[data-rid] .chk").forEach(btn=>btn.onclick=e=>{const id=e.currentTarget.closest("[data-rid]").dataset.rid;setDone(id,!done.has(id));renderReels();});
+}
+
+/* ============ TOURNAGE (checklist agence — méthode matrice) ============ */
+const TOURNAGE_FALLBACK={
+  objectif:"50 clips SFW en une séance — méthode matrice : 5 tenues × 10 trends",
+  note:"Jour flexible : choisis ton créneau dans la semaine. Les 10 trends sont envoyées par Emma (dossier Drive de la semaine).",
+  reglages:[
+    "Caméra en 4K, 60 images/seconde (Réglages → Appareil photo → Enregistrement vidéo)",
+    "Caméra arrière — jamais la caméra selfie (qualité deux fois meilleure)",
+    "Objectif nettoyé (un coup de chiffon change tout)",
+    "Lumière face à toi : fenêtre en journée ou ring light — jamais dans le dos",
+    "Batterie chargée + stockage suffisant"],
+  avant:[
+    "5 tenues préparées et accessibles",
+    "Les 10 trends de la semaine ouvertes sur un deuxième écran (envoyées par Emma, dossier Drive)",
+    "Fond propre, lieu rangé"],
+  tenues:[{n:1,suggestion:""},{n:2,suggestion:""},{n:3,suggestion:""},{n:4,suggestion:""},{n:5,suggestion:""}],
+  apres:[
+    "Déposer tous les clips dans le dossier Drive de la semaine",
+    "Nommer simplement : Tenue X – Trend Y",
+    "Prévenir Emma que c'est déposé"],
+  regleOr:"Tout le contenu reste 100 % safe Instagram/Facebook — pas de nudité, pas de sollicitation, pas de référence explicite. Un doute sur une trend → demande à Emma AVANT de filmer."
+};
+function renderTournage(){
+  const el=document.getElementById("view-tournage");
+  const T=DATA.tournage||TOURNAGE_FALLBACK;
+  const secs=[
+    {k:"reg",t:"1 · Réglages téléphone (à chaque séance)",items:(T.reglages||[])},
+    {k:"av",t:"2 · Avant de filmer",items:(T.avant||[])},
+    {k:"mat",t:"3 · La matrice — toutes les trends dans une tenue, puis change de tenue (jamais l'inverse)",items:(T.tenues||[]).map(x=>"Tenue "+x.n+(x.suggestion?" — "+x.suggestion:"")+" → filme les 10 trends")},
+    {k:"ap",t:"4 · Après la séance",items:(T.apres||[])}
+  ];
+  const allIds=[];secs.forEach(s=>s.items.forEach((_,i)=>allIds.push("sh:"+s.k+":"+i)));
+  const nDone=allIds.filter(id=>done.has(id)).length;
+  let h='<div class="info"><span class="tt">🎥 Séance tournage — checklist agence</span>'
+    +'<b>Objectif :</b> '+esc(T.objectif||"")+'.<br>'+esc(T.note||"")
+    +'<br>Bonus : même setup ? Enchaîne les <b>4 réels scriptés</b> de la semaine → <a href="#" id="goReels" style="color:var(--done);font-weight:700">onglet Réels</a>.</div>';
+  h+='<div class="ruleor"><b>Règle d\'or :</b> '+esc(T.regleOr||"")+'</div>';
+  h+='<div class="meta-line" style="margin:0 2px 12px"><b>'+nDone+'/'+allIds.length+'</b> étapes cochées'+(allIds.length&&nDone===allIds.length?' — 50 clips prêts 🎉':'')+'</div>';
+  secs.forEach(s=>{
+    h+='<div class="beat"><div class="bh"><span>'+esc(s.t)+'</span></div>';
+    s.items.forEach((tx,i)=>{
+      const id="sh:"+s.k+":"+i,on=done.has(id);
+      h+='<div class="titem'+(on?" on":"")+'" data-tid="'+id+'"><button class="chk'+(on?" on":"")+'" aria-label="Fait">✓</button><div class="tx">'+esc(tx)+'</div></div>';
+    });
+    h+='</div>';
+  });
+  el.innerHTML=h;
+  el.querySelectorAll("[data-tid] .chk").forEach(b=>b.onclick=e=>{const id=e.currentTarget.closest("[data-tid]").dataset.tid;setDone(id,!done.has(id));renderTournage();});
+  const g=el.querySelector("#goReels");if(g)g.onclick=e=>{e.preventDefault();goto("reels");};
 }
 
 /* ============ SCRIPT ============ */
