@@ -315,11 +315,27 @@
       "date": "2026-08-27",
       "theme": "Sexualité",
       "title": "Faut-il tout se dire dans un couple libertin ?",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Transparence, limites et jalousie : où placer le curseur + vécu",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Ce que je ne raconte pas à mon mari (couple libertin)",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "Faut-il tout se dire dans un couple libertin ?",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Transparence totale dans le couple : la plus belle des illusions",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "Dans un couple libertin, on croit que la solution c'est de tout se dire. J'ai essayé. Ça a tenu quatre mois, et ça nous a coûté trois semaines de silence. Aujourd'hui je vous explique la nuance qui a tout changé chez nous : il ne faut pas TOUT se dire, il faut tout POUVOIR se dire.\n\n• Transparence VS déballage : la différence que personne n'explique\n• Les chiffres qui dérangent : 8 % des Français en relation ouverte, et la 2e règle la plus fréquente… c'est le silence (IFOP-Gleeden 2025)\n• Mon aveu : le soir où j'ai tout raconté à mon mari (et ce que ça a cassé)\n• Les 3 règles qu'on applique aujourd'hui : cadre avant, débrief émotionnel, droit de demander\n• La seule frontière entre pudeur et mensonge\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#couplelibertin #libertinage #transparence #couple #communication #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1784199174180",
@@ -393,6 +409,14 @@
       "format": "Long format",
       "hook": "Histoire perso + analyse psycho",
       "potentiel": "🔥🔥"
+    },
+    {
+      "id": "id-simulation",
+      "theme": "Sexualité",
+      "title": "Pourquoi les femmes simulent — et pourquoi j'ai arrêté",
+      "format": "Long format",
+      "hook": "Aveu perso + double standard du plaisir dans le couple",
+      "potentiel": "🔥🔥🔥"
     }
   ],
   "links": {
