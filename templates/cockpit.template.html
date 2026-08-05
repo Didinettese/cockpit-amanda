@@ -1018,6 +1018,8 @@ async function renderApproche(){
       ${kpi("veulent la suite",fb.yes??0)}
     </div>
 
+    <div id="laTournage" style="margin:4px 0 14px"></div>
+
     <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#d4566a;margin:16px 0 4px">Funnel</h3>
     ${row("Comptes créés",f.claimed??0)}
     ${row("Histoire commencée (Q1)",(f.q1_done??0)+" · "+pct(f.q1_done,f.claimed))}
@@ -1049,6 +1051,7 @@ async function renderApproche(){
     <button id="laLogout" style="display:block;margin:10px auto 0;border:none;background:none;color:#555;font-size:12px;text-decoration:underline">oublier le token sur ce téléphone</button>
   </div>`;
 
+  laShots(v,tok);
   v.querySelector("#laRefresh").onclick=()=>renderApproche();
   v.querySelector("#laLogout").onclick=()=>{localStorage.removeItem("la:admin");renderApproche();};
   v.querySelector("#laAddSrc").onclick=()=>{
@@ -1060,6 +1063,166 @@ async function renderApproche(){
     renderApproche();
   };
   bindCopies(v);
+}
+
+/* ============ APPROCHE · TOURNAGE — checklist + upload direct Bunny ============ */
+const LA_CDN="vz-1f95d57b-2dd.b-cdn.net";
+const LA_SHOTS=[
+ {g:"1 · L'accroche — transat, carnet, un verre",items:[
+  {id:"CLIP_01",t:"video",n:"Q1 · l'accroche (~20s)",d:"Tu écris, tu sens un regard, tu lèves lentement les yeux vers l'objectif. Un sourcil. Tu attends."},
+  {id:"CLIP_01a",t:"video",n:"réaction · abord lourd",d:"Amusée-fermée, tu refermes à moitié le carnet : « Il fallait. Rien que ça. »"},
+  {id:"CLIP_01b",t:"video",n:"réaction · question carnet",d:"Touchée, surprise : « …Personne me demande jamais ça. »"},
+  {id:"CLIP_01c",t:"video",n:"réaction · abord neutre",d:"Polie, tiède : « Ça dépend qui demande. » Fin des 3 : d'un geste du menton, tu désignes la place."}]},
+ {g:"2-3 · Elle te jauge, puis se lève",items:[
+  {id:"CLIP_02",t:"video",n:"Q2 · elle te jauge (~20s)",d:"Sourire en coin : « T'as l'habitude d'aborder des inconnues au bord des piscines, toi ? »"},
+  {id:"CLIP_03",t:"video",n:"Q3 · elle se lève (~25s) — LE cliffhanger",d:"Téléphone vibre, tu ranges le carnet, à moitié levée. Regard caméra, 10 s de silence : « Je dois y aller. »"}]},
+ {g:"4 · Elle se rassoit (juste après le paiement)",items:[
+  {id:"CLIP_04a",t:"video",n:"version amusée-défensive",d:"« Cinq minutes. Vraiment cinq. »"},
+  {id:"CLIP_04b",t:"video",n:"version troublée",d:"Tu reposes le carnet : « …T'as de la chance que je déteste les gens prévisibles. »"}]},
+ {g:"5-6 · Les prénoms, le carnet",items:[
+  {id:"CLIP_05",t:"video",n:"Q4 · les prénoms (~15s)",d:"« Bon. J'ai cinq minutes, paraît-il. Tu t'appelles comment ? »"},
+  {id:"CLIP_06",t:"video",n:"Q5 · le carnet (~20s)",d:"Main posée dessus, sourire : « Ça, c'est privé. »"}]},
+ {g:"7 · La vraie question (2 humeurs)",items:[
+  {id:"CLIP_07a",t:"video",n:"version méfiante",d:"Bras croisés : « Pourquoi tu es venu me parler ? Sérieusement. La vraie raison. »"},
+  {id:"CLIP_07b",t:"video",n:"version joueuse",d:"Penchée en avant : « Et si je t'avais pas plu… tu serais venu quand même ? »"}]},
+ {g:"8 · Le secret — LE moment du chapitre",items:[
+  {id:"CLIP_08",t:"video",n:"la question (~20s)",d:"Coudes sur la table, voix plus basse : « Dis-moi un truc sur toi que personne ne sait. Un vrai. Je le garderai. »"},
+  {id:"CLIP_08a",t:"video",n:"réaction · il s'est livré",d:"Silence, ton regard change, tu hoches à peine la tête : « …D'accord. Je le garde. »"},
+  {id:"CLIP_08b",t:"video",n:"réaction · il a esquivé",d:"Tu te redresses, sourire de façade : « D'accord. On fait comme ça, alors. »"}]},
+ {g:"9-10 · Sincérité, rapprochement",items:[
+  {id:"CLIP_09",t:"video",n:"Q8 · sincérité (~15s)",d:"« T'es du genre à dire ça à toutes, non ? »"},
+  {id:"CLIP_10a",t:"video",n:"Q9 · version pudique",d:"Tes doigts effleurent sa main en reprenant le sucre, tu te ravises : « …Pardon. » (sans vraiment t'excuser)"},
+  {id:"CLIP_10b",t:"video",n:"Q9 · version audacieuse",d:"Tu prends SON verre, gorgée sans le quitter des yeux : « J'ai le droit, non ? »"}]},
+ {g:"11-12 · La fin de soirée",items:[
+  {id:"CLIP_11",t:"video",n:"Q10 · quitte ou double (~15s)",d:"Tu regardes l'heure, puis lui : « Il est tard. Normalement, là… je rentre. »"},
+  {id:"CLIP_12",t:"video",n:"Q11 · ce qu'il veut (~20s)",d:"Sérieuse pour la première fois : « Qu'est-ce que tu veux ? Là. Vraiment. »"}]},
+ {g:"13 · Le numéro — les 3 fins (monte l'intensité)",items:[
+  {id:"CLIP_13c",t:"video",n:"l'ÉCHEC",d:"Sac à l'épaule, presque désolée : « C'était… sympa. Bonne soirée. » PAS de numéro. Tu pars sans te retourner."},
+  {id:"CLIP_13a",t:"video",n:"la retenue (jauge 40-59)",d:"Tu griffonnes ton numéro, tu le poses sans le lâcher : « T'as une chance. Une. »"},
+  {id:"CLIP_13b",t:"video",n:"la prise (jauge 60+)",d:"Tu prends SON téléphone, tu t'appelles toi-même, sourire : « Voilà. Comme ça, moi aussi j'ai le tien. » Tu pars — et tu te retournes, une fois."}]},
+ {g:"14 · Le teaser (l'asset qui circulera)",items:[
+  {id:"TEASER",t:"video",n:"teaser de sortie (~15s)",d:"Regard caméra, ton jeu le plus magnétique : « chapitre 2 bientôt » (formulation libre)."}]},
+ {g:"📷 Photos du chapitre 2 (chez toi — suggestif, jamais explicite)",items:[
+  {id:"PHOTO_1",t:"photo",n:"miroir · sortie",o:"tenue de sortie",d:"Regard par-dessus l'épaule. Contexte : « Je sors avec des copines. Avis ? »"},
+  {id:"PHOTO_4",t:"photo",n:"retour de soirée · 1h47",o:"la même robe du soir",d:"Air faussement boudeur, canapé ou miroir d'ascenseur : « La preuve, j'ai même pas fini mon verre. »"},
+  {id:"PHOTO_2",t:"photo",n:"le choix de la robe",o:"épaule/dos nu + une robe posée sur le lit",d:"« Celle-là, ou l'autre ? »"},
+  {id:"PHOTO_3",t:"photo",n:"pénombre (jauge 50+)",o:"épaules nues au-dessus du drap",d:"Rien de visible. La récompense de celles qu'il a vraiment séduites."}]},
+ {g:"🎤 Vocaux (au téléphone, ambiance chambre)",items:[
+  {id:"VOCAL_2",t:"vocal",n:"la question sérieuse (~6s)",d:"Un petit soupir, puis posé, sincère : « Dis… la piscine, hier. C'était quoi, pour toi ? »"},
+  {id:"VOCAL_1",t:"vocal",n:"bonne nuit (~5s, jauge 70+)",d:"Un rire doux : « Bonne nuit, toi. » (si l'audio seul est refusé par Bunny : filme-le en vidéo, écran contre la table)"}]},
+ {g:"🛒 Médias plateformes (codes dans l'admin, section Codes PPV)",items:[
+  {id:"T_PPV_OF",t:"task",n:"PPV OnlyFans chapitres — 8,75 €",d:"Révèle le code OF + lien ?src=of. À épingler."},
+  {id:"T_PPV_MYM",t:"task",n:"Média MYM chapitres — 10,50 €",d:"Révèle le code MYM + lien ?src=mym."},
+  {id:"T_EX_CALL",t:"task",n:"Post OF « L'appel » — 62,50 €",d:"Révèle le code appel."},
+  {id:"T_EX_CAM",t:"task",n:"Post OF « La cam » — 125 €",d:"Révèle le code cam."},
+  {id:"T_EX_PHOTO",t:"task",n:"Post OF « La photo » — 12,50 €",d:"Révèle le code photo perso."},
+  {id:"T_BTS",t:"task",n:"BTS 10 min pendant la session",d:"Rushes non explicites pour le tease Snap/FB/Reels (Guilhem filme entre les prises)."}]}
+];
+function laTaskDone(id){return localStorage.getItem("la:task:"+id)==="1";}
+function laReadyMap(){try{return JSON.parse(localStorage.getItem("la:ready")||"{}");}catch(e){return{};}}
+
+async function laShots(v,tok){
+  const box=v.querySelector("#laTournage"); if(!box)return;
+  let ready={};
+  try{ready=await laRpc("admin_clips",{p_admin:tok});localStorage.setItem("la:ready",JSON.stringify(ready));}
+  catch(e){ready=laReadyMap();}
+  const media=LA_SHOTS.flatMap(x=>x.items);
+  const doneN=media.filter(i=>i.t==="task"?laTaskDone(i.id):ready[i.id]).length;
+  const cfgOk=!!(localStorage.getItem("la:bunny:key"));
+  const stOk=!!(localStorage.getItem("la:st:zone"));
+  box.innerHTML=`<details ${doneN<media.length?"open":""} style="background:#141419;border:1px solid #26262e;border-radius:16px;padding:12px 14px">
+    <summary style="font-weight:800;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">
+      <span>🎬 Tournage</span><span style="color:${doneN===media.length?"#3dbb6e":"var(--muted)"};font-size:13px">${doneN}/${media.length}</span></summary>
+    <details style="margin:10px 0;font-size:12px;color:var(--muted)">
+      <summary style="list-style:none">⚙️ Config upload ${cfgOk?"✓":"— à faire une fois"}</summary>
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        <input id="laBk" type="password" placeholder="Clé API de la library Bunny (Stream ▸ lapproche ▸ API)" value="${laEsc(localStorage.getItem("la:bunny:key")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <div style="display:flex;gap:6px">
+          <input id="laSz" placeholder="Storage zone (photos)" value="${laEsc(localStorage.getItem("la:st:zone")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+          <input id="laSp" type="password" placeholder="mot de passe zone" value="${laEsc(localStorage.getItem("la:st:pass")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        </div>
+        <input id="laSh" placeholder="hostname pull zone photos (ex: photos-la.b-cdn.net)" value="${laEsc(localStorage.getItem("la:st:host")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <button id="laCfgSave" style="padding:9px;border-radius:8px;border:none;background:#d4566a;color:#fff;font-weight:700">Enregistrer (reste sur ce téléphone)</button>
+      </div>
+    </details>
+    ${LA_SHOTS.map(grp=>`<div style="margin-top:12px">
+      <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d4566a;margin-bottom:4px">${laEsc(grp.g)}</div>
+      ${grp.items.map(i=>{
+        const ok=i.t==="task"?laTaskDone(i.id):!!ready[i.id];
+        return `<div style="display:flex;gap:9px;padding:7px 0;border-bottom:1px solid #1d1d24;align-items:flex-start">
+          ${i.t==="task"
+            ?`<button data-task="${i.id}" style="width:26px;height:26px;border-radius:8px;border:1px solid ${ok?"#3dbb6e":"#444"};background:${ok?"#183d28":"none"};color:#3dbb6e;flex-shrink:0">${ok?"✓":""}</button>`
+            :`<span style="width:26px;height:26px;border-radius:8px;border:1px solid ${ok?"#3dbb6e":"#444"};background:${ok?"#183d28":"none"};color:#3dbb6e;display:flex;align-items:center;justify-content:center;flex-shrink:0">${ok?"✓":""}</span>`}
+          <div style="flex:1;min-width:0">
+            <div style="font-size:14px;font-weight:700">${laEsc(i.n)}</div>
+            ${i.o?`<div style="font-size:12px;color:#F5A623">👗 ${laEsc(i.o)}</div>`:""}
+            <div style="font-size:12.5px;color:var(--muted);line-height:1.45">${laEsc(i.d)}</div>
+          </div>
+          ${i.t!=="task"?`<button data-up="${i.id}" style="border:1px solid #333;background:none;color:#eee;border-radius:8px;padding:6px 10px;font-size:12px;flex-shrink:0">${ok?"remplacer":"⬆︎ envoyer"}</button>`:""}
+        </div>`;}).join("")}
+    </div>`).join("")}
+    <input type="file" id="laFile" style="display:none">
+  </details>`;
+
+  box.querySelector("#laCfgSave").onclick=()=>{
+    localStorage.setItem("la:bunny:key",box.querySelector("#laBk").value.trim());
+    localStorage.setItem("la:st:zone",box.querySelector("#laSz").value.trim());
+    localStorage.setItem("la:st:pass",box.querySelector("#laSp").value.trim());
+    localStorage.setItem("la:st:host",box.querySelector("#laSh").value.trim());
+    toast("Config enregistrée ✓");laShots(v,tok);
+  };
+  box.querySelectorAll("[data-task]").forEach(b=>b.onclick=()=>{
+    const id=b.dataset.task;
+    localStorage.setItem("la:task:"+id,laTaskDone(id)?"0":"1");
+    laShots(v,tok);
+  });
+  const fileInput=box.querySelector("#laFile");
+  box.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{
+    const item=media.find(x=>x.id===b.dataset.up);
+    fileInput.accept=item.t==="photo"?"image/*":(item.t==="vocal"?"audio/*,video/*":"video/*");
+    fileInput.onchange=()=>{if(fileInput.files[0])laUpload(item,fileInput.files[0],b,tok,()=>laShots(v,tok));fileInput.value="";};
+    fileInput.click();
+  });
+}
+
+async function laUpload(item,file,btn,tok,onDone){
+  const key=localStorage.getItem("la:bunny:key");
+  try{
+    let url;
+    if(item.t==="photo"){
+      const zone=localStorage.getItem("la:st:zone"),pass=localStorage.getItem("la:st:pass"),host=localStorage.getItem("la:st:host");
+      if(!zone||!pass||!host){toast("Configure la Storage zone d'abord (⚙️)");return;}
+      const ext=(file.name.split(".").pop()||"jpg").toLowerCase();
+      const path="lapproche/"+item.id+"_"+Date.now()+"."+ext;
+      btn.textContent="…";
+      const r=await fetch("https://storage.bunnycdn.com/"+zone+"/"+path,{method:"PUT",headers:{AccessKey:pass},body:file});
+      if(!r.ok)throw new Error("storage "+r.status);
+      url="https://"+host+"/"+path;
+    }else{
+      if(!key){toast("Configure la clé Bunny d'abord (⚙️)");return;}
+      btn.textContent="0%";
+      const cr=await fetch("https://video.bunnycdn.com/library/720136/videos",{method:"POST",
+        headers:{AccessKey:key,"Content-Type":"application/json"},body:JSON.stringify({title:item.id})});
+      if(!cr.ok)throw new Error("create "+cr.status);
+      const guid=(await cr.json()).guid;
+      await new Promise((res,rej)=>{
+        const x=new XMLHttpRequest();
+        x.open("PUT","https://video.bunnycdn.com/library/720136/videos/"+guid);
+        x.setRequestHeader("AccessKey",key);
+        x.upload.onprogress=e=>{if(e.total)btn.textContent=Math.round(e.loaded/e.total*100)+"%";};
+        x.onload=()=>x.status<300?res():rej(new Error("upload "+x.status));
+        x.onerror=()=>rej(new Error("upload réseau"));
+        x.send(file);
+      });
+      url="https://"+LA_CDN+"/"+guid+"/playlist.m3u8";
+    }
+    const set=await laRpc("admin_set_clip",{p_admin:tok,p_clip:item.id,p_url:url});
+    if(set&&set.ok){toast(item.id+" en ligne et branché ✓");onDone&&onDone();}
+    else{toast("Upload ok mais branchement raté — réessaie");btn.textContent="⬆︎ envoyer";}
+  }catch(e){
+    toast("Échec envoi "+item.id+" ("+(e.message||"réseau")+")");
+    btn.textContent="⬆︎ envoyer";
+  }
 }
 
 renderDays();renderJour();
