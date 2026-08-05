@@ -242,6 +242,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
 <div id="view-prog" style="display:none"></div>
 <div id="view-idees" style="display:none"></div>
 <div id="view-liens" style="display:none"></div>
+<div id="view-approche" style="display:none"></div>
 <div id="view-archives" style="display:none"></div>
 
 <div class="tabs" id="tabs">
@@ -252,6 +253,7 @@ h1,h2,h3{font-family:"Bricolage Grotesque",sans-serif;margin:0;letter-spacing:-.
   <button class="tab" data-v="prog"><span class="ic">🗂️</span>Prog</button>
   <button class="tab" data-v="idees"><span class="bdot"></span><span class="ic">💡</span>Idées</button>
   <button class="tab" data-v="liens"><span class="ic">🔗</span>Liens</button>
+  <button class="tab" data-v="approche"><span class="ic">🌊</span>Approche</button>
   <button class="tab" data-v="archives"><span class="ic">📚</span>Archives</button>
 </div>
 
@@ -328,7 +330,7 @@ function bindCopies(root){root.querySelectorAll(".copybtn").forEach(b=>b.onclick
 document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
   b.classList.add("active");curTab=b.dataset.v;
-  ["jour","reels","tournage","script","prog","idees","liens","archives"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
+  ["jour","reels","tournage","script","prog","idees","liens","approche","archives"].forEach(k=>document.getElementById("view-"+k).style.display=(k===curTab)?"block":"none");
   document.getElementById("ringWrap").style.display=(curTab==="jour"&&calMode==="day")?"block":"none";
   if(curTab==="jour")renderJour();
   if(curTab==="reels")renderReels();
@@ -337,6 +339,7 @@ document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>{
   if(curTab==="prog")renderProg();
   if(curTab==="idees")renderIdees();
   if(curTab==="liens")renderLiens();
+  if(curTab==="approche")renderApproche();
   if(curTab==="archives")renderArchives();
   window.scrollTo({top:0,behavior:"smooth"});
 });
@@ -936,6 +939,129 @@ function archiveDetailHTML(w){
 loadDone();loadLinks();
 pipeLoading=loadPipe();
 pipeLoading.then(()=>{if(curTab==="prog")_renderProg();if(curTab==="idees")_renderIdees();});
+/* ============ ONGLET APPROCHE — jeu "L'Approche", données live Supabase ============
+   Le token admin est saisi UNE fois et stocké dans le localStorage du téléphone.
+   Il n'apparaît jamais dans ce fichier (le dépôt est public). */
+const LA_API="https://ymgpxuyamddpiyxiyfgo.supabase.co/rest/v1/rpc/";
+const LA_KEY="sb_publishable_WDw8MbyRNwiI9DsoDD6kFQ_YKPRJHuV"; // clé publique (côté client par design)
+const LA_GAME="https://lapproche-558.netlify.app";
+function laEsc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+async function laRpc(fn,args){const r=await fetch(LA_API+fn,{method:"POST",headers:{"Content-Type":"application/json","apikey":LA_KEY},body:JSON.stringify(args||{})});if(!r.ok)throw new Error("http"+r.status);return r.json();}
+function laLinks(){try{return JSON.parse(localStorage.getItem("la:links")||"[]");}catch(e){return[];}}
+
+async function renderApproche(){
+  const v=document.getElementById("view-approche");
+  const tok=localStorage.getItem("la:admin")||"";
+  if(!tok){
+    v.innerHTML=`<div style="padding:18px">
+      <h2 style="margin:0 0 6px">🌊 L'Approche</h2>
+      <p style="color:var(--muted);font-size:14px;line-height:1.5">Colle ton token admin — une seule fois, il reste sur ce téléphone (jamais dans le dépôt public).</p>
+      <input id="laTok" type="password" placeholder="Token admin" style="width:100%;padding:12px;border-radius:10px;border:1px solid #333;background:#17171d;color:#eee">
+      <button id="laGo" style="margin-top:10px;width:100%;padding:12px;border-radius:10px;border:none;background:#d4566a;color:#fff;font-weight:700">Connecter</button>
+    </div>`;
+    v.querySelector("#laGo").onclick=()=>{const t=v.querySelector("#laTok").value.trim();if(!t)return;localStorage.setItem("la:admin",t);renderApproche();};
+    return;
+  }
+  v.innerHTML=`<div style="padding:18px;color:var(--muted)">Chargement des données du jeu…</div>`;
+  let d;
+  try{d=await laRpc("admin_dashboard",{p_admin:tok});}
+  catch(e){
+    v.innerHTML=`<div style="padding:18px"><p style="color:#d4566a;font-size:14px">Accès refusé (token invalide ?) ou problème réseau.</p>
+      <button id="laReset" style="margin-top:8px;padding:10px 14px;border-radius:10px;border:1px solid #333;background:none;color:#eee">Changer le token</button></div>`;
+    v.querySelector("#laReset").onclick=()=>{localStorage.removeItem("la:admin");renderApproche();};
+    return;
+  }
+  let players=null;
+  try{players=await laRpc("admin_players",{p_admin:tok});}catch(e){}
+
+  const f=d.funnel||{},fb=d.feedback||{},sty=d.story||{},att=d.attribution||{},pool=d.pool||{};
+  const pct=(a,b)=>b>0?Math.round(a/b*100)+" %":"—";
+  const kpi=(l,val)=>`<div style="flex:1;min-width:90px;background:#17171d;border:1px solid #26262e;border-radius:14px;padding:12px 8px;text-align:center"><div style="font-size:21px;font-weight:800">${val}</div><div style="font-size:11px;color:var(--muted);margin-top:2px">${l}</div></div>`;
+  const row=(l,val)=>`<div style="display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #222;font-size:14px"><span style="color:var(--muted)">${l}</span><b style="text-align:right">${val}</b></div>`;
+
+  // Liens de tracking : slugs enregistrés localement + tous les src vus en base
+  const saved=laLinks();
+  const allSrc=[...new Set([...saved,...Object.keys(att)])];
+  const linkRows=allSrc.map(s=>{
+    const n=att[s]||0, url=LA_GAME+"/?src="+encodeURIComponent(s);
+    return `<div style="display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #222;font-size:14px">
+      <b style="flex:1">${laEsc(s)}</b><span style="color:var(--muted);font-size:12px">${n} joueur${n>1?"s":""}</span>
+      <button class="copybtn" data-c="${encodeURIComponent(url)}" style="border:1px solid #333;background:none;color:#eee;border-radius:8px;padding:5px 10px;font-size:12px">Copier</button>
+    </div>`;
+  }).join("")||`<div style="color:var(--muted);font-size:13px;padding:6px 0">Aucun lien pour l'instant.</div>`;
+
+  const playersRows = players===null
+    ? `<div style="color:var(--muted);font-size:13px">Liste indisponible — le RPC <code>admin_players</code> n'est pas encore activé (bloc SQL à coller, voir Claude).</div>`
+    : (players.length? players.map(p=>{
+        const paid=p.status==="paid";
+        return `<div style="display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid #1e1e26;font-size:13px">
+          <b style="flex:1">${laEsc(p.pseudo)}</b>
+          <span style="color:var(--muted)">${laEsc(p.src||"tg")}</span>
+          <span style="color:var(--muted)">♥${p.gauge}</span>
+          ${p.platform_pseudo?`<span style="color:var(--muted);font-size:11px">${laEsc(p.platform_pseudo)}</span>`:""}
+          <span style="font-weight:700;color:${paid?"#3dbb6e":(p.status==="pending"?"#F5A623":"#888")}">${paid?"payé":laEsc(p.status)}</span>
+        </div>`;}).join("")
+      : `<div style="color:var(--muted);font-size:13px">Aucun joueur.</div>`);
+
+  const extras=(d.extras||[]).map(x=>row(laEsc(x.title),`code <b>${laEsc(x.pin)}</b> · ${(x.pending||[]).length} à traiter · ${x.done_count} faits`)).join("");
+
+  v.innerHTML=`<div style="padding:14px 16px 30px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px">
+      <h2 style="margin:0">🌊 L'Approche</h2>
+      <button id="laRefresh" style="border:1px solid #333;background:none;color:#eee;border-radius:10px;padding:6px 12px;font-size:12px">↻ Actualiser</button>
+    </div>
+
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px">
+      ${kpi("tickets restants",(pool.remaining??"—")+"/"+(pool.total??200))}
+      ${kpi("payés",f.approved??0)}
+      ${kpi("conv. paywall",pct(f.approved,f.q3_done))}
+      ${kpi("veulent la suite",fb.yes??0)}
+    </div>
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#d4566a;margin:16px 0 4px">Funnel</h3>
+    ${row("Comptes créés",f.claimed??0)}
+    ${row("Histoire commencée (Q1)",(f.q1_done??0)+" · "+pct(f.q1_done,f.claimed))}
+    ${row("Paywall atteint (Q3)",(f.q3_done??0)+" · "+pct(f.q3_done,f.q1_done))}
+    ${row("Payés",(f.approved??0)+" · "+pct(f.approved,f.q3_done)+" (code "+(f.approved_pin||0)+" / manuel "+(f.approved_form||0)+")")}
+    ${row("Numéro obtenu (ch.1)",f.ch1_done??0)}
+    ${row("Échecs · restarts",(sty.ch1_failed||0)+" · "+(sty.restarts||0))}
+    ${row("Chapitre 2 complété",sty.ch2_completed||0)}
+    ${row("Feedback",`👍 ${fb.yes||0} · 🤔 ${fb.maybe||0} · 👎 ${fb.no||0}`)}
+    ${row("Liste d'attente Vague 2",d.waitlist_count||0)}
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#d4566a;margin:18px 0 4px">Liens de tracking</h3>
+    <div style="display:flex;gap:8px;margin:6px 0 4px">
+      <input id="laNewSrc" placeholder="nouveau tag (ex : story12)" style="flex:1;padding:10px;border-radius:10px;border:1px solid #333;background:#17171d;color:#eee;font-size:14px">
+      <button id="laAddSrc" style="border:none;background:#d4566a;color:#fff;border-radius:10px;padding:0 16px;font-weight:700">Créer</button>
+    </div>
+    ${linkRows}
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#d4566a;margin:18px 0 4px">Codes PPV</h3>
+    ${row("Chapitres — OnlyFans",`<b>${laEsc(d.pins&&d.pins.of||"—")}</b>`)}
+    ${row("Chapitres — MYM",`<b>${laEsc(d.pins&&d.pins.mym||"—")}</b>`)}
+    ${extras}
+
+    <h3 style="font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:#d4566a;margin:18px 0 4px">Joueurs${players?` (${players.length})`:""}</h3>
+    <div style="max-height:300px;overflow-y:auto">${playersRows}</div>
+
+    <a href="${LA_GAME}/?admin=${encodeURIComponent(tok)}" target="_blank" rel="noopener"
+       style="display:block;text-align:center;margin-top:18px;padding:12px;border:1px solid #333;border-radius:12px;color:#eee;text-decoration:none">Ouvrir l'admin complet →</a>
+    <button id="laLogout" style="display:block;margin:10px auto 0;border:none;background:none;color:#555;font-size:12px;text-decoration:underline">oublier le token sur ce téléphone</button>
+  </div>`;
+
+  v.querySelector("#laRefresh").onclick=()=>renderApproche();
+  v.querySelector("#laLogout").onclick=()=>{localStorage.removeItem("la:admin");renderApproche();};
+  v.querySelector("#laAddSrc").onclick=()=>{
+    const s=(v.querySelector("#laNewSrc").value||"").trim().toLowerCase().replace(/[^a-z0-9_-]/g,"");
+    if(!s)return;
+    const l=laLinks(); if(!l.includes(s))l.push(s);
+    localStorage.setItem("la:links",JSON.stringify(l));
+    copy(LA_GAME+"/?src="+encodeURIComponent(s));
+    renderApproche();
+  };
+  bindCopies(v);
+}
+
 renderDays();renderJour();
 autoArchive();   // archive la semaine en cours (script + réels) pour consultation future
 </script>
