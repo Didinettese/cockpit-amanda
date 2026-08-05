@@ -594,10 +594,10 @@
           "time": "08:00",
           "moment": "8h — Sortie",
           "type": "PUBLICATION VIDÉO A (Première)",
-          "texte": "10 conseils pour ta première fois au village naturiste du Cap d'Agde — à deux, sans filtre. Description : arrivée, logement, la journée, la nuit, le libertinage, nos endroits préférés (et ceux qu'on évite). 📲 Facebook @blondymandise · Telegram & liens en bio.",
-          "media": "Publication en Première YouTube à 8h00 pile. Miniature A/B testée, chapitres, description complète, fin d'écran + carte.",
+          "texte": "TITRE : 10 conseils pour ta première fois au village naturiste du Cap d'Agde\n\nDESCRIPTION YouTube (copier-coller tel quel) :\nOn m'avait dit que le Cap d'Agde était « un bordel à ciel ouvert ». J'y suis allée en couple, et tout ce que je croyais savoir était faux. Mes 10 conseils pour ta première fois, sans tabou.\n\n• Naturisme ≠ libertinage : la confusion qui fausse tout\n• Ma première fois : ce que ça fait vraiment d'enlever son maillot\n• Le Cap d'Agde en couple : révélateur ou danger ?\n• La règle d'or qui rend tout l'endroit safe : le consentement\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#naturisme #capdagde #libertinage #couple #lespenséesdamanda #blondymandise",
+          "media": "Publication en Première YouTube à 8h00 pile. Miniature A/B testée, chapitres, fin d'écran + carte. Colle la description ci-dessus telle quelle dans le champ Description.",
           "lien": "YouTube",
-          "astuce": "Colle le lien de la vidéo publiée dans le cockpit (onglet Liens) dès qu'elle est en ligne : tous les posts du week-end le réutilisent.",
+          "astuce": "La description vient directement du pipeline (onglet Pipeline → épisode du 06/08) : elle est déjà validée, ne la réécris pas. Colle ensuite le lien de la vidéo publiée dans le cockpit (onglet Liens) — tous les posts du week-end le réutilisent.",
           "release": true
         },
         {
