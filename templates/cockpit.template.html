@@ -1109,7 +1109,7 @@ const LA_SHOTS=[
   {id:"PHOTO_3",t:"photo",n:"pénombre (jauge 50+)",o:"épaules nues au-dessus du drap",d:"Rien de visible. La récompense de celles qu'il a vraiment séduites."}]},
  {g:"🎤 Vocaux (au téléphone, ambiance chambre)",items:[
   {id:"VOCAL_2",t:"vocal",n:"la question sérieuse (~6s)",d:"Un petit soupir, puis posé, sincère : « Dis… la piscine, hier. C'était quoi, pour toi ? »"},
-  {id:"VOCAL_1",t:"vocal",n:"bonne nuit (~5s, jauge 70+)",d:"Un rire doux : « Bonne nuit, toi. » (si l'audio seul est refusé par Bunny : filme-le en vidéo, écran contre la table)"}]},
+  {id:"VOCAL_1",t:"vocal",n:"bonne nuit (~5s, jauge 70+)",d:"Un rire doux : « Bonne nuit, toi. » — enregistre avec Dictaphone/Mémos vocaux, le .m4a passe directement."}]},
  {g:"🛒 Médias plateformes (codes dans l'admin, section Codes PPV)",items:[
   {id:"T_PPV_OF",t:"task",n:"PPV OnlyFans chapitres — 8,75 €",d:"Révèle le code OF + lien ?src=of. À épingler."},
   {id:"T_PPV_MYM",t:"task",n:"Média MYM chapitres — 10,50 €",d:"Révèle le code MYM + lien ?src=mym."},
@@ -1194,7 +1194,7 @@ async function laShots(v,tok){
   const fileInput=box.querySelector("#laFile");
   box.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{
     const item=media.find(x=>x.id===b.dataset.up);
-    fileInput.accept=item.t==="photo"?"image/*":(item.t==="vocal"?"audio/*,video/*":"video/*");
+    fileInput.accept=item.t==="photo"?"image/*":(item.t==="vocal"?"audio/*":"video/*");
     fileInput.onchange=()=>{if(fileInput.files[0])laUpload(item,fileInput.files[0],b,tok,()=>laShots(v,tok));fileInput.value="";};
     fileInput.click();
   });
@@ -1204,10 +1204,10 @@ async function laUpload(item,file,btn,tok,onDone){
   const key=localStorage.getItem("la:bunny:key");
   try{
     let url;
-    if(item.t==="photo"){
+    if(item.t==="photo"||item.t==="vocal"){   // Storage zone : images ET audio (Stream refuse l'audio seul)
       const zone=localStorage.getItem("la:st:zone"),pass=localStorage.getItem("la:st:pass"),host=localStorage.getItem("la:st:host");
       if(!zone||!pass||!host){toast("Configure la Storage zone d'abord (⚙️)");return;}
-      const ext=(file.name.split(".").pop()||"jpg").toLowerCase();
+      const ext=(file.name.split(".").pop()||(item.t==="vocal"?"m4a":"jpg")).toLowerCase();
       const path="lapproche/"+item.id+"_"+Date.now()+"."+ext;
       btn.textContent="…";
       const r=await fetch("https://storage.bunnycdn.com/"+zone+"/"+path,{method:"PUT",headers:{AccessKey:pass},body:file});
