@@ -1142,12 +1142,15 @@ async function laShots(v,tok){
       <summary style="list-style:none">⚙️ Config upload ${cfgOk?"✓":"— à faire une fois"}</summary>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
         <input id="laBk" type="password" placeholder="Clé API de la library Bunny (Stream ▸ lapproche ▸ API)" value="${laEsc(localStorage.getItem("la:bunny:key")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <div style="margin-top:6px;color:#666">— photos (Storage zone) —</div>
         <div style="display:flex;gap:6px">
-          <input id="laSz" placeholder="Storage zone (photos)" value="${laEsc(localStorage.getItem("la:st:zone")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+          <input id="laSz" placeholder="nom de la Storage zone" value="${laEsc(localStorage.getItem("la:st:zone")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
           <input id="laSp" type="password" placeholder="mot de passe zone" value="${laEsc(localStorage.getItem("la:st:pass")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         </div>
-        <input id="laSh" placeholder="hostname pull zone photos (ex: photos-la.b-cdn.net)" value="${laEsc(localStorage.getItem("la:st:host")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
-        <button id="laCfgSave" style="padding:9px;border-radius:8px;border:none;background:#d4566a;color:#fff;font-weight:700">Enregistrer (reste sur ce téléphone)</button>
+        <input id="laSh" placeholder="hostname pull zone (ex: lapproche-photos.b-cdn.net)" value="${laEsc(localStorage.getItem("la:st:host")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <input id="laStk" type="password" placeholder="clé Token Auth de cette pull zone (facultatif)" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <button id="laCfgSave" style="padding:9px;border-radius:8px;border:none;background:#d4566a;color:#fff;font-weight:700">Enregistrer</button>
+        <div style="font-size:11px;color:#555">Les mots de passe restent sur ce téléphone. Le hostname et la clé Token Auth sont envoyés au jeu (pour signer les photos).</div>
       </div>
     </details>
     ${LA_SHOTS.map(grp=>`<div style="margin-top:12px">
@@ -1168,12 +1171,20 @@ async function laShots(v,tok){
     <input type="file" id="laFile" style="display:none">
   </details>`;
 
-  box.querySelector("#laCfgSave").onclick=()=>{
+  box.querySelector("#laCfgSave").onclick=async()=>{
     localStorage.setItem("la:bunny:key",box.querySelector("#laBk").value.trim());
     localStorage.setItem("la:st:zone",box.querySelector("#laSz").value.trim());
     localStorage.setItem("la:st:pass",box.querySelector("#laSp").value.trim());
-    localStorage.setItem("la:st:host",box.querySelector("#laSh").value.trim());
-    toast("Config enregistrée ✓");laShots(v,tok);
+    const host=box.querySelector("#laSh").value.trim().replace(/^https?:\/\//,"").replace(/\/$/,"");
+    localStorage.setItem("la:st:host",host);
+    // hostname + clé de signature → côté jeu (pour servir les photos protégées)
+    try{
+      if(host)await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_host",p_value:host});
+      const stk=box.querySelector("#laStk").value.trim();
+      if(stk)await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_token_key",p_value:stk});
+      toast("Config enregistrée ✓");
+    }catch(e){toast("Enregistré sur le téléphone, mais le jeu n'a pas reçu la config");}
+    laShots(v,tok);
   };
   box.querySelectorAll("[data-task]").forEach(b=>b.onclick=()=>{
     const id=b.dataset.task;
