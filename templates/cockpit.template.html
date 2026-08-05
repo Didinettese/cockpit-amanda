@@ -1127,12 +1127,17 @@ async function laShots(v,tok){
   try{ready=await laRpc("admin_clips",{p_admin:tok});localStorage.setItem("la:ready",JSON.stringify(ready));}
   catch(e){ready=laReadyMap();}
   const media=LA_SHOTS.flatMap(x=>x.items);
-  const doneN=media.filter(i=>i.t==="task"?laTaskDone(i.id):ready[i.id]).length;
+  const doneN=media.filter(i=>laTaskDone(i.id)).length;            // cases cochées à la main = "c'est fait"
+  const upTot=media.filter(i=>i.t!=="task").length;
+  const upN=media.filter(i=>i.t!=="task"&&ready[i.id]).length;     // médias réellement en ligne
   const cfgOk=!!(localStorage.getItem("la:bunny:key"));
   const stOk=!!(localStorage.getItem("la:st:zone"));
   box.innerHTML=`<details ${doneN<media.length?"open":""} style="background:#141419;border:1px solid #26262e;border-radius:16px;padding:12px 14px">
     <summary style="font-weight:800;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center">
-      <span>🎬 Tournage</span><span style="color:${doneN===media.length?"#3dbb6e":"var(--muted)"};font-size:13px">${doneN}/${media.length}</span></summary>
+      <span>🎬 Tournage</span><span style="font-size:11.5px;text-align:right;line-height:1.4">
+        <span style="color:${doneN===media.length?"#3dbb6e":"var(--muted)"}">${doneN}/${media.length} fait${doneN>1?"s":""}</span><br>
+        <span style="color:${upN===upTot?"#3dbb6e":"var(--muted)"}">${upN}/${upTot} en ligne</span>
+      </span></summary>
     <details style="margin:10px 0;font-size:12px;color:var(--muted)">
       <summary style="list-style:none">⚙️ Config upload ${cfgOk?"✓":"— à faire une fois"}</summary>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
@@ -1148,17 +1153,16 @@ async function laShots(v,tok){
     ${LA_SHOTS.map(grp=>`<div style="margin-top:12px">
       <div style="font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#d4566a;margin-bottom:4px">${laEsc(grp.g)}</div>
       ${grp.items.map(i=>{
-        const ok=i.t==="task"?laTaskDone(i.id):!!ready[i.id];
+        const shot=laTaskDone(i.id);            // TA coche : la scène est faite
+        const up=i.t!=="task"&&!!ready[i.id];   // le média est en ligne dans le jeu
         return `<div style="display:flex;gap:9px;padding:7px 0;border-bottom:1px solid #1d1d24;align-items:flex-start">
-          ${i.t==="task"
-            ?`<button data-task="${i.id}" style="width:26px;height:26px;border-radius:8px;border:1px solid ${ok?"#3dbb6e":"#444"};background:${ok?"#183d28":"none"};color:#3dbb6e;flex-shrink:0">${ok?"✓":""}</button>`
-            :`<span style="width:26px;height:26px;border-radius:8px;border:1px solid ${ok?"#3dbb6e":"#444"};background:${ok?"#183d28":"none"};color:#3dbb6e;display:flex;align-items:center;justify-content:center;flex-shrink:0">${ok?"✓":""}</span>`}
+          <button data-task="${i.id}" style="width:28px;height:28px;border-radius:8px;border:1px solid ${shot?"#3dbb6e":"#444"};background:${shot?"#183d28":"none"};color:#3dbb6e;flex-shrink:0;font-size:15px">${shot?"✓":""}</button>
           <div style="flex:1;min-width:0">
-            <div style="font-size:14px;font-weight:700">${laEsc(i.n)}</div>
+            <div style="font-size:14px;font-weight:700;${shot?"opacity:.55":""}">${laEsc(i.n)}${up?` <span style="color:#3dbb6e;font-size:11px;font-weight:600">● en ligne</span>`:""}</div>
             ${i.o?`<div style="font-size:12px;color:#F5A623">👗 ${laEsc(i.o)}</div>`:""}
             <div style="font-size:12.5px;color:var(--muted);line-height:1.45">${laEsc(i.d)}</div>
           </div>
-          ${i.t!=="task"?`<button data-up="${i.id}" style="border:1px solid #333;background:none;color:#eee;border-radius:8px;padding:6px 10px;font-size:12px;flex-shrink:0">${ok?"remplacer":"⬆︎ envoyer"}</button>`:""}
+          ${i.t!=="task"?`<button data-up="${i.id}" style="border:1px solid ${up?"#3dbb6e":"#333"};background:none;color:${up?"#3dbb6e":"#eee"};border-radius:8px;padding:6px 10px;font-size:12px;flex-shrink:0">${up?"remplacer":"⬆︎ envoyer"}</button>`:""}
         </div>`;}).join("")}
     </div>`).join("")}
     <input type="file" id="laFile" style="display:none">
@@ -1217,7 +1221,10 @@ async function laUpload(item,file,btn,tok,onDone){
       url="https://"+LA_CDN+"/"+guid+"/playlist.m3u8";
     }
     const set=await laRpc("admin_set_clip",{p_admin:tok,p_clip:item.id,p_url:url});
-    if(set&&set.ok){toast(item.id+" en ligne et branché ✓");onDone&&onDone();}
+    if(set&&set.ok){
+      localStorage.setItem("la:task:"+item.id,"1");   // envoyé = forcément tourné
+      toast(item.id+" en ligne et branché ✓");onDone&&onDone();
+    }
     else{toast("Upload ok mais branchement raté — réessaie");btn.textContent="⬆︎ envoyer";}
   }catch(e){
     toast("Échec envoi "+item.id+" ("+(e.message||"réseau")+")");
