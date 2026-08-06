@@ -1227,6 +1227,22 @@ async function laCheckPhoto(path){
   try{const r=await fetch(url,{method:"GET",cache:"no-store"});return r.ok;}catch(e){return null;}
 }
 
+/* Compression des photos avant envoi : max 1280 px, JPEG 82 % —
+   ~250 Ko au lieu de 1,7 Mo, affichage 5× plus rapide dans le jeu. */
+async function laShrink(file){
+  if(!/^image\//.test(file.type))return{file,ext:null};
+  try{
+    const img=await createImageBitmap(file);
+    const sc=Math.min(1,1280/Math.max(img.width,img.height));
+    if(sc>=1&&file.size<400000)return{file,ext:null};
+    const c=document.createElement("canvas");
+    c.width=Math.round(img.width*sc);c.height=Math.round(img.height*sc);
+    c.getContext("2d").drawImage(img,0,0,c.width,c.height);
+    const blob=await new Promise(r=>c.toBlob(r,"image/jpeg",0.82));
+    return blob&&blob.size<file.size?{file:blob,ext:"jpg"}:{file,ext:null};
+  }catch(e){return{file,ext:null};}
+}
+
 async function laUpload(item,file,btn,tok,onDone){
   const key=localStorage.getItem("la:bunny:key");
   try{
@@ -1234,9 +1250,11 @@ async function laUpload(item,file,btn,tok,onDone){
     if(item.t==="photo"||item.t==="vocal"){   // Storage zone : images ET audio (Stream refuse l'audio seul)
       const zone=localStorage.getItem("la:st:zone"),pass=localStorage.getItem("la:st:pass"),host=localStorage.getItem("la:st:host");
       if(!zone||!pass||!host){toast("Configure la Storage zone d'abord (⚙️)");return;}
-      const ext=(file.name.split(".").pop()||(item.t==="vocal"?"m4a":"jpg")).toLowerCase();
-      const path="lapproche/"+item.id+"_"+Date.now()+"."+ext;
       btn.textContent="…";
+      const shrunk=item.t==="photo"?await laShrink(file):{file:file,ext:null};
+      file=shrunk.file;
+      const ext=shrunk.ext||((file.name||"").split(".").pop()||(item.t==="vocal"?"m4a":"jpg")).toLowerCase();
+      const path="lapproche/"+item.id+"_"+Date.now()+"."+ext;
       const r=await fetch("https://storage.bunnycdn.com/"+zone+"/"+path,{method:"PUT",headers:{AccessKey:pass},body:file});
       if(!r.ok)throw new Error("storage "+r.status);
       url="https://"+host+"/"+path;
