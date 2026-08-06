@@ -944,7 +944,7 @@ pipeLoading.then(()=>{if(curTab==="prog")_renderProg();if(curTab==="idees")_rend
    Il n'apparaît jamais dans ce fichier (le dépôt est public). */
 const LA_API="https://ymgpxuyamddpiyxiyfgo.supabase.co/rest/v1/rpc/";
 const LA_KEY="sb_publishable_WDw8MbyRNwiI9DsoDD6kFQ_YKPRJHuV"; // clé publique (côté client par design)
-const LA_GAME="https://lapproche-558.netlify.app";
+const LA_GAME="https://lapproche.pages.dev";
 function laEsc(s){return String(s==null?"":s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
 async function laRpc(fn,args){const r=await fetch(LA_API+fn,{method:"POST",headers:{"Content-Type":"application/json","apikey":LA_KEY},body:JSON.stringify(args||{})});if(!r.ok)throw new Error("http"+r.status);return r.json();}
 function laLinks(){try{return JSON.parse(localStorage.getItem("la:links")||"[]");}catch(e){return[];}}
