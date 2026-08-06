@@ -5106,8 +5106,11 @@ async function laShots(v,tok){
           <input id="laSp" type="password" placeholder="mot de passe zone" value="${laEsc(localStorage.getItem("la:st:pass")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         </div>
         <input id="laSh" placeholder="hostname pull zone (ex: lapproche-photos.b-cdn.net)" value="${laEsc(localStorage.getItem("la:st:host")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
-        <input id="laStk" type="password" placeholder="clé Token Auth de cette pull zone (facultatif)" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
-        <button id="laCfgSave" style="padding:9px;border-radius:8px;border:none;background:#d4566a;color:#fff;font-weight:700">Enregistrer</button>
+        <input id="laStk" type="password" placeholder="clé Token Auth de la PULL ZONE (vide = pas de signature)" value="${laEsc(localStorage.getItem("la:st:tok")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <div style="display:flex;gap:6px">
+          <button id="laCfgSave" style="flex:1;padding:9px;border-radius:8px;border:none;background:#d4566a;color:#fff;font-weight:700">Enregistrer</button>
+          <button id="laCfgTest" style="padding:9px 14px;border-radius:8px;border:1px solid #333;background:none;color:#eee">Tester</button>
+        </div>
         <div style="font-size:11px;color:#555">Les mots de passe restent sur ce téléphone. Le hostname et la clé Token Auth sont envoyés au jeu (pour signer les photos).</div>
       </div>
     </details>
@@ -5143,6 +5146,15 @@ async function laShots(v,tok){
       toast("Config enregistrée ✓");
     }catch(e){toast("Enregistré sur le téléphone, mais le jeu n'a pas reçu la config");}
     laShots(v,tok);
+  };
+  box.querySelector("#laCfgTest").onclick=async()=>{
+    const p=localStorage.getItem("la:lastpath");
+    if(!p)return toast("Envoie d'abord une photo, puis retouche Tester");
+    toast("Test en cours…");
+    const ok=await laCheckPhoto(p);
+    toast(ok===true?"✓ La clé est bonne, les photos s'affichent"
+        :ok===false?"✗ Clé refusée par Bunny (403) — prends la clé de la PULL ZONE, onglet Security"
+        :"Test impossible (config incomplète)");
   };
   box.querySelectorAll("[data-task]").forEach(b=>b.onclick=()=>{
     const id=b.dataset.task;
@@ -5186,6 +5198,7 @@ async function laUpload(item,file,btn,tok,onDone){
       const r=await fetch("https://storage.bunnycdn.com/"+zone+"/"+path,{method:"PUT",headers:{AccessKey:pass},body:file});
       if(!r.ok)throw new Error("storage "+r.status);
       url="https://"+host+"/"+path;
+      localStorage.setItem("la:lastpath",path);
       const okRead=await laCheckPhoto(path);
       if(okRead===false)toast("⚠️ Envoyé, mais illisible : la clé Token Auth ne correspond pas à cette pull zone");
     }else{
