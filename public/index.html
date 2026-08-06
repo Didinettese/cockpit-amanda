@@ -5139,7 +5139,7 @@ async function laShots(v,tok){
     try{
       if(host)await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_host",p_value:host});
       const stk=box.querySelector("#laStk").value.trim();
-      if(stk)await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_token_key",p_value:stk});
+      if(stk){localStorage.setItem("la:st:tok",stk);await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_token_key",p_value:stk});}
       toast("Config enregistrée ✓");
     }catch(e){toast("Enregistré sur le téléphone, mais le jeu n'a pas reçu la config");}
     laShots(v,tok);
@@ -5158,6 +5158,21 @@ async function laShots(v,tok){
   });
 }
 
+/* Vérifie qu'un fichier de la zone photos est réellement lisible avec la clé
+   Token Auth enregistrée — sinon le jeu affichera une image/son manquant. */
+async function laCheckPhoto(path){
+  const key=localStorage.getItem("la:st:tok"),host=localStorage.getItem("la:st:host");
+  if(!host)return null;
+  if(!key){                                   // pas de token auth : accès direct
+    return new Promise(r=>{const i=new Image();i.onload=()=>r(true);i.onerror=()=>r(false);i.src="https://"+host+"/"+path+"?t="+Date.now();});
+  }
+  const dir="/"+path.split("/")[0]+"/",exp=Math.floor(Date.now()/1000)+600;
+  const buf=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(key+dir+exp+"token_path="+dir));
+  const b64=btoa(String.fromCharCode.apply(null,new Uint8Array(buf))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=/g,"");
+  const url="https://"+host+"/bcdn_token="+b64+"&expires="+exp+"&token_path="+encodeURIComponent(dir)+"/"+path;
+  try{const r=await fetch(url,{method:"GET",cache:"no-store"});return r.ok;}catch(e){return null;}
+}
+
 async function laUpload(item,file,btn,tok,onDone){
   const key=localStorage.getItem("la:bunny:key");
   try{
@@ -5171,6 +5186,8 @@ async function laUpload(item,file,btn,tok,onDone){
       const r=await fetch("https://storage.bunnycdn.com/"+zone+"/"+path,{method:"PUT",headers:{AccessKey:pass},body:file});
       if(!r.ok)throw new Error("storage "+r.status);
       url="https://"+host+"/"+path;
+      const okRead=await laCheckPhoto(path);
+      if(okRead===false)toast("⚠️ Envoyé, mais illisible : la clé Token Auth ne correspond pas à cette pull zone");
     }else{
       if(!key){toast("Configure la clé Bunny d'abord (⚙️)");return;}
       btn.textContent="0%";
