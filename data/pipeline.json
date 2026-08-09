@@ -342,11 +342,27 @@
       "date": "2026-09-03",
       "theme": "MYM / OnlyFans",
       "title": "Ce que personne ne dit côté créatrice",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Tabou + démystification",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Ce que personne ne dit côté créatrice",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "OnlyFans : la vérité sur ce que je gagne vraiment",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Je suis payée pour parler, pas pour me déshabiller",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "On croit que ce métier c'est vendre des photos. En vrai, la plupart du temps, je suis payée pour parler. Revenu médian : 140 à 170 € par mois. 70 % des créateurs sous 500 €. Et 81 % des abonnés ne dépensent jamais un euro de plus. Aujourd'hui je vous ouvre les coulisses, chiffres à l'appui et sans filtre.\n\n• Les vrais chiffres du métier en France (70 000 créateurs, revenu médian, top 1 %)\n• Ce pour quoi on me paie vraiment : la disponibilité, pas le corps\n• Mon aveu : la nuit où j'ai pleuré dans ma cuisine avec 47 conversations ouvertes\n• L'invisible : l'administratif, la peur du doxxing, et le burn-out dont personne ne parle\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#onlyfans #mym #créatricedecontenu #creatoreconomy #coulisses #femmeetsociété #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1785123184579",
@@ -416,6 +432,14 @@
       "title": "Pourquoi les femmes simulent — et pourquoi j'ai arrêté",
       "format": "Long format",
       "hook": "Aveu perso + double standard du plaisir dans le couple",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-argent-couple",
+      "theme": "Femme & Société",
+      "title": "Quand c'est elle qui gagne plus : le tabou qui casse les couples",
+      "format": "Long format",
+      "hook": "L'argent comme dernier rapport de force + mon expérience de créatrice",
       "potentiel": "🔥🔥🔥"
     }
   ],
