@@ -54,8 +54,17 @@ function cleanWeek(w) {
     dur: S(r && r.dur, 60), cam: S(r && r.cam, 200), plats: S(r && r.plats, 200),
     jour: S(r && r.jour, 60), hook: S(r && r.hook, 2000), corps: S(r && r.corps, 4000), cta: S(r && r.cta, 2000)
   });
+  const topt = o => ({ text: S(o && o.text, 300), potentiel: S(o && o.potentiel, 12), best: !!(o && o.best) });
+  // videoD archivé AVEC le titre officiel, les titres proposés et la description YouTube
   const vd = w.videoD && typeof w.videoD === "object"
-    ? { title: S(w.videoD.title, 300), theme: S(w.videoD.theme, 300), date: S(w.videoD.date, 20) } : null;
+    ? {
+        title: S(w.videoD.title, 300),
+        theme: S(w.videoD.theme, 300),
+        date: S(w.videoD.date, 20),
+        next: S(w.videoD.next, 300),
+        titleOptions: arr(w.videoD.titleOptions).slice(0, 12).map(topt),
+        caption: S(w.videoD.caption, 8000)
+      } : null;
   return {
     isoWeek: iso, weekLabel: S(w.weekLabel, 200), briefDate: S(w.briefDate, 20), videoD: vd,
     script: arr(w.script).slice(0, 40).map(beat),

@@ -579,6 +579,13 @@ function titleCaptionBlock(ep){
     +'<textarea class="cap" id="capBox" placeholder="Description de la vidéo pour YouTube…">'+esc(ep.caption||"")+'</textarea></div>';
   return h;
 }
+// répercute le titre officiel / les titres proposés / la caption dans l'archive de la semaine
+function syncEntryVideoD(){
+  const e=(typeof curEntry==="function")?curEntry():null;
+  if(!e)return;
+  e.videoD=snapshotVideoD();
+  queueArchiveSave();
+}
 function bindTitleCaption(root,ep){
   if(!ep)return;
   // Répercute le nouveau titre : titre officiel, en-tête (Thème) et caption (remplace l'ancien titre s'il y figure)
@@ -593,20 +600,20 @@ function bindTitleCaption(root,ep){
     const i=+row.dataset.ti;
     const tt=row.querySelector(".tt");
     fit(tt);tt.addEventListener("input",()=>fit(tt));
-    tt.onchange=e=>{const old=ep.titleOptions[i].text;ep.titleOptions[i].text=e.target.value;if(ep.titleOptions[i].best)syncTitle(old,e.target.value);queueSave();renderScript();};
+    tt.onchange=e=>{const old=ep.titleOptions[i].text;ep.titleOptions[i].text=e.target.value;if(ep.titleOptions[i].best)syncTitle(old,e.target.value);queueSave();syncEntryVideoD();renderScript();};
     row.querySelector(".pot").onchange=e=>{ep.titleOptions[i].potentiel=e.target.value;queueSave();};
     row.querySelector(".pick").onclick=()=>{
       const old=((ep.titleOptions||[]).find(o=>o.best)||{}).text||ep.title;
       ep.titleOptions.forEach((o,j)=>o.best=(j===i));
       const capSynced=syncTitle(old,ep.titleOptions[i].text||ep.title);
-      queueSave();renderScript();toast(capSynced?"Titre choisi ✓ — caption mise à jour":"Titre choisi ✓");
+      queueSave();syncEntryVideoD();renderScript();toast(capSynced?"Titre choisi ✓ — caption mise à jour":"Titre choisi ✓");
     };
-    row.querySelector(".delt").onclick=()=>{ep.titleOptions.splice(i,1);queueSave();renderScript();};
+    row.querySelector(".delt").onclick=()=>{ep.titleOptions.splice(i,1);queueSave();syncEntryVideoD();renderScript();};
   });
   const add=root.querySelector("#addTitle");
-  if(add)add.onclick=()=>{ep.titleOptions.push({text:"",potentiel:"🔥🔥",best:ep.titleOptions.length===0});queueSave();renderScript();};
+  if(add)add.onclick=()=>{ep.titleOptions.push({text:"",potentiel:"🔥🔥",best:ep.titleOptions.length===0});queueSave();syncEntryVideoD();renderScript();};
   const cap=root.querySelector("#capBox");
-  if(cap)cap.onchange=e=>{ep.caption=e.target.value;queueSave();};
+  if(cap)cap.onchange=e=>{ep.caption=e.target.value;queueSave();syncEntryVideoD();};
 }
 function renderScript(){ensurePipe(_renderScript);}
 function _renderScript(){
@@ -866,10 +873,21 @@ function loadArchive(){
     ARCHIVE=(j&&Array.isArray(j.weeks)&&j.weeks.length)?j:embedArchive();
   }).catch(()=>{ARCHIVE=embedArchive();});
 }
+// videoD archivé AVEC le titre officiel, les titres proposés et la description YouTube (source : pipeline)
+function snapshotVideoD(){
+  const vd=Object.assign({},(DATA.meta&&DATA.meta.videoD)||{});
+  const ep=(typeof PIPE!=="undefined"&&PIPE)?videoDEpisode():null;
+  if(ep){
+    if(ep.title)vd.title=ep.title;
+    vd.titleOptions=JSON.parse(JSON.stringify(ep.titleOptions||[]));
+    vd.caption=ep.caption||"";
+  }
+  return vd;
+}
 function snapshotWeek(){
   const m=DATA.meta||{};
   return {isoWeek:m.isoWeek||"",weekLabel:m.weekLabel||"",briefDate:m.briefDate||"",
-    videoD:m.videoD||null,script:DATA.script||[],reels:DATA.reels||[]};
+    videoD:snapshotVideoD(),script:DATA.script||[],reels:DATA.reels||[]};
 }
 // archive la semaine en cours si elle n'y est pas encore (1 écriture git par semaine)
 function autoArchive(){
@@ -877,8 +895,12 @@ function autoArchive(){
     afterArchiveReady();
     const wk=DATA.meta&&DATA.meta.isoWeek;if(!wk)return;
     if((ARCHIVE.weeks||[]).some(w=>w.isoWeek===wk))return;
-    fetch("/api/archive",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(snapshotWeek())})
-      .then(r=>r.ok?r.json():null).then(j=>{if(j&&j.archive)ARCHIVE=j.archive;afterArchiveReady();}).catch(()=>{});
+    // on attend le pipeline : c'est lui qui porte le titre officiel et la description YouTube
+    if(!pipeLoading)pipeLoading=loadPipe();
+    pipeLoading.catch(()=>{}).then(()=>{
+      fetch("/api/archive",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(snapshotWeek())})
+        .then(r=>r.ok?r.json():null).then(j=>{if(j&&j.archive)ARCHIVE=j.archive;afterArchiveReady();}).catch(()=>{});
+    });
   });
 }
 // sauvegarde débouncée du script édité (dans l'archive de la semaine)
@@ -909,11 +931,35 @@ function renderArchives(){
   el.innerHTML=h;
   el.querySelectorAll("[data-week]").forEach(b=>b.onclick=e=>{archiveWeek=e.currentTarget.dataset.week;renderArchives();window.scrollTo({top:0,behavior:"smooth"});});
 }
+// Titre officiel + titres proposés + description YouTube archivés (lecture seule, copiables)
+function archiveTitleCaptionHTML(vd){
+  const opts=Array.isArray(vd.titleOptions)?vd.titleOptions:[];
+  const officiel=vd.title||((opts.find(o=>o&&o.best)||{}).text)||"";
+  const cap=vd.caption||"";
+  if(!officiel&&!opts.length&&!cap)return "";
+  let h='<div class="tblk"><div class="hd">🎬 Titre & description de cette semaine</div>';
+  if(officiel)h+='<div class="cl">🏆 Titre choisi (officiel)</div>'
+    +'<div class="copyrow"><div class="copytxt tchosen">'+esc(officiel)+'</div>'
+    +'<button class="copybtn" data-c="'+encodeURIComponent(officiel)+'">Copier</button></div>';
+  if(opts.length){
+    h+='<div class="cl">💡 Titres proposés</div>';
+    opts.forEach(o=>{h+='<div class="topt'+(o&&o.best?" best":"")+'" style="align-items:center">'
+      +'<div class="copytxt" style="flex:1">'+esc((o&&o.text)||"")+'</div>'
+      +'<div class="ctr"><span class="tag">'+esc((o&&o.potentiel)||"")+'</span>'
+      +(o&&o.best?'<span class="reco">Reco</span>':'')+'</div></div>';});
+  }
+  h+='<div class="cl">📝 Description YouTube</div>';
+  h+=cap?('<div class="copyrow"><div class="copytxt" style="white-space:pre-wrap">'+esc(cap)+'</div>'
+    +'<button class="copybtn" data-c="'+encodeURIComponent(cap)+'">Copier</button></div>')
+    :'<div class="info">Non archivée pour cette semaine.</div>';
+  return h+'</div>';
+}
 function archiveDetailHTML(w){
   const vd=w.videoD||{};
   let h='<button class="btn ghost" data-back style="margin-bottom:12px">← Toutes les semaines</button>';
   h+='<div class="info"><span class="tt">'+esc(w.weekLabel||w.isoWeek)+'</span>'
     +(vd.title?'Vidéo : <b>'+esc(vd.title)+'</b>'+(vd.theme?' — '+esc(vd.theme):''):'')+'</div>';
+  h+=archiveTitleCaptionHTML(vd);
   h+='<div class="sec-title">📜 Script long format</div>';
   if(!(w.script||[]).length)h+='<div class="info">Pas de script archivé.</div>';
   (w.script||[]).forEach(b=>{
