@@ -401,11 +401,27 @@
       "date": "2026-09-10",
       "theme": "Couple",
       "title": "Dormir dans des chambres séparées : la fin du couple ou son salut ?",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Déconstruire le tabou du lit conjugal + témoignages",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Chambre à part : la fin du couple ou son salut ?",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "On dort séparés une nuit sur deux (et ça a sauvé notre couple)",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Le tabou du lit conjugal : pourquoi personne n'ose l'avouer",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "On m'a dit que faire chambre à part, c'était le début de la fin. Ça fait deux ans qu'on dort séparés une nuit sur deux, et je ne l'ai jamais autant aimé. Un couple français sur dix l'assume déjà, près d'un sur quatre le fait quelques nuits par semaine — et pourtant c'est encore le grand tabou du couple. Aujourd'hui je démonte le mythe du lit conjugal.\n\n• D'où vient vraiment le lit commun (spoiler : de la place et du chauffage, pas de l'amour)\n• Les chiffres : 25 % des Français disent que dormir à deux abîme leur sommeil, 1 couple sur 2 s'est déjà disputé à cause des ronflements\n• Mon aveu : la nuit où j'ai pris mon oreiller et pleuré dans le couloir\n• La règle qui change tout — et le seul cas où la chambre à part est un vrai signal d'alarme\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#chambreapart #sleepdivorce #couple #sommeil #tabou #psychologie #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1785123190096",
@@ -472,6 +488,14 @@
       "title": "Quand c'est elle qui gagne plus : le tabou qui casse les couples",
       "format": "Long format",
       "hook": "L'argent comme dernier rapport de force + mon expérience de créatrice",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-charge-mentale-desir",
+      "theme": "Couple / Sexualité",
+      "title": "La charge mentale du désir : pourquoi c'est toujours à elle d'avoir envie",
+      "format": "Long format",
+      "hook": "Initier, relancer, rassurer : le travail invisible du désir dans le couple + mon vécu",
       "potentiel": "🔥🔥🔥"
     }
   ],
