@@ -428,11 +428,27 @@
       "date": "2026-09-17",
       "theme": "Sexualité / Société",
       "title": "Body count : pourquoi ce chiffre obsède tout le monde",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Le double standard du « compteur » + prise de position + vécu",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "Body count : pourquoi ce chiffre obsède tout le monde",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "J'ai divisé mon chiffre par deux (et j'ai eu honte 6 mois)",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "7,9 contre 16,4 : le chiffre qui prouve qu'on ment tous",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "On m'a demandé mon body count à vingt-trois ans. J'ai divisé par deux, et j'ai mis six ans à comprendre pourquoi. En France, les femmes déclarent 7,9 partenaires au cours de leur vie, les hommes 16,4 — faites le calcul, les comptes ne tombent jamais juste. Aujourd'hui je démonte le compteur qui obsède tout le monde et ne mesure absolument rien.\n\n• D'où vient le mot « body count » (spoiler : c'est un terme militaire, ça compte les morts)\n• Les chiffres qui trahissent tout le monde : 7,9 contre 16,4, et 1 Français sur 3 qui avoue sous-évaluer son nombre de partenaires\n• Le double standard en un test de trois secondes : même chiffre, deux mots\n• Ce que ça fait aux hommes aussi — la même prison, l'autre serrure\n• Mon aveu : le soir où j'ai menti sur mon chiffre, et les six mois passés à protéger ce mensonge\n• La seule question de santé qui se pose vraiment, et le test infaillible à renvoyer\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#bodycount #doublestandard #slutshaming #sexualité #femmeetsociété #couple #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1785123192848",
@@ -496,6 +512,14 @@
       "title": "La charge mentale du désir : pourquoi c'est toujours à elle d'avoir envie",
       "format": "Long format",
       "hook": "Initier, relancer, rassurer : le travail invisible du désir dans le couple + mon vécu",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-ex-effacer",
+      "theme": "Couple / Psycho",
+      "title": "Les ex : faut-il vraiment tout effacer pour aller bien ?",
+      "format": "Long format",
+      "hook": "Supprimer les photos, bloquer, brûler les lettres : est-ce que couper les ponts guérit, ou est-ce qu'on efface juste la preuve ? + ce que j'ai gardé, moi",
       "potentiel": "🔥🔥🔥"
     }
   ],

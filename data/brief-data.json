@@ -2,30 +2,30 @@
   "meta": {
     "channel": "Les Pensées d'Amanda",
     "handle": "@blondymandise",
-    "weekLabel": "Semaine du lundi 17 août au dimanche 23 août 2026",
-    "briefDate": "2026-08-17",
-    "isoWeek": "2026-W34",
+    "weekLabel": "Semaine du lundi 24 août au dimanche 30 août 2026",
+    "briefDate": "2026-08-24",
+    "isoWeek": "2026-W35",
     "previous": {
-      "title": "Le contrôle déguisé en amour",
-      "date": "2026-08-13"
-    },
-    "videoA": {
       "title": "Naturisme : pourquoi on confond nudité et sexualité ?",
       "date": "2026-08-20"
     },
-    "videoB": {
+    "videoA": {
       "title": "Ce que je ne raconte pas à mon mari (couple libertin)",
       "date": "2026-08-27"
     },
-    "videoC": {
+    "videoB": {
       "title": "Ce que personne ne dit côté créatrice",
       "date": "2026-09-03"
     },
+    "videoC": {
+      "title": "Chambre à part : la fin du couple ou son salut ?",
+      "date": "2026-09-10"
+    },
     "videoD": {
-      "title": "Dormir dans des chambres séparées : la fin du couple ou son salut ?",
-      "theme": "Couple — faire chambre à part : le tabou du lit conjugal, aveu d'échec ou acte de soin ?",
-      "date": "2026-09-10",
-      "next": "Body count : pourquoi ce chiffre obsède tout le monde"
+      "title": "Body count : pourquoi ce chiffre obsède tout le monde",
+      "theme": "Sexualité & Société — le « body count » : pourquoi le nombre de partenaires obsède tout le monde, et pourquoi il ne dit rien de personne",
+      "date": "2026-09-17",
+      "next": "« Elle l'a bien cherché » : comment on inverse la culpabilité"
     }
   },
   "links": {
@@ -45,7 +45,7 @@
   "schedule": [
     {
       "day": "Lundi",
-      "date": "17/08",
+      "date": "24/08",
       "posts": [
         {
           "platKey": "youtube",
@@ -53,8 +53,8 @@
           "time": "09:00",
           "moment": "Matin",
           "type": "Post Communauté : sondage",
-          "texte": "Sondage 🗳️ « S'il est jaloux, c'est qu'il t'aime. » Pour vous c'est : ① mignon ② un red flag ③ ça dépend jusqu'où. Répondez honnêtement, on en a tous dit un jour 👀",
-          "media": "Onglet Communauté YouTube : sondage 3 options + miniature de la vidéo « Le contrôle déguisé en amour ».",
+          "texte": "Sondage 🗳️ Se baigner seins nus sur une plage française, aujourd'hui, pour vous c'est : ① normal ② gênant ③ ça dépend qui regarde. Soyez honnêtes, on ne juge personne ici 👀",
+          "media": "Onglet Communauté YouTube : sondage 3 options + miniature de la vidéo « Naturisme : pourquoi on confond nudité et sexualité ? ».",
           "lien": "YouTube",
           "astuce": "Le sondage Communauté réactive les abonnés entre deux vidéos et nourrit l'algo. Réponds aux 10 premiers commentaires dans l'heure."
         },
@@ -64,8 +64,8 @@
           "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "Il ne t'a jamais levé la main. Il a juste toujours besoin de savoir où tu es, avec qui, et pourquoi tu as mis cette robe. Ça a un nom.",
-          "media": "Extrait « Le contrôle déguisé en amour », hook avant 3 s, son tendance, sous-titres brûlés, AUCUN watermark. Caption courte + #emprise #redflags.",
+          "texte": "J'ai passé une semaine entière toute nue au milieu de centaines d'inconnus. Il ne s'est rien passé. Absolument rien. Et c'est ça qui devrait vous interroger.",
+          "media": "Extrait « Naturisme : pourquoi on confond nudité et sexualité ? », hook avant 3 s, son tendance, sous-titres brûlés, AUCUN watermark. Caption courte + #naturisme #tabou.",
           "lien": "TikTok",
           "astuce": "Le son tendance = ticket FYP. Hook avant la 3e seconde. Zéro lien explicite, CTA « Bio » uniquement."
         },
@@ -75,7 +75,7 @@
           "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Question du lundi : tu donnerais le code de ton téléphone à ton mec ? Oui / Jamais 👀",
+          "texte": "Question du lundi : tu enlèverais le haut sur une plage bondée ? Oui / Jamais de la vie 👀",
           "media": "Story verticale rapide, sticker sondage 2 choix, ton léger. Visuel DIFFÉRENT de la story Facebook.",
           "lien": "Bio",
           "astuce": "Story TikTok = légère et tendance, jamais le copier-coller de la story FB."
@@ -86,7 +86,7 @@
           "time": "10:30",
           "moment": "Matin",
           "type": "Engagement / opinion",
-          "texte": "Le contrôle ne commence jamais par une interdiction. Il commence par une inquiétude. « Je m'inquiète juste. » Et six mois plus tard tu préviens avant d'aller chercher le pain.",
+          "texte": "On est le pays numéro un du naturisme et le topless a été divisé par presque trois en trente ans. On n'est pas devenus plus pudiques. On est devenus plus surveillés.",
           "media": "Tweet texte seul, ton tranché. Répondre aux 10 premières réponses dans l'heure.",
           "lien": "—",
           "astuce": "80 % de contenu marque/engagement, 20 % promo. L'engagement du matin nourrit la portée du soir."
@@ -97,10 +97,10 @@
           "time": "12:30",
           "moment": "Midi",
           "type": "Post feed débat",
-          "texte": "Vraie question, sans jugement : demander à voir le téléphone de son conjoint, pour vous c'est de la transparence… ou déjà de la surveillance ? Je vous lis 👇",
-          "media": "Texte + photo SFW (mains, café, ambiance). Aucun lien dans le post. Répondre aux 15 premiers commentaires.",
-          "lien": "Bio",
-          "astuce": "Sur FB, le débat en commentaires est le signal roi. La première heure fait toute la portée."
+          "texte": "Vraie question, sans jugement : un corps nu, pour vous, c'est forcément un corps sexuel ? Parce que dans un village naturiste, personne ne regarde personne. Et en ville, tout le monde regarde tout le monde, habillé. Comment on en est arrivés là ?",
+          "media": "Post texte seul (le texte performe mieux que l'image sur ce format débat). Photo de plage lointaine SFW en option.",
+          "lien": "—",
+          "astuce": "Réponds à TOUS les commentaires les 90 premières minutes : c'est ce qui déclenche la portée sur Facebook."
         },
         {
           "platKey": "facebook",
@@ -108,198 +108,198 @@
           "time": "12:35",
           "moment": "Midi",
           "type": "Story Facebook",
-          "texte": "Le red flag n°1 dont personne ne parle : il ne t'interdit rien, il te fait juste sentir coupable d'y aller.",
-          "media": "Story FB soignée : fond uni, typo propre, sticker question « Vous l'avez vécu ? ». Visuel maison, JAMAIS le repost TikTok.",
-          "lien": "Bio",
-          "astuce": "L'audience FB est plus âgée et acheteuse : visuel propre, zéro effet TikTok."
+          "texte": "Petit mot du lundi : la vidéo de vendredi dernier vous a beaucoup fait réagir. Je lis tout, même les messages fâchés 😊",
+          "media": "Story FB au visuel PROPRE (couleur de marque, typo lisible) + sticker question. Ne JAMAIS recycler la story TikTok telle quelle.",
+          "lien": "YouTube",
+          "astuce": "Audience 35-65 : ton chaleureux, phrases courtes, pas de jargon TikTok."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
           "time": "14:00",
           "moment": "Après-midi",
-          "type": "Post contribution (texte)",
-          "texte": "Retour d'expérience : comment j'ai compris que la « jalousie mignonne » de mon ex était en fait de l'isolement progressif. Ce que j'aurais aimé qu'on me dise.",
-          "media": "Post texte long, honnête, sans lien externe. Répondre à tous les commentaires.",
+          "type": "Contribution (non promo)",
+          "texte": "Retour d'expérience honnête sur une semaine en village naturiste : ce qui m'a le plus surprise, c'est le silence total autour des corps. Personne ne commente, personne ne regarde. Je réponds aux questions.",
+          "media": "Texte long, ton posé, zéro lien commercial dans ce post.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/france ou r/AskFrance · Flair requis : Discussion/Témoignage · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
-          "type": "Story publique (Creator Profile)",
-          "texte": "Petit débrief de la vidéo de vendredi : vous êtes des centaines à m'avoir écrit « c'était moi ». On en parle.",
-          "media": "Story publique sur le profil PUBLIC (Creator Profile) — PAS de snap privé premium. Selfie parlé 3 segments max.",
-          "lien": "OnlyFans",
-          "astuce": "Snapchat = nurture, pas de vente agressive. CTA soft en dernier segment uniquement."
+          "astuce": "Sub cible : r/AskFrance · Flair requis : Discussion · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "18:30",
+          "time": "18:00",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Ce soir je raconte en privé la version que je n'ai PAS mise sur YouTube : la nuit où j'ai compris que ma vie était devenue toute petite. C'est plus cru, et c'est là 👇",
-          "media": "Visuel suggestif SFW-limite (X autorise l'explicite) + lien OnlyFans DIRECT dans le tweet.",
+          "texte": "Là-bas, être nue n'était pas un événement. Ici, si. Parce qu'ici ce n'est pas pour tout le monde. 🔗",
+          "media": "1 visuel suggestif SFW-limite (hors-champ, lumière), lien OnlyFans directement dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le créneau du soir convertit le mieux sur X. Lien direct, pas de « lien en bio »."
+          "astuce": "Le créneau du soir convertit le mieux. Lien dans le tweet, pas en réponse."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "19:00",
+          "moment": "Soir",
+          "type": "Story publique (Creator Profile)",
+          "texte": "Aujourd'hui je réponds à la question que vous m'avez posée 40 fois : est-ce que j'ai eu honte, la première fois ?",
+          "media": "Story publique sur le profil PUBLIC (Creator Profile) — PAS de snap privé premium. Visage, ton parlé, sous-titres.",
+          "lien": "OnlyFans",
+          "astuce": "CTA soft : le swipe-up vend mal, la curiosité vend bien."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
-          "moment": "Soir",
-          "type": "Message intime / confession",
-          "texte": "Je vous avoue un truc que je n'ai pas dit en vidéo. Pendant deux ans j'ai cru que « il veut juste savoir où je suis » c'était de l'attention. C'était un GPS. Vous en pensez quoi, vous ? Répondez-moi, je lis tout.",
-          "media": "Message texte + 1 photo perso non explicite. Ouvrir la discussion, répondre en DM un par un.",
+          "moment": "Nuit",
+          "type": "Confession / coulisses",
+          "texte": "Vrai aveu du lundi soir : la première heure là-bas, j'ai gardé mon paréo. Pas par pudeur — par peur d'être la seule à qui ça ferait quelque chose. Vous voulez que je vous raconte la suite ?",
+          "media": "Message texte + 1 photo coulisses SFW. Répondre en DM à chaque réaction.",
           "lien": "OnlyFans",
-          "astuce": "Telegram = là où se fait l'argent. La relation d'abord, la vente ensuite : les gros dépenseurs paient pour le chat."
+          "astuce": "78 % des messages qui rapportent ne sont pas sexuels : c'est la relation qu'ils paient. Réponds vraiment."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "22:30",
+          "time": "22:00",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Retweets croisés + réponses aux comptes du pod. Citer 2 threads du soir avec une opinion courte et tranchée.",
-          "media": "Aucune création : 20 minutes d'interactions ciblées.",
+          "type": "Pod / RT engagement",
+          "texte": "RT + réponse dans le pod du soir. Quote-tweet d'un thread sur la pudeur avec une phrase perso tranchée.",
+          "media": "Aucun média : quote-tweet + réponses. 15 minutes d'interactions réelles.",
           "lien": "—",
-          "astuce": "Le pod de nuit relance la portée du teaser de 18h30. 20 min chrono, pas plus."
+          "astuce": "Le pod du soir remonte la portée de tous tes tweets du lendemain."
         }
       ]
     },
     {
       "day": "Mardi",
-      "date": "18/08",
+      "date": "25/08",
       "posts": [
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "09:30",
+          "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "Les 3 phrases qui ressemblent à de l'amour et qui sont du contrôle. La deuxième, je l'ai dite moi-même.",
-          "media": "Format liste 3 points, coupes sèches, texte à l'écran, son tendance. Sans watermark.",
+          "texte": "En 1984, 43 % des Françaises se baignaient seins nus. Aujourd'hui : 16 %. On ne vous a pas rendues pudiques. On vous a rendues surveillées.",
+          "media": "Extrait chiffré du long format, insert texte 43 % → 16 %, son tendance, sans watermark.",
           "lien": "TikTok",
-          "astuce": "Les formats « 3 signes » performent en froid. Termine sur une question pour les commentaires."
+          "astuce": "Les vidéos avec un chiffre à l'écran retiennent 20 % plus longtemps. Hook avant 3 s."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "09:35",
+          "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Team « je réponds en 2 min » ou team « je réponds dans 3 h » ? Avouez 😅",
-          "media": "Story verticale, sticker sondage. Ton léger, aucun sérieux. Distincte de la story FB.",
+          "texte": "Ma mère se baignait topless. Moi non. Vous, vos mères ? 👀",
+          "media": "Story verticale, sticker question, ton complice. Distincte de la story FB.",
           "lien": "Bio",
-          "astuce": "Une story légère par jour maintient la présence sans cannibaliser la vidéo du jour."
+          "astuce": "La story TikTok sert à alimenter les commentaires de la vidéo du jour."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "10:30",
-          "moment": "Matin",
-          "type": "Engagement / opinion",
-          "texte": "« Il est possessif mais c'est parce qu'il tient à moi. » Non. Il tient à toi ET il te contrôle. Ce sont deux choses, et seule la deuxième est un problème.",
-          "media": "Tweet texte seul. Répondre aux réponses dans l'heure.",
-          "lien": "—",
-          "astuce": "Les formulations en deux temps (« non… ET ») déclenchent les quote-tweets."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
           "time": "11:00",
           "moment": "Matin",
-          "type": "Reel Facebook (90-120 s)",
-          "texte": "Amour ou emprise : le test le plus simple du monde. Demande-toi si, en un an, ta vie est devenue plus grande ou plus petite.",
-          "media": "Reel 90-120 s cadré discussion (buste, regard caméra), sous-titres, SANS watermark TikTok. Version remontée pour FB.",
-          "lien": "Bio",
-          "astuce": "Les Reels FB en format « discussion » retiennent mieux les 35-65 que les cuts nerveux TikTok."
+          "type": "Engagement / opinion",
+          "texte": "« Elle l'a cherché, elle était à moitié nue. » On a inversé le problème : ce n'est pas le corps qui est obscène, c'est le regard qu'on a appris à poser dessus.",
+          "media": "Tweet texte seul. Répondre aux 10 premières réponses.",
+          "lien": "—",
+          "astuce": "Ce tweet prépare le terrain de la vidéo du 24/09. Note les meilleures réponses."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
           "time": "12:30",
           "moment": "Midi",
+          "type": "Reel Facebook (90-120 s)",
+          "texte": "Le naturisme, ce n'est pas une histoire de sexe. C'est une histoire de paix avec son corps. Je vous explique en deux minutes ce que j'ai compris là-bas.",
+          "media": "Reel 90-120 s, cadré discussion (face cam, buste), sous-titres, AUCUN watermark TikTok. Miniature soignée.",
+          "lien": "—",
+          "astuce": "Les Reels FB de 90-120 s cadrés discussion sont ceux qui convertissent en abonnés 35-65."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "12:35",
+          "moment": "Midi",
           "type": "Story Facebook",
-          "texte": "Le test en une phrase : ta vie est-elle devenue plus grande ou plus petite depuis que vous êtes ensemble ?",
-          "media": "Story FB propre : fond uni, typo lisible, sticker sondage 2 choix. Création dédiée FB.",
-          "lien": "Bio",
-          "astuce": "Jamais le même visuel que TikTok — l'audience FB décroche sur les codes TikTok."
+          "texte": "Un chiffre qui m'a scotchée : 2,6 millions de Français pratiquent le naturisme. On est loin du cliché 😅",
+          "media": "Story FB visuel PROPRE, chiffre en gros, typo de marque. Jamais le copier-coller TikTok.",
+          "lien": "—",
+          "astuce": "Une story par jour minimum : c'est ce qui garde ton nom en haut du fil FB."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Post contribution (question)",
-          "texte": "À quel moment exactement avez-vous compris que ce n'était plus de la jalousie mais du contrôle ? Je cherche des témoignages, je partage le mien en commentaire.",
-          "media": "Post texte, ton ouvert, aucun lien. Répondre à chaque témoignage.",
+          "time": "14:30",
+          "moment": "Après-midi",
+          "type": "Contribution (non promo)",
+          "texte": "Question sincère à la communauté : pourquoi la nudité non sexuelle met-elle autant mal à l'aise en France alors qu'on est le premier pays naturiste d'Europe ?",
+          "media": "Post texte, aucun lien. Répondre à chaque commentaire dans les 2 h.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/AskFrance ou r/CoupleFrance · Flair requis : Question · 1 post promo pour 3 contributions."
+          "astuce": "Sub cible : r/france · Flair requis : Société · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
+          "time": "18:30",
+          "moment": "Soir",
           "type": "Story publique (Creator Profile)",
-          "texte": "Coulisses : je prépare la vidéo de vendredi et j'hésite encore à garder un passage. Vous voulez la version soft ou la vraie ?",
-          "media": "3 segments : plan bureau, selfie parlé, sticker sondage. Profil PUBLIC uniquement.",
+          "texte": "Coulisses : je prépare le tournage de mercredi. Sujet sensible cette semaine, j'ai réécrit l'intro quatre fois.",
+          "media": "Story publique, format vertical brut, ambiance bureau/miroir. Profil PUBLIC uniquement.",
           "lien": "OnlyFans",
-          "astuce": "Impliquer l'audience dans la décision crée de l'attachement — c'est ce qui convertit plus tard."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "16:00",
-          "moment": "Après-midi",
-          "type": "Post promo (image)",
-          "texte": "Créatrice française, je parle couple et sexualité sans filtre. Voilà mon univers 🤍",
-          "media": "1 image verified, visage visible, respect strict des règles du sub. Vérifier le flair AVANT de poster.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/FrenchOnlyFans ou r/OnlyFansPromo · Flair requis : Verified · Jamais 2× la même image le même jour."
+          "astuce": "Les coulisses créent l'attachement : c'est du nurture, pas de la vente."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "19:00",
+          "time": "19:30",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Sur YouTube je parle de contrôle. Ici je parle de lâcher prise, et c'est beaucoup moins sage. Le set complet est en ligne 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT dans le tweet. Épingler jusqu'à demain matin.",
+          "texte": "Sur YouTube je vous explique pourquoi un corps nu ne veut rien dire. Ici, il veut dire quelque chose. 🔗",
+          "media": "Visuel suggestif (drap, contre-jour). Lien OnlyFans dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le soir convertit. Un seul CTA par tweet, jamais deux liens."
+          "astuce": "Le contraste SFW/NSFW est ton meilleur argument de conversion sur X."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:15",
-          "moment": "Soir",
-          "type": "Coulisses / audio",
-          "texte": "Petit vocal du soir : ce que je n'arrive pas à dire face caméra sur la jalousie. 2 minutes, à écouter avec un casque.",
-          "media": "Message vocal 2 min. Format audio = intimité maximale, très fort taux d'écoute.",
+          "time": "21:00",
+          "moment": "Nuit",
+          "type": "Intime / question ouverte",
+          "texte": "Question sérieuse pour vous ce soir : à quel moment vous avez arrêté de vous trouver beau/belle nu ? Moi j'ai une date précise. Je vous la donne si vous me donnez la vôtre.",
+          "media": "Message texte seul. Enchaîner en DM avec ceux qui répondent.",
           "lien": "OnlyFans",
-          "astuce": "Les vocaux créent la relation parasociale la plus forte. 1 à 2 par semaine, jamais plus."
+          "astuce": "L'argent se fait dans le chat. Une question ouverte = 20 conversations ouvertes."
         },
         {
           "platKey": "x",
           "plats": "X",
+          "time": "22:30",
+          "moment": "Nuit",
+          "type": "Engagement / opinion",
+          "texte": "On a appris aux filles à cacher leur corps, puis on leur reproche de ne pas l'assumer. Choisissez.",
+          "media": "Tweet texte seul, format punchline.",
+          "lien": "—",
+          "astuce": "Les punchlines courtes tard le soir sont les plus reprises en RT."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
           "time": "23:00",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Session pod : RT croisés + 10 réponses ciblées sur les comptes affinitaires du soir.",
-          "media": "Aucune création, 20 minutes d'interactions.",
-          "lien": "—",
-          "astuce": "Répondre vaut mieux que poster : les réponses te placent devant des audiences neuves."
+          "type": "Post promo (1 pour 3)",
+          "texte": "Créatrice française, je parle surtout de société et de couple sur ma chaîne — et un peu moins habillée ailleurs. Photo + contexte en commentaire.",
+          "media": "1 image conforme aux règles du sub, jamais réutilisée le même jour ailleurs.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair requis : Verification / OC · 1 post promo pour 3 contributions."
         }
       ]
     },
     {
       "day": "Mercredi",
-      "date": "19/08",
+      "date": "26/08",
       "posts": [
         {
           "platKey": "youtube",
@@ -307,10 +307,10 @@
           "time": "09:00",
           "moment": "Matin",
           "type": "Post Communauté : coulisses tournage",
-          "texte": "Jour de tournage 🎬 Aujourd'hui je tourne la prochaine longue + les réels de la semaine. Une question à me poser avant que j'allume la caméra ?",
-          "media": "Photo coulisses SFW (setup, lumière, script annoté). Onglet Communauté.",
+          "texte": "Jour de tournage 🎬 Aujourd'hui j'enregistre un sujet qui va faire du bruit dans les commentaires. Indice : ça parle de couple, de secrets, et de ce qu'on choisit de ne PAS dire. Vendredi 8h.",
+          "media": "Photo coulisses du setup (lumière, caméra, notes) — visage flouté ou de dos si tu préfères garder le mystère.",
           "lien": "YouTube",
-          "astuce": "Les coulisses du mercredi humanisent et alimentent l'algo entre deux vidéos. Zéro lien OF sur YouTube."
+          "astuce": "Les posts coulisses du mercredi préparent l'audience à la sortie de vendredi et augmentent la vue dans la 1re heure."
         },
         {
           "platKey": "tiktok",
@@ -318,10 +318,10 @@
           "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "« Je ne t'interdis pas, je te demande juste. » Voilà pourquoi cette phrase est la plus dangereuse de toutes.",
-          "media": "Face cam serré, coupe sèche à 3 s, son tendance, sous-titres. Sans watermark.",
+          "texte": "Il y a une phrase que je ne dirai jamais à mon mari. Ce n'est pas un mensonge. C'est une frontière. Vendredi je vous explique la différence.",
+          "media": "Face cam serré, hook avant 3 s, son tendance calme, sous-titres brûlés, sans watermark.",
           "lien": "TikTok",
-          "astuce": "Un seul message par vidéo. Le hook porte tout, le reste sert la rétention."
+          "astuce": "Le teasing en milieu de semaine capte les nouveaux qui reviendront vendredi."
         },
         {
           "platKey": "tiktok",
@@ -329,21 +329,10 @@
           "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Jour de tournage : 5 tenues, 10 trends, 1 café beaucoup trop fort ☕",
-          "media": "Story coulisses rapide, filtre tendance. Distincte du visuel FB.",
+          "texte": "Jour de tournage = 4 tenues essayées, 3 abandonnées 😅 Devinez laquelle a gagné.",
+          "media": "Story rapide, sticker sondage, ambiance légère. Différente de la story FB.",
           "lien": "Bio",
-          "astuce": "Les coulisses en story font monter le taux de retour sur profil."
-        },
-        {
-          "platKey": "groupe",
-          "plats": "Groupe FB « La communauté des Pensées d'Amanda »",
-          "time": "11:00",
-          "moment": "Matin",
-          "type": "Post coulisses (membres)",
-          "texte": "Coulisses réservées au groupe 🎬 Je tourne aujourd'hui. Le sujet de vendredi est celui qui m'a fait le plus hésiter cette année. Je vous montre mon script annoté — et je vous dis en avant-première le titre. (Ceux qui veulent les infos avant tout le monde, c'est sur Telegram, lien en commentaire.)",
-          "media": "2-3 photos coulisses + script annoté flouté. Lien Telegram en PREMIER commentaire, pas dans le post.",
-          "lien": "Telegram",
-          "astuce": "Le groupe est un sas : il réchauffe et pousse vers Telegram, là où se fait la monétisation."
+          "astuce": "Le contenu coulisses en story fait grimper le taux de retour sur ton profil."
         },
         {
           "platKey": "facebook",
@@ -351,10 +340,10 @@
           "time": "12:30",
           "moment": "Midi",
           "type": "Post feed débat",
-          "texte": "On m'a écrit hier : « chez nous, chacun a le code du téléphone de l'autre, c'est la base de la confiance. » Moi je pense l'inverse : si on a besoin du code, c'est que la confiance n'est plus là. Qui a raison ? 👇",
-          "media": "Texte + photo SFW. Opinion tranchée + question ouverte. Zéro lien dans le post.",
-          "lien": "Bio",
-          "astuce": "Poser une opinion PUIS une question double le volume de commentaires par rapport à une simple question."
+          "texte": "On dit qu'un couple qui va bien se dit tout. Je n'y crois plus. Je crois qu'un couple qui va bien peut tout se dire — ce n'est pas pareil. Vous placez le curseur où, vous ?",
+          "media": "Post texte seul, ton posé, question directe en fin de post.",
+          "lien": "—",
+          "astuce": "Ce débat prépare la sortie de vendredi. Épingle-le jusqu'à jeudi soir."
         },
         {
           "platKey": "facebook",
@@ -362,231 +351,242 @@
           "time": "12:35",
           "moment": "Midi",
           "type": "Story Facebook",
-          "texte": "Jour de tournage. Vendredi, on parle d'un sujet que tout le monde comprend de travers.",
-          "media": "Story FB soignée : photo coulisses recadrée + typo propre. Création dédiée, jamais le repost TikTok.",
-          "lien": "Bio",
-          "astuce": "Annoncer le tournage crée l'attente jusqu'à vendredi."
+          "texte": "En plein tournage aujourd'hui ☕ Sujet difficile, j'ai la voix qui tremble un peu sur une partie. Vendredi 8h vous comprendrez.",
+          "media": "Story FB propre : photo du setup + bandeau texte de marque. Pas de recyclage TikTok.",
+          "lien": "—",
+          "astuce": "Montrer l'effort crée de la loyauté chez les 35-65."
         },
         {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "14:00",
-          "moment": "Après-midi",
-          "type": "Post contribution (texte)",
-          "texte": "Les micro-signes d'emprise que personne ne repère au début : je liste ceux que j'ai vécus, complétez avec les vôtres.",
-          "media": "Post texte structuré, aucun lien externe, ton non moralisateur.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/france ou r/psychologie · Flair requis : Discussion · Contribuer 3× avant tout post promo."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
-          "type": "Story publique (Creator Profile)",
-          "texte": "Entre deux prises. Je viens de refaire la même phrase 6 fois parce que je n'arrivais pas à la dire sans trembler.",
-          "media": "Story publique, 3 segments coulisses. Profil PUBLIC — pas de snap privé premium.",
-          "lien": "OnlyFans",
-          "astuce": "La vulnérabilité en coulisses convertit mieux qu'un teaser sexy sur Snapchat."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "16:00",
-          "moment": "Après-midi",
-          "type": "Spotlight",
-          "texte": "POV : tu réalises que « il s'inquiète juste » n'était pas de l'amour.",
-          "media": "Vertical 15-25 s, hook texte à l'écran dès la 1re seconde, son tendance Spotlight. SFW strict.",
-          "lien": "OnlyFans",
-          "astuce": "Spotlight = découverte froide sur Snapchat. 1 à 2 par semaine, jamais d'explicite."
+          "platKey": "groupe",
+          "plats": "Groupe Facebook — La communauté des Pensées d'Amanda",
+          "time": "13:00",
+          "moment": "Midi",
+          "type": "Coulisses réservées au groupe",
+          "texte": "Coulisses en avant-première rien que pour vous : le sujet de vendredi, c'est ce qu'on choisit de taire dans un couple. Je vous montre mes notes de tournage — et je vous demande votre avis avant de monter la vidéo.",
+          "media": "2-3 photos coulisses + photo des notes manuscrites. Poser une vraie question au groupe.",
+          "lien": "Telegram",
+          "astuce": "Le groupe est ta base la plus chaude : oriente-les vers Telegram, c'est là que se fait le chiffre."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "18:30",
-          "moment": "Soir",
-          "type": "Teaser → OnlyFans",
-          "texte": "Journée de tournage terminée. Les photos de la fin de journée ne finiront pas sur YouTube, elles finissent là 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT. Épingler pour la soirée.",
-          "lien": "OnlyFans",
-          "astuce": "Lier le teaser à un moment réel de la journée (« fin de tournage ») augmente la crédibilité et le clic."
+          "time": "14:00",
+          "moment": "Après-midi",
+          "type": "Engagement / opinion",
+          "texte": "La transparence totale dans le couple, ce n'est pas de l'honnêteté. C'est souvent une manière de se décharger de sa culpabilité sur l'autre.",
+          "media": "Tweet texte seul, très partageable.",
+          "lien": "—",
+          "astuce": "Réponds aux contradicteurs : le débat double la portée."
         },
         {
-          "platKey": "prive",
-          "plats": "Feed privé OnlyFans / MYM",
-          "time": "20:00",
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "15:00",
+          "moment": "Après-midi",
+          "type": "Contribution (non promo)",
+          "texte": "Couples ouverts / libertins : vous vous racontez tout, ou vous avez des zones que vous gardez pour vous ? Je prépare une vidéo là-dessus, je cherche des points de vue autres que le mien.",
+          "media": "Post texte, ton humble, aucun lien commercial.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/sexualite ou r/AskFrance · Flair requis : Discussion · 1 post promo pour 3 contributions."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "18:00",
           "moment": "Soir",
-          "type": "Teaser suggestif (mots, jamais visuel explicite)",
-          "texte": "« Un corps nu n'est pas un corps sexuel. » C'est la phrase que je dis vendredi sur YouTube, très calmement, très sérieusement. Sauf qu'ici je ne suis pas en mode pédagogie. Sur YouTube je t'explique pourquoi la nudité n'a rien de sale. Ici je te montre autrement — et là, ce n'est plus du tout de la théorie. Ce que YouTube ne verra jamais, c'est ce que j'ai gardé pour ce soir. Viens me parler en DM avant de regarder : tu débloques, on discute, et je te montre.",
-          "media": "1 visuel suggestif (peau, lumière, hors-champ) — JAMAIS explicite. Le texte fait tout le travail.",
+          "type": "Story publique + Spotlight",
+          "texte": "Journée tournage terminée. Voix cassée, maquillage qui tient plus, mais la vidéo de vendredi vaut le coup.",
+          "media": "1 story publique brute + 1 Spotlight vertical (15-30 s, hook fort, sous-titres). Profil PUBLIC.",
           "lien": "OnlyFans",
-          "astuce": "Objectif : faire venir en chat ET payer. Ouvre la conversation en DM dans les 10 minutes qui suivent la publication."
+          "astuce": "Le Spotlight est la seule vraie source de découverte froide sur Snapchat : poste-en 1-2 par semaine."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "19:30",
+          "moment": "Soir",
+          "type": "Teaser → OnlyFans",
+          "texte": "Ce que je ne raconte pas à mon mari, je ne le raconte pas non plus sur YouTube. Devine où je le raconte. 🔗",
+          "media": "Visuel suggestif, lien OnlyFans direct dans le tweet.",
+          "lien": "OnlyFans",
+          "astuce": "Le teasing par le secret convertit mieux que le teasing par l'image."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
-          "moment": "Soir",
-          "type": "Message intime / confession",
-          "texte": "Fin de tournage. Je suis vidée mais je suis contente. Vendredi je dis un truc que ma mère va détester. Vous voulez que je vous spoile lequel ? 🙊",
-          "media": "Photo fin de tournage + question. Répondre en DM à chaque réaction.",
+          "moment": "Nuit",
+          "type": "Coulisses intimes",
+          "texte": "Je sors du tournage. J'ai dit une chose que je n'avais jamais dite à voix haute, même à lui. Elle est dans la vidéo de vendredi. Vous, il y a quelque chose que vous n'avez jamais dit à votre partenaire ?",
+          "media": "Vocal de 40 s (la voix crée plus d'attachement que le texte) + relance en DM.",
           "lien": "OnlyFans",
-          "astuce": "Poser une question fermée (« vous voulez ? ») déclenche une vague de réponses = autant de conversations ouvertes."
+          "astuce": "Le vocal en fin de journée est le format qui déclenche le plus de réponses en DM."
         },
         {
-          "platKey": "x",
-          "plats": "X",
+          "platKey": "prive",
+          "plats": "Feed privé OnlyFans / MYM",
+          "time": "22:00",
+          "moment": "Nuit",
+          "type": "Teaser suggestif (mots, jamais visuel explicite)",
+          "texte": "« Il y a une chose que je ne lui dis pas. » Je le dis vendredi sur YouTube, en version propre, en version expliquée. Ici, je peux te dire ce que c'est. Sur YouTube je parle des frontières du couple ; ici je te montre ce qu'il y a de l'autre côté. Ce que YouTube ne verra jamais, c'est ce que je fais quand je ne parle plus. Écris-moi avant de débloquer — tu débloques, on discute, et je te montre.",
+          "media": "1 visuel suggestif (ombre, drap, hors-champ) — JAMAIS explicite. Le texte fait tout le travail.",
+          "lien": "OnlyFans",
+          "astuce": "Ouvre la conversation en DM dans les 10 minutes : le PPV se vend dans le chat, pas dans le feed."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
           "time": "22:30",
           "moment": "Nuit",
-          "type": "Engagement / opinion",
-          "texte": "On confond tout le temps « il tient à moi » et « il a besoin de savoir ». Le premier te laisse partir. Le second te compte les minutes.",
-          "media": "Tweet texte seul, ton posé. Répondre aux réponses.",
-          "lien": "—",
-          "astuce": "Le tweet d'opinion de nuit ramène de la portée organique sur le teaser du soir."
+          "type": "Vidéo bonus (2e du jour, trickle)",
+          "texte": "Trois questions que vous ne devriez JAMAIS poser à votre partenaire si vous n'êtes pas prêt à entendre la réponse.",
+          "media": "Format liste 3 points, montage rythmé, texte à l'écran, sans watermark.",
+          "lien": "TikTok",
+          "astuce": "Une 2e vidéo tard le soir teste un autre créneau d'audience sans cannibaliser celle du matin."
         }
       ]
     },
     {
       "day": "Jeudi",
-      "date": "20/08",
+      "date": "27/08",
       "posts": [
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "09:30",
+          "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "Le contrôle coercitif ne laisse aucun bleu. C'est pour ça qu'on met dix ans à le nommer.",
-          "media": "Face cam serré, ton bas, insert texte de la phrase. Son tendance discret. Sans watermark.",
+          "texte": "On a essayé de tout se dire pendant quatre mois. Résultat : trois semaines à ne plus se parler du tout.",
+          "media": "Face cam, hook avant 3 s, sous-titres brûlés, son tendance. Sans watermark.",
           "lien": "TikTok",
-          "astuce": "Dernier post sur le thème de la semaine passée : c'est celui qui doit ramener le plus de commentaires."
+          "astuce": "Une anecdote chiffrée (« quatre mois », « trois semaines ») rend le hook concret et retient."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "09:35",
+          "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Demain 8h, nouvelle vidéo. Indice : ça parle de peau, et ce n'est pas ce que vous croyez 👀",
-          "media": "Story teaser rapide, sticker compte à rebours. Visuel distinct de FB.",
+          "texte": "Demain 8h, nouvelle vidéo. Thème : les secrets dans le couple. Vous êtes team « tout dire » ou team « zones d'ombre » ? 👀",
+          "media": "Story sondage 2 choix, visuel léger. Distincte de la story FB.",
           "lien": "Bio",
-          "astuce": "Le sticker compte à rebours crée une notification automatique au moment de la sortie."
-        },
-        {
-          "platKey": "x",
-          "plats": "X",
-          "time": "10:30",
-          "moment": "Matin",
-          "type": "Engagement / opinion",
-          "texte": "On apprend aux filles à repérer l'homme qui crie. On ne leur apprend jamais à repérer celui qui range doucement leur vie dans une boîte plus petite.",
-          "media": "Tweet texte seul. Répondre aux 10 premières réponses.",
-          "lien": "—",
-          "astuce": "Les images fortes (« une boîte plus petite ») sont ce qui se fait citer."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "11:30",
-          "moment": "Matin",
-          "type": "Reel Facebook (90-120 s)",
-          "texte": "Les 3 signes d'un contrôle déguisé en amour : le téléphone, l'isolement, la dévalorisation. Je détaille chacun, calmement.",
-          "media": "Reel 90-120 s, cadrage discussion, sous-titres, remontage dédié FB. AUCUN watermark TikTok.",
-          "lien": "Bio",
-          "astuce": "Sur FB le rythme peut être plus lent : l'audience 35-65 reste si le propos est clair."
+          "astuce": "Le sondage de la veille génère les premiers commentaires dès la mise en ligne."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
           "time": "12:30",
           "moment": "Midi",
-          "type": "Story Facebook",
-          "texte": "Demain 8h : une vidéo qui va faire réagir. On parle de nudité — et de tout ce qu'on projette dessus.",
-          "media": "Story FB propre : miniature floutée + typo lisible + sticker compte à rebours. Création dédiée.",
-          "lien": "Bio",
-          "astuce": "Annoncer 24 h avant sur FB maximise les vues de la première heure."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Post contribution (texte)",
-          "texte": "Question sincère : est-ce qu'on peut sortir d'une relation d'emprise sans couper totalement le contact ? Mon expérience en commentaire.",
-          "media": "Post texte, ton ouvert, aucun lien externe.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/psychologie ou r/AskFrance · Flair requis : Question · 1 promo pour 3 contributions."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
-          "type": "Story publique (Creator Profile)",
-          "texte": "Montage terminé. Demain 8h. J'ai gardé un passage que j'ai failli couper trois fois.",
-          "media": "Story publique 3 segments : écran de montage flouté, selfie, compte à rebours. Profil PUBLIC.",
-          "lien": "OnlyFans",
-          "astuce": "CTA soft uniquement : le rôle de Snapchat est de réchauffer, pas de vendre."
-        },
-        {
-          "platKey": "youtube",
-          "plats": "YouTube",
-          "time": "19:00",
-          "moment": "Soir",
-          "type": "Post Communauté : TEASING vidéo A",
-          "texte": "Demain 8h ⏰ « Naturisme : pourquoi on confond nudité et sexualité ? » 2,6 millions de Français pratiquent le naturisme et pourtant on n'a jamais eu aussi peur d'un corps nu. J'ai vécu nue au milieu de centaines d'inconnus. Il ne s'est rien passé. Et c'est exactement le sujet.",
-          "media": "Onglet Communauté : miniature + texte teasing. Activer la notification Première.",
-          "lien": "YouTube",
-          "astuce": "Le teasing de la veille au soir remplit la Première de 8h. Jamais de lien OF sur YouTube."
+          "type": "Reel Facebook (90-120 s)",
+          "texte": "Transparence ou déballage : ce n'est pas la même chose, et confondre les deux casse des couples. Je vous explique la nuance en deux minutes.",
+          "media": "Reel 90-120 s cadré discussion, sous-titres, sans watermark. Vignette lisible.",
+          "lien": "—",
+          "astuce": "Les Reels pédagogiques marchent très bien sur ton audience FB : garde un rythme calme."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "19:30",
-          "moment": "Soir",
-          "type": "Post feed teasing",
-          "texte": "Demain 8h, nouvelle vidéo. Un corps nu n'est pas un corps sexuel — je sais que beaucoup vont grincer des dents, et c'est justement pour ça que j'en parle. Vous en pensez quoi, avant même d'avoir vu ? 👇",
-          "media": "Texte + miniature. Aucun lien dans le post (lien « Bio »). Répondre aux commentaires ce soir.",
-          "lien": "Bio",
-          "astuce": "Faire débattre AVANT la sortie garantit du trafic dès la publication."
+          "time": "12:35",
+          "moment": "Midi",
+          "type": "Story Facebook",
+          "texte": "Demain 8h : « Ce que je ne raconte pas à mon mari ». La vidéo la plus personnelle que j'ai tournée cet été.",
+          "media": "Story FB propre : miniature + bandeau « Demain 8h ». Visuel de marque, pas de recyclage.",
+          "lien": "YouTube",
+          "astuce": "L'annonce J-1 en story fait mécaniquement grimper les vues de la première heure."
         },
         {
           "platKey": "x",
           "plats": "X",
+          "time": "13:30",
+          "moment": "Après-midi",
+          "type": "Engagement / opinion",
+          "texte": "Il ne faut pas tout se dire. Il faut tout POUVOIR se dire. Entre les deux il y a la différence entre un couple libre et un couple qui se punit.",
+          "media": "Tweet texte seul, format thèse. C'est le tweet à épingler jusqu'à vendredi.",
+          "lien": "—",
+          "astuce": "Épingle ce tweet : il sert d'accroche pour tous les nouveaux profils qui te découvrent demain."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "15:00",
+          "moment": "Après-midi",
+          "type": "Contribution (non promo)",
+          "texte": "J'ai testé la transparence totale dans mon couple pendant quatre mois. Bilan honnête, sans morale : ce qui a marché, ce qui a explosé.",
+          "media": "Post texte long, format retour d'expérience, aucun lien.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/couplesfrance ou r/AskFrance · Flair requis : Témoignage · 1 post promo pour 3 contributions."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "18:00",
+          "moment": "Soir",
+          "type": "Story publique (Creator Profile)",
+          "texte": "Montage terminé à l'instant. Il y a un passage que j'ai failli couper trois fois. Je l'ai gardé. Demain 8h.",
+          "media": "Story publique, ton confidence, profil PUBLIC. Sous-titres.",
+          "lien": "OnlyFans",
+          "astuce": "Le « j'ai failli couper » est l'un des meilleurs hooks de nurture : il promet du vrai."
+        },
+        {
+          "platKey": "youtube",
+          "plats": "YouTube",
           "time": "20:00",
           "moment": "Soir",
+          "type": "Post Communauté : teasing vidéo A",
+          "texte": "Demain 8h ⏰ « Ce que je ne raconte pas à mon mari (couple libertin) ». On va parler de la frontière entre pudeur et mensonge — et je raconte le soir où j'ai tout déballé, et ce que ça a cassé. Activez la cloche 🔔",
+          "media": "Post Communauté avec la miniature définitive + phrase d'accroche. Mets la cloche en avant.",
+          "lien": "YouTube",
+          "astuce": "Le teasing du jeudi soir est ce qui déclenche la vague de vues à 8h05 : ne le saute jamais."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "20:30",
+          "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Demain je publie une vidéo où j'explique pourquoi la nudité n'est pas sexuelle. Ici, elle l'est. Assumons les deux 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT dans le tweet.",
+          "texte": "Demain je raconte publiquement ce que je cache. Enfin, une partie. L'autre partie est ici. 🔗",
+          "media": "Visuel suggestif, lien OnlyFans dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le contraste SFW/NSFW explicité est un des angles qui convertit le mieux sur X."
+          "astuce": "Faire coïncider le teasing SFW et le teasing NSFW le même soir maximise le report d'audience."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:30",
-          "moment": "Soir",
-          "type": "Teasing exclusif",
-          "texte": "Vous l'avez avant tout le monde : demain 8h, « Naturisme : pourquoi on confond nudité et sexualité ». Et vendredi soir je vous fais le débrief que je ne peux dire nulle part ailleurs. Préparez vos questions 🤍",
-          "media": "Message texte + photo. Ouvrir un fil de questions pour le débrief de demain.",
+          "moment": "Nuit",
+          "type": "Avant-première abonnés",
+          "texte": "Vous êtes les premiers : demain 8h la vidéo sort, mais ce soir je vous donne la phrase que j'ai failli couper au montage. Répondez « OK » et je vous l'envoie en privé.",
+          "media": "Message texte + mécanique de réponse. Envoyer la phrase en DM à chacun (chaque DM = une conversation ouverte).",
           "lien": "OnlyFans",
-          "astuce": "Donner l'info « avant tout le monde » est le principal argument de rétention sur Telegram."
+          "astuce": "La mécanique « réponds OK » transforme un canal passif en 50 conversations. C'est là que naît le PPV de vendredi."
         },
         {
           "platKey": "x",
           "plats": "X",
+          "time": "22:30",
+          "moment": "Nuit",
+          "type": "Pod / RT engagement",
+          "texte": "Session pod du soir : quote-tweets et réponses sur les threads couple/sexualité les plus actifs.",
+          "media": "Aucun média. 15-20 minutes de réponses réelles.",
+          "lien": "—",
+          "astuce": "Le pod de la veille d'une sortie fait remonter ton profil dans les recommandations du lendemain."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
           "time": "23:00",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Pod du soir : RT croisés + réponses ciblées. Relancer le teaser de 20h en quote-tweet.",
-          "media": "Aucune création, 20 minutes.",
-          "lien": "—",
-          "astuce": "Un quote-tweet de son propre teaser relance l'impression sans doublonner le post."
+          "type": "Vidéo bonus (trickle)",
+          "texte": "Le pire moment de mon couple, ce n'est pas quand il m'a caché quelque chose. C'est quand je lui ai TOUT dit.",
+          "media": "Face cam, plan fixe, silence de 2 s avant la chute. Sans watermark.",
+          "lien": "TikTok",
+          "astuce": "Le format confession en plan fixe marche mieux sans musique : laisse le silence travailler."
         }
       ]
     },
     {
       "day": "Vendredi",
-      "date": "21/08",
+      "date": "28/08",
       "posts": [
         {
           "platKey": "youtube",
@@ -594,33 +594,11 @@
           "time": "08:00",
           "moment": "8h — Sortie",
           "type": "PUBLICATION VIDÉO A (Première)",
-          "texte": "TITRE : Naturisme : pourquoi on confond nudité et sexualité ?\n\nDESCRIPTION YouTube (copier-coller tel quel) :\nUn corps nu n'est pas un corps sexuel. Je sais, vous n'y croyez pas — moi non plus, avant d'avoir vécu nue au milieu de centaines d'inconnus sans qu'il ne se passe rien. 2,6 millions de Français pratiquent le naturisme, et pourtant on n'a jamais eu aussi peur de la simple nudité. Aujourd'hui je démonte cette confusion qui nous pourrit le rapport au corps.\n\n• Pourquoi notre cerveau associe nu = sexe (et qui nous l'a appris)\n• Le paradoxe français : pays n°1 du naturisme… où le topless disparaît (43 % → 16 %)\n• Ma première fois toute nue : ce qui se passe vraiment dans la tête\n• Sexualisation subie ≠ sensualité choisie : reprendre le pouvoir sur son corps\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#naturisme #nudité #corps #tabou #femmeetsociété #bodypositive #lespenséesdamanda #blondymandise",
+          "texte": "TITRE : Ce que je ne raconte pas à mon mari (couple libertin)\n\nDESCRIPTION YouTube (copier-coller tel quel) :\nDans un couple libertin, on croit que la solution c'est de tout se dire. J'ai essayé. Ça a tenu quatre mois, et ça nous a coûté trois semaines de silence. Aujourd'hui je vous explique la nuance qui a tout changé chez nous : il ne faut pas TOUT se dire, il faut tout POUVOIR se dire.\n\n• Transparence VS déballage : la différence que personne n'explique\n• Les chiffres qui dérangent : 8 % des Français en relation ouverte, et la 2e règle la plus fréquente… c'est le silence (IFOP-Gleeden 2025)\n• Mon aveu : le soir où j'ai tout raconté à mon mari (et ce que ça a cassé)\n• Les 3 règles qu'on applique aujourd'hui : cadre avant, débrief émotionnel, droit de demander\n• La seule frontière entre pudeur et mensonge\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#couplelibertin #libertinage #transparence #couple #communication #lespenséesdamanda #blondymandise",
           "media": "Publication en Première YouTube à 8h00 pile. Miniature A/B testée, chapitres, fin d'écran + carte. Colle la description ci-dessus telle quelle dans le champ Description.",
           "lien": "YouTube",
-          "astuce": "La description vient directement du pipeline (onglet Pipeline → épisode du 20/08) : elle est déjà validée, ne la réécris pas. Colle ensuite le lien de la vidéo publiée dans le cockpit (onglet Liens) — tous les posts du week-end le réutilisent.",
+          "astuce": "La description vient directement du pipeline (onglet Pipeline → épisode du 27/08) : elle est déjà validée, ne la réécris pas. Colle ensuite le lien de la vidéo publiée dans le cockpit (onglet Liens) — tous les posts du week-end le réutilisent.",
           "release": true
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "08:30",
-          "moment": "Matin",
-          "type": "Post feed sortie",
-          "texte": "C'est en ligne 🎬 « Naturisme : pourquoi on confond nudité et sexualité ? » J'ai vécu nue au milieu de centaines d'inconnus et il ne s'est rien passé. On va parler de ce que notre cerveau projette sur un corps — et de qui nous l'a appris. Dites-moi en commentaire si vous êtes d'accord avec moi, ou pas du tout 👇",
-          "media": "Texte + miniature. Coller le lien YouTube en PREMIER COMMENTAIRE (pas dans le post) pour ne pas brider la portée.",
-          "lien": "YouTube",
-          "astuce": "FB pénalise les liens sortants dans le post : le lien va toujours en premier commentaire."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "08:35",
-          "moment": "Matin",
-          "type": "Story Facebook (annonce)",
-          "texte": "En ligne 🎬 La nouvelle vidéo est là. Swipe up si vous voulez comprendre pourquoi on confond tout.",
-          "media": "Story FB dédiée : miniature propre + typo lisible + sticker lien. JAMAIS le repost TikTok.",
-          "lien": "YouTube",
-          "astuce": "La story d'annonce capte les abonnés qui ne voient jamais le feed."
         },
         {
           "platKey": "youtube",
@@ -628,10 +606,32 @@
           "time": "09:00",
           "moment": "Matin",
           "type": "Short (meilleur hook)",
-          "texte": "J'ai vécu nue au milieu de centaines d'inconnus. Il ne s'est rien passé. Et ça a changé tout mon rapport à mon corps.",
-          "media": "Short vertical 45-55 s, extrait E4 du long format, sous-titres, lien vers la vidéo complète en épinglé.",
+          "texte": "On a essayé de tout se dire pendant quatre mois. Ça nous a coûté trois semaines de silence. Il ne faut pas tout se dire — il faut tout pouvoir se dire.",
+          "media": "Short vertical 45-55 s, extrait du moment clé du long format, sous-titres, lien vers la vidéo complète en épinglé.",
           "lien": "YouTube",
           "astuce": "Un Short le jour de la sortie draine les nouveaux vers le long format. Zéro lien OF, zéro explicite."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "09:30",
+          "moment": "Matin",
+          "type": "Post feed sortie",
+          "texte": "Nouvelle vidéo en ligne ce matin : « Ce que je ne raconte pas à mon mari ». On y parle de la différence entre tout se dire et tout pouvoir se dire — et je raconte le soir où j'ai tout déballé. Je lis tous vos commentaires, même ceux qui ne sont pas d'accord.",
+          "media": "Lien YouTube + miniature. Texte d'accroche personnel, pas un copier-coller de la description.",
+          "lien": "YouTube",
+          "astuce": "Publie et reste 45 minutes dans les commentaires : la portée FB se joue là. Jamais de lien OF sur Facebook."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "09:35",
+          "moment": "Matin",
+          "type": "Story Facebook (annonce)",
+          "texte": "C'est en ligne ✨ La vidéo la plus personnelle de l'été. Dites-moi ce que vous en pensez en commentaire.",
+          "media": "Story FB propre : miniature + bandeau « En ligne » + sticker lien vers la chaîne.",
+          "lien": "YouTube",
+          "astuce": "Story + post feed le même matin = double point de contact sans saturer le fil."
         },
         {
           "platKey": "tiktok",
@@ -639,10 +639,10 @@
           "time": "10:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "La France est le pays n°1 du naturisme au monde. Et pourtant le topless est passé de 43 % à 16 %. Expliquez-moi.",
-          "media": "Insert texte des deux chiffres, hook avant 3 s, son tendance, sans watermark.",
+          "texte": "Il y a une chose que je ne raconte pas à mon mari. Ce n'est pas de l'infidélité. C'est pire pour certains : c'est un silence que j'assume.",
+          "media": "Extrait fort du long format, hook avant 3 s, son tendance, sans watermark. CTA « Bio ».",
           "lien": "TikTok",
-          "astuce": "Les chiffres contre-intuitifs sont les meilleurs hooks froids. CTA « Bio » uniquement."
+          "astuce": "Le jour de sortie, TikTok sert à alimenter YouTube : CTA soft, pas de lien direct."
         },
         {
           "platKey": "tiktok",
@@ -650,54 +650,54 @@
           "time": "10:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Nouvelle vidéo en ligne 🎬 Allez la voir et revenez me dire si vous êtes choqués 😅",
-          "media": "Story courte, sticker lien profil. Ton léger. Distincte de la story FB.",
+          "texte": "Nouvelle vidéo ce matin ☕ Team « tout dire » ou team « zones d'ombre » ? Les résultats du sondage d'hier m'ont surprise.",
+          "media": "Story légère, résultat du sondage de la veille en visuel. Distincte de la story FB.",
           "lien": "Bio",
-          "astuce": "Story = rappel, pas argumentation. 5 secondes max."
+          "astuce": "Réutiliser le résultat du sondage crée un feuilleton d'un jour à l'autre."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "10:30",
+          "time": "11:00",
           "moment": "Matin",
-          "type": "Teaser → OnlyFans",
-          "texte": "Nouvelle vidéo ce matin : pourquoi un corps nu n'est pas un corps sexuel. Et pour ceux qui veulent quand même la version sexuelle, elle est ici 👇",
-          "media": "Visuel + lien OnlyFans DIRECT dans le tweet.",
-          "lien": "OnlyFans",
-          "astuce": "L'humour du contraste désamorce l'agressivité commerciale et fait cliquer."
+          "type": "Annonce sortie / engagement",
+          "texte": "Nouvelle vidéo : « Ce que je ne raconte pas à mon mari (couple libertin) ». Thèse : la transparence totale n'est pas de l'honnêteté, c'est parfois une manière de faire porter sa culpabilité à l'autre. Venez me contredire.",
+          "media": "Tweet avec lien YouTube. Répondre à tout pendant 30 minutes.",
+          "lien": "YouTube",
+          "astuce": "Une thèse tranchée dans le tweet d'annonce génère plus de clics qu'un simple « nouvelle vidéo »."
         },
         {
           "platKey": "reddit",
           "plats": "Reddit",
-          "time": "13:00",
-          "moment": "Midi",
-          "type": "Post contribution (texte)",
-          "texte": "Pour ceux qui ont déjà fait du naturisme : au bout de combien de temps vous avez arrêté d'y penser ? Je raconte ma première fois en commentaire.",
-          "media": "Post texte, aucun lien externe, ton sincère.",
+          "time": "14:00",
+          "moment": "Après-midi",
+          "type": "Contribution (non promo)",
+          "texte": "J'ai publié une vidéo sur les non-dits dans les couples libertins. La question que je pose : est-ce que le droit au silence est une forme de respect ou une porte ouverte au mensonge ? Vos avis m'intéressent vraiment.",
+          "media": "Post texte, lien uniquement si le sub l'autorise, sinon en commentaire.",
           "lien": "Reddit",
-          "astuce": "Sub cible : r/france ou r/naturisme · Flair requis : Discussion · Jamais 2× la même image le même jour."
+          "astuce": "Sub cible : r/sexualite · Flair requis : Discussion · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
         },
         {
           "platKey": "snapchat",
           "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
+          "time": "18:00",
+          "moment": "Soir",
           "type": "Story publique (Creator Profile)",
-          "texte": "La vidéo est sortie ce matin et vos messages sont fous. Je réponds à trois d'entre eux ici.",
-          "media": "Story publique 3 segments, captures de messages anonymisées. Profil PUBLIC.",
+          "texte": "La vidéo est sortie ce matin et les commentaires partent dans tous les sens. Je vous lis un des plus durs ce soir.",
+          "media": "Story publique, lecture de commentaire à voix haute, profil PUBLIC. Sous-titres.",
           "lien": "OnlyFans",
-          "astuce": "Répondre publiquement à des messages donne envie aux autres d'écrire — c'est le début du chat."
+          "astuce": "Lire un commentaire négatif à voix haute crée un pic d'engagement et d'empathie."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "18:30",
+          "time": "19:30",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Vendredi soir. La vidéo sage est sur YouTube. Ce que j'ai posté ce soir ne l'est pas du tout 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT. Épingler pour la soirée.",
+          "texte": "Ce matin j'ai expliqué ce que je ne dis pas à mon mari. Ce soir je le montre à ceux qui paient pour l'entendre en entier. 🔗",
+          "media": "Visuel suggestif, lien OnlyFans dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le vendredi soir est le pic de conversion de la semaine sur X. Un seul lien, une seule promesse."
+          "astuce": "Le vendredi soir est le meilleur créneau de conversion de la semaine : garde ton meilleur visuel pour lui."
         },
         {
           "platKey": "prive",
@@ -705,7 +705,7 @@
           "time": "20:00",
           "moment": "Soir",
           "type": "Teaser suggestif (mots, jamais visuel explicite)",
-          "texte": "« Il ne s'est rien passé. » C'est ce que je dis dans la vidéo de ce matin, et c'est vrai : là-bas, la nudité n'était pas un événement. Ici, c'en est un — parce qu'ici, ce n'est pas pour tout le monde, c'est pour toi. Sur YouTube je t'explique pourquoi un corps nu ne veut rien dire. Ici je te montre autrement : ce que YouTube ne verra jamais, c'est le moment exact où j'arrête d'expliquer. Écris-moi avant de débloquer. Tu débloques, on discute, et je te montre.",
+          "texte": "« Il ne faut pas tout se dire. » C'est ma phrase du matin, sur YouTube, devant tout le monde. Sauf qu'ici, il n'y a pas tout le monde — il y a toi. Sur YouTube j'explique où je place la frontière ; ici je te montre ce qu'il y a juste derrière. Ce que YouTube ne verra jamais, c'est ce que je garde pour ceux qui prennent le temps de me parler. Écris-moi d'abord. Tu débloques, on discute, et je te montre.",
           "media": "1 visuel suggestif (lumière rasante, hors-champ, drap) — JAMAIS explicite. Le texte fait tout.",
           "lien": "OnlyFans",
           "astuce": "Ouvre la conversation en DM dans les 10 minutes : le PPV se vend dans le chat, pas dans le feed."
@@ -713,289 +713,289 @@
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "20:30",
-          "moment": "Soir",
-          "type": "DÉBRIEF EXCLUSIF vendredi",
-          "texte": "DÉBRIEF EXCLUSIF 🎙️ La vidéo est sortie ce matin, et voilà tout ce que je n'ai PAS pu dire dessus : la réaction de mon mari, le passage que j'ai coupé au montage, et le message d'une abonnée qui m'a fait pleurer. Posez vos questions, je réponds à tout ce soir.",
-          "media": "Message long + 1 vocal de 3 min. Rester disponible 1 h pour répondre en direct.",
+          "time": "21:00",
+          "moment": "Nuit",
+          "type": "DÉBRIEF EXCLUSIF de la semaine",
+          "texte": "Débrief exclusif du vendredi 🎙️ Ce que je n'ai PAS mis dans la vidéo de ce matin : la vraie raison pour laquelle on a arrêté de tout se dire, et ce que mon mari m'a répondu ce soir-là. Je vous raconte la version longue, ici, rien que pour vous.",
+          "media": "Vocal de 2-3 minutes (le format le plus attachant) + 1 photo coulisses SFW.",
           "lien": "OnlyFans",
-          "astuce": "Le débrief du vendredi est LE rendez-vous de rétention Telegram. Ne jamais le sauter."
+          "astuce": "Le débrief du vendredi est ton rendez-vous de rétention : même heure chaque semaine, ils l'attendent."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:30",
-          "moment": "Soir",
+          "time": "22:00",
+          "moment": "Nuit",
           "type": "PPV en avant-première",
-          "texte": "Avant-première pour vous seulement : deux contenus partent ce soir, et vous les avez 24 h avant tout le monde. Le premier est dans la continuité de la vidéo. Le second, beaucoup moins. Répondez « 1 » ou « 2 » et je vous envoie 🤍",
-          "media": "2 PPV avec aperçu flouté. Envoi en DM individuel après réponse, jamais en masse.",
+          "texte": "Deux PPV ce soir, en avant-première pour le canal avant le feed : le premier c'est la suite du débrief, sans filtre. Le second, je préfère te le décrire en privé. Écris-moi.",
+          "media": "2 PPV préparés à l'avance. Annonce sobre, description en DM, jamais de prix affiché publiquement.",
           "lien": "OnlyFans",
-          "astuce": "Faire choisir (« 1 ou 2 ») transforme une annonce en conversation — c'est là que le panier moyen monte."
+          "astuce": "81 % des fans ne dépensent jamais : concentre-toi sur les 5 qui répondent, pas sur le canal entier."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "22:30",
+          "time": "23:00",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Pod de nuit : RT croisés + quote-tweet du teaser de 18h30 avec une accroche différente.",
-          "media": "Aucune création, 20 minutes.",
+          "type": "Engagement / opinion",
+          "texte": "Le contraire du mensonge, ce n'est pas la transparence totale. C'est la confiance. On a confondu les deux et on s'épuise à tout se raconter.",
+          "media": "Tweet texte seul, punchline de fin de journée.",
           "lien": "—",
-          "astuce": "Le trafic X de vendredi nuit est le plus acheteur de la semaine."
+          "astuce": "Un dernier tweet d'opinion tard prolonge la portée jusqu'au samedi matin."
         }
       ]
     },
     {
       "day": "Samedi",
-      "date": "22/08",
+      "date": "29/08",
       "posts": [
-        {
-          "platKey": "tiktok",
-          "plats": "TikTok",
-          "time": "10:00",
-          "moment": "Matin",
-          "type": "Vidéo découverte (hook 3 s)",
-          "texte": "Ce n'est pas la peau qui est sexuelle. C'est le regard. Et le regard, ça s'éduque.",
-          "media": "Extrait du long format, hook avant 3 s, son tendance, sous-titres, sans watermark.",
-          "lien": "TikTok",
-          "astuce": "Le samedi matin est un créneau à forte rétention sur TikTok. Réutilise le meilleur hook de la vidéo."
-        },
-        {
-          "platKey": "tiktok",
-          "plats": "TikTok",
-          "time": "10:05",
-          "moment": "Matin",
-          "type": "Story TikTok (légère)",
-          "texte": "Samedi. Café. Et 400 commentaires à lire 😅 Vous m'avez surprise cette fois.",
-          "media": "Story rapide, ton léger, sticker réaction. Distincte de la story FB.",
-          "lien": "Bio",
-          "astuce": "Montrer qu'on lit les commentaires augmente le volume de commentaires."
-        },
         {
           "platKey": "youtube",
           "plats": "YouTube",
           "time": "11:00",
           "moment": "Matin",
           "type": "Short (trickle week-end)",
-          "texte": "Pays n°1 du naturisme au monde… et le topless est passé de 43 % à 16 %. Le paradoxe français en 40 secondes.",
-          "media": "Short vertical, extrait E1, insert texte des chiffres, source en petit. Lien vers la vidéo complète en épinglé.",
+          "texte": "Transparence ou déballage ? Si tu dis quelque chose à ton partenaire uniquement pour te sentir mieux TOI, ce n'est pas de l'honnêteté.",
+          "media": "Short vertical 40-50 s, 2e meilleur extrait du long format, sous-titres, lien épinglé vers la vidéo.",
           "lien": "YouTube",
-          "astuce": "Le Short du week-end fait vivre la vidéo 48 h de plus. Un seul par jour maximum."
+          "astuce": "Le Short du week-end capte l'audience qui a raté la sortie du vendredi."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
+          "time": "11:30",
+          "moment": "Matin",
+          "type": "Vidéo découverte (hook 3 s)",
+          "texte": "Trois règles qu'on applique aujourd'hui dans notre couple. La deuxième, personne ne l'aime quand je l'explique.",
+          "media": "Format liste 3 points, extrait du long format, sans watermark, son tendance.",
+          "lien": "TikTok",
+          "astuce": "Le format « la deuxième va vous déplaire » booste la rétention jusqu'au bout."
+        },
+        {
+          "platKey": "tiktok",
+          "plats": "TikTok",
+          "time": "11:35",
+          "moment": "Matin",
+          "type": "Story TikTok (légère)",
+          "texte": "Samedi, café, et 300 commentaires à lire 😅 Posez-moi vos questions, je réponds en story.",
+          "media": "Story avec sticker questions. Ton détendu. Distincte de la story FB.",
+          "lien": "Bio",
+          "astuce": "Le samedi matin est le meilleur moment pour un Q&R en story : les gens ont le temps."
         },
         {
           "platKey": "facebook",
           "plats": "Facebook",
-          "time": "12:30",
-          "moment": "Midi",
-          "type": "Post feed débat",
-          "texte": "On m'a écrit : « le naturisme c'est un prétexte, tout le monde regarde. » Franchement ? J'ai cru ça aussi. Puis j'y suis allée. Vous en pensez quoi — prétexte ou vrai rapport au corps ? 👇",
-          "media": "Texte + photo SFW (paysage, dos, coucher de soleil). Aucun lien dans le post.",
-          "lien": "Bio",
-          "astuce": "Reprendre un commentaire réel d'un abonné comme point de départ multiplie l'engagement."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "12:35",
-          "moment": "Midi",
-          "type": "Story Facebook",
-          "texte": "Vous avez été 400 à commenter hier. J'en ai relevé trois qui m'ont fait changer d'avis.",
-          "media": "Story FB propre : captures de commentaires anonymisées, typo lisible. Création dédiée FB.",
-          "lien": "Bio",
-          "astuce": "Mettre en avant les abonnés fidélise la communauté FB, la plus acheteuse."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
           "time": "14:00",
           "moment": "Après-midi",
-          "type": "Post promo (image)",
-          "texte": "Créatrice française, je parle de corps, de couple et de tabous sans filtre 🤍",
-          "media": "1 image verified inédite (jamais celle de mardi), respect strict des règles du sub.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/FrenchOnlyFans ou r/OnlyFansPromo · Flair requis : Verified · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+          "type": "Reel Facebook (90-120 s)",
+          "texte": "Les trois règles qu'on s'est fixées après avoir raté la transparence totale : le cadre avant, le débrief émotionnel après, et le droit de demander. Je détaille.",
+          "media": "Reel 90-120 s cadré discussion, sous-titres, sans watermark.",
+          "lien": "—",
+          "astuce": "Le contenu « méthode » performe très bien le week-end sur Facebook."
         },
         {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "15:00",
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "14:05",
           "moment": "Après-midi",
-          "type": "Story publique (Creator Profile)",
-          "texte": "Samedi tranquille. Je réponds à vos questions sur la vidéo pendant une heure.",
-          "media": "Story publique + sticker questions. Profil PUBLIC, pas de snap privé premium.",
-          "lien": "OnlyFans",
-          "astuce": "Les sessions questions du week-end ouvrent des conversations qui se monétisent en semaine."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "16:30",
-          "moment": "Après-midi",
-          "type": "Spotlight",
-          "texte": "POV : tu comprends que ton malaise face à un corps nu, ce n'est pas le corps — c'est ce qu'on t'a appris.",
-          "media": "Vertical 15-25 s, hook texte dès la 1re seconde, son Spotlight. SFW strict.",
-          "lien": "OnlyFans",
-          "astuce": "2e Spotlight de la semaine : découverte froide, aucun explicite, CTA soft."
+          "type": "Story Facebook",
+          "texte": "Merci pour tous vos messages sur la vidéo d'hier 💛 J'en ai lu un ce matin qui m'a fait pleurer, sincèrement.",
+          "media": "Story FB propre, texte sur fond de marque, sans capture d'écran de message identifiable.",
+          "lien": "—",
+          "astuce": "La gratitude sincère est le post le plus rentable en fidélité sur ton audience 35-65."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "19:00",
+          "time": "15:00",
+          "moment": "Après-midi",
+          "type": "Engagement / opinion",
+          "texte": "« Je te dis tout » est parfois la plus élégante des façons de dire « je ne veux pas porter ça seul ».",
+          "media": "Tweet texte seul, format aphorisme.",
+          "lien": "—",
+          "astuce": "Les aphorismes courts sont tes tweets les plus repris : garde-en un par jour."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Post promo (1 pour 3)",
+          "texte": "Samedi, mode détente. Créatrice française qui parle beaucoup trop de psychologie de couple pour un profil comme celui-ci. Contexte en commentaire.",
+          "media": "1 image conforme aux règles du sub, jamais réutilisée ailleurs le même jour.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/FrenchGoneWild · Flair requis : OC · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "18:30",
+          "moment": "Soir",
+          "type": "Story publique + Spotlight",
+          "texte": "Samedi soir tranquille. Je réponds à vos questions les plus gênantes en story — et il y en a eu.",
+          "media": "1 story publique Q&R + 1 Spotlight vertical (15-30 s) avec le meilleur extrait de la semaine. Profil PUBLIC.",
+          "lien": "OnlyFans",
+          "astuce": "Deuxième Spotlight de la semaine : c'est ton seul canal de découverte froide sur Snapchat."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "20:00",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Samedi soir. Vous voulez la suite de ce que je n'ai pas montré cette semaine ? C'est là 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT dans le tweet.",
+          "texte": "Samedi soir. Toi, moi, et une conversation que personne d'autre ne lira. 🔗",
+          "media": "Visuel suggestif, lien OnlyFans dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le samedi soir est le 2e meilleur créneau de conversion après vendredi."
+          "astuce": "Le samedi soir convertit presque aussi bien que le vendredi : ne saute pas ce créneau."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
-          "time": "21:00",
-          "moment": "Soir",
-          "type": "Message intime / confession",
-          "texte": "Une question qui revient beaucoup depuis hier : « comment tu fais pour ne pas avoir honte ? » Réponse honnête : j'ai eu honte pendant des années. Je vous raconte à partir de quand ça a changé.",
-          "media": "Message texte long + photo perso non explicite. Répondre en DM à chaque réaction.",
+          "time": "21:30",
+          "moment": "Nuit",
+          "type": "Intime / chatting",
+          "texte": "Samedi soir, je suis là et je réponds vraiment. Racontez-moi votre semaine — la vraie version, pas celle que vous racontez au boulot.",
+          "media": "Message texte + disponibilité réelle en DM pendant 1 heure.",
           "lien": "OnlyFans",
-          "astuce": "Répondre à une vraie question d'abonné crée l'impression d'une conversation privée à grande échelle."
+          "astuce": "Une heure de chatting réel le samedi soir vaut dix posts. C'est là que se fait l'argent."
         },
         {
           "platKey": "x",
           "plats": "X",
           "time": "22:30",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Pod de nuit : RT croisés + 10 réponses ciblées.",
-          "media": "Aucune création, 20 minutes.",
+          "type": "Pod / RT engagement",
+          "texte": "Pod du samedi : RT et réponses sur les threads créateurs/couple les plus actifs du soir.",
+          "media": "Aucun média. 15 minutes d'interactions.",
           "lien": "—",
-          "astuce": "Maintenir le pod même le week-end : la régularité vaut plus que le volume."
+          "astuce": "Le pod du week-end coûte peu et maintient ta portée pendant les jours creux."
         }
       ]
     },
     {
       "day": "Dimanche",
-      "date": "23/08",
+      "date": "30/08",
       "posts": [
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "10:00",
+          "time": "11:00",
           "moment": "Matin",
           "type": "Vidéo découverte (hook 3 s)",
-          "texte": "La première fois que j'ai enlevé mon maillot devant des inconnus, j'ai mis exactement 12 minutes à arrêter d'y penser.",
-          "media": "Face cam, storytelling, hook avant 3 s, son tendance, sous-titres. Sans watermark.",
+          "texte": "La seule frontière entre la pudeur et le mensonge, c'est celle-ci : est-ce que ce que je tais protège l'autre, ou est-ce que ça me protège moi ?",
+          "media": "Face cam, plan fixe, hook avant 3 s, extrait du long format. Sans watermark.",
           "lien": "TikTok",
-          "astuce": "Le storytelling à la 1re personne performe mieux le dimanche que les formats liste."
+          "astuce": "Le dimanche matin est un créneau calme mais très fidèle : privilégie le contenu réflexif."
         },
         {
           "platKey": "tiktok",
           "plats": "TikTok",
-          "time": "10:05",
+          "time": "11:05",
           "moment": "Matin",
           "type": "Story TikTok (légère)",
-          "texte": "Dimanche = zéro tournage, zéro montage, juste vous 🤍 Posez-moi une question.",
-          "media": "Story avec sticker questions. Ton léger. Distincte de la story FB.",
+          "texte": "Dimanche = jour off. Enfin, off en théorie 😅 Je prépare déjà la vidéo de vendredi prochain.",
+          "media": "Story légère, ambiance dimanche. Distincte de la story FB.",
           "lien": "Bio",
-          "astuce": "Les questions du dimanche alimentent les contenus de la semaine suivante."
+          "astuce": "Montrer le travail du dimanche humanise sans surcharger le fil."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "12:00",
+          "moment": "Midi",
+          "type": "Post feed débat",
+          "texte": "Débat du dimanche : est-ce qu'un secret qui ne fait de mal à personne est encore un mensonge ? Je pose la question sérieusement, j'ai changé d'avis trois fois cette semaine.",
+          "media": "Post texte seul, question ouverte, ton humble (« j'ai changé d'avis »).",
+          "lien": "—",
+          "astuce": "Admettre qu'on hésite fait exploser le nombre de commentaires : les gens veulent t'aider à trancher."
+        },
+        {
+          "platKey": "facebook",
+          "plats": "Facebook",
+          "time": "12:05",
+          "moment": "Midi",
+          "type": "Story Facebook",
+          "texte": "Si vous avez raté la vidéo de vendredi, elle est toujours là ☕ Et le débat continue en commentaire.",
+          "media": "Story FB propre : miniature + sticker lien chaîne. Pas de recyclage TikTok.",
+          "lien": "YouTube",
+          "astuce": "Le rappel du dimanche récupère 10 à 15 % de vues supplémentaires sur la vidéo de la semaine."
         },
         {
           "platKey": "groupe",
-          "plats": "Groupe FB « La communauté des Pensées d'Amanda »",
-          "time": "11:00",
-          "moment": "Matin",
-          "type": "Question de la semaine",
-          "texte": "Question de la semaine 💬 Est-ce que vous seriez capable de vous mettre nu·e devant des inconnus ? Et surtout : qu'est-ce qui vous en empêche exactement — le corps, le regard, ou l'idée qu'on s'en fait ? Réponses les plus honnêtes en commentaire, je réponds à tout le monde. (Et si vous voulez le débrief complet, c'est sur Telegram — lien en commentaire.)",
-          "media": "Post texte seul, aucun visuel. Lien Telegram en PREMIER commentaire.",
-          "lien": "Telegram",
-          "astuce": "La question du dimanche est le rituel du groupe : elle réchauffe et redirige vers Telegram."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "12:30",
-          "moment": "Midi",
-          "type": "Post feed débat",
-          "texte": "Bilan de la semaine : vous avez été très partagés. Certains m'ont dit « enfin quelqu'un qui le dit », d'autres « tu banalises ». Alors je repose la question, franchement : est-ce qu'on peut séparer nudité et sexualité, ou c'est une illusion de bobo ? 👇",
-          "media": "Texte + photo SFW. Aucun lien dans le post. Répondre aux 15 premiers commentaires.",
-          "lien": "Bio",
-          "astuce": "Reconnaître publiquement les avis opposés augmente la confiance — et le débat."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "12:35",
-          "moment": "Midi",
-          "type": "Story Facebook",
-          "texte": "Merci pour cette semaine 🤍 Vendredi prochain : ce que je ne raconte pas à mon mari.",
-          "media": "Story FB soignée : fond uni, typo propre, teasing vidéo B. Création dédiée FB.",
-          "lien": "Bio",
-          "astuce": "Annoncer la vidéo suivante dès le dimanche installe le rendez-vous du vendredi."
-        },
-        {
-          "platKey": "reddit",
-          "plats": "Reddit",
+          "plats": "Groupe Facebook — La communauté des Pensées d'Amanda",
           "time": "14:00",
           "moment": "Après-midi",
-          "type": "Post contribution (texte)",
-          "texte": "Le paradoxe français : premier pays naturiste du monde, et pourtant le topless a quasiment disparu des plages. Vos hypothèses ?",
-          "media": "Post texte avec les chiffres et la source. Aucun lien externe.",
-          "lien": "Reddit",
-          "astuce": "Sub cible : r/france ou r/AskFrance · Flair requis : Discussion · Apporter la source dans le corps du post, jamais en lien nu."
-        },
-        {
-          "platKey": "snapchat",
-          "plats": "Snapchat",
-          "time": "15:00",
-          "moment": "Après-midi",
-          "type": "Story publique (Creator Profile)",
-          "texte": "Dimanche cocooning. Je vous montre ma vraie tête du dimanche, sans filtre 🤍",
-          "media": "Story publique 3 segments, très naturel. Profil PUBLIC uniquement.",
-          "lien": "OnlyFans",
-          "astuce": "Le « sans filtre » du dimanche est ce qui fidélise le plus sur Snapchat. CTA soft."
-        },
-        {
-          "platKey": "facebook",
-          "plats": "Facebook",
-          "time": "17:00",
-          "moment": "Après-midi",
-          "type": "Reel Facebook (90-120 s)",
-          "texte": "Sexualisation subie et sensualité choisie, ce n'est pas la même chose. Je vous explique la différence en deux minutes.",
-          "media": "Reel 90-120 s cadré discussion, sous-titres, remontage dédié FB. AUCUN watermark.",
-          "lien": "Bio",
-          "astuce": "3e Reel de la semaine : c'est celui qui doit ramener des abonnés au groupe."
+          "type": "Question de la semaine",
+          "texte": "Question de la semaine 💬 Dans votre couple, il y a un sujet dont vous ne parlez jamais. Sans le nommer si c'est trop perso : c'est plutôt de l'argent, du sexe, de la famille, ou du passé ? Je lis tout et je réponds à chacun. (Et pour celles et ceux qui veulent parler plus librement, le canal Telegram est fait pour ça.)",
+          "media": "Post texte + sondage 4 choix dans le groupe. Répondre nominativement à chaque membre.",
+          "lien": "Telegram",
+          "astuce": "La question du dimanche est le rituel du groupe : c'est elle qui maintient le taux de participation, et ton meilleur pont vers Telegram."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "19:00",
+          "time": "15:00",
+          "moment": "Après-midi",
+          "type": "Engagement / opinion",
+          "texte": "On confond souvent « je n'ai rien à cacher » et « je n'ai rien à moi ». Ce n'est pas la même vie.",
+          "media": "Tweet texte seul, format aphorisme.",
+          "lien": "—",
+          "astuce": "Un aphorisme le dimanche après-midi capte l'audience qui scrolle sans but."
+        },
+        {
+          "platKey": "reddit",
+          "plats": "Reddit",
+          "time": "16:00",
+          "moment": "Après-midi",
+          "type": "Contribution (non promo)",
+          "texte": "Récap des meilleures réponses reçues cette semaine sur les non-dits dans le couple, et ce que ça m'a fait changer d'avis. Merci à ceux qui ont pris le temps.",
+          "media": "Post texte, ton reconnaissant, aucun lien commercial.",
+          "lien": "Reddit",
+          "astuce": "Sub cible : r/AskFrance · Flair requis : Discussion · 1 post promo pour 3 contributions, jamais 2× la même image le même jour."
+        },
+        {
+          "platKey": "snapchat",
+          "plats": "Snapchat",
+          "time": "18:00",
+          "moment": "Soir",
+          "type": "Story publique (Creator Profile)",
+          "texte": "Bilan du dimanche soir : la semaine a été intense. Je vous dis ce qui m'a le plus touchée dans vos messages.",
+          "media": "Story publique, ton posé, profil PUBLIC. Sous-titres.",
+          "lien": "OnlyFans",
+          "astuce": "Le bilan du dimanche soir est du pur nurture : aucune vente, que de la relation."
+        },
+        {
+          "platKey": "x",
+          "plats": "X",
+          "time": "19:30",
           "moment": "Soir",
           "type": "Teaser → OnlyFans",
-          "texte": "Fin de week-end. J'ai posté quelque chose ce soir qui n'a rien de pédagogique 👇",
-          "media": "Visuel teaser + lien OnlyFans DIRECT.",
+          "texte": "Dimanche soir, dernière ligne droite avant lundi. Ici, la semaine ne finit jamais tout à fait. 🔗",
+          "media": "Visuel suggestif, lien OnlyFans dans le tweet.",
           "lien": "OnlyFans",
-          "astuce": "Le dimanche soir capte ceux qui repoussent le retour au travail : bon taux de clic."
+          "astuce": "Le dimanche soir capte les abonnements « anti-lundi » : ton texte doit promettre de la présence, pas du contenu."
         },
         {
           "platKey": "telegram",
           "plats": "Telegram",
           "time": "21:00",
-          "moment": "Soir",
-          "type": "Message intime / confession",
-          "texte": "Dimanche soir, on fait le point. Cette semaine vous m'avez appris un truc : vous n'avez pas peur de la nudité, vous avez peur du jugement. Moi aussi. Racontez-moi la vôtre, je réponds à tout le monde ce soir.",
-          "media": "Message texte + photo cocooning. Rester disponible 45 min en DM.",
+          "moment": "Nuit",
+          "type": "Intime / teasing semaine suivante",
+          "texte": "Petit spoiler de fin de semaine : vendredi prochain je parle de ce que personne ne dit du métier de créatrice. Les vrais chiffres, la fatigue, la nuit où j'ai pleuré dans ma cuisine. Si vous voulez la version non filtrée avant tout le monde, restez là.",
+          "media": "Message texte + relance individuelle en DM aux plus actifs de la semaine.",
           "lien": "OnlyFans",
-          "astuce": "Le dimanche soir est le meilleur moment pour ouvrir des conversations longues : les gens sont seuls et disponibles."
+          "astuce": "Terminer la semaine par une promesse crée l'attente : c'est ce qui empêche les désabonnements du lundi."
         },
         {
           "platKey": "x",
           "plats": "X",
-          "time": "22:00",
+          "time": "22:30",
           "moment": "Nuit",
-          "type": "Pod RT / engagement",
-          "texte": "Pod du dimanche : RT croisés + préparation du thread d'opinion de lundi.",
-          "media": "Aucune création, 20 minutes.",
+          "type": "Engagement / opinion",
+          "texte": "On passe notre vie à réclamer de la transparence aux autres et à négocier discrètement la nôtre.",
+          "media": "Tweet texte seul, dernière punchline de la semaine.",
           "lien": "—",
-          "astuce": "Préparer lundi le dimanche soir évite le trou de publication du lundi matin."
+          "astuce": "Le dernier tweet du dimanche soir est souvent celui qui tourne le plus le lundi matin."
         }
       ]
     }
@@ -1003,85 +1003,85 @@
   "reels": [
     {
       "n": 1,
-      "title": "Le chiffre que personne ne croit",
+      "title": "Le chiffre que personne n'ose vérifier",
       "angle": "STAT",
       "dur": "20-25 sec",
       "cam": "face cam serré, ton intrigué",
-      "hook": "Un couple français sur dix fait déjà chambre à part. Et si on compte ceux qui dorment séparés quelques nuits par semaine, on monte à un sur quatre.",
-      "corps": "Un sur quatre. Et pourtant, essayez de dire à table que vous ne dormez plus avec votre mari : on vous regarde comme si vous annonciez un divorce. Six pour cent de couples en plus y pensent sans oser franchir le pas. Six pour cent de gens qui dorment mal, par peur de ce que ça voudrait dire.",
-      "cta": "J'en parle en entier dans « Chambre à part : la fin du couple ou son salut ? » — abonnez-vous.",
+      "hook": "En France, les femmes déclarent 7,9 partenaires dans leur vie. Les hommes, 16,4. Vous voyez le problème arithmétique ?",
+      "corps": "Mathématiquement, c'est impossible. Ils couchent avec qui, les huit partenaires manquants ? La réponse est simple et elle est gênante : un Français sur trois avoue sous-évaluer son chiffre. Les femmes enlèvent. Les hommes ajoutent. Personne ne ment vraiment — tout le monde arrondit dans le sens où on sera le moins jugé.",
+      "cta": "J'en parle en entier dans « Body count : pourquoi ce chiffre obsède tout le monde » — abonnez-vous.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Lundi 07/09"
+      "jour": "Lundi 14/09"
     },
     {
       "n": 2,
-      "title": "Le lit commun n'est pas une preuve d'amour",
+      "title": "La vraie question derrière le body count",
       "angle": "OPINION",
       "dur": "25-30 sec",
-      "cam": "face cam, ton posé, regard fixe",
-      "hook": "Dormir dans le même lit, ce n'est pas de l'amour. C'est une habitude de logement.",
-      "corps": "Pendant des siècles, les gens qui en avaient les moyens dormaient dans des chambres séparées. Le lit commun s'est imposé quand on a manqué de place et de chauffage, pas quand on a inventé les sentiments. On a transformé une contrainte immobilière en test de couple. Et aujourd'hui on culpabilise des gens qui dorment mal au nom d'une tradition qui n'a même pas cent cinquante ans.",
-      "cta": "La vidéo complète est en ligne — dites-moi si je vous ai fait changer d'avis.",
+      "cam": "face cam, ton tranché, plan fixe",
+      "hook": "Quand quelqu'un vous demande votre body count, il ne demande pas un chiffre. Il demande une autorisation.",
+      "corps": "L'autorisation de vous ranger dans une case avant même de vous connaître. Trop bas, vous êtes coincée. Trop haut, vous êtes facile. Il n'existe aucun chiffre gagnant — c'est un piège fermé des deux côtés. Et le pire, c'est qu'on a réussi à faire croire aux femmes que répondre était une preuve d'honnêteté.",
+      "cta": "Vidéo complète sur la chaîne. Venez me dire si je me trompe.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Mardi 08/09"
+      "jour": "Mardi 15/09"
     },
     {
       "n": 3,
-      "title": "La nuit où j'ai pris mon oreiller",
+      "title": "La fois où j'ai menti sur mon chiffre",
       "angle": "INTIME",
       "dur": "30-35 sec",
-      "cam": "plan un peu plus large, lumière basse, ton bas",
-      "hook": "La première fois que j'ai pris mon oreiller pour aller dormir dans l'autre chambre, j'ai pleuré dans le couloir.",
-      "corps": "Pas parce que j'étais fâchée. Parce que j'étais persuadée que ça voulait dire qu'on était en train de se perdre. Je suis restée debout dans le noir, oreiller sous le bras, à me demander à quel moment j'avais raté un truc. Le lendemain matin, j'avais dormi sept heures d'affilée pour la première fois depuis des mois. Et je l'ai trouvé beaucoup plus supportable au petit-déjeuner.",
-      "cta": "Je raconte toute la suite dans la vidéo. Abonnez-vous.",
+      "cam": "face cam très serré, lumière basse, sans musique",
+      "hook": "J'avais vingt-trois ans, il m'a demandé combien. J'ai divisé par deux. Et j'ai eu honte pendant six mois — pas du chiffre, du mensonge.",
+      "corps": "Ce qui m'a fait le plus mal, ce n'est pas sa question. C'est le réflexe. Cette seconde où mon cerveau a calculé tout seul quel chiffre serait acceptable pour rester aimable à ses yeux. Personne ne m'avait appris ça. Et pourtant je savais faire.",
+      "cta": "L'histoire complète est dans la vidéo. Racontez-moi la vôtre en commentaire.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Mercredi 09/09"
+      "jour": "Jeudi 17/09"
     },
     {
       "n": 4,
-      "title": "Vous dormez mal par fierté",
+      "title": "Le test qui met tout le monde d'accord",
       "angle": "QUESTION CLIVANTE",
-      "dur": "25-30 sec",
-      "cam": "face cam serré, ton direct, léger défi",
-      "hook": "Un Français sur quatre dit que dormir en couple abîme son sommeil. Et presque un sur deux s'est déjà disputé à cause des ronflements de l'autre.",
-      "corps": "Donc on est très nombreux à passer nos nuits à donner des coups de coude, à se réveiller à trois heures, à commencer la journée à cran. Et on continue. Pourquoi ? Parce qu'on a peur de ce que les gens vont penser. Vous dormez mal par fierté. Franchement, dites-moi si j'ai tort.",
-      "cta": "Réponse en commentaire, et la vidéo entière est en ligne.",
+      "dur": "20-25 sec",
+      "cam": "face cam, ton complice, regard direct",
+      "hook": "Test rapide. Un homme à 30 partenaires, vous pensez quoi ? Une femme à 30 partenaires, vous pensez quoi ? Répondez honnêtement, dans votre tête.",
+      "corps": "Voilà. C'est tout le sujet. Ce n'est pas le chiffre qui change, c'est le mot que votre cerveau a sorti automatiquement. Et ce mot, vous ne l'avez pas inventé : on vous l'a appris. La bonne nouvelle, c'est que ce qui s'apprend se désapprend.",
+      "cta": "On en parle en profondeur dans la nouvelle vidéo. Abonnez-vous.",
       "plats": "TikTok + YouTube + Facebook",
-      "jour": "Jeudi 10/09"
+      "jour": "Samedi 19/09"
     }
   ],
   "extraits": [
     {
       "n": "E1",
-      "quoi": "Le paradoxe chiffré d'ouverture (≈10 % des couples français font chambre à part · ≈25 % en comptant les nuits séparées régulières · 6 % y pensent sans oser)",
-      "tc": "~00:50",
+      "quoi": "Le paradoxe arithmétique d'ouverture (7,9 partenaires déclarés par les femmes contre 16,4 par les hommes · 1 Français sur 3 avoue sous-évaluer son chiffre)",
+      "tc": "~00:55",
       "angle": "STAT / accroche",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Insert texte des trois chiffres à l'écran, source en petit : IFOP. Cutaway GIF « ronflement » (tenor.com/search/snoring-gifs) sur la phrase « et pourtant personne ne l'assume »."
+      "note": "Insert texte des deux chiffres côte à côte à l'écran, source en petit : enquête CSF 2023 (Inserm/ANRS/Santé publique France). Cutaway GIF « compter sur ses doigts » (tenor.com/search/counting-fingers-gifs) sur la phrase « et pourtant les comptes ne tombent jamais juste », 1,5 s maximum."
     },
     {
       "n": "E2",
-      "quoi": "L'exemple du mardi 23h40 : le coup de coude, la troisième position, le réveil à 3 h et la journée gâchée",
-      "tc": "~02:35",
-      "angle": "EXEMPLE / quotidien",
+      "quoi": "Le double standard illustré : le même chiffre, deux mots — « expérimenté » pour lui, « facile » pour elle",
+      "tc": "~03:10",
+      "angle": "EXEMPLE / société",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Découper en 3 temps avec insert horaire à l'écran (23h40 / 01h15 / 03h02). Cutaway GIF « viré du lit » (tenor.com/search/kick-out-of-bed-gifs) sur le coup de coude. Rythme sec."
+      "note": "Découper en split-screen : à gauche l'homme, à droite la femme, même chiffre affiché. Cutaway GIF « side eye » (tenor.com/search/side-eye-gifs) sur le mot « facile ». Rythme sec, deux coupes maximum."
     },
     {
       "n": "E3",
-      "quoi": "L'anecdote perso : l'oreiller sous le bras dans le couloir, les larmes, et les sept heures de sommeil du lendemain",
-      "tc": "~04:20",
+      "quoi": "L'anecdote perso : la question à vingt-trois ans, le chiffre divisé par deux, les six mois de honte",
+      "tc": "~05:05",
       "angle": "INTIME / émotion",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Ralenti léger sur « j'étais persuadée qu'on était en train de se perdre », musique retirée pendant 3 s, aucun sous-titre décoratif."
+      "note": "Musique coupée intégralement pendant l'anecdote, aucun sous-titre décoratif, ralenti léger sur « j'ai divisé par deux ». Remettre le son seulement sur la phrase de sortie."
     },
     {
       "n": "E4",
-      "quoi": "Le moment clé : « dormir ensemble, ce n'est pas de l'amour, c'est de la logistique »",
-      "tc": "~06:50",
+      "quoi": "Le moment clé : « ton passé n'est pas un casier judiciaire, c'est une bibliothèque »",
+      "tc": "~07:30",
       "angle": "PUNCH / citation",
       "plats": "TikTok + YouTube + Facebook",
-      "note": "Plan fixe, 2 s de silence après la phrase, citation incrustée en gros à l'écran. C'est le Short prioritaire."
+      "note": "Plan fixe, 2 s de silence après la phrase, citation incrustée en gros à l'écran. C'est le Short prioritaire de la semaine."
     }
   ],
   "script": [
@@ -1091,12 +1091,12 @@
       "timing": "0-8 sec",
       "lines": [
         {
-          "t": "On m'a dit que faire chambre à part, c'était le début de la fin. Ça fait deux ans qu'on dort séparés une nuit sur deux, et je ne l'ai jamais autant aimé.",
+          "t": "On m'a demandé mon body count à vingt-trois ans. J'ai divisé par deux — et j'ai mis six ans à comprendre pourquoi.",
           "quote": true
         }
       ],
       "notes": [
-        "Caméra : face cam serré, regard direct, pause d'une seconde avant « et je ne l'ai jamais autant aimé »."
+        "Caméra : face cam serré, regard direct, pause d'une seconde entière avant « et j'ai mis six ans à comprendre pourquoi »."
       ]
     },
     {
@@ -1105,16 +1105,16 @@
       "timing": "15-60 sec",
       "lines": [
         {
-          "t": "Les chiffres d'abord, parce qu'ils vont vous surprendre. En France, environ 10 % des couples déclarent faire chambre à part. Et si on compte ceux qui dorment séparément plusieurs nuits par semaine, on grimpe à près de 25 %. Un couple sur quatre. À ça, l'IFOP ajoute 6 % de couples qui y pensent sans jamais oser franchir le pas. Six pour cent de gens qui dorment mal, volontairement, parce qu'ils ont peur de ce que ça voudrait dire."
+          "t": "Body count. Le mot est arrivé de TikTok il y a quelques années et il a colonisé les conversations en un temps record : les repas de famille, les premiers rendez-vous, les débats de vestiaire. Le nombre de partenaires sexuels qu'une personne a eus dans sa vie, transformé en indicateur de valeur. Et pas n'importe quelle valeur : une valeur morale."
         },
         {
-          "t": "Et le sommeil, lui, ne fait pas de sentiment. D'après l'enquête de l'Institut National du Sommeil et de la Vigilance avec la Fondation VINCI Autoroutes pour la Journée du sommeil 2025, un Français sur quatre estime que dormir en couple nuit à son sommeil. Près d'un Français en couple sur deux s'est déjà disputé à cause des ronflements de l'autre, et 26 % considèrent que ces ronflements abîment carrément leur vie de couple. Le tout sur une moyenne de sept heures quatre par nuit en semaine, ce qui n'est déjà pas énorme."
+          "t": "Sauf que les chiffres, eux, racontent une histoire beaucoup plus drôle. La grande enquête « Contexte des sexualités en France », menée par l'Inserm, l'ANRS et Santé publique France auprès de 31 518 personnes, donne pour les 18-69 ans une moyenne de 7,9 partenaires au cours de la vie chez les femmes, contre 16,4 chez les hommes. Vous n'avez pas besoin d'un doctorat en mathématiques pour voir que quelque chose cloche : si les hommes couchent deux fois plus, c'est avec qui, exactement ? Un sondage IFOP réalisé en janvier 2024 auprès de 1 911 personnes donne le début de la réponse : un Français sur trois admet lui-même sous-évaluer son nombre de partenaires. Les femmes retirent. Les hommes rajoutent. Et tout le monde arrondit dans le sens où il sera le moins jugé."
         }
       ],
       "notes": [
-        "Insert texte à l'écran : 10 % · 25 % · 6 %, source IFOP en petit en bas de cadre.",
-        "Insert texte : 1 Français sur 4 · 1 couple sur 2 · 26 %, source INSV / Fondation VINCI Autoroutes 2025.",
-        "Cutaway GIF ronflement (tenor.com/search/snoring-gifs) sur « ne fait pas de sentiment », 1,5 seconde maximum."
+        "Insert texte à l'écran : 7,9 · 16,4, source enquête CSF 2023 (Inserm / ANRS / Santé publique France) en petit en bas de cadre.",
+        "Insert texte : 1 Français sur 3 sous-évalue son chiffre, source IFOP-LELO janvier 2024.",
+        "Cutaway GIF « compter sur ses doigts » (tenor.com/search/counting-fingers-gifs) sur « les comptes ne tombent jamais juste », 1,5 seconde maximum."
       ]
     },
     {
@@ -1137,11 +1137,11 @@
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Alors je vous donne mon avis tout de suite, et il est tranché : faire chambre à part ne tue aucun couple. Ce qui tue les couples, c'est le silence autour. C'est décider ça dans la rancune, à deux heures du matin, en claquant une porte, et ne plus jamais en reparler. Le lit commun n'est pas une preuve d'amour. C'est une habitude, et une habitude assez récente. Et je trouve dingue qu'on demande à des adultes de sacrifier leur santé pour un symbole."
+          "t": "Je vais être très claire tout de suite : le body count ne mesure rien. Il ne mesure ni la fidélité, ni la santé, ni la capacité à aimer, ni la valeur de qui que ce soit. Il mesure une seule chose, et c'est celle-là qui m'intéresse aujourd'hui : la peur qu'on a de ne pas contrôler le passé de l'autre. Poser la question, ce n'est pas chercher une information. C'est chercher une prise."
         }
       ],
       "notes": [
-        "Ton posé, débit ralenti sur « ce qui tue les couples, c'est le silence autour »."
+        "Ton posé, débit ralenti sur « c'est chercher une prise »."
       ]
     },
     {
@@ -1150,31 +1150,34 @@
       "timing": "4-5 min",
       "lines": [
         {
-          "t": "Commençons par démonter le mythe, parce que tout part de là. On parle du lit conjugal comme d'une évidence millénaire, comme si l'amour avait toujours eu la forme d'un matelas deux places. C'est faux. Pendant des siècles, les gens qui en avaient les moyens dormaient dans des chambres séparées, et personne n'y voyait le signe d'un désamour. Le lit commun généralisé, c'est une histoire de mètres carrés et de chauffage : on dormait ensemble parce qu'on n'avait ni la place ni les moyens de faire autrement. Puis le XXe siècle est passé par là, la publicité, le cinéma, les photos de mariage, et on a transformé une contrainte immobilière en test de couple. Aujourd'hui, une femme qui dit qu'elle dort dans la chambre d'amis doit se justifier. Un homme qui dit la même chose, on suppose qu'il a fait une bêtise. Dans les deux cas, on a déjà décidé que c'était un problème."
+          "t": "Commençons par le mot lui-même, parce qu'il n'est pas innocent. « Body count », littéralement, ça veut dire le décompte des corps. C'est un terme militaire. On l'utilisait pour compter les morts après une bataille. Alors quand on l'applique à la sexualité, on n'utilise pas une métaphore neutre : on transforme les gens avec qui on a couché en victimes tombées au combat, et la personne qui compte en survivante — ou en coupable. Le vocabulaire fait déjà tout le travail avant même qu'on ait ouvert le débat."
         },
         {
-          "t": "Maintenant, un exemple ultra concret, et je suis sûre que beaucoup vont se reconnaître. Il est vingt-trois heures quarante, un mardi. Vous vous endormez enfin. Il ronfle. Vous lui donnez un coup de coude, il s'arrête douze secondes, il repart. Une heure quinze : vous testez la troisième position, celle où vous mettez l'oreiller sur votre oreille et où vous respirez à travers. Trois heures deux : vous êtes complètement réveillée, vous regardez le plafond, et vous commencez à calculer combien d'heures il vous reste. Sept heures du matin : vous vous levez, vous êtes à cran, et à sept heures dix vous vous engueulez pour une histoire de lave-vaisselle. Sauf que la vraie dispute, elle n'a rien à voir avec le lave-vaisselle. Elle a commencé à trois heures du matin."
+          "t": "Ensuite il y a le double standard, et là je vais faire simple, parce que tout le monde le connaît sans jamais le dire à voix haute. Prenez un homme de trente-cinq ans qui annonce trente partenaires. Le mot qui vient, c'est « expérimenté ». Peut-être « joueur ». Au pire, on sourit. Prenez maintenant une femme de trente-cinq ans, exactement le même chiffre, exactement la même vie. Le mot qui vient n'est pas le même. Et vous le savez, parce qu'il vient de traverser votre tête pendant que je parlais. Ce n'est pas de votre faute : ce mot, on ne l'a pas inventé tout seul, on nous l'a appris très tôt, dans la cour de récréation, dans les films, dans les chansons. Mais aujourd'hui on peut au moins le regarder en face."
         },
         {
-          "t": "Et c'est ça que les gens ne mesurent pas. Le manque de sommeil ne vous rend pas juste fatiguée, il vous rend moins patiente, moins drôle, moins tendre, et beaucoup plus susceptible. Vous devenez la pire version de vous-même, tous les jours, à cause de quelque chose que personne n'a choisi. Le ronflement, ce n'est pas une faute morale : c'est de la mécanique. Mais la rancune, elle, s'accumule très bien. On finit par en vouloir à quelqu'un pour un bruit qu'il ne contrôle pas. C'est absurde et c'est extrêmement fréquent."
+          "t": "Ce qui me sidère le plus, c'est la manière dont on demande à une femme de tenir deux positions incompatibles en même temps. Un chiffre trop bas ? Elle est coincée, elle ne saura pas s'y prendre, elle va s'attacher trop vite. Un chiffre trop haut ? Elle est facile, elle a « trop vécu », on ne pourra jamais lui faire confiance. Cherchez le bon chiffre. Il n'existe pas. Ce n'est pas une question à laquelle on peut répondre correctement, c'est un test qu'on est certaine de rater. Et un test qu'on ne peut pas réussir, en psychologie, ça porte un nom : c'est un instrument de contrôle."
         },
         {
-          "t": "Je vais vous raconter comment ça s'est passé chez nous, parce que je n'ai pas envie de faire la donneuse de leçons depuis un canapé. La première fois que j'ai pris mon oreiller pour aller dormir dans l'autre chambre, j'ai pleuré. Dans le couloir, debout, dans le noir, oreiller sous le bras, comme une gamine. Pas parce que j'étais en colère contre lui. Parce que j'étais absolument persuadée que ce geste-là voulait dire quelque chose. Que c'était la première marche d'un escalier dont on ne remonte pas. J'avais dans la tête toutes les phrases que j'avais entendues sur les couples de mes parents, de mes tantes, « ils ne dorment même plus ensemble, tu sais ». Et puis je me suis couchée. Et j'ai dormi sept heures d'affilée pour la première fois depuis des mois. Le lendemain matin, je l'ai trouvé nettement plus supportable au petit-déjeuner. Ce n'est pas très romantique dit comme ça, mais c'est la vérité."
+          "t": "Prenons un exemple très concret, celui que tout le monde a vécu ou verra un jour. Troisième rendez-vous. Le dîner s'est bien passé, l'ambiance est bonne, il y a du vin, il y a des rires. Et puis vient la phrase, sur le ton le plus léger du monde : « Franchement, sans juger, t'en as eu combien ? » Le mot « franchement » est là pour désarmer, le mot « sans juger » pour signaler que le jugement est déjà prêt. Et à cet instant précis, il se passe quelque chose de fascinant dans le cerveau d'une femme : elle ne cherche pas son chiffre réel. Elle cherche le chiffre qui va lui permettre de rester désirable à la fin de la phrase. Elle fait un calcul social, en une seconde et demie, avec le sourire. Voilà ce qu'on a normalisé."
         },
         {
-          "t": "L'objection arrive toujours au même endroit, et je l'entends d'ici : « et le sexe ? » Alors soyons sérieux deux minutes. Si votre vie sexuelle repose entièrement sur le fait de vous retrouver au même endroit à minuit et demi, épuisés tous les deux, après une journée de travail et une bataille de couette, ce n'est pas la chambre à part le problème. Chez nous, ça n'a rien enlevé, ça a même remis un peu d'intention là où il n'y avait plus que de la routine. Quand on ne se retrouve pas automatiquement, on se retrouve exprès. Et il y a quelque chose de très adolescent, très agréable, à devoir traverser un couloir."
+          "t": "Et il y a l'autre versant, celui dont on parle beaucoup moins : les hommes. Parce que ce compteur les enferme aussi, simplement dans l'autre sens. Un garçon de vingt-deux ans qui n'a connu personne, aujourd'hui, on lui a fabriqué un mot pour ça, et une communauté entière en ligne pour le lui rappeler tous les jours. On lui explique que sa valeur d'homme se mesure à un nombre d'expériences qu'il n'a pas eues. Résultat : il ment lui aussi, il gonfle son chiffre, et il finit par entrer dans sa vie amoureuse en croyant qu'il doit rattraper un retard imaginaire. Ce n'est pas un privilège masculin, c'est la même prison avec une autre serrure."
         },
         {
-          "t": "Mais il y a une règle, et sans elle ça ne marche pas. La règle, c'est qu'on ne supprime pas le rituel du soir, on le déplace. Chez nous, on se couche ensemble : on parle, on râle sur la journée, on regarde un truc. Et à un moment, l'un des deux se lève et va dans l'autre chambre. Ce n'est pas une fuite, c'est un horaire. Ce qui compte dans le lit commun, ce n'est pas les huit heures inconscientes côte à côte, c'est les vingt minutes avant de dormir. Ces vingt minutes-là, on ne les sacrifie jamais. C'est le seul moment de la journée où personne ne demande rien à personne."
+          "t": "Maintenant, l'anecdote que je n'avais jamais racontée en vidéo. J'avais vingt-trois ans. On sortait ensemble depuis trois semaines, on était allongés dans son lit, il faisait presque nuit dans la chambre, et il m'a posé la question. Il l'a posée gentiment, sans agressivité, avec ce ton de celui qui veut « juste savoir ». J'ai entendu ma propre voix dire un chiffre. Et ce chiffre, ce n'était pas le mien. Je l'avais divisé par deux, tout seul, sans que j'aie eu besoin de réfléchir. Je me souviens très bien de la sensation : ce n'était pas de la honte à cause de mon passé, c'était de la honte d'avoir menti aussi vite, aussi bien, avec autant de réflexe. Pendant six mois, à chaque fois que le sujet revenait, j'ai dû tenir ce faux chiffre. Six mois à protéger un mensonge que je n'avais même pas décidé de dire. Et vous savez ce qui est le plus triste ? Le jour où je lui ai dit la vérité, il s'en fichait complètement. Le problème n'avait jamais été le sien. Il était en moi, mis là par vingt-trois ans de messages sur ce qu'une fille bien est censée avoir vécu."
         },
         {
-          "t": "Et puis il faut être honnête : parfois, la chambre à part n'est pas la solution, c'est le symptôme. Il y a une différence énorme entre « je dors mieux seule et on en a parlé calmement un dimanche après-midi » et « je ne supporte plus d'être dans la même pièce que lui ». Le test est simple, et il n'est pas dans le sommeil : est-ce que vous avez encore envie de vous raconter votre journée ? Si oui, dormez où vous voulez, tout va bien. Si la chambre à part est arrivée toute seule, sans discussion, après des mois de silence, alors ce n'est pas le lit qu'il faut réorganiser. C'est la conversation qu'il faut avoir. Et celle-là, aucun matelas ne la remplacera."
+          "t": "Alors qu'est-ce qu'on fait ? Je ne vais pas vous dire qu'il ne faut jamais parler de son passé, ce serait ridicule. Il y a des choses qu'on doit se dire dans un couple, et il y en a une qui est absolument non négociable : la santé sexuelle. Les dépistages, les protections, les antécédents, ça se dit, calmement, adultement, et ça n'a rien à voir avec un compteur. La différence est simple à repérer. Une question de santé cherche à protéger deux personnes. Une question de body count cherche à en classer une seule."
+        },
+        {
+          "t": "Et si vous voulez un test infaillible, le voici. Quand quelqu'un vous demande votre chiffre, posez-lui une seule question en retour : « Qu'est-ce que tu feras de la réponse ? » S'il répond « rien, c'était juste par curiosité », alors il n'a besoin de rien, et vous non plus. S'il commence à s'expliquer, à négocier, à dire « ça dépend », vous avez votre réponse — celle qui compte vraiment. Parce que la seule information utile dans cette conversation, ce n'est jamais votre passé. C'est ce que l'autre a l'intention d'en faire."
         }
       ],
       "notes": [
-        "Caméra : plan un peu plus large sur le passage historique, retour en face cam serré sur l'exemple du mardi soir.",
-        "Montage : insert horaire à l'écran (23h40 / 01h15 / 03h02) sur l'exemple concret, cutaway GIF « viré du lit » (tenor.com/search/kick-out-of-bed-gifs) sur le coup de coude, 1,5 seconde.",
-        "Anecdote perso : couper la musique intégralement pendant l'anecdote de l'oreiller, la remettre seulement sur « sept heures d'affilée »."
+        "Caméra : plan un peu plus large sur l'étymologie militaire, retour en face cam serré sur l'exemple du troisième rendez-vous.",
+        "Montage : split-screen homme/femme avec le même chiffre affiché sur le passage du double standard, cutaway GIF « side eye » (tenor.com/search/side-eye-gifs) sur le mot « facile », 1,5 seconde.",
+        "Anecdote perso : couper intégralement la musique pendant l'anecdote des vingt-trois ans, la remettre seulement sur « il s'en fichait complètement »."
       ]
     },
     {
@@ -1183,7 +1186,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Dormir ensemble, ce n'est pas de l'amour. C'est de la logistique. L'amour, c'est ce qu'on se dit dans les vingt minutes avant d'éteindre.",
+          "t": "Ton passé n'est pas un casier judiciaire. C'est une bibliothèque — et personne n'a à venir compter les livres.",
           "quote": true
         }
       ],
@@ -1197,7 +1200,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Alors dites-moi honnêtement en commentaire : vous dormez vraiment bien à deux, ou vous faites semblant depuis des années parce que vous avez peur de ce que ça voudrait dire ?"
+          "t": "Alors dites-moi honnêtement, en commentaire : on vous a déjà demandé votre chiffre — et est-ce que vous avez donné le vrai ?"
         }
       ],
       "notes": [
@@ -1210,7 +1213,7 @@
       "timing": "",
       "lines": [
         {
-          "t": "Et la semaine prochaine, on s'attaque à un chiffre qui obsède absolument tout le monde et que personne n'assume de demander : le body count. Pourquoi ce compteur rend fou, à qui il sert, et pourquoi on ne le compte jamais de la même façon selon qu'on soit un homme ou une femme. Ça s'appelle « Body count : pourquoi ce chiffre obsède tout le monde », et je vous attends."
+          "t": "Et vendredi prochain, on reste exactement sur le même terrain, mais en plus lourd : « Elle l'a bien cherché » — comment on a appris à inverser la culpabilité et à faire porter aux femmes ce qu'elles subissent. Croyez-moi, celle-là, je l'ai réécrite trois fois."
         }
       ],
       "notes": [
@@ -1223,7 +1226,7 @@
       "timing": "20 sec",
       "lines": [
         {
-          "t": "Si cette vidéo vous a fait réfléchir, abonnez-vous, ça m'aide énormément et c'est gratuit. Retrouvez-moi sur Facebook @blondymandise, on y débat beaucoup et j'y réponds à tout le monde. Et si vous voulez la version longue, celle où je raconte les choses que je ne peux pas dire ici, c'est sur mon Telegram — le lien est en description."
+          "t": "Si cette vidéo vous a fait réfléchir, abonnez-vous, ça m'aide plus que vous ne l'imaginez. On continue la discussion sur Facebook, @blondymandise, et pour la version sans filtre — celle où je dis vraiment tout — rendez-vous sur mon canal Telegram, le lien est en description."
         }
       ],
       "notes": [
@@ -1247,39 +1250,39 @@
   ],
   "sources": [
     {
-      "label": "IFOP — environ 10 % des couples français déclarent faire chambre à part, près de 25 % en comptant ceux qui dorment séparément plusieurs nuits par semaine, et 6 % y songent sans oser franchir le pas",
-      "url": "https://www.allodocteurs.fr/faut-il-vraiment-dormir-separement-pour-entretenir-son-couple-46272.html"
+      "label": "Enquête « Contexte des sexualités en France » (CSF), Inserm / ANRS / Santé publique France, données 2022-2023 auprès de 31 518 personnes — les femmes de 18-69 ans déclarent 7,9 partenaires en moyenne au cours de la vie contre 3,4 en 1992, les hommes 16,4 contre 11,2 en 1992",
+      "url": "https://csf.inserm.fr/resultats/activites-sexuelles/"
     },
     {
-      "label": "Enquête INSV / Fondation VINCI Autoroutes, Journée du sommeil 2025 — 25 % des Français estiment que dormir en couple nuit à leur sommeil ; près d'un Français en couple sur deux s'est déjà disputé à cause des ronflements de son partenaire et 26 % jugent que les ronflements affectent leur vie de couple ; durée moyenne de sommeil 7 h 04 en semaine",
-      "url": "https://institut-sommeil-vigilance.org/sommeil-somnolence-et-sante-mentale-enquete-insv-fondation-vinci-autoroutes-pour-la-journee-du-sommeil-2025/"
+      "label": "Sondage IFOP pour LELO, janvier 2024, 1 911 personnes — un Français sur trois avoue sous-évaluer le nombre de partenaires sexuels qu'il a eus au cours de sa vie",
+      "url": "https://www.eurotribune.fr/articles/46800/-francais-e-sur-avoue-sous-evaluer-le-nombre-de-partenaires-sexuels-au-cours-de-sa-vie"
     },
     {
-      "label": "France 3 Normandie / franceinfo — « On a choisi de faire chambre à part » : pourquoi dormir en couple peut nuire au sommeil (témoignages et données INSV)",
-      "url": "https://france3-regions.franceinfo.fr/normandie/on-a-choisi-de-faire-chambre-a-part-pourquoi-dormir-en-couple-peut-nuire-a-votre-sommeil-3354289.html"
+      "label": "Wikipédia — « Bodycount (concept sexiste) » : origine militaire du terme, diffusion par les réseaux sociaux et usage dans les discours masculinistes",
+      "url": "https://fr.wikipedia.org/wiki/Bodycount_(concept_sexiste)"
     }
   ],
   "ideaProposals": [
     {
-      "theme": "Femme & Société",
-      "title": "La ménopause : le sujet dont on nous parle 40 ans trop tard",
+      "theme": "Couple / Psycho",
+      "title": "Les ex : faut-il vraiment tout effacer pour aller bien ?",
       "format": "Long format",
-      "hook": "Le tabou médical qui touche toutes les femmes et dont personne ne prévient + ce que ça dit du regard sur le corps féminin",
+      "hook": "Supprimer les photos, bloquer, brûler les lettres : est-ce que couper les ponts guérit, ou est-ce qu'on efface juste la preuve ? + ce que j'ai gardé, moi",
       "potentiel": "🔥🔥🔥"
+    },
+    {
+      "theme": "Femme & Société",
+      "title": "La friendzone n'existe pas (et ce que ça dit des hommes)",
+      "format": "Long format",
+      "hook": "Déconstruire un mot qui transforme le refus d'une femme en injustice faite à un homme + témoignages",
+      "potentiel": "🔥🔥"
     },
     {
       "theme": "Sexualité",
-      "title": "Le porno a-t-il cassé notre imaginaire érotique ?",
+      "title": "Faire l'amour sans avoir envie : le consentement de confort",
       "format": "Long format",
-      "hook": "Prise de position de créatrice : ce que je vois de l'intérieur du métier + comment ça déforme les attentes dans le couple",
+      "hook": "Le oui qu'on donne pour éviter la discussion : la zone grise dont personne ne parle dans les couples installés + mon vécu",
       "potentiel": "🔥🔥🔥"
-    },
-    {
-      "theme": "Couple / Psycho",
-      "title": "L'amour à distance : test ultime ou illusion confortable ?",
-      "format": "Long format",
-      "hook": "Aimer quelqu'un qu'on ne voit pas, ou aimer l'idée qu'on s'en fait ? + mon expérience",
-      "potentiel": "🔥🔥"
     }
   ],
   "tournage": {
