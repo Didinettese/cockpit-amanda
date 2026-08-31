@@ -455,11 +455,27 @@
       "date": "2026-09-24",
       "theme": "Femme & Société",
       "title": "« Elle l'a bien cherché » : comment on inverse la culpabilité",
-      "status": "idee",
+      "status": "script",
       "lieu": "",
       "notes": "Déconstruire le victim-blaming + prise de position",
-      "titleOptions": [],
-      "caption": ""
+      "titleOptions": [
+        {
+          "text": "On demande toujours à la victime ce qu'elle portait",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "« Elle l'a bien cherché » : comment on inverse la culpabilité",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Le renversement : pourquoi c'est toujours à elle de s'expliquer",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "Quand une maison est cambriolée, personne ne demande à la maison ce qu'elle portait ce soir-là. Pour une femme, c'est la première question. Aujourd'hui je démonte le mécanisme le plus efficace de notre société : celui qui transforme une victime en accusée en trois phrases.\n\n• Le renversement en trois temps : le questionnaire, le doute, le silence\n• Les chiffres qui font mal : 31 % des hommes ne qualifient pas de viol le fait de contraindre leur conjointe malgré son refus (IFOP, juillet 2025), et 23 % des 18-24 ans pensent encore que « non » veut dire « oui » (Ipsos / Mémoire Traumatique, vague 3)\n• Pourquoi on fait ça — la croyance en un monde juste, et pourquoi elle nous rassure\n• Mon aveu : le soir où je me suis excusée d'avoir été suivie dans la rue\n• Ce que ça coûte aux hommes aussi, et le test de substitution à sortir dans n'importe quelle conversation\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#victimblaming #ellelabiencherche #femmeetsociété #consentement #culturedublame #psychologie #lespenséesdamanda #blondymandise"
     },
     {
       "id": "ep-1785123195649",
@@ -520,6 +536,14 @@
       "title": "Les ex : faut-il vraiment tout effacer pour aller bien ?",
       "format": "Long format",
       "hook": "Supprimer les photos, bloquer, brûler les lettres : est-ce que couper les ponts guérit, ou est-ce qu'on efface juste la preuve ? + ce que j'ai gardé, moi",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-people-pleasing",
+      "theme": "Psychologie",
+      "title": "Le people pleasing : dire oui jusqu'à disparaître",
+      "format": "Long format",
+      "hook": "Pourquoi on dit oui à ce qu'on ne veut pas, d'où ça vient, et la phrase de trois mots qui m'a permis d'arrêter",
       "potentiel": "🔥🔥🔥"
     }
   ],
