@@ -1114,17 +1114,19 @@ async function renderApproche(){
 /* ============ APPROCHE · TOURNAGE — checklist + upload direct Bunny ============ */
 const LA_CDN="vz-1f95d57b-2dd.b-cdn.net";
 const LA_SHOTS=[
- {g:"1 · L'accroche — transat, carnet, un verre",items:[
-  {id:"CLIP_01",t:"video",n:"Q1 · l'accroche (~20s)",d:"Tu écris, tu sens un regard, tu lèves lentement les yeux vers l'objectif. Un sourcil. Tu attends."},
+ {g:"⚠️ Chapitre 1 — version BAR (proposition en attente de ta validation)",items:[
+  {id:"T_BAR_INFO",t:"task",n:"Décor : un bar de quartier, à l'heure de l'apéro",d:"Petite table près de la vitrine, un verre de vin et TON carnet (le même servira au chapitre 3, avec la phrase « Il va venir me parler. » écrite dedans). Une seule tenue pour toute la session : c'est une scène continue. Plan d'approche (CLIP_01) : filme en marchant entre les tables, téléphone en main, puis coupe sur toi."}]},
+ {g:"1 · L'accroche — petite table, carnet, un verre",items:[
+  {id:"CLIP_01",t:"video",n:"Q1 · l'accroche (~20s)",d:"Tu écris dans ton carnet, tu sens un regard, tu lèves lentement les yeux vers l'objectif. Un sourcil. Tu attends."},
   {id:"CLIP_01a",t:"video",n:"réaction · abord lourd",d:"Amusée-fermée, tu refermes à moitié le carnet : « Il fallait. Rien que ça. »"},
   {id:"CLIP_01b",t:"video",n:"réaction · question carnet",d:"Touchée, surprise : « …Personne me demande jamais ça. »"},
-  {id:"CLIP_01c",t:"video",n:"réaction · abord neutre",d:"Polie, tiède : « Ça dépend qui demande. » Fin des 3 : d'un geste du menton, tu désignes la place."}]},
+  {id:"CLIP_01c",t:"video",n:"réaction · « La place est libre ? »",d:"Polie, tiède : « Ça dépend qui demande. » Fin des 3 : d'un geste du menton, tu désignes la chaise en face."}]},
  {g:"2-3 · Elle te jauge, puis se lève",items:[
-  {id:"CLIP_02",t:"video",n:"Q2 · elle te jauge (~20s)",d:"Sourire en coin : « T'as l'habitude d'aborder des inconnues au bord des piscines, toi ? »"},
-  {id:"CLIP_03",t:"video",n:"Q3 · elle se lève (~25s) — LE cliffhanger",d:"Téléphone vibre, tu ranges le carnet, à moitié levée. Regard caméra, 10 s de silence : « Je dois y aller. »"}]},
+  {id:"CLIP_02",t:"video",n:"Q2 · elle te jauge (~20s)",d:"Sourire en coin : « T'as l'habitude d'aborder des inconnues dans les bars, toi ? »"},
+  {id:"CLIP_03",t:"video",n:"Q3 · elle se lève (~25s) — LE cliffhanger",d:"Téléphone vibre, tu ranges le carnet, tu attrapes ta veste sur le dossier, à moitié levée. Regard caméra, 10 s de silence : « Je dois y aller. »"}]},
  {g:"4 · Elle se rassoit (juste après le paiement)",items:[
   {id:"CLIP_04a",t:"video",n:"version amusée-défensive",d:"« Cinq minutes. Vraiment cinq. »"},
-  {id:"CLIP_04b",t:"video",n:"version troublée",d:"Tu reposes le carnet : « …T'as de la chance que je déteste les gens prévisibles. »"}]},
+  {id:"CLIP_04b",t:"video",n:"version troublée",d:"Tu raccroches ta veste, tu reposes le carnet : « …T'as de la chance que je déteste les gens prévisibles. »"}]},
  {g:"5-6 · Les prénoms, le carnet",items:[
   {id:"CLIP_05",t:"video",n:"Q4 · les prénoms (~15s)",d:"« Bon. J'ai cinq minutes, paraît-il. Tu t'appelles comment ? »"},
   {id:"CLIP_06",t:"video",n:"Q5 · le carnet (~20s)",d:"Main posée dessus, sourire : « Ça, c'est privé. »"}]},
@@ -1134,35 +1136,66 @@ const LA_SHOTS=[
  {g:"8 · Le secret — LE moment du chapitre",items:[
   {id:"CLIP_08",t:"video",n:"la question (~20s)",d:"Coudes sur la table, voix plus basse : « Dis-moi un truc sur toi que personne ne sait. Un vrai. Je le garderai. »"},
   {id:"CLIP_08a",t:"video",n:"réaction · il s'est livré",d:"Silence, ton regard change, tu hoches à peine la tête : « …D'accord. Je le garde. »"},
-  {id:"CLIP_08b",t:"video",n:"réaction · il a esquivé",d:"Tu te redresses, sourire de façade : « D'accord. On fait comme ça, alors. »"}]},
+  {id:"CLIP_08b",t:"video",n:"réaction · il a esquivé",d:"Tu te redresses, tu reprends ton verre, sourire de façade : « D'accord. On fait comme ça, alors. »"}]},
  {g:"9-10 · Sincérité, rapprochement",items:[
   {id:"CLIP_09",t:"video",n:"Q8 · sincérité (~15s)",d:"« T'es du genre à dire ça à toutes, non ? »"},
-  {id:"CLIP_10a",t:"video",n:"Q9 · version pudique",d:"Tes doigts effleurent sa main en reprenant le sucre, tu te ravises : « …Pardon. » (sans vraiment t'excuser)"},
-  {id:"CLIP_10b",t:"video",n:"Q9 · version audacieuse",d:"Tu prends SON verre, gorgée sans le quitter des yeux : « J'ai le droit, non ? »"}]},
- {g:"11-12 · La fin de soirée",items:[
-  {id:"CLIP_11",t:"video",n:"Q10 · quitte ou double (~15s)",d:"Tu regardes l'heure, puis lui : « Il est tard. Normalement, là… je rentre. »"},
+  {id:"CLIP_10a",t:"video",n:"Q9 · version pudique",d:"En attrapant la carte posée entre vous, tes doigts effleurent sa main (touche le bord de la table juste sous l'objectif). Tu te ravises : « …Pardon. » (sans vraiment t'excuser)"},
+  {id:"CLIP_10b",t:"video",n:"Q9 · version audacieuse",d:"Tu prends SON verre, posé juste sous l'objectif, gorgée sans le quitter des yeux : « J'ai le droit, non ? »"}]},
+ {g:"11-12 · La fin du verre",items:[
+  {id:"CLIP_11",t:"video",n:"Q10 · quitte ou double (~15s)",d:"Tu regardes l'heure, puis lui : « Ça fait bien plus de cinq minutes. Normalement, là… je rentre. »"},
   {id:"CLIP_12",t:"video",n:"Q11 · ce qu'il veut (~20s)",d:"Sérieuse pour la première fois : « Qu'est-ce que tu veux ? Là. Vraiment. »"}]},
  {g:"13 · Le numéro — les 3 fins (monte l'intensité)",items:[
   {id:"CLIP_13c",t:"video",n:"l'ÉCHEC",d:"Sac à l'épaule, presque désolée : « C'était… sympa. Bonne soirée. » PAS de numéro. Tu pars sans te retourner."},
-  {id:"CLIP_13a",t:"video",n:"la retenue (jauge 40-59)",d:"Tu griffonnes ton numéro, tu le poses sans le lâcher : « T'as une chance. Une. »"},
-  {id:"CLIP_13b",t:"video",n:"la prise (jauge 60+)",d:"Tu prends SON téléphone, tu t'appelles toi-même, sourire : « Voilà. Comme ça, moi aussi j'ai le tien. » Tu pars — et tu te retournes, une fois."}]},
+  {id:"CLIP_13a",t:"video",n:"la retenue (jauge 40-59)",d:"Tu griffonnes ton numéro au dos du ticket de caisse, tu le poses sans le lâcher : « T'as une chance. Une. »"},
+  {id:"CLIP_13b",t:"video",n:"la prise (jauge 60+)",d:"Tu prends SON téléphone (posé sous l'objectif), tu t'appelles toi-même, sourire : « Voilà. Comme ça, moi aussi j'ai le tien. » Tu pars — et tu te retournes, une fois."}]},
  {g:"14 · Le teaser (l'asset qui circulera)",items:[
-  {id:"TEASER",t:"video",n:"teaser de sortie (~15s)",d:"Regard caméra, ton jeu le plus magnétique : « chapitre 2 bientôt » (formulation libre)."}]},
- {g:"📷 Photos du chapitre 2 (chez toi — suggestif, jamais explicite)",items:[
-  {id:"PHOTO_1",t:"photo",n:"miroir · sortie",o:"tenue de sortie",d:"Regard par-dessus l'épaule. Contexte : « Je sors avec des copines. Avis ? »"},
-  {id:"PHOTO_4",t:"photo",n:"retour de soirée · 1h47",o:"la même robe du soir",d:"Air faussement boudeur, canapé ou miroir d'ascenseur : « La preuve, j'ai même pas fini mon verre. »"},
-  {id:"PHOTO_2",t:"photo",n:"le choix de la robe",o:"épaule/dos nu + une robe posée sur le lit",d:"« Celle-là, ou l'autre ? »"},
-  {id:"PHOTO_3",t:"photo",n:"pénombre (jauge 50+)",o:"épaules nues au-dessus du drap",d:"Rien de visible. La récompense de celles qu'il a vraiment séduites."}]},
- {g:"🎤 Vocaux (au téléphone, ambiance chambre)",items:[
-  {id:"VOCAL_2",t:"vocal",n:"la question sérieuse (~6s)",d:"Un petit soupir, puis posé, sincère : « Dis… la piscine, hier. C'était quoi, pour toi ? »"},
-  {id:"VOCAL_1",t:"vocal",n:"bonne nuit (~5s, jauge 70+)",d:"Un rire doux : « Bonne nuit, toi. » — enregistre avec Dictaphone/Mémos vocaux, le .m4a passe directement."}]},
+  {id:"TEASER",t:"video",n:"teaser de sortie (~15s)",d:"Regard caméra, ton jeu le plus magnétique : « L'Approche arrive » (formulation libre)."}]},
+ {g:"📷 Chapitre 2 — photos : UNE SEULE SOIRÉE, à tourner en une fois",items:[
+  {id:"PHOTO_2",t:"photo",n:"1 · elle hésite entre deux robes",o:"épaule/dos nu + DEUX robes sur le lit, côte à côte",d:"« Je sors dans une heure et je suis incapable de choisir. » Deux robes bien visibles et très différentes : sa réplique (« celle de gauche ou celle de droite ? », ou « la noire ou la rouge ? ») sera calée sur ta photo."},
+  {id:"PHOTO_1",t:"photo",n:"2 · la tenue choisie",o:"la robe retenue, au miroir",d:"Regard par-dessus l'épaule : « Voilà. Décidé. Avis ? » Enchaîne juste après la précédente, même maquillage."},
+  {id:"PHOTO_4",t:"photo",n:"3 · au bar, elle s'ennuie",o:"la même robe, un verre à la main",d:"Air faussement boudeur : « J'ai même pas fini mon verre. » Un coin sombre suffit, on ne voit pas le décor."},
+  {id:"PHOTO_3",t:"photo",n:"4 · au lit, pénombre (jauge 50+)",o:"épaules nues au-dessus du drap",d:"Fin de la soirée. La récompense des joueurs qui t'ont vraiment séduite."}]},
+ {g:"🎤 Chapitre 2 — vocaux",items:[
+  {id:"VOCAL_2",t:"vocal",n:"la question sérieuse (~6s)",d:"Un fond de rue si possible. Un petit soupir, puis posé, sincère : « Dis… tout à l'heure, au bar. C'était quoi, pour toi ? »"},
+  {id:"VOCAL_1",t:"vocal",n:"bonne nuit (~5s, jauge 70+)",d:"Chuchoté, un rire doux : « Bonne nuit, toi. » — Mémos vocaux, le .m4a passe directement."}]},
+ {g:"🏠 Chapitre 3 — sur le palier (une seule tenue pour toute la soirée)",items:[
+  {id:"CLIP_31",t:"video",n:"R4 · la porte (~15s)",d:"Trépied à hauteur d'yeux, face à la porte fermée. Tu ouvres, adossée au chambranle, pieds nus. Tu le regardes de haut en bas sans t'écarter : « Alors ? »"},
+  {id:"CLIP_31a",t:"video",n:"réaction · « T'es… »",d:"Un sourire lent : « Termine ta phrase. » Un temps. « …Non. Garde-la. »"},
+  {id:"CLIP_31b",t:"video",n:"réaction · la bouteille",d:"Tu prends la bouteille, tu la soupèses : « Une excuse pour quoi, exactement ? »"},
+  {id:"CLIP_31c",t:"video",n:"réaction · il veut t'embrasser (piège)",d:"Tu tournes la tête au dernier moment. Sourire en coin : « Doucement. T'es même pas entré. »"}]},
+ {g:"🛋️ Chapitre 3 — sur le canapé",items:[
+  {id:"CLIP_32",t:"video",n:"R5 · « On trinque à quoi ? » (~20s)",d:"Trépied posé sur le canapé, hauteur d'yeux assis. Tu ouvres sa bouteille, tu sers deux verres, tu t'assois À CÔTÉ, jambes repliées. Tu lèves ton verre : « On trinque à quoi ? »"},
+  {id:"CLIP_33",t:"video",n:"R6 · le carnet (~25s)",d:"Le MÊME carnet qu'au chapitre 1, avec la phrase vraiment écrite. Tu l'ouvres, tu hésites : « Tu voulais savoir ce que j'écrivais quand t'es arrivé. » À voix basse : « Il va venir me parler. » Tu refermes : « J'ai jamais fini la phrase. »"},
+  {id:"CLIP_34",t:"video",n:"R7 🌙 « Pourquoi moi ? » (~25s)",d:"Cadrage serré. Tu mets la musique (coupe-la pendant la prise, elle s'ajoute au montage), tu reviens plus près, tête contre son épaule côté objectif : « J'ai repensé à hier toute la journée. » Tu lèves les yeux : « Pourquoi moi ? »"},
+  {id:"CLIP_35",t:"video",n:"R7 🎲 « Une vérité chacun » (~25s)",d:"Tu poses ton verre, tu te tournes vers lui, une jambe repliée : « On joue. Une vérité chacun. Je commence. » Sourire en coin : « La première chose que t'as regardée chez moi, hier. Et mens pas : je le verrai. »"},
+  {id:"CLIP_36",t:"video",n:"R7 bis 🌙 « J'ai compté jusqu'à dix » (~25s)",d:"La chanson se termine. Tout bas, tête contre son épaule : « Je vais te dire un truc. » Un temps. « Tout à l'heure, derrière la porte… j'ai compté jusqu'à dix avant d'ouvrir. » Tu relèves la tête, très près, et tu tiens le regard."},
+  {id:"CLIP_37",t:"video",n:"R7 bis 🎲 « À toi » (~15s)",d:"Adossée au canapé, verre à la main, un défi dans le regard : « À toi. Pose ta question. Et attention : moi, je dis toujours la vérité. »"},
+  {id:"CLIP_38a",t:"video",n:"R8 · le baiser (jauge 85+)",d:"Tu t'approches sans te presser jusqu'à frôler l'objectif, les yeux qui se ferment, et tu coupes juste avant. Tu recules d'un centimètre : « Voilà. C'est fait. »"},
+  {id:"CLIP_38b",t:"video",n:"R8 · « Le dernier centimètre » (jauge 65-84)",d:"Tu t'approches jusqu'à frôler l'objectif, et tu t'arrêtes : « Le dernier centimètre, c'est toi. »"},
+  {id:"CLIP_38c",t:"video",n:"R8 · « Pas si vite » (jauge sous 65)",d:"Tu t'approches… puis ton doigt se pose juste devant l'objectif : « Pas si vite. Tu m'as pas encore convaincue. »"},
+  {id:"CLIP_39",t:"video",n:"R9 · la bascule (~20s)",d:"Trépied cadré vers le haut. Tu te lèves devant lui, tu remets une mèche, tu respires : « Bon. Maintenant, faut que je décide ce que je fais de toi. »"}]},
+ {g:"🚪 Chapitre 3 — dans le couloir",items:[
+  {id:"CLIP_40",t:"video",n:"R10 · le couloir (~20s)",d:"Porte d'entrée et porte de chambre entrouverte dans le champ si possible. Tu tends la main : « Viens. » Tu t'arrêtes entre les deux portes, dos au mur : « Dis-moi pourquoi je devrais pas te mettre dehors. »"},
+  {id:"CLIP_41",t:"video",n:"R11 · « Ta dernière chance » (~15s)",d:"Adossée à la porte de la chambre, la main sur la poignée. Tu ne souris plus : « C'est ta dernière chance de partir. »"}]},
+ {g:"🔑 Chapitre 3 — à l'entrée (les fins sans chambre)",items:[
+  {id:"CLIP_42",t:"video",n:"fin 🚪 La porte (~20s)",d:"Tu ouvres, adossée au chambranle — le geste de son arrivée, à l'envers : « Merci d'être venu. » Un temps. « Pas ce soir. » Tu refermes doucement."},
+  {id:"CLIP_43",t:"video",n:"fin 💋 Le seuil (~20s)",d:"Tu ouvres, tu hésites, tu l'attrapes par le col et tu l'embrasses sur le seuil, vers l'objectif. Tu recules : « La prochaine fois… reste. » Tu refermes."}]},
+ {g:"🛏️ Chapitre 3 — dans la chambre",items:[
+  {id:"CLIP_44",t:"video",n:"fin 🌙 « Doucement… ou pas ? » (~15s)",d:"Lampe basse. Tu le tires jusqu'au bord du lit, tu te retournes, une bretelle glisse lentement, sans le quitter des yeux : « Doucement… ou pas ? »"},
+  {id:"CLIP_44a",t:"video",n:"fin 🌙 version lente (~30s)",d:"Ce que tu montres, c'est ta décision. Intention : la lenteur, les regards, les mains. Fondu au noir sur un « …enfin » chuchoté."},
+  {id:"CLIP_44b",t:"video",n:"fin 🌙 version intense (~30s)",d:"Ce que tu montres, c'est ta décision. Intention : l'élan, le rire, le souffle court. Fondu au noir sur un rire."},
+  {id:"CLIP_45",t:"video",n:"fin cachée 🤍 Reste dormir (~25s)",d:"Allongée contre lui, la tête tout près de l'objectif, tu joues avec un bouton de sa chemise : « On fait rien, ce soir. On reste juste là. » Presque endormie : « …Reste. » Fondu au noir."}]},
+ {g:"📷🎤 Chapitre 3 — photos et vocal",items:[
+  {id:"PHOTO_5",t:"photo",n:"R3 · sortie de douche (jauge 55+)",o:"serviette, cheveux mouillés, épaule nue",d:"« 19h. Je suis pas prête. »"},
+  {id:"PHOTO_6",t:"photo",n:"fin 🌙 · au réveil",o:"SA chemise à lui, dans ton lit",d:"« Tu as oublié quelque chose. » … « Je te la rends pas. »"},
+  {id:"VOCAL_3",t:"vocal",n:"fin cachée 🤍 · « Merci d'être resté » (~5s)",d:"Chuchoté, un rire : « Merci d'être resté. »"}]},
  {g:"🛒 Médias plateformes (codes dans l'admin, section Codes PPV)",items:[
-  {id:"T_PPV_OF",t:"task",n:"PPV OnlyFans chapitres — 8,75 €",d:"Révèle le code OF + lien ?src=of. À épingler."},
-  {id:"T_PPV_MYM",t:"task",n:"Média MYM chapitres — 10,50 €",d:"Révèle le code MYM + lien ?src=mym."},
+  {id:"T_PPV_OF",t:"task",n:"PPV OnlyFans — les 3 chapitres — 28 $ (≈ 25 €)",d:"Annonce clairement le contenu explicite du chapitre 3. Révèle le code OF + lien ?src=of. À épingler."},
+  {id:"T_PPV_MYM",t:"task",n:"Média MYM — les 3 chapitres — 36,36 €",d:"Annonce clairement le contenu explicite du chapitre 3. Révèle le code MYM + lien ?src=mym."},
   {id:"T_EX_CALL",t:"task",n:"Post OF « L'appel » — 62,50 €",d:"Révèle le code appel."},
   {id:"T_EX_CAM",t:"task",n:"Post OF « La cam » — 125 €",d:"Révèle le code cam."},
   {id:"T_EX_PHOTO",t:"task",n:"Post OF « La photo » — 12,50 €",d:"Révèle le code photo perso."},
-  {id:"T_BTS",t:"task",n:"BTS 10 min pendant la session",d:"Rushes non explicites pour le tease Snap/FB/Reels (Guilhem filme entre les prises)."}]}
+  {id:"T_BTS",t:"task",n:"BTS pendant les sessions",d:"Quelques rushes non explicites au trépied, entre les prises, pour le tease Snap/FB/Reels."}]}
 ];
 function laTaskDone(id){return localStorage.getItem("la:task:"+id)==="1";}
 function laReadyMap(){try{return JSON.parse(localStorage.getItem("la:ready")||"{}");}catch(e){return{};}}
