@@ -487,6 +487,33 @@
       "notes": "Ghosting, bouderie, ignorance : arme de manipulation ou droit de se protéger ? + vécu",
       "titleOptions": [],
       "caption": ""
+    },
+    {
+      "id": "ep-2026-10-08",
+      "date": "2026-10-08",
+      "theme": "Couple / Sexualité",
+      "title": "La charge mentale du désir : pourquoi c'est toujours à elle d'avoir envie",
+      "status": "script",
+      "lieu": "",
+      "notes": "Promu depuis les idées (id-charge-mentale-desir) le 14/09/2026 pour alimenter la VIDÉO D. Initier, relancer, rassurer, refuser, réparer : le travail invisible du désir + vécu perso.",
+      "titleOptions": [
+        {
+          "text": "Le soir où j'ai dit oui pour avoir la paix",
+          "potentiel": "🔥🔥🔥",
+          "best": true
+        },
+        {
+          "text": "La charge mentale du désir : pourquoi c'est toujours à elle d'avoir envie",
+          "potentiel": "🔥🔥",
+          "best": false
+        },
+        {
+          "text": "Ce n'est pas une panne de désir, c'est un épuisement",
+          "potentiel": "🔥🔥",
+          "best": false
+        }
+      ],
+      "caption": "On a fini par admettre qu'il existe une charge mentale du ménage. Personne ne parle de celle du désir. Initier, relancer, rassurer, refuser sans blesser, réparer le lendemain : cinq tâches que quelqu'un, dans le couple, finit toujours par prendre en charge tout seul. Aujourd'hui je mets un nom sur ce travail invisible — et je vous raconte le soir où j'ai dit oui juste pour ne pas avoir à gérer le silence du lendemain.\n\n• Les 5 tâches invisibles du désir : initier, relancer, rassurer, refuser, réparer\n• Les chiffres : 43 % des femmes et 31 % des hommes déclarent un manque fréquent de désir (Ifop), et 67 % des hommes n'ont jamais osé exprimer une envie à leur partenaire\n• Le calcul d'une seconde et demie que fait une tête à 22h30, et que l'autre ne soupçonne pas\n• Mon aveu : trente minutes maintenant ou trois jours d'ambiance bizarre — l'arbitrage que j'ai fait pendant des années\n• Pourquoi les hommes sont enfermés dans la même prison, avec l'autre serrure\n• Les 3 règles qui ont tout changé chez nous (et pourquoi « planifier un soir par semaine » est le pire conseil du monde)\n\n📲 Facebook @blondymandise · OnlyFans/MYM & Telegram → liens en bio\n#chargementale #désir #couple #sexualité #libido #femmeetsociété #lespenséesdamanda #blondymandise"
     }
   ],
   "ideas": [
@@ -523,14 +550,6 @@
       "potentiel": "🔥🔥🔥"
     },
     {
-      "id": "id-charge-mentale-desir",
-      "theme": "Couple / Sexualité",
-      "title": "La charge mentale du désir : pourquoi c'est toujours à elle d'avoir envie",
-      "format": "Long format",
-      "hook": "Initier, relancer, rassurer : le travail invisible du désir dans le couple + mon vécu",
-      "potentiel": "🔥🔥🔥"
-    },
-    {
       "id": "id-ex-effacer",
       "theme": "Couple / Psycho",
       "title": "Les ex : faut-il vraiment tout effacer pour aller bien ?",
@@ -544,6 +563,14 @@
       "title": "Le people pleasing : dire oui jusqu'à disparaître",
       "format": "Long format",
       "hook": "Pourquoi on dit oui à ce qu'on ne veut pas, d'où ça vient, et la phrase de trois mots qui m'a permis d'arrêter",
+      "potentiel": "🔥🔥🔥"
+    },
+    {
+      "id": "id-jamais-dispute",
+      "theme": "Couple / Psychologie",
+      "title": "Le couple qui ne se dispute jamais : santé ou anesthésie ?",
+      "format": "Long format",
+      "hook": "On vante les couples « qui ne se disputent jamais » comme un modèle. Et si c'était surtout le signe que plus personne n'ose demander quoi que ce soit ? + ce que nos silences disaient vraiment",
       "potentiel": "🔥🔥🔥"
     }
   ],
