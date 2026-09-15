@@ -1276,6 +1276,9 @@ async function laShots(v,tok){
       <summary style="list-style:none">⚙️ Config upload ${cfgOk?"✓":"— à faire une fois"}</summary>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
         <input id="laBk" type="password" placeholder="Clé API de la library Bunny (Stream ▸ lapproche ▸ API)" value="${laEsc(localStorage.getItem("la:bunny:key")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <div style="margin-top:6px;color:#666">— lecture des vidéos dans le jeu —</div>
+        <input id="laVtk" type="password" placeholder="clé Token Authentication des VIDÉOS (Stream ▸ lapproche ▸ Security)" value="${laEsc(localStorage.getItem("la:vid:tok")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <button id="laVidTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">▶︎ Tester la lecture vidéo</button>
         <div style="margin-top:6px;color:#666">— photos (Storage zone) —</div>
         <div style="display:flex;gap:6px">
           <input id="laSz" placeholder="nom de la Storage zone" value="${laEsc(localStorage.getItem("la:st:zone")||"")}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
@@ -1317,6 +1320,8 @@ async function laShots(v,tok){
     // hostname + clé de signature → côté jeu (pour servir les photos protégées)
     try{
       if(host)await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_host",p_value:host});
+      const vtk=box.querySelector("#laVtk").value.trim();   // clé de signature des vidéos → côté jeu
+      if(vtk){localStorage.setItem("la:vid:tok",vtk);await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_token_key",p_value:vtk});}
       const stk=box.querySelector("#laStk").value.trim();
       if(stk){localStorage.setItem("la:st:tok",stk);await laRpc("admin_set_setting",{p_admin:tok,p_key:"bunny_photo_token_key",p_value:stk});}
       toast("Config enregistrée ✓");
@@ -1331,6 +1336,15 @@ async function laShots(v,tok){
     toast(ok===true?"✓ La clé est bonne, les photos s'affichent"
         :ok===false?"✗ Clé refusée par Bunny (403) — prends la clé de la PULL ZONE, onglet Security"
         :"Test impossible (config incomplète)");
+  };
+  box.querySelector("#laVidTest").onclick=async()=>{
+    toast("Test de lecture en cours…");
+    const r=await laCheckVideo();
+    toast(r===200?"✓ Lecture OK : les joueurs verront les vidéos"
+        :r===403?"✗ Bunny refuse (403) : reprends la clé Token Authentication et vérifie que « Block direct URL file access » est désactivé"
+        :r===404?"Vidéo introuvable ou encore en traitement : réessaie dans 2 minutes"
+        :r===null?"Entre d'abord la clé vidéo, puis Enregistrer"
+        :"Test impossible ("+r+")");
   };
   box.querySelectorAll("[data-task]").forEach(b=>b.onclick=()=>{
     const id=b.dataset.task;
@@ -1359,6 +1373,19 @@ async function laCheckPhoto(path){
   const b64=btoa(String.fromCharCode.apply(null,new Uint8Array(buf))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=/g,"");
   const url="https://"+host+"/bcdn_token="+b64+"&expires="+exp+"&token_path="+encodeURIComponent(dir)+"/"+path;
   try{const r=await fetch(url,{method:"GET",cache:"no-store"});return r.ok;}catch(e){return null;}
+}
+
+/* Vérifie qu'une vidéo Stream est lisible avec la clé Token Authentication
+   enregistrée (même signature que le jeu) — sur la dernière vidéo envoyée. */
+async function laCheckVideo(){
+  const key=localStorage.getItem("la:vid:tok");
+  if(!key)return null;
+  const guid=localStorage.getItem("la:lastguid")||"f3cb62b9-4fff-4610-8f01-26691e9a1490";
+  const dir="/"+guid+"/",exp=Math.floor(Date.now()/1000)+600;
+  const buf=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(key+dir+exp+"token_path="+dir));
+  const b64=btoa(String.fromCharCode.apply(null,new Uint8Array(buf))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=/g,"");
+  const url="https://"+LA_CDN+"/bcdn_token="+b64+"&expires="+exp+"&token_path="+encodeURIComponent(dir)+dir+"playlist.m3u8";
+  try{const r=await fetch(url,{method:"GET",cache:"no-store"});return r.status;}catch(e){return "réseau";}
 }
 
 /* Compression des photos avant envoi : max 1280 px, JPEG 82 % —
@@ -1402,6 +1429,7 @@ async function laUpload(item,file,btn,tok,onDone){
         headers:{AccessKey:key,"Content-Type":"application/json"},body:JSON.stringify({title:item.id})});
       if(!cr.ok)throw new Error("create "+cr.status);
       const guid=(await cr.json()).guid;
+      localStorage.setItem("la:lastguid",guid);   // sert au test de lecture vidéo
       await new Promise((res,rej)=>{
         const x=new XMLHttpRequest();
         x.open("PUT","https://video.bunnycdn.com/library/720136/videos/"+guid);
