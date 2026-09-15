@@ -1113,6 +1113,9 @@ async function renderApproche(){
 
 /* ============ APPROCHE · TOURNAGE — checklist + upload direct Bunny ============ */
 const LA_CDN="vz-1f95d57b-2dd.b-cdn.net";
+// Bibliothèque Bunny Stream : réglable dans ⚙️ (au cas où la library serait recréée)
+const laLib=()=>localStorage.getItem("la:bunny:lib")||"720136";
+const laCdnHost=()=>localStorage.getItem("la:bunny:cdn")||LA_CDN;
 const LA_SHOTS=[
  {g:"🍷 Chapitre 1 — le bar (décor validé)",items:[
   {id:"T_BAR_INFO",t:"task",n:"Décor : un bar de quartier, à l'heure de l'apéro",d:"Petite table près de la vitrine, un verre de vin et TON carnet (le même servira au chapitre 3, avec la phrase « Il va venir me parler. » écrite dedans). Une seule tenue pour toute la session : c'est une scène continue. Plan d'approche (CLIP_01) : filme en marchant entre les tables, téléphone en main, puis coupe sur toi."}]},
@@ -1275,7 +1278,13 @@ async function laShots(v,tok){
     <details style="margin:10px 0;font-size:12px;color:var(--muted)">
       <summary style="list-style:none">⚙️ Config upload ${cfgOk?"✓":"— à faire une fois"}</summary>
       <div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">
+        <div style="color:#888;line-height:1.4">Bunny ▸ Stream ▸ bibliothèque <b>lapproche</b> ▸ onglet <b>API</b> : prends la <b>clé API de la bibliothèque</b> (pas celle du compte), son <b>Library ID</b> et son <b>CDN Hostname</b>.</div>
         <input id="laBk" type="password" placeholder="Clé API de la library Bunny (Stream ▸ lapproche ▸ API)" value="${laEsc(localStorage.getItem("la:bunny:key")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        <div style="display:flex;gap:6px">
+          <input id="laLib" placeholder="Library ID" value="${laEsc(laLib())}" style="width:34%;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+          <input id="laCdn" placeholder="CDN Hostname (vz-….b-cdn.net)" value="${laEsc(laCdnHost())}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
+        </div>
+        <button id="laKeyTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">🔑 Tester la clé d'envoi</button>
         <div style="margin-top:6px;color:#666">— lecture des vidéos dans le jeu —</div>
         <input id="laVtk" type="password" placeholder="clé Token Authentication des VIDÉOS (Stream ▸ lapproche ▸ Security)" value="${laEsc(localStorage.getItem("la:vid:tok")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         <button id="laVidTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">▶︎ Tester la lecture vidéo</button>
@@ -1313,6 +1322,8 @@ async function laShots(v,tok){
 
   box.querySelector("#laCfgSave").onclick=async()=>{
     localStorage.setItem("la:bunny:key",box.querySelector("#laBk").value.trim());
+    localStorage.setItem("la:bunny:lib",box.querySelector("#laLib").value.trim()||"720136");
+    localStorage.setItem("la:bunny:cdn",box.querySelector("#laCdn").value.trim().replace(/^https?:\/\//,"").replace(/\/$/,"")||LA_CDN);
     localStorage.setItem("la:st:zone",box.querySelector("#laSz").value.trim());
     localStorage.setItem("la:st:pass",box.querySelector("#laSp").value.trim());
     const host=box.querySelector("#laSh").value.trim().replace(/^https?:\/\//,"").replace(/\/$/,"");
@@ -1336,6 +1347,18 @@ async function laShots(v,tok){
     toast(ok===true?"✓ La clé est bonne, les photos s'affichent"
         :ok===false?"✗ Clé refusée par Bunny (403) — prends la clé de la PULL ZONE, onglet Security"
         :"Test impossible (config incomplète)");
+  };
+  box.querySelector("#laKeyTest").onclick=async()=>{
+    // teste ce qui est tapé, même avant Enregistrer
+    const key=box.querySelector("#laBk").value.trim(),lib=box.querySelector("#laLib").value.trim()||"720136";
+    if(!key)return toast("Colle d'abord la clé API de la bibliothèque");
+    toast("Test de la clé…");
+    let st;
+    try{const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos?itemsPerPage=1",{headers:{AccessKey:key,accept:"application/json"}});st=r.status;}catch(e){st="réseau";}
+    toast(st===200?"✓ Clé d'envoi OK — n'oublie pas Enregistrer"
+        :st===401?"✗ Clé refusée (401) : prends la clé API de la BIBLIOTHÈQUE lapproche (onglet API), pas celle du compte"
+        :st===404?"✗ Bibliothèque introuvable (404) : vérifie le Library ID"
+        :"Test impossible ("+st+")");
   };
   box.querySelector("#laVidTest").onclick=async()=>{
     toast("Test de lecture en cours…");
@@ -1384,7 +1407,7 @@ async function laCheckVideo(){
   const dir="/"+guid+"/",exp=Math.floor(Date.now()/1000)+600;
   const buf=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(key+dir+exp+"token_path="+dir));
   const b64=btoa(String.fromCharCode.apply(null,new Uint8Array(buf))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=/g,"");
-  const url="https://"+LA_CDN+"/bcdn_token="+b64+"&expires="+exp+"&token_path="+encodeURIComponent(dir)+dir+"playlist.m3u8";
+  const url="https://"+laCdnHost()+"/bcdn_token="+b64+"&expires="+exp+"&token_path="+encodeURIComponent(dir)+dir+"playlist.m3u8";
   try{const r=await fetch(url,{method:"GET",cache:"no-store"});return r.status;}catch(e){return "réseau";}
 }
 
@@ -1425,21 +1448,21 @@ async function laUpload(item,file,btn,tok,onDone){
     }else{
       if(!key){toast("Configure la clé Bunny d'abord (⚙️)");return;}
       btn.textContent="0%";
-      const cr=await fetch("https://video.bunnycdn.com/library/720136/videos",{method:"POST",
+      const cr=await fetch("https://video.bunnycdn.com/library/"+laLib()+"/videos",{method:"POST",
         headers:{AccessKey:key,"Content-Type":"application/json"},body:JSON.stringify({title:item.id})});
       if(!cr.ok)throw new Error("create "+cr.status);
       const guid=(await cr.json()).guid;
       localStorage.setItem("la:lastguid",guid);   // sert au test de lecture vidéo
       await new Promise((res,rej)=>{
         const x=new XMLHttpRequest();
-        x.open("PUT","https://video.bunnycdn.com/library/720136/videos/"+guid);
+        x.open("PUT","https://video.bunnycdn.com/library/"+laLib()+"/videos/"+guid);
         x.setRequestHeader("AccessKey",key);
         x.upload.onprogress=e=>{if(e.total)btn.textContent=Math.round(e.loaded/e.total*100)+"%";};
         x.onload=()=>x.status<300?res():rej(new Error("upload "+x.status));
         x.onerror=()=>rej(new Error("upload réseau"));
         x.send(file);
       });
-      url="https://"+LA_CDN+"/"+guid+"/playlist.m3u8";
+      url="https://"+laCdnHost()+"/"+guid+"/playlist.m3u8";
     }
     const set=await laRpc("admin_set_clip",{p_admin:tok,p_clip:item.id,p_url:url});
     if(set&&set.ok){
@@ -1448,7 +1471,10 @@ async function laUpload(item,file,btn,tok,onDone){
     }
     else{toast("Upload ok mais branchement raté — réessaie");btn.textContent="⬆︎ envoyer";}
   }catch(e){
-    toast("Échec envoi "+item.id+" ("+(e.message||"réseau")+")");
+    const m=e.message||"réseau";
+    toast(/ 401$/.test(m)?"Échec "+item.id+" : clé API refusée par Bunny. ⚙️ ▸ colle la clé de la BIBLIOTHÈQUE lapproche (onglet API) ▸ 🔑 Tester"
+        :/ 404$/.test(m)?"Échec "+item.id+" : bibliothèque introuvable. ⚙️ ▸ vérifie le Library ID"
+        :"Échec envoi "+item.id+" ("+m+")");
     btn.textContent="⬆︎ envoyer";
   }
 }
