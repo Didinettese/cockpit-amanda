@@ -5602,9 +5602,18 @@ async function laShots(v,tok){
     const key=box.querySelector("#laBk").value.trim(),lib=box.querySelector("#laLib").value.trim()||"720136";
     if(!key)return toast("Colle d'abord la clé API de la bibliothèque");
     toast("Test de la clé…");
-    let st;
-    try{const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos?itemsPerPage=1",{headers:{AccessKey:key,accept:"application/json"}});st=r.status;}catch(e){st="réseau";}
-    toast(st===200?"✓ Clé d'envoi OK — n'oublie pas Enregistrer"
+    let st,info="";
+    try{
+      const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos?itemsPerPage=5&orderBy=date",{headers:{AccessKey:key,accept:"application/json"}});
+      st=r.status;
+      if(r.ok){
+        // Montre OÙ partent les vidéos : à comparer avec la bibliothèque ouverte dans Bunny
+        const j=await r.json(),it=j.items||[];
+        const ETAT={0:"créée",1:"envoyée",2:"en traitement",3:"en encodage",4:"prête ✓",5:"ERREUR",6:"envoi raté"};
+        info=" · bibliothèque "+lib+" : "+(j.totalItems||0)+" vidéo(s)"+(it[0]?" · dernière : "+it[0].title+" ("+(ETAT[it[0].status]||"état "+it[0].status)+")":"");
+      }
+    }catch(e){st="réseau";}
+    toast(st===200?"✓ Clé d'envoi OK"+info
         :st===401?"✗ Clé refusée (401) : prends la clé API de la BIBLIOTHÈQUE lapproche (onglet API), pas celle du compte"
         :st===404?"✗ Bibliothèque introuvable (404) : vérifie le Library ID"
         :"Test impossible ("+st+")");
