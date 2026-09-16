@@ -1287,6 +1287,9 @@ async function laShots(v,tok){
         <button id="laKeyTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">🔑 Tester la clé d'envoi</button>
         <button id="laVidList" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">🩺 État des vidéos chez Bunny</button>
         <div id="laVidListOut" style="font-size:11.5px;line-height:1.5"></div>
+        <button id="laSync" style="padding:9px;border-radius:8px;border:1px solid #3dbb6e;background:none;color:#3dbb6e;font-weight:700">🔗 Brancher dans le jeu les vidéos prêtes</button>
+        <div style="font-size:11px;color:#777">Pour un envoi fait directement dans Bunny : donne à la vidéo le titre exact du clip (ex. CLIP_07b), attends « prête », puis touche ce bouton.</div>
+        <div id="laSyncOut" style="font-size:11.5px;line-height:1.5"></div>
         <div style="margin-top:6px;color:#666">— lecture des vidéos dans le jeu —</div>
         <input id="laVtk" type="password" placeholder="clé Token Authentication des VIDÉOS (Stream ▸ lapproche ▸ Security)" value="${laEsc(localStorage.getItem("la:vid:tok")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         <button id="laVidTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">▶︎ Tester la lecture vidéo</button>
@@ -1408,6 +1411,44 @@ async function laShots(v,tok){
         toast("Relance terminée — revérifie l'état dans 2-3 minutes");
       };
     }catch(e){out.textContent="Test impossible (réseau)";}
+  };
+  box.querySelector("#laSync").onclick=async()=>{
+    // Lit la bibliothèque Bunny et branche chaque vidéo PRÊTE dont le titre est un clip du script
+    const out=box.querySelector("#laSyncOut");
+    const key=box.querySelector("#laBk").value.trim()||localStorage.getItem("la:bunny:key");
+    const lib=box.querySelector("#laLib").value.trim()||laLib(),cdn=laCdnHost();
+    if(!key)return toast("Colle d'abord la clé API de la bibliothèque");
+    out.textContent="Lecture de la bibliothèque…";
+    try{
+      let all=[],page=1;
+      for(;;){
+        const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos?page="+page+"&itemsPerPage=100&orderBy=date",{headers:{AccessKey:key,accept:"application/json"}});
+        if(!r.ok){out.textContent="Bunny répond "+r.status;return;}
+        const j=await r.json();all=all.concat(j.items||[]);
+        if(all.length>=(j.totalItems||0)||!(j.items||[]).length)break;page++;
+      }
+      const ids={};media.filter(i=>i.t==="video").forEach(i=>ids[i.id.toUpperCase()]=i.id);
+      const best={},pending={},unknown=[];
+      for(const v of all){
+        const id=ids[String(v.title||"").trim().replace(/\.[a-z0-9]+$/i,"").toUpperCase()];
+        if(!id){unknown.push(v.title);continue;}
+        const t=new Date(v.dateUploaded||v.dateCreated||0).getTime();
+        if(v.status===4){if(!best[id]||t>best[id].t)best[id]={guid:v.guid,t};}
+        else pending[id]=true;
+      }
+      const done=[],fail=[];
+      for(const id of Object.keys(best)){
+        const set=await laRpc("admin_set_clip",{p_admin:tok,p_clip:id,p_url:"https://"+cdn+"/"+best[id].guid+"/playlist.m3u8"});
+        (set&&set.ok?done:fail).push(id);
+        if(set&&set.ok)localStorage.setItem("la:task:"+id,"1");
+      }
+      const wait=Object.keys(pending).filter(id=>!best[id]);
+      out.innerHTML='<div style="color:#3dbb6e">✓ '+done.length+' branchée(s) : '+laEsc(done.sort().join(", ")||"—")+'</div>'
+        +(wait.length?'<div style="color:#F5A623">⏳ pas encore prêtes : '+laEsc(wait.sort().join(", "))+'</div>':"")
+        +(fail.length?'<div style="color:#e0566a">✗ échec du branchement : '+laEsc(fail.join(", "))+'</div>':"")
+        +(unknown.length?'<div style="color:#888">titres non reconnus (renomme-les en CLIP_…) : '+laEsc(unknown.join(", "))+'</div>':"");
+      toast(done.length+" vidéo(s) branchée(s) dans le jeu");
+    }catch(e){out.textContent="Échec (réseau)";}
   };
   box.querySelector("#laVidTest").onclick=async()=>{
     toast("Test de lecture en cours…");
