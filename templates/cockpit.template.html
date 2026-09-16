@@ -1382,15 +1382,31 @@ async function laShots(v,tok){
       if(!r.ok){out.textContent="Bunny répond "+r.status;return;}
       const it=((await r.json()).items||[]).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
       const ETAT={0:"créée",1:"envoyée",2:"en traitement",3:"en encodage",4:"prête",5:"ERREUR",6:"envoi raté"};
-      let bad=0;
+      let bad=0;const stuck=[];
       out.innerHTML=it.map(v=>{
-        const mo=(v.storageSize||0)/1048576,vide=!v.storageSize&&v.status!==4,ko=vide||v.status===5||v.status===6,ok=v.status===4;
+        const mo=(v.storageSize||0)/1048576,vide=v.status===0,ko=vide||v.status===5||v.status===6,ok=v.status===4;
+        const bloquee=[0,1,2,3].includes(v.status)&&(Date.now()-new Date(v.dateUploaded||v.dateCreated||Date.now()).getTime())>15*60000;
+        if(bloquee)stuck.push(v);
         if(ko)bad++;
         const col=ok?"#3dbb6e":(ko?"#e0566a":"#F5A623");
         return '<div style="display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #1d1d24;padding:3px 0"><span>'+laEsc(v.title)+'</span><span style="color:'+col+';text-align:right">'
-          +(vide?"VIDE (0 octet) → à renvoyer":(ETAT[v.status]||"état "+v.status)+(v.status===3&&v.encodeProgress!=null?" "+v.encodeProgress+" %":""))
+          +(vide?"jamais reçue → à renvoyer":(bloquee?"BLOQUÉE ("+(ETAT[v.status]||v.status)+" depuis +15 min)":(ETAT[v.status]||"état "+v.status))+(v.status===3&&v.encodeProgress!=null?" "+v.encodeProgress+" %":""))
           +(mo?" · "+mo.toFixed(1)+" Mo":"")+(v.length?" · "+v.length+" s":"")+'</span></div>';
-      }).join("")+'<div style="margin-top:6px;color:'+(bad?"#e0566a":"#3dbb6e")+'">'+it.length+' vidéo(s) · '+(bad?bad+" à renvoyer (bouton « remplacer » sur le clip)":"aucun envoi raté")+'</div>';
+      }).join("")+'<div style="margin-top:6px;color:'+(bad?"#e0566a":"#3dbb6e")+'">'+it.length+' vidéo(s) · '+(bad?bad+" à renvoyer (bouton « remplacer » sur le clip)":"aucun envoi raté")+(stuck.length?" · "+stuck.length+" bloquée(s)":"")+'</div>'
+        +(stuck.length?'<button id="laReenc" style="margin-top:8px;width:100%;padding:9px;border-radius:8px;border:1px solid #F5A623;background:none;color:#F5A623;font-weight:700">🔁 Relancer l\'encodage des '+stuck.length+' vidéo(s) bloquée(s)</button><div id="laReencOut" style="margin-top:6px"></div>':"");
+      const rb=out.querySelector("#laReenc");
+      if(rb)rb.onclick=async()=>{
+        // Demande à Bunny de réencoder chaque vidéo coincée (API Stream « reencode »)
+        rb.disabled=true;const res=out.querySelector("#laReencOut");res.textContent="Relance en cours…";
+        const lines=[];
+        for(const v of stuck){
+          let code;
+          try{const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos/"+v.guid+"/reencode",{method:"POST",headers:{AccessKey:key,accept:"application/json"}});code=r.status;}catch(e){code="réseau";}
+          lines.push(laEsc(v.title)+" : "+(code===200?"✓ relancé":"✗ "+code));
+          res.innerHTML=lines.join("<br>");
+        }
+        toast("Relance terminée — revérifie l'état dans 2-3 minutes");
+      };
     }catch(e){out.textContent="Test impossible (réseau)";}
   };
   box.querySelector("#laVidTest").onclick=async()=>{
