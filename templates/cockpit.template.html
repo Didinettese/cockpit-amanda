@@ -1285,6 +1285,8 @@ async function laShots(v,tok){
           <input id="laCdn" placeholder="CDN Hostname (vz-….b-cdn.net)" value="${laEsc(laCdnHost())}" style="flex:1;padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         </div>
         <button id="laKeyTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">🔑 Tester la clé d'envoi</button>
+        <button id="laVidList" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">🩺 État des vidéos chez Bunny</button>
+        <div id="laVidListOut" style="font-size:11.5px;line-height:1.5"></div>
         <div style="margin-top:6px;color:#666">— lecture des vidéos dans le jeu —</div>
         <input id="laVtk" type="password" placeholder="clé Token Authentication des VIDÉOS (Stream ▸ lapproche ▸ Security)" value="${laEsc(localStorage.getItem("la:vid:tok")||"")}" style="padding:9px;border-radius:8px;border:1px solid #333;background:#101014;color:#eee">
         <button id="laVidTest" style="padding:9px;border-radius:8px;border:1px solid #333;background:none;color:#eee">▶︎ Tester la lecture vidéo</button>
@@ -1368,6 +1370,28 @@ async function laShots(v,tok){
         :st===401?"✗ Clé refusée (401) : prends la clé API de la BIBLIOTHÈQUE lapproche (onglet API), pas celle du compte"
         :st===404?"✗ Bibliothèque introuvable (404) : vérifie le Library ID"
         :"Test impossible ("+st+")");
+  };
+  box.querySelector("#laVidList").onclick=async()=>{
+    // Liste chaque vidéo de la bibliothèque : état, poids, durée → repère les envois vides à refaire
+    const out=box.querySelector("#laVidListOut");
+    const key=box.querySelector("#laBk").value.trim()||localStorage.getItem("la:bunny:key"),lib=box.querySelector("#laLib").value.trim()||laLib();
+    if(!key)return toast("Colle d'abord la clé API de la bibliothèque");
+    out.textContent="Chargement…";
+    try{
+      const r=await fetch("https://video.bunnycdn.com/library/"+encodeURIComponent(lib)+"/videos?itemsPerPage=100&orderBy=date",{headers:{AccessKey:key,accept:"application/json"}});
+      if(!r.ok){out.textContent="Bunny répond "+r.status;return;}
+      const it=((await r.json()).items||[]).sort((a,b)=>String(a.title).localeCompare(String(b.title)));
+      const ETAT={0:"créée",1:"envoyée",2:"en traitement",3:"en encodage",4:"prête",5:"ERREUR",6:"envoi raté"};
+      let bad=0;
+      out.innerHTML=it.map(v=>{
+        const mo=(v.storageSize||0)/1048576,vide=!v.storageSize&&v.status!==4,ko=vide||v.status===5||v.status===6,ok=v.status===4;
+        if(ko)bad++;
+        const col=ok?"#3dbb6e":(ko?"#e0566a":"#F5A623");
+        return '<div style="display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid #1d1d24;padding:3px 0"><span>'+laEsc(v.title)+'</span><span style="color:'+col+';text-align:right">'
+          +(vide?"VIDE (0 octet) → à renvoyer":(ETAT[v.status]||"état "+v.status)+(v.status===3&&v.encodeProgress!=null?" "+v.encodeProgress+" %":""))
+          +(mo?" · "+mo.toFixed(1)+" Mo":"")+(v.length?" · "+v.length+" s":"")+'</span></div>';
+      }).join("")+'<div style="margin-top:6px;color:'+(bad?"#e0566a":"#3dbb6e")+'">'+it.length+' vidéo(s) · '+(bad?bad+" à renvoyer (bouton « remplacer » sur le clip)":"aucun envoi raté")+'</div>';
+    }catch(e){out.textContent="Test impossible (réseau)";}
   };
   box.querySelector("#laVidTest").onclick=async()=>{
     toast("Test de lecture en cours…");
@@ -1456,6 +1480,8 @@ async function laUpload(item,file,btn,tok,onDone){
       if(okRead===false)toast("⚠️ Envoyé, mais illisible : la clé Token Auth ne correspond pas à cette pull zone");
     }else{
       if(!key){toast("Configure la clé Bunny d'abord (⚙️)");return;}
+      // Fichier vide (vidéo encore dans iCloud, export raté…) : Bunny créerait une vidéo à 0 octet, jamais encodée
+      if(!file.size){toast("Fichier vide (0 octet) : télécharge d'abord la vidéo sur le téléphone (Photos ▸ ⤓), puis renvoie "+item.id);return;}
       btn.textContent="0%";
       const cr=await fetch("https://video.bunnycdn.com/library/"+laLib()+"/videos",{method:"POST",
         headers:{AccessKey:key,"Content-Type":"application/json"},body:JSON.stringify({title:item.id})});
