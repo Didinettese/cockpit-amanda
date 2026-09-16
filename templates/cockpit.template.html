@@ -1467,7 +1467,7 @@ async function laShots(v,tok){
   const fileInput=box.querySelector("#laFile");
   box.querySelectorAll("[data-up]").forEach(b=>b.onclick=()=>{
     const item=media.find(x=>x.id===b.dataset.up);
-    fileInput.accept=item.t==="photo"?"image/*":(item.t==="vocal"?"audio/*":"video/*");
+    fileInput.accept=item.t==="photo"?"image/*":(item.t==="vocal"?"audio/*,.m4a,.mp3,.aac,.wav,.caf":"video/*");
     fileInput.onchange=()=>{if(fileInput.files[0])laUpload(item,fileInput.files[0],b,tok,()=>laShots(v,tok));fileInput.value="";};
     fileInput.click();
   });
